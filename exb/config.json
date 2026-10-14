@@ -993,7 +993,7 @@
    "id": "w_help3",
    "label": "How to use",
    "config": {
-    "text": "<p style=\"font-size:12px;\"><strong>Smoke screening:</strong> click a unit, then open <em>Unit selected on map</em> — or search / upload in the other tab. Set the burn date, ignition hour and duration, then run. Layers show the NWS smoke forecast, air districts and Class I areas.</p>",
+    "text": "<p style=\"font-size:12px;\"><strong>Smoke screening:</strong> click a unit, then open <em>Smoke: map-selected unit</em> — or use <em>Smoke: search / upload unit</em>. Set the burn date, ignition hour and duration, then run. Layers show the NWS smoke forecast, air districts and Class I areas.</p>",
     "style": {
      "verticalAlign": "start",
      "wrap": true
@@ -1047,7 +1047,7 @@
     "enableLabel": true,
     "label": "Click a fuel treatment unit on the map to run it here.",
     "enableBlankMessage": true,
-    "blankMessage": "Click a fuel treatment unit on the map to run it here. To upload your own unit, search by name, or enter coordinates, use the \"Search / upload unit & Rx\" tab above.",
+    "blankMessage": "Click a fuel treatment unit on the map to run it here. To upload your own unit, search by name, or enter coordinates, use the \"Smoke: search / upload unit\" tab above.",
     "autoRefresh": false,
     "honorThemeFont": false,
     "embedCode": ""
@@ -1226,14 +1226,14 @@
   },
   "view_3_tool": {
    "id": "view_3_tool",
-   "label": "Search / upload unit & Rx",
+   "label": "Smoke: search / upload unit",
    "layout": {
     "LARGE": "layout_view_3_tool"
    }
   },
   "view_3_sel": {
    "id": "view_3_sel",
-   "label": "Unit selected on map",
+   "label": "Smoke: map-selected unit",
    "layout": {
     "LARGE": "layout_view_3_sel"
    }

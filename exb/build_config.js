@@ -39,7 +39,7 @@ function buildExb2({ wm1, wm2, wm3, base, portalUrl = 'https://nifc.maps.arcgis.
   LAY.layout_footer = { type: 'FIXED', order: [], content: {} };
 
   // a map + search + help + two-tab tool panel
-  function toolPage(n, ds, toolFile, toolName, helpHtml) {
+  function toolPage(n, ds, toolFile, toolName, helpHtml, tabLabels) {
     const units = `${ds}-treatment_units`, sel = `${units}-selection`;
     const mapId = `w_map${n}`, searchId = `w_search${n}`, helpId = `w_help${n}`, navId = `w_nav${n}`, secId = `section_${n}`;
     const vStatic = `view_${n}_tool`, vDyn = `view_${n}_sel`, eStatic = `w_embed${n}_tool`, eDyn = `w_embed${n}_sel`;
@@ -64,12 +64,13 @@ function buildExb2({ wm1, wm2, wm3, base, portalUrl = 'https://nifc.maps.arcgis.
       config: { embedType: 'url', expression: `<p>${base}/${toolFile}</p>`, enableLabel: false, enableBlankMessage: false, autoRefresh: false, honorThemeFont: false, embedCode: '' }, useDataSourcesEnabled: false };
     W[eDyn] = { uri: 'widgets/common/embed/', version: v, id: eDyn, label: `${toolName} – map-selected unit`,
       config: { embedType: 'url', expression: dynUrl(toolFile, ds, `${n}x`), enableLabel: true, label: 'Click a fuel treatment unit on the map to run it here.',
-        enableBlankMessage: true, blankMessage: 'Click a fuel treatment unit on the map to run it here. To upload your own unit, search by name, or enter coordinates, use the "Search / upload unit & Rx" tab above.', autoRefresh: false, honorThemeFont: false, embedCode: '' },
+        enableBlankMessage: true, blankMessage: `Click a fuel treatment unit on the map to run it here. To upload your own unit, search by name, or enter coordinates, use the "${tabLabels[0]}" tab above.`, autoRefresh: false, honorThemeFont: false, embedCode: '' },
       useDataSourcesEnabled: true, useDataSources: [{ dataSourceId: sel, mainDataSourceId: units, rootDataSourceId: ds, dataViewId: 'selection', fields: ['name', 'objectid'] }] };
     LAY[`layout_${vStatic}`] = fixed([{ w: eStatic, bbox: pct(0, 0, 100, 100) }]);
     LAY[`layout_${vDyn}`] = fixed([{ w: eDyn, bbox: pct(0, 0, 100, 100) }]);
-    VIEWS[vStatic] = { id: vStatic, label: 'Search / upload unit & Rx', layout: { LARGE: `layout_${vStatic}` } };
-    VIEWS[vDyn] = { id: vDyn, label: 'Unit selected on map', layout: { LARGE: `layout_${vDyn}` } };
+    // view labels must be unique across the app (EB switches views by label slug)
+    VIEWS[vStatic] = { id: vStatic, label: tabLabels[0], layout: { LARGE: `layout_${vStatic}` } };
+    VIEWS[vDyn] = { id: vDyn, label: tabLabels[1], layout: { LARGE: `layout_${vDyn}` } };
     SEC[secId] = { id: secId, label: `${toolName} panel`, views: [vStatic, vDyn], arrowsNav: { visible: false }, dotsNav: { visible: false } };
     W[navId] = { uri: 'widgets/common/navigator/', version: v, id: navId, label: `${toolName} tabs`,
       config: { data: { type: 'AUTO', section: secId, views: [] }, display: { advanced: false, vertical: false, type: 'nav', navStyle: 'default', standard: { scrollable: true, textAlign: 'center', gap: '0px', showText: true, showIcon: false, iconPosition: 'start' } } } };
@@ -90,9 +91,11 @@ function buildExb2({ wm1, wm2, wm3, base, portalUrl = 'https://nifc.maps.arcgis.
         useDataSources: [{ dataSourceId: units, mainDataSourceId: units, rootDataSourceId: ds, fields: [] }] }] };
   }
   toolPage(1, 'dataSource_1', 'burn_eval_ca.html', 'Weather Evaluator',
-    '<p style="font-size:12px;"><strong>Two ways in:</strong> click a fuel treatment unit, then open the <em>Unit selected on map</em> tab — or use the <em>Search / upload unit &amp; Rx</em> tab to search by name, upload a shapefile/KML/GeoJSON, or enter lat/lon. Set your Rx in either tab.</p>');
+    '<p style="font-size:12px;"><strong>Two ways in:</strong> click a fuel treatment unit, then open the <em>Unit selected on map</em> tab — or use the <em>Search / upload unit &amp; Rx</em> tab to search by name, upload a shapefile/KML/GeoJSON, or enter lat/lon. Set your Rx in either tab.</p>',
+    ['Search / upload unit & Rx', 'Unit selected on map']);
   toolPage(3, 'dataSource_3', 'smoke_eval_ca.html', 'Smoke Modeling',
-    '<p style="font-size:12px;"><strong>Smoke screening:</strong> click a unit, then open <em>Unit selected on map</em> — or search / upload in the other tab. Set the burn date, ignition hour and duration, then run. Layers show the NWS smoke forecast, air districts and Class I areas.</p>');
+    '<p style="font-size:12px;"><strong>Smoke screening:</strong> click a unit, then open <em>Smoke: map-selected unit</em> — or use <em>Smoke: search / upload unit</em>. Set the burn date, ignition hour and duration, then run. Layers show the NWS smoke forecast, air districts and Class I areas.</p>',
+    ['Smoke: search / upload unit', 'Smoke: map-selected unit']);
 
   // Outlooks page
   W.w_map2 = { uri: 'widgets/arcgis/arcgis-map/', version: v, id: 'w_map2', label: 'Outlook Map',
