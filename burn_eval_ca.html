@@ -1,0 +1,485 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CA Rx Burn Window Planner</title>
+<script src="https://unpkg.com/shpjs@4.0.4/dist/shp.min.js"></script>
+<style>
+  :root{--ink:#1d2733;--muted:#5b6673;--line:#d9dee4;--bg:#f6f7f9;--card:#fff;--brand:#0b4f8a;--go:#2e7d32;--go-bg:#e3f1e4;--no:#b3261e;--no-bg:#fbe5e3;--mid:#b26a00;--mid-bg:#fdf0dc}
+  *{box-sizing:border-box}
+  body{margin:0;padding:12px;font:13px/1.4 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:var(--ink);background:var(--bg)}
+  h2{font-size:17px;margin:0 0 2px}
+  h3{font-size:14px;margin:14px 0 6px;color:var(--brand)}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:6px;padding:12px;margin-bottom:10px}
+  .muted{color:var(--muted);font-size:12px}
+  #status{color:var(--brand);font-size:12px;min-height:16px;margin:4px 0 8px}
+  .row{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+  .drop{flex:1 1 220px;border:2px dashed #9fb3c8;border-radius:6px;padding:10px;text-align:center;cursor:pointer;color:var(--muted)}
+  .drop.over{background:#eaf2fb;border-color:var(--brand)}
+  input[type=text],input[type=number],select{width:100%;padding:5px 6px;border:1px solid #b8c1cb;border-radius:4px;font:inherit}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(118px,1fr));gap:8px}
+  .grid label{font-size:11px;font-weight:600;color:var(--muted)}
+  button{background:var(--brand);color:#fff;border:0;border-radius:4px;padding:8px 12px;font:600 13px system-ui;cursor:pointer}
+  button.secondary{background:#e9edf1;color:var(--ink)}
+  button:disabled{opacity:.5;cursor:default}
+  .tabs{display:flex;gap:4px;flex-wrap:wrap;margin:6px 0 0}
+  .tab{background:#e9edf1;color:var(--ink);padding:7px 10px;border-radius:4px 4px 0 0;font-weight:600}
+  .tab.on{background:var(--brand);color:#fff}
+  .pane{display:none}.pane.on{display:block}
+  .scroll{overflow-x:auto}
+  table{border-collapse:collapse;width:100%;font-size:12px;background:#fff}
+  th,td{border:1px solid var(--line);padding:4px 5px;text-align:center;white-space:nowrap}
+  th{background:#eef2f6;position:sticky;top:0}
+  td.l{text-align:left}
+  .go{background:var(--go-bg);color:var(--go);font-weight:700}
+  .no{background:var(--no-bg);color:var(--no)}
+  .mid{background:var(--mid-bg);color:var(--mid)}
+  .bad{color:var(--no);font-weight:700}
+  .kpis{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:8px;margin:8px 0}
+  .kpi{background:#fff;border:1px solid var(--line);border-radius:6px;padding:8px}
+  .kpi b{display:block;font-size:20px}
+  .days{display:grid;grid-template-columns:repeat(auto-fill,minmax(92px,1fr));gap:6px}
+  .day{border:1px solid var(--line);border-radius:6px;padding:6px;text-align:center;background:#fff}
+  .day.go{border-color:#8cc28f}
+  .note{font-size:11px;color:var(--muted);margin-top:6px}
+  .heat td{min-width:34px}
+  .legend span{display:inline-block;width:14px;height:10px;margin:0 2px 0 8px;vertical-align:middle;border:1px solid #ccc}
+  svg text{font:11px system-ui;fill:var(--ink)}
+  @media print{.noprint{display:none!important}.pane{display:block!important;page-break-inside:avoid}body{background:#fff}}
+</style>
+</head>
+<body>
+<div class="card">
+  <h2 id="title">CA Prescribed Fire Burn Window Planner</h2>
+  <div id="status">Select a unit on the map, upload a unit boundary, or enter coordinates.</div>
+
+  <div class="row noprint">
+    <div id="drop" class="drop">Upload unit: zipped shapefile, KML, or GeoJSON
+      <input id="file" type="file" accept=".zip,.kml,.geojson,.json" hidden>
+    </div>
+    <div style="flex:1 1 200px">
+      <label class="muted" for="coords">Or lat, lon</label>
+      <input id="coords" type="text" placeholder="e.g. 38.95, -120.62">
+    </div>
+  </div>
+
+  <h3>Prescription</h3>
+  <div class="grid">
+    <div><label>Min Temp °F</label><input id="minT" type="number" value="40"></div>
+    <div><label>Max Temp °F</label><input id="maxT" type="number" value="80"></div>
+    <div><label>Min RH %</label><input id="minRH" type="number" value="20"></div>
+    <div><label>Max RH %</label><input id="maxRH" type="number" value="50"></div>
+    <div><label>Max 20-ft Wind mph</label><input id="maxW" type="number" value="12"></div>
+    <div><label>Max Gust mph</label><input id="maxG" type="number" value="20"></div>
+    <div><label>Min Vent (1000 kt-ft)</label><input id="minV" type="number" value="0"></div>
+    <div><label>Burn period start</label><input id="bpS" type="number" value="9" min="0" max="23"></div>
+    <div><label>Burn period end</label><input id="bpE" type="number" value="17" min="1" max="24"></div>
+    <div><label>Min hours in Rx = burn day</label><input id="minRun" type="number" value="4" min="1" max="24"></div>
+    <div><label>History</label><select id="years"><option value="10">Last 10 years</option><option value="20">Last 20 years</option><option value="30">Last 30 years</option></select></div>
+  </div>
+  <div class="note">Vent 0 = not evaluated. Set it per your air district smoke management requirements; CARB burn-day designations still apply.</div>
+  <div class="row noprint" style="margin-top:10px">
+    <button id="run">Evaluate burn windows</button>
+    <button id="csv" class="secondary" disabled>Download CSV</button>
+    <button id="print" class="secondary" disabled>Print / PDF</button>
+  </div>
+</div>
+
+<div class="tabs noprint" id="tabs">
+  <button class="tab on" data-p="p72">72-Hour (NWS)</button>
+  <button class="tab" data-p="p16">16-Day</button>
+  <button class="tab" data-p="pmon">Monthly Outlook</button>
+  <button class="tab" data-p="pyr">Yearly Availability</button>
+  <button class="tab" data-p="pabout">Method</button>
+</div>
+<div class="card" style="border-top-left-radius:0">
+  <div class="pane on" id="p72"><div class="muted">Run an evaluation to see the hourly NWS forecast against your prescription.</div></div>
+  <div class="pane" id="p16"></div>
+  <div class="pane" id="pmon"></div>
+  <div class="pane" id="pyr"></div>
+  <div class="pane" id="pabout">
+    <h3>How burn windows are counted</h3>
+    <p>An hour is <b>in Rx</b> when temperature, RH, 20-ft wind, gust and (if set) ventilation all meet your limits. A <b>burn day</b> is a day with at least the minimum number of consecutive in-Rx hours inside the burn period.</p>
+    <p><b>72-Hour:</b> NWS gridded forecast (api.weather.gov) for the unit's centroid, including mixing height and transport wind for ventilation.</p>
+    <p><b>16-Day:</b> ECMWF/GFS blend from Open-Meteo, hourly. 20-ft wind is estimated as 10-m wind ÷ 1.15. Ventilation uses boundary-layer height × 120-m wind as a transport-wind stand-in.</p>
+    <p><b>Yearly Availability:</b> ERA5 reanalysis (≈25 km / ERA5-Land ≈9 km for surface fields) via Open-Meteo, hourly, for the selected number of complete years. Shows burn days for every year and month, the typical (mean) month, and the share of burn-period hours in Rx. Reanalysis smooths terrain: compare to your nearest RAWS before relying on absolute counts.</p>
+    <p><b>Monthly Outlook (experimental):</b> ECMWF SEAS5 monthly anomalies for the next ~6 months (temperature, dew point, 10-m wind; forecast minus the model's own climatology, so the coarse model's bias cancels). Each anomaly is added to every hour of that calendar month in the ERA5 history at the unit, RH is recomputed from the shifted temperature and dew point, and your full hourly Rx and burn-period rule is re-applied. The outlook is the mean across historical years; the range is the 10th–90th percentile year. Cross-check with CPC and Predictive Services outlooks.</p>
+  </div>
+</div>
+
+<script>
+(() => {
+'use strict';
+const $ = id => document.getElementById(id);
+const MON = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+const TZ = 'America/Los_Angeles';
+const DEFAULT_SVC = 'https://gis.reshapewildfire.org/arcgis/rest/services/Hosted/Treatment_Index_View/FeatureServer/0';
+const P = new URLSearchParams(location.search);
+const state = { lat: null, lon: null, rings: null, label: null, results: {} };
+
+const setStatus = (t, bad) => { $('status').textContent = t; $('status').style.color = bad ? 'var(--no)' : 'var(--brand)'; };
+const esc = s => String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const clean = v => { if (v == null) return null; const s = String(v).trim(); return (!s || /^\{.*\}$/.test(s) || /^(none|null|undefined)$/i.test(s)) ? null : s; };
+const fmt = (v, d = 0) => v == null || Number.isNaN(v) ? '–' : Number(v).toFixed(d);
+
+// ---------- Rx ----------
+function rx() {
+  const n = id => { const v = parseFloat($(id).value); return Number.isFinite(v) ? v : null; };
+  return { minT: n('minT'), maxT: n('maxT'), minRH: n('minRH'), maxRH: n('maxRH'), maxW: n('maxW'), maxG: n('maxG'),
+           minV: n('minV') || 0, bpS: n('bpS') ?? 9, bpE: n('bpE') ?? 17, minRun: Math.max(1, n('minRun') || 4), years: parseInt($('years').value, 10) };
+}
+// Each hour: {t, rh, w20, g, v}; returns {ok, fails[]}
+function test(h, r) {
+  const f = [];
+  if (h.t == null || h.rh == null || h.w20 == null) return { ok: false, fails: ['no data'] };
+  if (r.minT != null && h.t < r.minT) f.push('T low');
+  if (r.maxT != null && h.t > r.maxT) f.push('T high');
+  if (r.minRH != null && h.rh < r.minRH) f.push('RH low');
+  if (r.maxRH != null && h.rh > r.maxRH) f.push('RH high');
+  if (r.maxW != null && h.w20 > r.maxW) f.push('Wind');
+  if (r.maxG != null && h.g != null && h.g > r.maxG) f.push('Gust');
+  if (r.minV > 0 && h.v != null && h.v < r.minV) f.push('Vent');
+  return { ok: f.length === 0, fails: f };
+}
+const inPeriod = (hour, r) => r.bpE > r.bpS ? hour >= r.bpS && hour < r.bpE : (hour >= r.bpS || hour < r.bpE);
+// hours: [{date:'YYYY-MM-DD', hour:int, ...}] → Map(date → {run, inRx, period})
+function dayStats(hours, r) {
+  const m = new Map();
+  for (const h of hours) {
+    if (!inPeriod(h.hour, r)) continue;
+    let d = m.get(h.date); if (!d) { d = { run: 0, cur: 0, inRx: 0, period: 0, fails: {} }; m.set(h.date, d); }
+    d.period++;
+    const res = test(h, r);
+    if (res.ok) { d.inRx++; d.cur++; d.run = Math.max(d.run, d.cur); }
+    else { d.cur = 0; res.fails.forEach(x => d.fails[x] = (d.fails[x] || 0) + 1); }
+  }
+  for (const d of m.values()) d.burn = d.run >= r.minRun;
+  return m;
+}
+
+// ---------- Geometry ----------
+function ringArea(r) { let a = 0; for (let i = 0, j = r.length - 1; i < r.length; j = i++) a += (r[j][0] + r[i][0]) * (r[j][1] - r[i][1]); return a / 2; }
+function centroid(rings) {
+  let best = null, bestA = -1;
+  for (const r of rings) { const a = Math.abs(ringArea(r)); if (a > bestA) { bestA = a; best = r; } }
+  if (!best || !best.length) return null;
+  let cx = 0, cy = 0, A = 0;
+  for (let i = 0, j = best.length - 1; i < best.length; j = i++) {
+    const f = best[j][0] * best[i][1] - best[i][0] * best[j][1];
+    cx += (best[j][0] + best[i][0]) * f; cy += (best[j][1] + best[i][1]) * f; A += f;
+  }
+  if (Math.abs(A) < 1e-12) { const n = best.length; return { lon: best.reduce((s, p) => s + p[0], 0) / n, lat: best.reduce((s, p) => s + p[1], 0) / n }; }
+  return { lon: cx / (3 * A), lat: cy / (3 * A) };
+}
+function ringsFromGeoJSON(g) {
+  const out = [];
+  const add = geom => {
+    if (!geom) return;
+    if (geom.type === 'Polygon') out.push(...geom.coordinates);
+    else if (geom.type === 'MultiPolygon') geom.coordinates.forEach(p => out.push(...p));
+    else if (geom.type === 'Point') out.push([geom.coordinates]);
+    else if (geom.type === 'GeometryCollection') geom.geometries.forEach(add);
+  };
+  if (Array.isArray(g)) g.forEach(x => out.push(...ringsFromGeoJSON(x)));
+  else if (g.type === 'FeatureCollection') g.features.forEach(f => add(f.geometry));
+  else if (g.type === 'Feature') add(g.geometry);
+  else add(g);
+  return out;
+}
+function nameFromGeoJSON(g) {
+  const f = Array.isArray(g) ? (g[0] && g[0].features && g[0].features[0]) : g.type === 'FeatureCollection' ? g.features[0] : g.type === 'Feature' ? g : null;
+  const p = (f && f.properties) || {};
+  const k = Object.keys(p).find(k => /^(unit_?name|name|burn_?unit|unit)$/i.test(k));
+  return k ? clean(p[k]) : null;
+}
+function ringsFromKML(text) {
+  const doc = new DOMParser().parseFromString(text, 'text/xml');
+  const rings = [];
+  doc.querySelectorAll('Polygon outerBoundaryIs coordinates, Polygon coordinates, Point coordinates').forEach(el => {
+    const pts = el.textContent.trim().split(/\s+/).map(s => s.split(',').map(Number)).filter(p => p.length >= 2 && p.every(Number.isFinite)).map(p => [p[0], p[1]]);
+    if (pts.length) rings.push(pts);
+  });
+  const nm = doc.querySelector('Placemark > name, Document > name');
+  return { rings, name: nm ? clean(nm.textContent) : null };
+}
+function setUnit(rings, label) {
+  const c = centroid(rings);
+  if (!c || !Number.isFinite(c.lat) || !Number.isFinite(c.lon)) throw new Error('Could not find a usable polygon or point in that unit.');
+  if (c.lat < 32 || c.lat > 42.2 || c.lon < -124.6 || c.lon > -113.9) setStatus(`Unit centroid ${c.lat.toFixed(3)}, ${c.lon.toFixed(3)} is outside California. Results will still run.`, true);
+  Object.assign(state, { lat: c.lat, lon: c.lon, rings, label: label || 'Uploaded unit' });
+  $('title').textContent = state.label;
+}
+
+async function loadFile(file) {
+  try {
+    setStatus('Reading ' + file.name + '…');
+    const base = file.name.replace(/\.[^.]+$/, '');
+    if (/\.zip$/i.test(file.name)) {
+      if (typeof shp !== 'function') throw new Error('Shapefile reader did not load. Try GeoJSON or KML.');
+      const gj = await shp(await file.arrayBuffer());
+      setUnit(ringsFromGeoJSON(gj), nameFromGeoJSON(gj) || base);
+    } else if (/\.kml$/i.test(file.name)) {
+      const k = ringsFromKML(await file.text()); setUnit(k.rings, k.name || base);
+    } else {
+      const gj = JSON.parse(await file.text()); setUnit(ringsFromGeoJSON(gj), nameFromGeoJSON(gj) || base);
+    }
+    setStatus(`Loaded ${state.label} (${state.lat.toFixed(4)}, ${state.lon.toFixed(4)}). Evaluating…`);
+    run();
+  } catch (e) { setStatus(e.message, true); }
+}
+
+async function loadFromParams() {
+  const lat = parseFloat(P.get('lat')), lon = parseFloat(P.get('lon') ?? P.get('lng'));
+  const label = clean(P.get('unit') || P.get('name') || P.get('Name'));
+  if (Number.isFinite(lat) && Number.isFinite(lon)) { setUnit([[[lon, lat]]], label || 'Selected point'); return true; }
+  const id = clean(P.get('id') || P.get('objectid') || P.get('OBJECTID'));
+  if (!id || !/^\d+$/.test(id)) return false;
+  const svc = (clean(P.get('svc')) || DEFAULT_SVC).replace(/\/+$/, '');
+  if (!/^https:\/\/[^/]+\/.+\/(FeatureServer|MapServer)\/\d+$/i.test(svc)) throw new Error('svc must be an https FeatureServer or MapServer layer URL.');
+  const oidField = clean(P.get('oidField')) || 'objectid';
+  const q = `${svc}/query?where=${encodeURIComponent(oidField + '=' + id)}&outFields=*&returnGeometry=true&outSR=4326&f=json`;
+  const j = await fetch(q).then(r => r.json());
+  const f = j.features && j.features[0];
+  if (!f || !f.geometry) throw new Error('That unit could not be found in the treatment layer.');
+  const g = f.geometry;
+  const rings = g.rings || (g.x != null ? [[[g.x, g.y]]] : null);
+  const attrs = f.attributes || {};
+  const nk = Object.keys(attrs).find(k => /^name$/i.test(k));
+  setUnit(rings, label || (nk && clean(attrs[nk])) || 'Unit ' + id);
+  return true;
+}
+
+// ---------- Data: NWS 72h ----------
+function isoDur(s) { const m = /P(?:(\d+)D)?(?:T(?:(\d+)H)?(?:(\d+)M)?)?/.exec(s) || []; return ((+m[1] || 0) * 24 + (+m[2] || 0)) + (+m[3] || 0) / 60; }
+function expand(prop) {
+  const out = new Map(); if (!prop || !prop.values) return out;
+  const u = prop.uom || '';
+  const conv = v => v == null ? null : /degC/.test(u) ? v * 9 / 5 + 32 : /km_h/.test(u) ? v * 0.621371 : /m_s/.test(u) ? v * 2.23694 : /:m$/.test(u) ? v * 3.28084 : v;
+  for (const { validTime, value } of prop.values) {
+    const [start, dur] = validTime.split('/'); const t0 = Date.parse(start); const n = Math.max(1, Math.round(isoDur(dur)));
+    for (let i = 0; i < n; i++) out.set(t0 + i * 3600e3, conv(value));
+  }
+  return out;
+}
+const local = ms => { const p = new Intl.DateTimeFormat('en-CA', { timeZone: TZ, year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', hourCycle: 'h23' }).formatToParts(new Date(ms)); const g = t => p.find(x => x.type === t).value; return { date: `${g('year')}-${g('month')}-${g('day')}`, hour: +g('hour') }; };
+async function nws72() {
+  const pt = await fetch(`https://api.weather.gov/points/${state.lat.toFixed(4)},${state.lon.toFixed(4)}`).then(r => { if (!r.ok) throw new Error('NWS point lookup failed (' + r.status + ')'); return r.json(); });
+  const grid = await fetch(pt.properties.forecastGridData).then(r => { if (!r.ok) throw new Error('NWS grid data failed (' + r.status + ')'); return r.json(); });
+  const g = grid.properties;
+  const T = expand(g.temperature), RH = expand(g.relativeHumidity), W = expand(g.windSpeed), G = expand(g.windGust), MH = expand(g.mixingHeight), TW = expand(g.transportWindSpeed);
+  const now = Math.floor(Date.now() / 3600e3) * 3600e3;
+  const hours = [];
+  for (let i = 0; i < 72; i++) {
+    const ms = now + i * 3600e3; const L = local(ms);
+    const w = W.get(ms), mh = MH.get(ms), tw = TW.get(ms);
+    hours.push({ ms, ...L, t: T.get(ms) ?? null, rh: RH.get(ms) ?? null, w20: w == null ? null : w / 1.15, g: G.get(ms) ?? null,
+                 v: mh == null || tw == null ? null : mh * (tw * 0.868976) / 1000, mh, tw });
+  }
+  return { hours, office: pt.properties.gridId, zone: (pt.properties.fireWeatherZone || '').split('/').pop() };
+}
+
+// ---------- Data: Open-Meteo ----------
+const OM_H = 'temperature_2m,relative_humidity_2m,wind_speed_10m,wind_gusts_10m,boundary_layer_height';
+function omHours(j, transportKey) {
+  const h = j.hourly, out = [];
+  for (let i = 0; i < h.time.length; i++) {
+    const [date, hm] = h.time[i].split('T'); const w = h.wind_speed_10m[i], blh = h.boundary_layer_height ? h.boundary_layer_height[i] : null, tw = h[transportKey] ? h[transportKey][i] : null;
+    out.push({ date, hour: +hm.slice(0, 2), t: h.temperature_2m[i], rh: h.relative_humidity_2m[i], w20: w == null ? null : w / 1.15,
+               w10: w, g: h.wind_gusts_10m ? h.wind_gusts_10m[i] : null, v: blh == null || tw == null ? null : blh * 3.28084 * tw * 0.868976 / 1000 });
+  }
+  return out;
+}
+async function om16() {
+  const u = `https://api.open-meteo.com/v1/forecast?latitude=${state.lat}&longitude=${state.lon}&hourly=${OM_H},wind_speed_120m&forecast_days=16&temperature_unit=fahrenheit&wind_speed_unit=mph&timezone=${encodeURIComponent(TZ)}`;
+  const j = await fetch(u).then(r => r.json()); if (j.error) throw new Error(j.reason);
+  return omHours(j, 'wind_speed_120m');
+}
+const histCache = new Map();
+async function omHistory(years) {
+  const key = `${state.lat.toFixed(3)},${state.lon.toFixed(3)},${years}`;
+  if (histCache.has(key)) return histCache.get(key);
+  const endY = new Date().getFullYear() - 1, startY = endY - years + 1;
+  const u = `https://archive-api.open-meteo.com/v1/archive?latitude=${state.lat}&longitude=${state.lon}&start_date=${startY}-01-01&end_date=${endY}-12-31&hourly=${OM_H},wind_speed_100m&temperature_unit=fahrenheit&wind_speed_unit=mph&timezone=${encodeURIComponent(TZ)}`;
+  const j = await fetch(u).then(r => r.json()); if (j.error) throw new Error(j.reason);
+  const res = { hours: omHours(j, 'wind_speed_100m'), startY, endY, elev: j.elevation };
+  histCache.set(key, res); return res;
+}
+// SEAS5 monthly anomalies (forecast minus the model's own climatology, so model bias cancels).
+// Anomalies arrive in K and km/h; converted to °F and mph deltas here.
+async function omSeasonal() {
+  const u = `https://seasonal-api.open-meteo.com/v1/seasonal?latitude=${state.lat}&longitude=${state.lon}&monthly=temperature_2m_anomaly,dew_point_2m_anomaly,wind_speed_10m_anomaly,precipitation_anomaly&timezone=GMT`;
+  const j = await fetch(u).then(r => r.json()); if (j.error) throw new Error(j.reason);
+  const m = j.monthly;
+  if (!m || !m.time || !m.temperature_2m_anomaly) throw new Error('seasonal anomalies not returned');
+  return m.time.map((t, i) => ({ y: +t.slice(0, 4), m: +t.slice(5, 7) - 1,
+    dT: m.temperature_2m_anomaly[i] * 1.8, dTd: (m.dew_point_2m_anomaly || [])[i] * 1.8 || 0,
+    dW: ((m.wind_speed_10m_anomaly || [])[i] || 0) * 0.621371, dP: (m.precipitation_anomaly || [])[i] }))
+    .filter(x => Number.isFinite(x.dT));
+}
+// Dew point / RH (Magnus, °F in/out)
+const toC = f => (f - 32) / 1.8, toF = c => c * 1.8 + 32;
+const dewF = (tF, rh) => { const t = toC(tF), a = 17.625, b = 243.04, g = Math.log(Math.max(rh, 1) / 100) + a * t / (b + t); return toF(b * g / (a - g)); };
+const rhFrom = (tF, tdF) => { const t = toC(tF), td = toC(tdF), a = 17.625, b = 243.04; return Math.min(100, Math.max(1, 100 * Math.exp(a * td / (b + td) - a * t / (b + t)))); };
+// Apply one month's anomalies to every historical hour of that calendar month, re-count burn days per year
+function deltaMonth(hist, r, a) {
+  const shifted = [];
+  for (const h of hist.hours) {
+    if (+h.date.slice(5, 7) - 1 !== a.m || h.t == null || h.rh == null) continue;
+    const t = h.t + a.dT, td = dewF(h.t, h.rh) + a.dTd;
+    const w10 = h.w10 == null ? null : Math.max(0, h.w10 + a.dW);
+    shifted.push({ ...h, t, rh: rhFrom(t, Math.min(td, t)), w20: w10 == null ? null : w10 / 1.15, g: h.g == null ? null : Math.max(0, h.g + a.dW) });
+  }
+  const perYear = {};
+  for (const [date, s] of dayStats(shifted, r)) { const y = date.slice(0, 4); perYear[y] = (perYear[y] || 0) + (s.burn ? 1 : 0); }
+  for (let y = hist.startY; y <= hist.endY; y++) perYear[y] = perYear[y] || 0;
+  return Object.values(perYear).sort((x, z) => x - z);
+}
+
+// ---------- Render ----------
+function cls(ok) { return ok ? 'go' : 'no'; }
+function render72(d, r) {
+  const ds = dayStats(d.hours, r);
+  let html = `<div class="muted">NWS ${esc(d.office)} gridded forecast${d.zone ? ' · Fire weather zone ' + esc(d.zone) : ''} · ${state.lat.toFixed(4)}, ${state.lon.toFixed(4)}</div>`;
+  html += '<div class="kpis">' + [...ds.entries()].map(([date, s]) => `<div class="kpi ${s.burn ? 'go' : ''}"><span class="muted">${new Date(date + 'T12:00').toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric' })}</span><b>${s.burn ? 'Burn window' : 'No window'}</b>${s.inRx}/${s.period} burn-period hrs in Rx</div>`).join('') + '</div>';
+  html += '<div class="scroll"><table><thead><tr><th>Date / Time</th><th>Temp °F</th><th>RH %</th><th>20-ft Wind</th><th>Gust</th><th>Mix Ht ft</th><th>Transport mph</th><th>Vent 1000 kt-ft</th><th>Status</th></tr></thead><tbody>';
+  for (const h of d.hours) {
+    const res = test(h, r); const bp = inPeriod(h.hour, r);
+    const c = (bad, v) => `<td class="${bad ? 'bad' : ''}">${v}</td>`;
+    html += `<tr><td class="l">${new Date(h.ms).toLocaleString('en-US', { timeZone: TZ, weekday: 'short', hour: 'numeric' })}${bp ? '' : ' <span class="muted">(off period)</span>'}</td>`
+      + c(res.fails.some(f => f.startsWith('T')), fmt(h.t)) + c(res.fails.some(f => f.startsWith('RH')), fmt(h.rh))
+      + c(res.fails.includes('Wind'), fmt(h.w20)) + c(res.fails.includes('Gust'), fmt(h.g)) + `<td>${fmt(h.mh)}</td><td>${fmt(h.tw)}</td>`
+      + c(res.fails.includes('Vent'), fmt(h.v)) + `<td class="${res.ok ? 'go' : 'no'}">${res.ok ? 'IN RX' : esc(res.fails.join(', '))}</td></tr>`;
+  }
+  $('p72').innerHTML = html + '</tbody></table></div>';
+}
+function render16(hours, r) {
+  const ds = dayStats(hours, r);
+  const n = [...ds.values()].filter(s => s.burn).length;
+  let html = `<div class="kpis"><div class="kpi"><span class="muted">Burn days, next 16</span><b>${n}</b></div></div><div class="days">`;
+  for (const [date, s] of ds) {
+    const top = Object.entries(s.fails).sort((a, b) => b[1] - a[1])[0];
+    html += `<div class="day ${s.burn ? 'go' : ''}"><b>${new Date(date + 'T12:00').toLocaleDateString('en-US', { weekday: 'short', month: 'numeric', day: 'numeric' })}</b><div class="${s.burn ? 'go' : 'no'}" style="border-radius:4px;margin:4px 0">${s.burn ? 'GO' : 'NO'}</div>${s.inRx}/${s.period} hrs${!s.burn && top ? `<div class="muted">${esc(top[0])}</div>` : ''}</div>`;
+  }
+  $('p16').innerHTML = html + '</div><div class="note">Days 8–16 carry low skill; use for resource staging, not go/no-go.</div>';
+}
+function histSummary(hist, r) {
+  const ds = dayStats(hist.hours, r);
+  const nY = hist.endY - hist.startY + 1;
+  const grid = {}; // year → [12] burn days
+  const hrs = Array.from({ length: 12 }, () => ({ inRx: 0, period: 0 }));
+  for (let y = hist.startY; y <= hist.endY; y++) grid[y] = Array(12).fill(0);
+  for (const [date, s] of ds) {
+    const y = +date.slice(0, 4), m = +date.slice(5, 7) - 1;
+    if (grid[y]) { if (s.burn) grid[y][m]++; hrs[m].inRx += s.inRx; hrs[m].period += s.period; }
+  }
+  const mean = MON.map((_, m) => Object.values(grid).reduce((a, row) => a + row[m], 0) / nY);
+  const sorted = MON.map((_, m) => Object.values(grid).map(row => row[m]).sort((a, b) => a - b));
+  return { grid, mean, p10: sorted.map(a => pct(a, .1)), p90: sorted.map(a => pct(a, .9)), pct: hrs.map(h => h.period ? 100 * h.inRx / h.period : 0), nY };
+}
+const pct = (arr, p) => arr[Math.min(arr.length - 1, Math.max(0, Math.round(p * (arr.length - 1))))];
+function heat(v, max) { if (max <= 0) return ''; const a = Math.min(1, v / max); return `background:rgba(46,125,50,${(0.08 + 0.72 * a).toFixed(2)});color:${a > .55 ? '#fff' : 'var(--ink)'}`; }
+function bars(vals, lo, hi) {
+  const W = 600, H = 170, pad = 26, bw = (W - pad * 2) / 12, max = Math.max(1, ...hi);
+  const y = v => H - 22 - (H - 40) * v / max;
+  let s = `<svg viewBox="0 0 ${W} ${H}" width="100%" role="img" aria-label="Typical burn days per month">`;
+  for (let i = 0; i < 12; i++) {
+    const x = pad + i * bw;
+    s += `<rect x="${x + 6}" y="${y(vals[i])}" width="${bw - 12}" height="${H - 22 - y(vals[i])}" fill="#2e7d32" rx="2"/>`;
+    s += `<line x1="${x + bw / 2}" x2="${x + bw / 2}" y1="${y(lo[i])}" y2="${y(hi[i])}" stroke="#1d2733" stroke-width="1.2"/>`;
+    s += `<text x="${x + bw / 2}" y="${y(vals[i]) - 4}" text-anchor="middle">${vals[i].toFixed(1)}</text><text x="${x + bw / 2}" y="${H - 6}" text-anchor="middle">${MON[i]}</text>`;
+  }
+  return s + '</svg>';
+}
+function renderYear(hist, S) {
+  const max = Math.max(1, ...Object.values(S.grid).flat());
+  const total = S.mean.reduce((a, b) => a + b, 0);
+  const best = S.mean.map((v, i) => [v, i]).sort((a, b) => b[0] - a[0]).slice(0, 3).map(x => MON[x[1]]);
+  let html = `<div class="muted">ERA5 reanalysis ${hist.startY}–${hist.endY} at ${state.lat.toFixed(3)}, ${state.lon.toFixed(3)} (model elevation ${fmt(hist.elev)} m)</div>
+  <div class="kpis"><div class="kpi"><span class="muted">Typical burn days / year</span><b>${total.toFixed(0)}</b></div><div class="kpi"><span class="muted">Best months</span><b>${best.join(', ')}</b></div></div>
+  <h3>Typical burn days per month</h3>${bars(S.mean, S.p10, S.p90)}<div class="note">Bars are the ${S.nY}-year mean; whiskers show the 10th–90th percentile year.</div>
+  <h3>Burn days by year and month</h3><div class="scroll"><table class="heat"><thead><tr><th>Year</th>${MON.map(m => `<th>${m}</th>`).join('')}<th>Total</th></tr></thead><tbody>`;
+  for (const [y, row] of Object.entries(S.grid).reverse()) html += `<tr><td>${y}</td>${row.map(v => `<td style="${heat(v, max)}">${v}</td>`).join('')}<td><b>${row.reduce((a, b) => a + b, 0)}</b></td></tr>`;
+  html += `<tr><th>Mean</th>${S.mean.map(v => `<th>${v.toFixed(1)}</th>`).join('')}<th>${total.toFixed(0)}</th></tr>`;
+  html += `<tr><td class="l">% burn-period hrs in Rx</td>${S.pct.map(v => `<td>${v.toFixed(0)}%</td>`).join('')}<td></td></tr></tbody></table></div>`;
+  $('pyr').innerHTML = html;
+}
+function renderMonthly(anoms, hist, S, r) {
+  const sgn = (v, d = 1) => v == null || !Number.isFinite(v) ? '–' : (v > 0 ? '+' : '') + v.toFixed(d);
+  let html = `<div class="muted">ECMWF SEAS5 monthly anomalies applied to ERA5 ${hist.startY}–${hist.endY} hourly weather at this unit, then re-tested against your Rx</div>
+  <div class="scroll"><table><thead><tr><th>Month</th><th>Typical burn days</th><th>Outlook burn days</th><th>Range (P10–P90)</th><th>Lean</th><th>Temp anom °F</th><th>Dew pt anom °F</th><th>Wind anom mph</th><th>Precip anom</th></tr></thead><tbody>`;
+  const rows = [];
+  for (const a of anoms) {
+    const counts = deltaMonth(hist, r, a);
+    const proj = counts.reduce((s, v) => s + v, 0) / counts.length, typical = S.mean[a.m];
+    const diff = proj - typical;
+    const lean = Math.abs(diff) < Math.max(1, 0.15 * typical) ? ['Near normal', 'mid'] : diff > 0 ? ['More than normal', 'go'] : ['Fewer than normal', 'no'];
+    rows.push({ m: a.m, y: a.y, typical, proj, lo: pct(counts, .1), hi: pct(counts, .9), lean, a });
+  }
+  for (const x of rows) html += `<tr><td class="l">${MON[x.m]} ${x.y}</td><td>${x.typical.toFixed(1)}</td><td><b>${x.proj.toFixed(1)}</b></td><td>${x.lo}–${x.hi}</td><td class="${x.lean[1]}">${x.lean[0]}</td><td>${sgn(x.a.dT)}</td><td>${sgn(x.a.dTd)}</td><td>${sgn(x.a.dW)}</td><td>${x.a.dP == null ? '–' : sgn(x.a.dP / 25.4, 1) + ' in'}</td></tr>`;
+  html += `</tbody></table></div><div class="note">Experimental. Outlook = mean burn days across the ${S.nY} historical years after shifting their hourly temperature, dew point and wind by the forecast anomalies; range = 10th–90th percentile year. Anomalies are monthly ensemble means, so short events (wind, wetting rain) are not resolved. Cross-check with CPC and Predictive Services outlooks.</div>`;
+  $('pmon').innerHTML = html;
+  state.results.monthly = rows;
+}
+
+// ---------- Run ----------
+let running = false;
+async function run() {
+  if (running) return;
+  if (state.lat == null) { setStatus('Choose a unit first: select one on the map, upload a file, or enter coordinates.', true); return; }
+  running = true; $('run').disabled = true;
+  const r = rx();
+  if (r.minT != null && r.maxT != null && r.minT > r.maxT || r.minRH != null && r.maxRH != null && r.minRH > r.maxRH) { setStatus('Check the Rx: a minimum is above its maximum.', true); running = false; $('run').disabled = false; return; }
+  setStatus(`Evaluating ${state.label}… (history download can take 10–30 s)`);
+  const loading = '<div class="muted">Loading…</div>';
+  ['p72', 'p16', 'pmon', 'pyr'].forEach(id => $(id).innerHTML = loading);
+  const errs = [];
+  const fail = (id, what) => e => { $(id).innerHTML = `<div class="bad">${esc(what)} unavailable: ${esc(e.message || e)}</div>`; errs.push(what); };
+  const tasks = [
+    nws72().then(d => { state.results.nws = d; render72(d, r); }).catch(fail('p72', 'NWS 72-hour forecast')),
+    om16().then(h => { state.results.f16 = h; render16(h, r); }).catch(fail('p16', '16-day forecast')),
+    (async () => {
+      const hist = await omHistory(r.years); const S = histSummary(hist, r); state.results.hist = { hist, S }; renderYear(hist, S);
+      try { const anoms = await omSeasonal(); renderMonthly(anoms, hist, S, r); } catch (e) { fail('pmon', 'Seasonal outlook')(e); }
+    })().catch(e => { fail('pyr', 'Historical record')(e); fail('pmon', 'Monthly outlook (needs history)')(e); })
+  ];
+  await Promise.all(tasks);
+  setStatus(errs.length ? `Done with gaps: ${errs.join('; ')}.` : `${state.label}: evaluated ${new Date().toLocaleString('en-US', { timeZone: TZ, dateStyle: 'medium', timeStyle: 'short' })} PT.`, errs.length > 0);
+  $('csv').disabled = !state.results.hist; $('print').disabled = false;
+  running = false; $('run').disabled = false;
+}
+
+function csv() {
+  const R = state.results; if (!R.hist) return;
+  const lines = [`# ${state.label} (${state.lat.toFixed(4)}, ${state.lon.toFixed(4)})`, '# Rx: ' + JSON.stringify(rx()), 'Year,' + MON.join(',') + ',Total'];
+  for (const [y, row] of Object.entries(R.hist.S.grid)) lines.push([y, ...row, row.reduce((a, b) => a + b, 0)].join(','));
+  lines.push(['Mean', ...R.hist.S.mean.map(v => v.toFixed(1))].join(','));
+  if (R.monthly) { lines.push('', 'Outlook month,Typical burn days,Outlook burn days,P10,P90,Lean,Temp anom F,Dew pt anom F,Wind anom mph,Precip anom mm'); R.monthly.forEach(x => lines.push([`${MON[x.m]} ${x.y}`, x.typical.toFixed(1), x.proj.toFixed(1), x.lo, x.hi, x.lean[0], x.a.dT.toFixed(1), x.a.dTd.toFixed(1), x.a.dW.toFixed(1), x.a.dP == null ? '' : x.a.dP.toFixed(0)].join(','))); }
+  const a = document.createElement('a'); a.href = URL.createObjectURL(new Blob([lines.join('\n')], { type: 'text/csv' }));
+  a.download = (state.label || 'unit').replace(/[^\w.-]+/g, '_') + '_burn_days.csv'; a.click(); setTimeout(() => URL.revokeObjectURL(a.href), 1000);
+}
+
+// ---------- Wire up ----------
+$('tabs').addEventListener('click', e => { const b = e.target.closest('.tab'); if (!b) return; document.querySelectorAll('.tab').forEach(t => t.classList.toggle('on', t === b)); document.querySelectorAll('.pane').forEach(p => p.classList.toggle('on', p.id === b.dataset.p)); });
+$('run').onclick = run; $('csv').onclick = csv; $('print').onclick = () => window.print();
+const drop = $('drop');
+drop.onclick = () => $('file').click();
+$('file').onchange = e => e.target.files[0] && loadFile(e.target.files[0]);
+['dragenter', 'dragover'].forEach(t => drop.addEventListener(t, e => { e.preventDefault(); drop.classList.add('over'); }));
+['dragleave', 'drop'].forEach(t => drop.addEventListener(t, e => { e.preventDefault(); drop.classList.remove('over'); }));
+drop.addEventListener('drop', e => e.dataTransfer.files[0] && loadFile(e.dataTransfer.files[0]));
+$('coords').addEventListener('change', () => {
+  const n = ($('coords').value.match(/-?\d+(\.\d+)?/g) || []).map(Number);
+  if (n.length < 2) return setStatus('Enter coordinates as lat, lon.', true);
+  let [a, b] = n; if (Math.abs(a) > 90 || (a < 0 && b > 0)) [a, b] = [b, a];
+  if (b > 0) b = -b; // western hemisphere
+  setUnit([[[b, a]]], 'Point ' + a.toFixed(4) + ', ' + b.toFixed(4)); run();
+});
+// Rx can be prefilled from URL (e.g. &minT=35&maxRH=45)
+['minT', 'maxT', 'minRH', 'maxRH', 'maxW', 'maxG', 'minV', 'bpS', 'bpE', 'minRun'].forEach(k => { const v = P.get(k); if (v != null && Number.isFinite(+v)) $(k).value = v; });
+
+loadFromParams().then(ok => { if (ok) run(); }).catch(e => setStatus(e.message, true));
+})();
+</script>
+</body>
+</html>
