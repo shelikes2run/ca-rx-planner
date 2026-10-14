@@ -178,14 +178,20 @@ function fillDates() {
 async function elev(points) { const out = []; for (let i = 0; i < points.length; i += 100) { const chunk = points.slice(i, i + 100);
   const j = await fetch(`https://api.open-meteo.com/v1/elevation?latitude=${chunk.map(p => p[0].toFixed(5)).join(',')}&longitude=${chunk.map(p => p[1].toFixed(5)).join(',')}`).then(r => r.json());
   if (!j.elevation) throw new Error('elevation service unavailable'); out.push(...j.elevation); } return out; }
+const pathLen = p => p.reduce((a, q, i) => i ? a + dist(p[i - 1], q) : 0, 0);
 async function drainage(start, miles) {
-  const stepMi = 0.25, nSteps = Math.ceil(miles / stepMi), path = [start]; let cur = start; let [z] = await elev([start]); const z0 = z;
+  const stepMi = 0.25, nSteps = Math.ceil(miles / stepMi) * 2, path = [start]; let cur = start; let [z] = await elev([start]); const z0 = z;
   for (let s = 0; s < nSteps; s++) {
-    const cand = []; for (let b = 0; b < 360; b += 22.5) cand.push(dest(cur[0], cur[1], b, stepMi));
-    const zs = await elev(cand); let bi = -1, bz = z;
-    zs.forEach((v, i) => { if (v < bz - 0.5) { bz = v; bi = i; } });
-    if (bi < 0) break; // local low point / valley floor
-    cur = cand[bi]; z = bz; path.push(cur);
+    // look 0.25 mi out; if every neighbor is higher (a pit or flat canyon floor), look 0.5 and 1 mi out before stopping
+    let moved = false;
+    for (const reach of [stepMi, stepMi * 2, stepMi * 4]) {
+      const cand = []; for (let b = 0; b < 360; b += 22.5) cand.push(dest(cur[0], cur[1], b, reach));
+      const zs = await elev(cand); let bi = -1, bz = z;
+      zs.forEach((v, i) => { if (v < bz - 0.5) { bz = v; bi = i; } });
+      if (bi >= 0) { cur = cand[bi]; z = bz; path.push(cur); moved = true; break; }
+    }
+    if (!moved) break; // true valley floor / basin
+    if (pathLen(path) >= miles) break;
   }
   return { path, drop: z0 - z, z0 };
 }
@@ -285,7 +291,7 @@ async function run() {
       null, null, null, null]).then(async ([dr]) => {
         const recp = await receptors(cone, dr.path, bufMi);
         const dj = await q(L_AIR, `where=1%3D1&geometry=${state.lon},${state.lat}&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=NAME,District_W,District_C,AirDistrict_Email&returnGeometry=false`).catch(() => []);
-        const mid = dest(state.lat, state.lon, mb, dayMi / 2);
+        const mid = dest(state.lat, state.lon, mb, dayMi);
         const [a1, a2] = await Promise.all([aqAt(state.lat, state.lon, date).catch(() => null), aqAt(mid[0], mid[1], date).catch(() => null)]);
         return [dr, recp, dj[0] && dj[0].attributes, a1, a2];
       });
@@ -299,7 +305,7 @@ async function run() {
       ['Plume sweep', `${Math.round(hi - lo)}° over ${usable.length} hr`],
       ['Transport wind', tws.length ? `${Math.round(Math.min(...tws))}–${Math.round(Math.max(...tws))} mph` : '–'],
       ['Avg ventilation', vent == null ? '–' : `${Math.round(vent)}k kt-ft`],
-      ['Night drainage toward', `${nightDir}, ${(dist(dr.path[0], nightEnd)).toFixed(1)} mi, ${Math.round(dr.drop * 3.281)} ft drop`],
+      ['Night drainage toward', `${nightDir}, ${pathLen(dr.path).toFixed(1)} mi trace, ${Math.round(dr.drop * 3.281).toLocaleString()} ft drop`],
       ['Receptors flagged', `${dayHits.length} day · ${nightHits.length} night · ${c1Hits.length} Class I`]
     ].map(([k, v]) => `<div class="kpi"><span class="muted">${k}</span><b>${esc(v)}</b></div>`).join('');
     const dStr = new Date(date + 'T12:00').toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric' });
@@ -315,7 +321,7 @@ async function run() {
       : '<p>No communities, schools, hospitals or Class I areas found in the screening zones.</p>';
     const aqTable = (rows, label) => rows && rows.length ? `<tr><td>${label}</td>${rows.filter(r => r.hour >= Math.max(0, start - 2) && r.hour < Math.min(24, start + dur + 4)).map(r => `<td class="${aqCls(r.aqi)}">${r.aqi ?? '–'}<br><span class="muted">${r.pm == null ? '' : r.pm.toFixed(0) + ' µg'}</span></td>`).join('')}</tr>` : `<tr><td>${label}</td><td>unavailable</td></tr>`;
     const hrs = (aqUnit || aqDown || []).filter(r => r.hour >= Math.max(0, start - 2) && r.hour < Math.min(24, start + dur + 4)).map(r => r.hour);
-    $('aq').innerHTML = `<table><thead><tr><th>US AQI / PM2.5</th>${hrs.map(h => `<th>${String(h).padStart(2, '0')}00</th>`).join('')}</tr></thead><tbody>${aqTable(aqUnit, 'At unit')}${aqTable(aqDown, `${Math.round(dayMi / 2)} mi downwind`)}</tbody></table>
+    $('aq').innerHTML = `<table><thead><tr><th>US AQI / PM2.5</th>${hrs.map(h => `<th>${String(h).padStart(2, '0')}00</th>`).join('')}</tr></thead><tbody>${aqTable(aqUnit, 'At unit')}${aqTable(aqDown, `${Math.round(dayMi)} mi downwind (${compass(mb)})`)}</tbody></table>
       <div class="note">CAMS global forecast (~40 km). Shows background air quality before your burn's smoke is added. Use it to spot days already near Moderate/USG; for burn smoke itself see the NWS smoke forecast layer in the map.</div>`;
     $('winds').innerHTML = `<table><thead><tr><th>Hour</th><th>20-ft wind</th><th>Transport wind</th><th>Mixing height</th><th>Ventilation</th><th>Smoke goes toward</th></tr></thead><tbody>${usable.map(h => `<tr><td>${String(h.hour).padStart(2, '0')}00</td><td>${h.wd == null ? '–' : compass(h.wd)} ${h.ws == null ? '' : Math.round(h.ws / 1.15) + ' mph'}</td><td>${h.twd == null ? '–' : compass(h.twd)} ${h.tws == null ? '' : Math.round(h.tws) + ' mph'}</td><td>${h.mh == null ? '–' : Math.round(h.mh).toLocaleString() + ' ft'}</td><td>${h.mh == null || h.tws == null ? '–' : Math.round(h.mh * h.tws * 0.868976 / 1000) + 'k kt-ft'}</td><td>${compass(((h.twd ?? h.wd) + 180) % 360)}</td></tr>`).join('')}</tbody></table>`;
     drawMap(cone, dr.path, rec);
