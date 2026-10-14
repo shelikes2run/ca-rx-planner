@@ -4,6 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>CA Rx Burn Window Planner</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
 <script src="https://unpkg.com/shpjs@4.0.4/dist/shp.min.js"></script>
 <style>
   :root{--ink:#1d2733;--muted:#5b6673;--line:#d9dee4;--bg:#f6f7f9;--card:#fff;--brand:#0b4f8a;--go:#2e7d32;--go-bg:#e3f1e4;--no:#b3261e;--no-bg:#fbe5e3;--mid:#b26a00;--mid-bg:#fdf0dc}
@@ -46,14 +48,19 @@
   .heat td{min-width:34px}
   .legend span{display:inline-block;width:14px;height:10px;margin:0 2px 0 8px;vertical-align:middle;border:1px solid #ccc}
   svg text{font:11px system-ui;fill:var(--ink)}
+  #umap{height:220px;border:1px solid var(--line);border-radius:6px;margin-top:8px;display:none}
   @media print{.noprint{display:none!important}.pane{display:block!important;page-break-inside:avoid}body{background:#fff}}
 </style>
 </head>
 <body>
 <div class="card">
   <h2 id="title">CA Prescribed Fire Burn Window Planner</h2>
-  <div id="status">Select a unit on the map, upload a unit boundary, or enter coordinates.</div>
+  <div id="status">Select a unit on the map, search by name, upload a unit boundary, or enter coordinates — then set your Rx.</div>
 
+  <div class="row noprint" style="margin-bottom:8px">
+    <div style="flex:1 1 100%"><label class="muted" for="search">Find a fuel treatment unit by name</label>
+      <input id="search" list="hits" type="text" placeholder="Type 3+ letters, e.g. Big Meadow"><datalist id="hits"></datalist></div>
+  </div>
   <div class="row noprint">
     <div id="drop" class="drop">Upload unit: zipped shapefile, KML, or GeoJSON
       <input id="file" type="file" accept=".zip,.kml,.geojson,.json" hidden>
@@ -64,6 +71,7 @@
     </div>
   </div>
 
+  <div id="umap"></div>
   <h3>Prescription</h3>
   <div class="grid">
     <div><label>Min Temp °F</label><input id="minT" type="number" value="40"></div>
@@ -209,7 +217,44 @@ function setUnit(rings, label) {
   if (c.lat < 32 || c.lat > 42.2 || c.lon < -124.6 || c.lon > -113.9) setStatus(`Unit centroid ${c.lat.toFixed(3)}, ${c.lon.toFixed(3)} is outside California. Results will still run.`, true);
   Object.assign(state, { lat: c.lat, lon: c.lon, rings, label: label || 'Uploaded unit' });
   $('title').textContent = state.label;
+  showUnitMap();
 }
+let umap = null, ulayer = null;
+function showUnitMap() {
+  if (typeof L === 'undefined') return;
+  $('umap').style.display = 'block';
+  if (!umap) {
+    umap = L.map('umap', { scrollWheelZoom: false, attributionControl: true });
+    const topo = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}', { maxZoom: 19, attribution: 'Esri' });
+    const img = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', { maxZoom: 19, attribution: 'Esri, Maxar' }).addTo(umap);
+    L.control.layers({ Imagery: img, Topographic: topo }).addTo(umap);
+  }
+  if (ulayer) ulayer.remove();
+  ulayer = L.featureGroup().addTo(umap);
+  const polys = (state.rings || []).filter(r => r.length > 2);
+  polys.forEach(r => L.polygon(r.map(p => [p[1], p[0]]), { color: '#00e5ff', weight: 2, fillOpacity: .2 }).addTo(ulayer));
+  L.circleMarker([state.lat, state.lon], { radius: 5, color: '#000', fillColor: '#ff3b30', fillOpacity: 1 }).bindTooltip(state.label).addTo(ulayer);
+  if (polys.length) umap.fitBounds(ulayer.getBounds().pad(0.3)); else umap.setView([state.lat, state.lon], 13);
+  setTimeout(() => umap.invalidateSize(), 50);
+}
+// name search of the treatment layer (California extent) — works without a map selection
+let searchTimer = null, lastHits = [];
+async function loadUnitById(id, label, svc = DEFAULT_SVC) {
+  const j = await fetch(`${svc}/query?where=${encodeURIComponent('objectid=' + id)}&outFields=name,objectid&returnGeometry=true&outSR=4326&f=json`).then(r => r.json());
+  const f = j.features && j.features[0]; if (!f || !f.geometry) throw new Error('That unit could not be found in the treatment layer.');
+  const g = f.geometry; setUnit(g.rings || [[[g.x, g.y]]], label || clean(f.attributes.name) || 'Unit ' + id);
+}
+document.getElementById('search').addEventListener('input', () => {
+  clearTimeout(searchTimer); const q = $('search').value.trim();
+  const hit = lastHits.find(h => h.label === q); if (hit) { loadUnitById(hit.id, hit.name).then(run).catch(e => setStatus(e.message, true)); return; }
+  if (q.length < 3) return;
+  searchTimer = setTimeout(async () => {
+    const where = `UPPER(name) LIKE '%${q.toUpperCase().replace(/'/g, "''")}%'`;
+    const j = await fetch(`${DEFAULT_SVC}/query?where=${encodeURIComponent(where)}&geometry=-124.6,32.4,-114,42.1&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=objectid,name&returnGeometry=false&resultRecordCount=25&f=json`).then(r => r.json()).catch(() => ({}));
+    lastHits = (j.features || []).map(f => ({ id: f.attributes.objectid, name: f.attributes.name, label: `${f.attributes.name} (#${f.attributes.objectid})` }));
+    $('hits').innerHTML = lastHits.map(h => `<option value="${esc(h.label)}">`).join('');
+  }, 300);
+});
 
 async function loadFile(file) {
   try {

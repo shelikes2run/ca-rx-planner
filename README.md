@@ -1,4 +1,4 @@
-# CA Prescribed Fire Planner — burn window evaluator
+# CA Prescribed Fire Planner — embedded tools
 
 `burn_eval_ca.html` is the per-unit evaluator embedded in the **CA Prescribed Fire Planner** Experience Builder app (NIFC ArcGIS Online). It runs entirely in the browser — no server, no keys.
 
@@ -23,7 +23,13 @@ A **burn day** = at least *N* consecutive in-Rx hours inside the burn period (de
 | `lat`, `lon` | `38.93`, `-120.66` | Evaluate a point instead of a unit |
 | `minT maxT minRH maxRH maxW maxG minV bpS bpE minRun` | `&maxRH=45` | Prefill the Rx |
 
-Experience Builder Embed widget URL (By URL, connected to the treatment-unit selection):
+## Smoke screening (`smoke_eval_ca.html`)
+
+Screening-level smoke look for a unit and burn plan (date, ignition hour, duration): daytime plume cone from NWS transport winds over the burn period, nighttime drainage path traced downslope on terrain elevations, communities / schools / hospitals / mandatory Class I areas inside either zone, the unit's air district (with CARB PFIRS and Smoke Management Program links), and CAMS background PM2.5 / US AQI at the unit and downwind. Same `id`, `unit`, `svc`, `lat`, `lon` parameters as the evaluator.
+
+## Experience Builder
+
+Embed widget URL (By URL, connected to the treatment-unit selection):
 `https://shelikes2run.github.io/ca-rx-planner/burn_eval_ca.html?unit={Name}&id={Object ID}`
 
 Inspired by Colorado DFPC's Prescribed Fire/Weather Planner (Eloise Armour). Code written independently.
