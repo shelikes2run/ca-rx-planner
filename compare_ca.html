@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CA Rx Compare & Rank</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<script src="https://unpkg.com/shpjs@4.0.4/dist/shp.min.js"></script>
+<script src="rxcore.js"></script>
+<style>
+  :root{--ink:#1d2733;--muted:#5b6673;--line:#d9dee4;--bg:#f6f7f9;--brand:#0b4f8a;--go:#2e7d32;--go-bg:#cfe9d1;--part:#fff1b8;--no-bg:#fbe5e3;--no:#b3261e}
+  *{box-sizing:border-box}
+  body{margin:0;padding:12px;font:13px/1.4 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:var(--ink);background:var(--bg)}
+  h2{font-size:17px;margin:0 0 2px} h3{font-size:14px;margin:14px 0 6px;color:var(--brand)}
+  .card{background:#fff;border:1px solid var(--line);border-radius:6px;padding:12px;margin-bottom:10px}
+  .muted{color:var(--muted);font-size:12px} .note{font-size:11px;color:var(--muted);margin-top:6px}
+  #status{color:var(--brand);font-size:12px;min-height:16px;margin:4px 0 8px}
+  .row{display:flex;gap:8px;flex-wrap:wrap;align-items:flex-end}
+  input,select{padding:4px 5px;border:1px solid #b8c1cb;border-radius:4px;font:inherit;width:100%}
+  label{font-size:11px;font-weight:600;color:var(--muted)}
+  button{background:var(--brand);color:#fff;border:0;border-radius:4px;padding:7px 11px;font:600 12px system-ui;cursor:pointer;white-space:nowrap}
+  button.secondary{background:#e9edf1;color:var(--ink)} button.x{background:none;color:var(--no);padding:2px 6px;font-size:15px}
+  button:disabled{opacity:.5;cursor:default}
+  .drop{border:2px dashed #9fb3c8;border-radius:6px;padding:8px;text-align:center;cursor:pointer;color:var(--muted);flex:1 1 220px}
+  .drop.over{background:#eaf2fb;border-color:var(--brand)}
+  .scroll{overflow-x:auto}
+  table{border-collapse:collapse;width:100%;font-size:12px;background:#fff}
+  th,td{border:1px solid var(--line);padding:3px 4px;text-align:center;white-space:nowrap}
+  th{background:#eef2f6;position:sticky;top:0;z-index:1} td.l,th.l{text-align:left}
+  #rxTable input,#rxTable select{width:58px;padding:2px 3px} #rxTable select.fuel{width:150px} #rxTable input.acres{width:64px}
+  .go{background:var(--go-bg);color:#1b5e20;font-weight:700} .part{background:var(--part)} .none{background:var(--no-bg);color:#8a1c14} .na{background:#f1f3f5;color:#98a2ad}
+  .src16{opacity:.75;font-style:italic}
+  .rank{display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;border-radius:50%;background:var(--brand);color:#fff;font-weight:700;font-size:12px}
+  .pm{display:inline-block;width:10px;height:10px;border-radius:2px;border:1px solid #888;margin-right:4px;vertical-align:middle}
+  #map{height:420px;border:1px solid var(--line);border-radius:6px}
+  .warn{color:var(--no);font-weight:600}
+  @media print{.noprint{display:none!important}body{background:#fff}}
+</style>
+</head>
+<body>
+<div class="card">
+  <h2>Compare & Rank Burn Units</h2>
+  <div id="status">Add units (search, upload a multi-unit shapefile/KML/GeoJSON, or lat/lon), give each its own prescription, pick a target day, and rank.</div>
+  <div class="row noprint">
+    <div style="flex:2 1 260px"><label>Add a fuel treatment unit by name</label><input id="search" list="hits" placeholder="Type 3+ letters, then pick from the list"><datalist id="hits"></datalist></div>
+    <div style="flex:1 1 160px"><label>Or add lat, lon</label><input id="coords" placeholder="38.95, -120.62 (Enter)"></div>
+    <div id="drop" class="drop">Upload units (each polygon = one unit; Rx fields read if present)<input id="file" type="file" accept=".zip,.kml,.geojson,.json" hidden></div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="row" style="justify-content:space-between">
+    <h3 style="margin:0">Units & prescriptions</h3>
+    <div class="row noprint">
+      <button class="secondary" id="copyRx" title="Copy the first unit's Rx to every unit">Copy row 1 Rx to all</button>
+      <button class="secondary" id="csvIn">Import Rx CSV</button><input id="csvFile" type="file" accept=".csv" hidden>
+      <button class="secondary" id="csvOut">Export Rx CSV</button>
+    </div>
+  </div>
+  <div class="scroll" style="margin-top:8px"><table id="rxTable"><thead><tr>
+    <th class="l">Unit</th><th>Agency</th><th>Acres</th><th>Fuel (smoke)</th>
+    <th>Min T</th><th>Max T</th><th>Min RH</th><th>Max RH</th><th>Max wind</th><th>Max gust</th><th>Min vent</th><th>Start</th><th>End</th><th>Min hrs</th><th></th></tr></thead><tbody></tbody></table></div>
+  <div class="note">Temp °F · RH % · 20-ft wind and gust mph · vent in 1000 kt-ft (0 = not evaluated) · burn period hours local · min hrs = consecutive in-Rx hours that make a burn day.</div>
+  <h3>Ranking settings</h3>
+  <div class="row">
+    <div style="flex:0 1 190px"><label>Target day</label><select id="tDay"></select></div>
+    <div style="flex:0 1 150px"><label>Smoke screening (mi)</label><input id="dayMi" type="number" value="15" min="1" max="60"></div>
+    <div style="flex:0 1 150px"><label>Night drainage (mi)</label><input id="nightMi" type="number" value="5" min="1" max="20"></div>
+    <div style="flex:0 1 150px"><label>Smoke check</label><select id="smokeOn"><option value="1">On (target day)</option><option value="0">Off (weather only)</option></select></div>
+    <button id="run" class="noprint">Rank units</button>
+    <button id="out" class="secondary noprint" disabled>Download ranking CSV</button>
+    <button id="print" class="secondary noprint" disabled>Print / PDF</button>
+  </div>
+</div>
+
+<div class="card" id="res" style="display:none">
+  <h3 style="margin-top:0">Ranking for <span id="tLabel"></span></h3>
+  <div class="scroll" id="rankTbl"></div>
+  <div class="note">Score = burn window on the target day (longest in-Rx run) + burn days in the next 7 and 16 days − smoke penalties (Class I area in a smoke zone, receptors, estimated PM2.5 at receptors) − overlap with a higher-ranked unit's plume. Use it to sort options; the burn boss and air district make the call.</div>
+  <h3>Burn windows by day (hours in Rx during each unit's burn period)</h3>
+  <div class="scroll" id="matrix"></div>
+  <div class="note"><span class="pm" style="background:#cfe9d1"></span>Burn day (min hours met) <span class="pm" style="background:#fff1b8"></span>Some in-Rx hours <span class="pm" style="background:#fbe5e3"></span>None · italic = 16-day forecast (beyond NWS ~7 days; lower skill)</div>
+  <h3>Map (target day)</h3>
+  <div id="map"></div>
+  <div class="note" id="mapNote">Numbers = rank. Shaded cones = estimated peak hourly PM2.5 during the burn (screening Gaussian plume); dashed blue = night drainage.</div>
+</div>
+
+<script>
+(() => {
+'use strict';
+const $ = id => document.getElementById(id), RX = window.RX, esc = RX.esc;
+const P = new URLSearchParams(location.search);
+let units = []; // {key, unit, rx, fuel, acres}
+let lastHits = [], timer = null, results = null;
+const setStatus = (t, bad) => { $('status').textContent = t; $('status').style.color = bad ? 'var(--no)' : 'var(--brand)'; };
+
+// ----- unit list -----
+function addUnit(u, rx) {
+  if (!u) return;
+  const key = (u.id != null ? 'id' + u.id : 'p' + u.lat.toFixed(5) + u.lon.toFixed(5));
+  if (units.some(x => x.key === key)) { setStatus(`${u.name} is already in the list.`); return; }
+  const base = units[0] ? { ...units[0].rx } : { ...RX.DEFAULT_RX };
+  units.push({ key, unit: u, rx: { ...base, ...(rx || u.rxFromAttrs || {}) }, fuel: RX.fuelFromType(u.type), acres: u.acres ? Math.round(u.acres) : null });
+  renderRx(); setStatus(`${units.length} unit(s). Add more, adjust each Rx, then Rank units.`);
+}
+function renderRx() {
+  const fuelOpts = k => Object.entries(RX.FUELS).map(([id, f]) => `<option value="${id}"${id === k ? ' selected' : ''}>${esc(f.label)}</option>`).join('');
+  $('rxTable').querySelector('tbody').innerHTML = units.map((x, i) => `<tr data-i="${i}">
+    <td class="l"><b>${esc(x.unit.name)}</b><br><span class="muted">${x.unit.lat.toFixed(4)}, ${x.unit.lon.toFixed(4)}${x.unit.type ? ' · ' + esc(x.unit.type) : ''}</span></td>
+    <td>${esc(x.unit.agency || '–')}</td>
+    <td><input class="acres" data-k="acres" type="number" value="${x.acres ?? ''}"></td>
+    <td><select class="fuel" data-k="fuel">${fuelOpts(x.fuel)}</select></td>
+    ${RX.RX_KEYS.map(k => `<td><input data-k="${k}" type="number" value="${x.rx[k] ?? ''}"></td>`).join('')}
+    <td><button class="x" data-del="${i}" title="Remove">✕</button></td></tr>`).join('') || `<tr><td colspan="15" class="muted">No units yet.</td></tr>`;
+}
+$('rxTable').addEventListener('input', e => { const tr = e.target.closest('tr[data-i]'); if (!tr) return; const x = units[+tr.dataset.i], k = e.target.dataset.k;
+  if (k === 'fuel') x.fuel = e.target.value; else if (k === 'acres') x.acres = +e.target.value || null; else x.rx[k] = e.target.value === '' ? null : +e.target.value; });
+$('rxTable').addEventListener('click', e => { const d = e.target.dataset.del; if (d != null) { units.splice(+d, 1); renderRx(); } });
+$('copyRx').onclick = () => { if (!units.length) return; units.forEach(x => x.rx = { ...units[0].rx }); renderRx(); };
+
+$('search').addEventListener('input', () => {
+  clearTimeout(timer); const q = $('search').value.trim(); const hit = lastHits.find(h => h.label === q);
+  if (hit) { $('search').value = ''; RX.unitById(hit.objectid).then(u => addUnit(u)).catch(e => setStatus(e.message, true)); return; }
+  if (q.length < 3) return;
+  timer = setTimeout(async () => { lastHits = await RX.searchUnits(q); $('hits').innerHTML = lastHits.map(h => `<option value="${esc(h.label)}">`).join(''); }, 300);
+});
+$('coords').addEventListener('keydown', e => { if (e.key !== 'Enter') return; const n = ($('coords').value.match(/-?\d+(\.\d+)?/g) || []).map(Number); if (n.length < 2) return;
+  let [a, b] = n; if (Math.abs(a) > 90 || (a < 0 && b > 0)) [a, b] = [b, a]; if (b > 0) b = -b; addUnit(RX.makeUnit([[[b, a]]], `Point ${a.toFixed(3)}, ${b.toFixed(3)}`)); $('coords').value = ''; });
+const drop = $('drop'); drop.onclick = () => $('file').click();
+const takeFile = async f => { try { setStatus('Reading ' + f.name + '…'); const us = await RX.unitsFromFile(f); if (!us.length) throw new Error('No polygons or points found.'); us.forEach(u => addUnit(u)); setStatus(`Added ${us.length} unit(s) from ${f.name}${us.some(u => u.rxFromAttrs) ? ' (Rx read from attributes)' : ''}.`); } catch (e) { setStatus(e.message, true); } };
+$('file').onchange = e => e.target.files[0] && takeFile(e.target.files[0]);
+['dragenter', 'dragover'].forEach(t => drop.addEventListener(t, e => { e.preventDefault(); drop.classList.add('over'); }));
+['dragleave', 'drop'].forEach(t => drop.addEventListener(t, e => { e.preventDefault(); drop.classList.remove('over'); }));
+drop.addEventListener('drop', e => e.dataTransfer.files[0] && takeFile(e.dataTransfer.files[0]));
+
+// ----- CSV in/out -----
+const COLS = ['name', 'id', 'lat', 'lon', 'acres', 'fuel', ...RX.RX_KEYS];
+const csvEsc = v => { const s = String(v ?? ''); return /[",\n]/.test(s) ? '"' + s.replace(/"/g, '""') + '"' : s; };
+const download = (name, text) => { const a = document.createElement('a'); a.href = URL.createObjectURL(new Blob([text], { type: 'text/csv' })); a.download = name; a.click(); setTimeout(() => URL.revokeObjectURL(a.href), 1000); };
+$('csvOut').onclick = () => download('rx_units.csv', [COLS.join(','), ...units.map(x => [x.unit.name, x.unit.id ?? '', x.unit.lat.toFixed(5), x.unit.lon.toFixed(5), x.acres ?? '', x.fuel, ...RX.RX_KEYS.map(k => x.rx[k] ?? '')].map(csvEsc).join(','))].join('\n'));
+$('csvIn').onclick = () => $('csvFile').click();
+$('csvFile').onchange = async e => { const f = e.target.files[0]; if (!f) return; const lines = (await f.text()).split(/\r?\n/).filter(Boolean);
+  const split = l => { const out = []; let cur = '', q = false; for (const ch of l) { if (ch === '"') q = !q; else if (ch === ',' && !q) { out.push(cur); cur = ''; } else cur += ch; } out.push(cur); return out; };
+  const hdr = split(lines[0]).map(h => h.trim()); let added = 0, updated = 0;
+  for (const l of lines.slice(1)) { const v = split(l), row = Object.fromEntries(hdr.map((h, i) => [h, v[i]]));
+    const rx = {}; RX.RX_KEYS.forEach(k => { if (row[k] !== undefined && row[k] !== '') rx[k] = +row[k]; });
+    const ex = units.find(x => (row.id && String(x.unit.id) === row.id) || x.unit.name === row.name);
+    if (ex) { Object.assign(ex.rx, rx); if (row.fuel && RX.FUELS[row.fuel]) ex.fuel = row.fuel; if (+row.acres) ex.acres = +row.acres; updated++; continue; }
+    try { let u = row.id && /^\d+$/.test(row.id) ? await RX.unitById(row.id) : (isFinite(+row.lat) && isFinite(+row.lon) ? RX.makeUnit([[[+row.lon, +row.lat]]], row.name) : null);
+      if (u) { if (row.name) u.name = row.name; addUnit(u, rx); const x = units[units.length - 1]; if (row.fuel && RX.FUELS[row.fuel]) x.fuel = row.fuel; if (+row.acres) x.acres = +row.acres; added++; } } catch (_) { }
+  }
+  renderRx(); setStatus(`CSV: ${added} added, ${updated} updated.`); e.target.value = ''; };
+
+// ----- days -----
+function fillDays() { const s = $('tDay'); const opts = []; for (let d = 0; d < 16; d++) opts.push(RX.local(Date.now() + d * 864e5).date);
+  s.innerHTML = [...new Set(opts)].map((d, i) => `<option value="${d}">${RX.dayLabel(d, { weekday: 'short', month: 'short', day: 'numeric' })}${i === 0 ? ' (today)' : i === 1 ? ' (tomorrow)' : ''}</option>`).join(''); s.selectedIndex = Math.min(1, s.options.length - 1); }
+
+// ----- run -----
+let map = null, mapLayer = null;
+async function run() {
+  if (!units.length) return setStatus('Add at least one unit first.', true);
+  const bad = units.find(x => x.rx.minT > x.rx.maxT || x.rx.minRH > x.rx.maxRH); if (bad) return setStatus(`Check the Rx for ${bad.unit.name}: a minimum is above its maximum.`, true);
+  $('run').disabled = true; const tDay = $('tDay').value, dayMi = Math.max(1, +$('dayMi').value || 15), nightMi = Math.max(1, +$('nightMi').value || 5), smokeOn = $('smokeOn').value === '1';
+  const out = [];
+  for (let i = 0; i < units.length; i++) {
+    const x = units[i], r = { ...RX.DEFAULT_RX, ...Object.fromEntries(Object.entries(x.rx).filter(([, v]) => v != null)) };
+    setStatus(`Forecast for ${x.unit.name} (${i + 1}/${units.length})…`);
+    const res = { x, r, err: null };
+    try {
+      const wx = await RX.blended(x.unit.lat, x.unit.lon); res.wx = wx;
+      res.days = RX.dayStats(wx.hours, r);
+      res.dates = [...res.days.keys()].sort();
+      res.target = res.days.get(tDay) || null;
+      const ahead = res.dates.filter(d => d >= tDay);
+      res.burn7 = ahead.slice(0, 7).filter(d => res.days.get(d).burn).length; res.burn16 = ahead.filter(d => res.days.get(d).burn).length;
+      res.next = res.dates.find(d => d >= RX.local(Date.now()).date && res.days.get(d).burn) || null;
+      if (smokeOn && res.target) {
+        setStatus(`Smoke check for ${x.unit.name} (${i + 1}/${units.length})…`);
+        const start = res.target.bestStart ?? r.bpS, dur = res.target.run >= 1 ? res.target.run : Math.max(1, r.bpE - r.bpS);
+        res.smoke = await RX.smoke(x.unit, tDay, { start, dur, dayMi, nightMi, bufMi: 1, fuel: x.fuel, acres: x.acres || x.unit.acres }, wx).catch(e => ({ err: e.message }));
+      }
+    } catch (e) { res.err = e.message; }
+    out.push(res);
+  }
+  // scoring
+  for (const s of out) {
+    let sc = 0; const notes = [];
+    if (s.err) { s.score = -999; s.notes = [s.err]; continue; }
+    const t = s.target;
+    if (!t) notes.push('No forecast for target day');
+    else if (t.burn) sc += 100 + t.run * 10; else { sc += t.run * 5; if (t.topFail) notes.push('Limiting: ' + t.topFail); }
+    sc += s.burn7 * 8 + s.burn16 * 2;
+    const sm = s.smoke;
+    if (sm && !sm.err) {
+      const c1 = sm.class1.filter(c => c.inDay || c.inNight); if (c1.length) { sc -= 25 * c1.length; notes.push('Class I: ' + c1.map(c => c.name).join(', ')); }
+      sc -= sm.rows.reduce((a, r) => a + (r.type === 'Hospital' ? 6 : r.type === 'School' ? 4 : 2), 0);
+      const cat = RX.pmCat(sm.peak); if (sm.peak > 55.4) sc -= 30; else if (sm.peak > 35.4) sc -= 15; else if (sm.peak > 12) sc -= 5;
+      if (sm.peak > 35.4) notes.push(`Est. PM2.5 ${Math.round(sm.peak)} µg/m³ at a receptor (${cat[2]})`);
+    } else if (sm && sm.err) notes.push('Smoke: ' + sm.err);
+    s.score = sc; s.notes = notes;
+  }
+  out.sort((a, b) => b.score - a.score);
+  // plume overlap with higher-ranked units (same day)
+  out.forEach((s, i) => { if (!s.smoke || s.smoke.err) return; for (let j = 0; j < i; j++) { const o = out[j]; if (!o.smoke || o.smoke.err) continue;
+    const hit = s.smoke.cone.some(p => RX.inPoly(p, o.smoke.cone)) || o.smoke.cone.some(p => RX.inPoly(p, s.smoke.cone));
+    if (hit) { s.score -= 20; s.notes.push(`Plume overlaps #${j + 1} ${o.x.unit.name} — stagger days or pick one`); } } });
+  out.sort((a, b) => b.score - a.score);
+  results = { out, tDay, smokeOn }; render(); $('run').disabled = false; $('out').disabled = false; $('print').disabled = false;
+  setStatus(`Ranked ${out.length} unit(s) for ${RX.dayLabel(tDay, { weekday: 'long', month: 'long', day: 'numeric' })}.`);
+}
+const hh = h => h == null ? '–' : String(h).padStart(2, '0') + '00';
+function render() {
+  const { out, tDay } = results; $('res').style.display = 'block'; $('tLabel').textContent = RX.dayLabel(tDay, { weekday: 'long', month: 'long', day: 'numeric' });
+  $('rankTbl').innerHTML = `<table><thead><tr><th>Rank</th><th class="l">Unit</th><th>Target-day window</th><th>Longest run</th><th>Burn days 7d / 16d</th><th>Next burn day</th><th>Plume toward</th><th>Receptors (day/night)</th><th>Class I</th><th>Est. peak PM2.5</th><th>Score</th><th class="l">Notes</th></tr></thead><tbody>${
+    out.map((s, i) => { const t = s.target, sm = s.smoke && !s.smoke.err ? s.smoke : null; const cat = sm ? RX.pmCat(sm.peak) : null;
+      const win = !t ? '–' : t.run ? `${hh(t.bestStart)}–${hh(t.bestStart + t.run)}` : 'none';
+      return `<tr><td><span class="rank">${i + 1}</span></td><td class="l"><b>${esc(s.x.unit.name)}</b><br><span class="muted">${esc(s.x.unit.agency || '')}</span></td>
+        <td class="${!t ? 'na' : t.burn ? 'go' : t.run ? 'part' : 'none'}">${win}</td><td>${t ? `${t.run} / ${t.period} hr` : '–'}</td>
+        <td>${s.err ? '–' : `${s.burn7} / ${s.burn16}`}</td><td>${s.next ? RX.dayLabel(s.next) : '–'}</td>
+        <td>${sm ? RX.compass(sm.mb) : '–'}</td><td>${sm ? `${sm.rows.filter(r => r.inDay).length} / ${sm.rows.filter(r => r.inNight).length}` : '–'}</td>
+        <td>${sm ? (sm.class1.filter(c => c.inDay || c.inNight).length || '0') : '–'}</td>
+        <td>${sm ? `<span class="pm" style="background:${cat[1]}"></span>${Math.round(sm.peak)} µg/m³` : '–'}</td>
+        <td><b>${Math.round(s.score)}</b></td><td class="l">${s.notes.map(n => `<div class="${/overlap|Class I|PM2.5/.test(n) ? 'warn' : ''}">${esc(n)}</div>`).join('') || '<span class="muted">—</span>'}</td></tr>`; }).join('')}</tbody></table>`;
+  // matrix
+  const allDates = [...new Set(out.flatMap(s => s.dates || []))].filter(d => d >= RX.local(Date.now()).date).sort().slice(0, 16);
+  $('matrix').innerHTML = `<table><thead><tr><th class="l">Unit</th>${allDates.map(d => `<th${d === tDay ? ' style="background:#d6e6f7"' : ''}>${RX.dayLabel(d)}</th>`).join('')}</tr></thead><tbody>${
+    out.map((s, i) => `<tr><td class="l"><span class="rank" style="width:18px;height:18px;font-size:11px">${i + 1}</span> ${esc(s.x.unit.name)}</td>${allDates.map(d => { const st = s.days && s.days.get(d); if (!st) return '<td class="na">–</td>';
+      const is16 = s.wx && !s.wx.nwsDays.has(d); return `<td class="${st.burn ? 'go' : st.run ? 'part' : 'none'}${is16 ? ' src16' : ''}" title="${st.inRx}/${st.period} hrs in Rx; longest run ${st.run}${st.topFail ? '; limiting: ' + st.topFail : ''}">${st.inRx}/${st.period}</td>`; }).join('')}</tr>`).join('')}</tbody></table>`;
+  drawMap();
+}
+function drawMap() {
+  const { out } = results;
+  if (!map) { map = L.map('map', { scrollWheelZoom: false }); const topo = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}', { maxZoom: 19, attribution: 'Esri' }).addTo(map);
+    L.control.layers({ Topographic: topo, Imagery: L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', { maxZoom: 19, attribution: 'Esri, Maxar' }) }).addTo(map); }
+  if (mapLayer) mapLayer.remove(); mapLayer = L.featureGroup().addTo(map);
+  out.forEach((s, i) => { const sm = s.smoke && !s.smoke.err ? s.smoke : null;
+    if (sm) { RX.concGrid(sm, 18).forEach(c => L.polygon(c.ring, { stroke: false, fillColor: RX.pmCat(c.v)[1], fillOpacity: .45 }).addTo(mapLayer));
+      L.polygon(sm.cone, { color: '#ff8c00', weight: 1, fill: false }).addTo(mapLayer);
+      if (sm.drain.path.length > 1) sm.night.segs.forEach(g => L.polyline([g.a, g.b], { color: RX.pmCat(g.c)[1], weight: 5, opacity: .9 }).addTo(mapLayer)); }
+    (s.x.unit.rings || []).filter(r => r.length > 2).forEach(r => L.polygon(r.map(p => [p[1], p[0]]), { color: '#00b8d4', weight: 2, fillOpacity: .15 }).addTo(mapLayer));
+    L.marker([s.x.unit.lat, s.x.unit.lon], { icon: L.divIcon({ className: '', html: `<span class="rank">${i + 1}</span>`, iconSize: [22, 22], iconAnchor: [11, 11] }) }).bindTooltip(`#${i + 1} ${s.x.unit.name}`).addTo(mapLayer); });
+  if (mapLayer.getLayers().length) map.fitBounds(mapLayer.getBounds().pad(0.05)); setTimeout(() => map.invalidateSize(), 50);
+}
+$('out').onclick = () => { if (!results) return; const { out, tDay } = results;
+  download(`rx_ranking_${tDay}.csv`, ['rank,unit,agency,target_window,longest_run_hr,burn_days_7d,burn_days_16d,next_burn_day,plume_toward,receptors_day,receptors_night,class1,peak_pm25_ugm3,score,notes',
+    ...out.map((s, i) => { const t = s.target, sm = s.smoke && !s.smoke.err ? s.smoke : null; return [i + 1, s.x.unit.name, s.x.unit.agency || '', t && t.run ? `${hh(t.bestStart)}-${hh(t.bestStart + t.run)}` : '', t ? t.run : '', s.burn7 ?? '', s.burn16 ?? '', s.next || '',
+      sm ? RX.compass(sm.mb) : '', sm ? sm.rows.filter(r => r.inDay).length : '', sm ? sm.rows.filter(r => r.inNight).length : '', sm ? sm.class1.filter(c => c.inDay || c.inNight).map(c => c.name).join('; ') : '', sm ? Math.round(sm.peak) : '', Math.round(s.score), s.notes.join(' | ')].map(csvEsc).join(','); })].join('\n')); };
+$('run').onclick = run; $('print').onclick = () => window.print();
+
+// ----- start -----
+fillDays(); renderRx();
+(async () => { const ids = (P.get('ids') || P.get('id') || '').split(/[ ,;]+/).filter(s => /^\d+$/.test(s));
+  for (const id of ids) { try { addUnit(await RX.unitById(id)); } catch (e) { setStatus(e.message, true); } } })();
+})();
+</script>
+</body>
+</html>

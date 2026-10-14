@@ -7,8 +7,9 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
 <script src="https://unpkg.com/shpjs@4.0.4/dist/shp.min.js"></script>
+<script src="rxcore.js"></script>
 <style>
-  :root{--ink:#1d2733;--muted:#5b6673;--line:#d9dee4;--bg:#f6f7f9;--brand:#0b4f8a;--go:#2e7d32;--go-bg:#e3f1e4;--no:#b3261e;--no-bg:#fbe5e3;--mid:#b26a00;--mid-bg:#fdf0dc}
+  :root{--ink:#1d2733;--muted:#5b6673;--line:#d9dee4;--bg:#f6f7f9;--brand:#0b4f8a;--no:#b3261e;--no-bg:#fbe5e3}
   *{box-sizing:border-box}
   body{margin:0;padding:12px;font:13px/1.4 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:var(--ink);background:var(--bg)}
   h2{font-size:17px;margin:0 0 2px} h3{font-size:14px;margin:14px 0 6px;color:var(--brand)}
@@ -23,15 +24,16 @@
   label{font-size:11px;font-weight:600;color:var(--muted)}
   button{background:var(--brand);color:#fff;border:0;border-radius:4px;padding:8px 12px;font:600 13px system-ui;cursor:pointer}
   button.secondary{background:#e9edf1;color:var(--ink)} button:disabled{opacity:.5;cursor:default}
-  #map{height:380px;border:1px solid var(--line);border-radius:6px}
+  #map{height:400px;border:1px solid var(--line);border-radius:6px}
   .kpis{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px;margin:8px 0}
-  .kpi{background:#fff;border:1px solid var(--line);border-radius:6px;padding:8px} .kpi b{display:block;font-size:17px}
+  .kpi{background:#fff;border:1px solid var(--line);border-radius:6px;padding:8px} .kpi b{display:block;font-size:16px}
   table{border-collapse:collapse;width:100%;font-size:12px} th,td{border:1px solid var(--line);padding:4px 6px;text-align:left} th{background:#eef2f6}
   .tag{display:inline-block;padding:1px 6px;border-radius:10px;font-size:11px;font-weight:700}
   .day{background:#fde3c8;color:#8a4b00}.night{background:#dce8f7;color:#1f4f86}.c1{background:#ece3f7;color:#5b2e8c}
   .aq0{background:#e3f1e4}.aq1{background:#fff7cc}.aq2{background:#fde3c8}.aq3{background:var(--no-bg)}
-  .legend span{display:inline-block;width:14px;height:10px;margin:0 3px 0 10px;vertical-align:middle;border:1px solid #888}
+  .sw{display:inline-block;width:12px;height:10px;border:1px solid #888;margin:0 3px 0 8px;vertical-align:middle}
   .scroll{overflow-x:auto}
+  details summary{cursor:pointer;color:var(--brand);font-weight:600}
   @media print{.noprint{display:none!important}body{background:#fff}}
 </style>
 </head>
@@ -40,8 +42,7 @@
   <h2 id="title">CA Rx Smoke Screening</h2>
   <div id="status">Select a unit on the map, search by name, upload a unit boundary, or enter coordinates.</div>
   <div class="row noprint">
-    <div style="flex:2 1 240px"><label for="search">Find a fuel treatment unit by name</label>
-      <input id="search" list="hits" type="text" placeholder="Type 3+ letters, e.g. Big Meadow"><datalist id="hits"></datalist></div>
+    <div style="flex:2 1 240px"><label for="search">Find a fuel treatment unit by name</label><input id="search" list="hits" type="text" placeholder="Type 3+ letters, then pick"><datalist id="hits"></datalist></div>
     <div style="flex:1 1 160px"><label for="coords">Or lat, lon</label><input id="coords" type="text" placeholder="38.95, -120.62"></div>
   </div>
   <div id="drop" class="drop noprint" style="margin-top:8px">Upload unit: zipped shapefile, KML, or GeoJSON<input id="file" type="file" accept=".zip,.kml,.geojson,.json" hidden></div>
@@ -51,298 +52,144 @@
     <div><label>Burn date</label><select id="bDate"></select></div>
     <div><label>Ignition start (hour)</label><input id="bStart" type="number" value="10" min="0" max="23"></div>
     <div><label>Burn duration (hrs)</label><input id="bDur" type="number" value="6" min="1" max="24"></div>
+    <div><label>Acres burned</label><input id="acres" type="number" min="1" placeholder="from unit"></div>
+    <div style="grid-column:span 2"><label>Fuel (emissions)</label><select id="fuel"></select></div>
+    <div><label>Fuel consumed (tons/ac)</label><input id="tpa" type="number" step="0.5" min="0.1"></div>
     <div><label>Day plume screening (mi)</label><input id="dayMi" type="number" value="15" min="1" max="60"></div>
     <div><label>Night drainage trace (mi)</label><input id="nightMi" type="number" value="5" min="1" max="20"></div>
     <div><label>Drainage buffer (mi)</label><input id="bufMi" type="number" value="1" min="0.2" max="5" step="0.1"></div>
   </div>
-  <div class="note">Screening only (similar in intent to a VSMOKE/SASEM first look). It does not replace the smoke management plan, SMP/PFIRS registration, or the air district's burn authorization.</div>
-  <div class="row noprint" style="margin-top:10px">
-    <button id="run">Run smoke screening</button>
-    <button id="print" class="secondary" disabled>Print / PDF</button>
-  </div>
+  <div class="note">Screening only. The concentration overlay is a simple Gaussian plume (day) and drainage-confined estimate (night) — use it to compare options and spot problems, not as a substitute for the smoke management plan, VSMOKE/BlueSky/PB-Piedmont runs, PFIRS registration, or air district authorization.</div>
+  <div class="row noprint" style="margin-top:10px"><button id="run">Run smoke screening</button><button id="print" class="secondary" disabled>Print / PDF</button></div>
 </div>
 
 <div class="card" id="results" style="display:none">
   <div class="kpis" id="kpis"></div>
   <div id="map"></div>
-  <div class="legend muted" style="margin-top:4px"><span style="background:rgba(255,140,0,.35)"></span>Day plume cone<span style="background:#2b6cb0"></span>Night drainage path<span style="background:rgba(120,60,180,.3)"></span>Class I area<span style="background:#0ff"></span>Unit</div>
+  <div class="muted" style="margin-top:4px">Estimated peak hourly PM2.5 (µg/m³):<span id="legend"></span> · <span class="sw" style="border:2px solid #ff8c00;background:none"></span>Day cone <span class="sw" style="background:#2b6cb0"></span>Night drainage (colored by PM2.5) <span class="sw" style="background:rgba(120,60,180,.3)"></span>Class I</div>
   <h3>Summary</h3><div id="summary"></div>
-  <h3>Air district</h3><div id="district"></div>
+  <h3>Air district & full models</h3><div id="district"></div>
   <h3>Smoke-sensitive receptors</h3><div id="receptors" class="scroll"></div>
   <h3>Background air quality (CAMS forecast)</h3><div id="aq" class="scroll"></div>
   <h3>Hourly transport winds (NWS)</h3><div id="winds" class="scroll"></div>
+  <details style="margin-top:10px"><summary>How the screening estimate works</summary><div class="note" style="font-size:12px">
+    <p><b>Emissions</b> = acres × fuel consumed (tons/ac) × PM2.5 emission factor (g/kg) for the fuel preset. Flaming-phase emissions are spread over the burn hours; the preset's smoldering share is held back, and half of it is assumed to be released overnight.</p>
+    <p><b>Day</b>: ground-level Gaussian plume for each burn hour using NWS transport wind and mixing height, Pasquill–Turner stability from the 20-ft wind, Briggs open-country dispersion, Briggs plume rise from the fire's heat release (capped at 80% of mixing height), reflection from the ground and mixing-layer top, and fully mixed beyond that. The overlay shows the highest hour at each spot.</p>
+    <p><b>Night</b> (PB-Piedmont concept): overnight smoldering emissions carried down the traced drainage by a 1 m/s, 100 m deep drainage flow whose width grows downstream; concentration = emission rate ÷ (speed × depth × width). Fog/superfog and roadway visibility are not modeled — use PB-Piedmont-Web for that.</p>
+    <p>Colors follow 24-hour PM2.5 AQI breakpoints applied to hourly estimates, so they read conservatively.</p></div></details>
 </div>
 
 <script>
 (() => {
 'use strict';
-const $ = id => document.getElementById(id);
-const TZ = 'America/Los_Angeles';
-const UNITS_SVC = 'https://gis.reshapewildfire.org/arcgis/rest/services/Hosted/Treatment_Index_View/FeatureServer/0';
-const L_AIR = 'https://services1.arcgis.com/jUJYIo9tSA7EHvfZ/arcgis/rest/services/BurnPermits_AirDistrictBoundaries/FeatureServer/0';
-const L_C1 = 'https://services.arcgis.com/cJ9YHowT8TU7DUyn/arcgis/rest/services/Mandatory_Class1_Federal_Areas/FeatureServer/0';
-const L_SCH = 'https://services.arcgis.com/XG15cJAlne2vxtgt/arcgis/rest/services/Public_Schools/FeatureServer/3';
-const L_HOS = 'https://services2.arcgis.com/C8EMgrsFcRFL6LrL/arcgis/rest/services/Hospitals/FeatureServer/0';
-const L_PL = 'https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/Places_CouSub_ConCity_SubMCD/MapServer';
+const $ = id => document.getElementById(id), RX = window.RX, esc = RX.esc;
 const P = new URLSearchParams(location.search);
-const state = { lat: null, lon: null, rings: null, label: null };
+let unit = null;
 const setStatus = (t, bad) => { $('status').textContent = t; $('status').style.color = bad ? 'var(--no)' : 'var(--brand)'; };
-const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
-const clean = v => { if (v == null) return null; const s = String(v).trim(); return (!s || /^\{.*\}$/.test(s) || /^(none|null|undefined)$/i.test(s)) ? null : s; };
-const COMPASS = ['N', 'NNE', 'NE', 'ENE', 'E', 'ESE', 'SE', 'SSE', 'S', 'SSW', 'SW', 'WSW', 'W', 'WNW', 'NW', 'NNW'];
-const compass = d => COMPASS[Math.round(((d % 360) + 360) % 360 / 22.5) % 16];
-const R = 3958.8; // earth radius, miles
-const toRad = d => d * Math.PI / 180, toDeg = r => r * 180 / Math.PI;
-function dest(lat, lon, brg, mi) { const d = mi / R, b = toRad(brg), p1 = toRad(lat), l1 = toRad(lon); const p2 = Math.asin(Math.sin(p1) * Math.cos(d) + Math.cos(p1) * Math.sin(d) * Math.cos(b)); const l2 = l1 + Math.atan2(Math.sin(b) * Math.sin(d) * Math.cos(p1), Math.cos(d) - Math.sin(p1) * Math.sin(p2)); return [toDeg(p2), toDeg(l2)]; }
-function dist(a, b) { const dp = toRad(b[0] - a[0]), dl = toRad(b[1] - a[1]); const h = Math.sin(dp / 2) ** 2 + Math.cos(toRad(a[0])) * Math.cos(toRad(b[0])) * Math.sin(dl / 2) ** 2; return 2 * R * Math.asin(Math.sqrt(h)); }
-function bearing(a, b) { const p1 = toRad(a[0]), p2 = toRad(b[0]), dl = toRad(b[1] - a[1]); return (toDeg(Math.atan2(Math.sin(dl) * Math.cos(p2), Math.cos(p1) * Math.sin(p2) - Math.sin(p1) * Math.cos(p2) * Math.cos(dl))) + 360) % 360; }
-// lat/lon polygon point test ([lat,lon] ring)
-function inPoly(pt, ring) { let c = false; for (let i = 0, j = ring.length - 1; i < ring.length; j = i++) { const [yi, xi] = ring[i], [yj, xj] = ring[j]; if (((yi > pt[0]) !== (yj > pt[0])) && (pt[1] < (xj - xi) * (pt[0] - yi) / (yj - yi) + xi)) c = !c; } return c; }
-function distToPath(pt, path) { let m = Infinity; for (let i = 0; i < path.length - 1; i++) { const a = path[i], b = path[i + 1]; const steps = 6; for (let k = 0; k <= steps; k++) { const q = [a[0] + (b[0] - a[0]) * k / steps, a[1] + (b[1] - a[1]) * k / steps]; m = Math.min(m, dist(pt, q)); } } return path.length === 1 ? dist(pt, path[0]) : m; }
+function setUnit(u) { if (!u) throw new Error('Could not find a usable polygon or point in that unit.'); unit = u; $('title').textContent = 'Smoke Screening · ' + u.name;
+  if (u.acres) $('acres').value = Math.round(u.acres); const f = RX.fuelFromType(u.type); $('fuel').value = f; $('tpa').value = RX.FUELS[f].tpa; }
+// fuel select
+$('fuel').innerHTML = Object.entries(RX.FUELS).map(([k, f]) => `<option value="${k}">${esc(f.label)}</option>`).join('');
+$('fuel').value = 'understory'; $('tpa').value = RX.FUELS.understory.tpa;
+$('fuel').onchange = () => { $('tpa').value = RX.FUELS[$('fuel').value].tpa; };
+// legend
+$('legend').innerHTML = RX.PM_CATS.map((c, i) => `<span class="sw" style="background:${c[1]}"></span>${i ? Math.round(RX.PM_CATS[i - 1][0]) + '+' : '0–12'}`).join('');
+// dates
+(() => { const opts = []; for (let d = 0; d < 7; d++) opts.push(RX.local(Date.now() + d * 864e5).date);
+  $('bDate').innerHTML = [...new Set(opts)].map((d, i) => `<option value="${d}">${RX.dayLabel(d, { weekday: 'short', month: 'short', day: 'numeric' })}${i === 0 ? ' (today)' : ''}</option>`).join('');
+  const pd = P.get('date'); if (pd && opts.includes(pd)) $('bDate').value = pd; })();
+['bStart', 'bDur', 'dayMi', 'nightMi'].forEach(k => { const v = P.get(k); if (v != null && isFinite(+v)) $(k).value = v; });
 
-// ---------- unit loading (shared with burn evaluator) ----------
-function ringArea(r) { let a = 0; for (let i = 0, j = r.length - 1; i < r.length; j = i++) a += (r[j][0] + r[i][0]) * (r[j][1] - r[i][1]); return a / 2; }
-function centroid(rings) {
-  let best = null, bA = -1; for (const r of rings) { const a = Math.abs(ringArea(r)); if (a > bA) { bA = a; best = r; } }
-  if (!best || !best.length) return null; let cx = 0, cy = 0, A = 0;
-  for (let i = 0, j = best.length - 1; i < best.length; j = i++) { const f = best[j][0] * best[i][1] - best[i][0] * best[j][1]; cx += (best[j][0] + best[i][0]) * f; cy += (best[j][1] + best[i][1]) * f; A += f; }
-  if (Math.abs(A) < 1e-12) { const n = best.length; return { lon: best.reduce((s, p) => s + p[0], 0) / n, lat: best.reduce((s, p) => s + p[1], 0) / n }; }
-  return { lon: cx / (3 * A), lat: cy / (3 * A) };
-}
-function ringsFromGeoJSON(g) { const out = []; const add = geom => { if (!geom) return; if (geom.type === 'Polygon') out.push(...geom.coordinates); else if (geom.type === 'MultiPolygon') geom.coordinates.forEach(p => out.push(...p)); else if (geom.type === 'Point') out.push([geom.coordinates]); else if (geom.type === 'GeometryCollection') geom.geometries.forEach(add); };
-  if (Array.isArray(g)) g.forEach(x => out.push(...ringsFromGeoJSON(x))); else if (g.type === 'FeatureCollection') g.features.forEach(f => add(f.geometry)); else if (g.type === 'Feature') add(g.geometry); else add(g); return out; }
-function nameFromGeoJSON(g) { const f = Array.isArray(g) ? (g[0] && g[0].features && g[0].features[0]) : g.type === 'FeatureCollection' ? g.features[0] : g.type === 'Feature' ? g : null; const p = (f && f.properties) || {}; const k = Object.keys(p).find(k => /^(unit_?name|name|burn_?unit|unit)$/i.test(k)); return k ? clean(p[k]) : null; }
-function ringsFromKML(text) { const doc = new DOMParser().parseFromString(text, 'text/xml'); const rings = []; doc.querySelectorAll('Polygon outerBoundaryIs coordinates, Polygon coordinates, Point coordinates').forEach(el => { const pts = el.textContent.trim().split(/\s+/).map(s => s.split(',').map(Number)).filter(p => p.length >= 2 && p.every(Number.isFinite)).map(p => [p[0], p[1]]); if (pts.length) rings.push(pts); }); const nm = doc.querySelector('Placemark > name, Document > name'); return { rings, name: nm ? clean(nm.textContent) : null }; }
-function setUnit(rings, label) {
-  const c = centroid(rings); if (!c || !Number.isFinite(c.lat)) throw new Error('Could not find a usable polygon or point in that unit.');
-  Object.assign(state, { lat: c.lat, lon: c.lon, rings, label: label || 'Uploaded unit' }); $('title').textContent = 'Smoke Screening · ' + state.label;
-}
-async function loadFile(file) {
-  try { setStatus('Reading ' + file.name + '…'); const base = file.name.replace(/\.[^.]+$/, '');
-    if (/\.zip$/i.test(file.name)) { if (typeof shp !== 'function') throw new Error('Shapefile reader did not load. Try GeoJSON or KML.'); const gj = await shp(await file.arrayBuffer()); setUnit(ringsFromGeoJSON(gj), nameFromGeoJSON(gj) || base); }
-    else if (/\.kml$/i.test(file.name)) { const k = ringsFromKML(await file.text()); setUnit(k.rings, k.name || base); }
-    else { const gj = JSON.parse(await file.text()); setUnit(ringsFromGeoJSON(gj), nameFromGeoJSON(gj) || base); }
-    run();
-  } catch (e) { setStatus(e.message, true); }
-}
-async function loadUnitById(id, label, svc = UNITS_SVC) {
-  const j = await fetch(`${svc}/query?where=${encodeURIComponent('objectid=' + id)}&outFields=name,objectid&returnGeometry=true&outSR=4326&f=json`).then(r => r.json());
-  const f = j.features && j.features[0]; if (!f || !f.geometry) throw new Error('That unit could not be found in the treatment layer.');
-  const g = f.geometry; setUnit(g.rings || [[[g.x, g.y]]], label || clean(f.attributes.name) || 'Unit ' + id);
-}
-async function loadFromParams() {
-  const lat = parseFloat(P.get('lat')), lon = parseFloat(P.get('lon'));
-  const label = clean(P.get('unit') || P.get('name'));
-  if (Number.isFinite(lat) && Number.isFinite(lon)) { setUnit([[[lon, lat]]], label || 'Selected point'); return true; }
-  const id = clean(P.get('id')); if (!id || !/^\d+$/.test(id)) return false;
-  let svc = clean(P.get('svc')) || UNITS_SVC; svc = svc.replace(/\/+$/, '');
-  if (!/^https:\/\/[^/]+\/.+\/(FeatureServer|MapServer)\/\d+$/i.test(svc)) throw new Error('svc must be an https FeatureServer or MapServer layer URL.');
-  await loadUnitById(id, label, svc); return true;
-}
-// name search (California extent)
-let searchTimer = null, lastHits = [];
-$('search').addEventListener('input', () => {
-  clearTimeout(searchTimer); const q = $('search').value.trim();
-  const hit = lastHits.find(h => h.label === q); if (hit) { loadUnitById(hit.id, hit.name).then(run).catch(e => setStatus(e.message, true)); return; }
-  if (q.length < 3) return;
-  searchTimer = setTimeout(async () => {
-    const where = `UPPER(name) LIKE '%${q.toUpperCase().replace(/'/g, "''")}%'`;
-    const j = await fetch(`${UNITS_SVC}/query?where=${encodeURIComponent(where)}&geometry=-124.6,32.4,-114,42.1&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=objectid,name&returnGeometry=false&resultRecordCount=25&f=json`).then(r => r.json()).catch(() => ({}));
-    lastHits = (j.features || []).map(f => ({ id: f.attributes.objectid, name: f.attributes.name, label: `${f.attributes.name} (#${f.attributes.objectid})` }));
-    $('hits').innerHTML = lastHits.map(h => `<option value="${esc(h.label)}">`).join('');
-  }, 300);
-});
+// unit inputs
+let timer = null, hits = [];
+$('search').addEventListener('input', () => { clearTimeout(timer); const q = $('search').value.trim(); const h = hits.find(x => x.label === q);
+  if (h) { RX.unitById(h.objectid).then(u => { setUnit(u); run(); }).catch(e => setStatus(e.message, true)); return; }
+  if (q.length < 3) return; timer = setTimeout(async () => { hits = await RX.searchUnits(q); $('hits').innerHTML = hits.map(x => `<option value="${esc(x.label)}">`).join(''); }, 300); });
+$('coords').addEventListener('change', () => { const n = ($('coords').value.match(/-?\d+(\.\d+)?/g) || []).map(Number); if (n.length < 2) return setStatus('Enter coordinates as lat, lon.', true);
+  let [a, b] = n; if (Math.abs(a) > 90 || (a < 0 && b > 0)) [a, b] = [b, a]; if (b > 0) b = -b; setUnit(RX.makeUnit([[[b, a]]], `Point ${a.toFixed(4)}, ${b.toFixed(4)}`)); run(); });
+const drop = $('drop'); drop.onclick = () => $('file').click();
+const takeFile = async f => { try { const us = await RX.unitsFromFile(f); if (!us.length) throw new Error('No polygons or points found.');
+  // single burn: merge all polygons in the file into one unit
+  const rings = us.flatMap(u => u.rings); setUnit(RX.makeUnit(rings, us.length === 1 ? us[0].name : f.name.replace(/\.[^.]+$/, ''), { acres: us.reduce((a, u) => a + (u.acres || 0), 0) })); run(); } catch (e) { setStatus(e.message, true); } };
+$('file').onchange = e => e.target.files[0] && takeFile(e.target.files[0]);
+['dragenter', 'dragover'].forEach(t => drop.addEventListener(t, e => { e.preventDefault(); drop.classList.add('over'); }));
+['dragleave', 'drop'].forEach(t => drop.addEventListener(t, e => { e.preventDefault(); drop.classList.remove('over'); }));
+drop.addEventListener('drop', e => e.dataTransfer.files[0] && takeFile(e.dataTransfer.files[0]));
 
-// ---------- NWS ----------
-function isoDur(s) { const m = /P(?:(\d+)D)?(?:T(?:(\d+)H)?)?/.exec(s) || []; return (+m[1] || 0) * 24 + (+m[2] || 0); }
-function expand(prop) { const out = new Map(); if (!prop || !prop.values) return out; const u = prop.uom || '';
-  const conv = v => v == null ? null : /km_h/.test(u) ? v * 0.621371 : /m_s/.test(u) ? v * 2.23694 : /:m$/.test(u) ? v * 3.28084 : v;
-  for (const { validTime, value } of prop.values) { const [s, d] = validTime.split('/'); const t0 = Date.parse(s); const n = Math.max(1, isoDur(d)); for (let i = 0; i < n; i++) out.set(t0 + i * 3600e3, conv(value)); } return out; }
-const localParts = ms => { const p = new Intl.DateTimeFormat('en-CA', { timeZone: TZ, year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', hourCycle: 'h23' }).formatToParts(new Date(ms)); const g = t => p.find(x => x.type === t).value; return { date: `${g('year')}-${g('month')}-${g('day')}`, hour: +g('hour') }; };
-let nwsCache = null;
-async function nwsGrid() {
-  const key = state.lat.toFixed(3) + ',' + state.lon.toFixed(3); if (nwsCache && nwsCache.key === key) return nwsCache;
-  const pt = await fetch(`https://api.weather.gov/points/${state.lat.toFixed(4)},${state.lon.toFixed(4)}`).then(r => { if (!r.ok) throw new Error('NWS point lookup failed (' + r.status + ')'); return r.json(); });
-  const g = (await fetch(pt.properties.forecastGridData).then(r => { if (!r.ok) throw new Error('NWS grid failed (' + r.status + ')'); return r.json(); })).properties;
-  nwsCache = { key, TWS: expand(g.transportWindSpeed), TWD: expand(g.transportWindDirection), MH: expand(g.mixingHeight), WD: expand(g.windDirection), WS: expand(g.windSpeed), office: pt.properties.gridId };
-  return nwsCache;
-}
-function fillDates() {
-  const sel = $('bDate'); const now = Date.now(); const opts = [];
-  for (let d = 0; d < 7; d++) { const p = localParts(now + d * 864e5); opts.push(p.date); }
-  sel.innerHTML = [...new Set(opts)].map((d, i) => `<option value="${d}">${new Date(d + 'T12:00').toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric' })}${i === 0 ? ' (today)' : ''}</option>`).join('');
-  const pd = P.get('date'); if (pd && opts.includes(pd)) sel.value = pd;
-}
-
-// ---------- terrain drainage (steepest descent on Open-Meteo elevation) ----------
-async function elev(points) { const out = []; for (let i = 0; i < points.length; i += 100) { const chunk = points.slice(i, i + 100);
-  const j = await fetch(`https://api.open-meteo.com/v1/elevation?latitude=${chunk.map(p => p[0].toFixed(5)).join(',')}&longitude=${chunk.map(p => p[1].toFixed(5)).join(',')}`).then(r => r.json());
-  if (!j.elevation) throw new Error('elevation service unavailable'); out.push(...j.elevation); } return out; }
-const pathLen = p => p.reduce((a, q, i) => i ? a + dist(p[i - 1], q) : 0, 0);
-async function drainage(start, miles) {
-  const stepMi = 0.25, nSteps = Math.ceil(miles / stepMi) * 2, path = [start]; let cur = start; let [z] = await elev([start]); const z0 = z;
-  for (let s = 0; s < nSteps; s++) {
-    // look 0.25 mi out; if every neighbor is higher (a pit or flat canyon floor), look 0.5 and 1 mi out before stopping
-    let moved = false;
-    for (const reach of [stepMi, stepMi * 2, stepMi * 4]) {
-      const cand = []; for (let b = 0; b < 360; b += 22.5) cand.push(dest(cur[0], cur[1], b, reach));
-      const zs = await elev(cand); let bi = -1, bz = z;
-      zs.forEach((v, i) => { if (v < bz - 0.5) { bz = v; bi = i; } });
-      if (bi >= 0) { cur = cand[bi]; z = bz; path.push(cur); moved = true; break; }
-    }
-    if (!moved) break; // true valley floor / basin
-    if (pathLen(path) >= miles) break;
-  }
-  return { path, drop: z0 - z, z0 };
-}
-
-// ---------- receptors ----------
-async function q(url, extra) { const j = await fetch(`${url}/query?${extra}&f=json`).then(r => r.json()); if (j.error) throw new Error(j.error.message); return j.features || []; }
-function bboxOf(pts) { const la = pts.map(p => p[0]), lo = pts.map(p => p[1]); return [Math.min(...lo), Math.min(...la), Math.max(...lo), Math.max(...la)]; }
-async function receptors(cone, path, bufMi) {
-  const all = [...cone, ...path.map(p => dest(p[0], p[1], 0, bufMi)), ...path.map(p => dest(p[0], p[1], 180, bufMi)), ...path.map(p => dest(p[0], p[1], 90, bufMi)), ...path.map(p => dest(p[0], p[1], 270, bufMi))];
-  const bb = bboxOf(all); const env = `geometry=${bb.join(',')}&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&returnGeometry=false`;
-  const [inc, cdp, sch, hos] = await Promise.all([
-    q(`${L_PL}/4`, `where=1%3D1&${env}&outFields=NAME,INTPTLAT,INTPTLON`).catch(() => []),
-    q(`${L_PL}/5`, `where=1%3D1&${env}&outFields=NAME,INTPTLAT,INTPTLON`).catch(() => []),
-    q(L_SCH, `where=STATE%3D%27CA%27&${env}&outFields=NAME,CITY,LATITUDE,LONGITUDE`).catch(() => []),
-    q(L_HOS, `where=STATE%3D%27CA%27&${env}&outFields=NAME,CITY,TYPE,LATITUDE,LONGITUDE`).catch(() => [])]);
-  const rows = [];
-  const add = (type, name, lat, lon) => {
-    const pt = [lat, lon]; const inDay = inPoly(pt, cone); const dPath = distToPath(pt, path); const inNight = dPath <= bufMi;
-    if (!inDay && !inNight) return;
-    rows.push({ type, name, lat, lon, d: dist([state.lat, state.lon], pt), brg: bearing([state.lat, state.lon], pt), inDay, inNight });
-  };
-  inc.forEach(f => add('Community', f.attributes.NAME, +f.attributes.INTPTLAT, +f.attributes.INTPTLON));
-  cdp.forEach(f => add('Community (CDP)', f.attributes.NAME, +f.attributes.INTPTLAT, +f.attributes.INTPTLON));
-  sch.forEach(f => add('School', `${f.attributes.NAME}, ${f.attributes.CITY}`, +f.attributes.LATITUDE, +f.attributes.LONGITUDE));
-  hos.forEach(f => add('Hospital', `${f.attributes.NAME}, ${f.attributes.CITY}`, +f.attributes.LATITUDE, +f.attributes.LONGITUDE));
-  // Class I areas (polygons)
-  const c1 = await q(L_C1, `where=1%3D1&geometry=${bb.join(',')}&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=NAME&returnGeometry=true&outSR=4326&maxAllowableOffset=0.003`).catch(() => []);
-  const class1 = [];
-  for (const f of c1) {
-    const rings = (f.geometry && f.geometry.rings || []).map(r => r.map(p => [p[1], p[0]]));
-    const verts = rings.flat(); let inDay = false, minD = Infinity, near = null;
-    for (const v of verts) { if (!inDay && inPoly(v, cone)) inDay = true; const dd = distToPath(v, path); if (dd < minD) { minD = dd; near = v; } }
-    if (!inDay) inDay = cone.some(c => rings.some(r => inPoly(c, r)));
-    const inNight = minD <= bufMi;
-    const closest = verts.reduce((m, v) => { const dd = dist([state.lat, state.lon], v); return dd < m.d ? { d: dd, v } : m; }, { d: Infinity, v: null });
-    class1.push({ name: f.attributes.NAME, rings, inDay, inNight, d: closest.d, brg: closest.v ? bearing([state.lat, state.lon], closest.v) : null });
-  }
-  rows.sort((a, b) => a.d - b.d);
-  return { rows, class1 };
-}
-
-// ---------- air quality (CAMS via Open-Meteo) ----------
-async function aqAt(lat, lon, date) {
-  const j = await fetch(`https://air-quality-api.open-meteo.com/v1/air-quality?latitude=${lat}&longitude=${lon}&hourly=pm2_5,us_aqi&forecast_days=7&timezone=${encodeURIComponent(TZ)}`).then(r => r.json());
-  if (j.error) throw new Error(j.reason);
-  const h = j.hourly; const idx = h.time.map((t, i) => t.startsWith(date) ? i : -1).filter(i => i >= 0);
-  return idx.map(i => ({ hour: +h.time[i].slice(11, 13), pm: h.pm2_5[i], aqi: h.us_aqi[i] }));
-}
+// AQ
+async function aqAt(lat, lon, date) { const j = await fetch(`https://air-quality-api.open-meteo.com/v1/air-quality?latitude=${lat}&longitude=${lon}&hourly=pm2_5,us_aqi&forecast_days=7&timezone=${encodeURIComponent(RX.TZ)}`).then(r => r.json());
+  if (j.error) throw new Error(j.reason); const h = j.hourly; return h.time.map((t, i) => t.startsWith(date) ? { hour: +t.slice(11, 13), pm: h.pm2_5[i], aqi: h.us_aqi[i] } : null).filter(Boolean); }
 const aqCls = a => a == null ? '' : a <= 50 ? 'aq0' : a <= 100 ? 'aq1' : a <= 150 ? 'aq2' : 'aq3';
 
-// ---------- map ----------
-let map = null, layers = null;
-function drawMap(cone, path, rec) {
-  if (!map) {
-    map = L.map('map', { scrollWheelZoom: false });
-    const imagery = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', { maxZoom: 19, attribution: 'Esri, Maxar' });
-    const topo = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}', { maxZoom: 19, attribution: 'Esri' }).addTo(map);
-    L.control.layers({ Topographic: topo, Imagery: imagery }).addTo(map);
-  }
-  if (layers) layers.remove();
-  layers = L.featureGroup().addTo(map);
-  rec.class1.forEach(c => c.rings.forEach(r => L.polygon(r, { color: '#7b3fb6', weight: 1, fillOpacity: .18 }).bindTooltip('Class I: ' + c.name).addTo(layers)));
-  L.polygon(cone, { color: '#ff8c00', weight: 1.5, fillColor: '#ff8c00', fillOpacity: .28 }).bindTooltip('Daytime plume screening cone').addTo(layers);
-  if (path.length > 1) L.polyline(path, { color: '#2b6cb0', weight: 4, dashArray: '6 4' }).bindTooltip('Nighttime drainage path').addTo(layers);
-  if (state.rings && state.rings[0] && state.rings[0].length > 2) state.rings.forEach(r => L.polygon(r.map(p => [p[1], p[0]]), { color: '#00e5ff', weight: 2, fillOpacity: .15 }).addTo(layers));
-  L.circleMarker([state.lat, state.lon], { radius: 5, color: '#000', fillColor: '#00e5ff', fillOpacity: 1 }).bindTooltip(state.label).addTo(layers);
-  const colors = { Community: '#b3261e', 'Community (CDP)': '#d1495b', School: '#b26a00', Hospital: '#6a1b9a' };
-  rec.rows.forEach(r => L.circleMarker([r.lat, r.lon], { radius: 5, color: '#fff', weight: 1, fillColor: colors[r.type] || '#333', fillOpacity: .95 }).bindTooltip(`${r.type}: ${r.name}`).addTo(layers));
-  map.fitBounds(layers.getBounds().pad(0.05));
-  setTimeout(() => map.invalidateSize(), 50);
+// map
+let map = null, layer = null;
+function drawMap(S) {
+  if (!map) { map = L.map('map', { scrollWheelZoom: false }); const topo = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}', { maxZoom: 19, attribution: 'Esri' }).addTo(map);
+    L.control.layers({ Topographic: topo, Imagery: L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', { maxZoom: 19, attribution: 'Esri, Maxar' }) }).addTo(map); }
+  if (layer) layer.remove(); layer = L.featureGroup().addTo(map);
+  S.class1.forEach(c => c.rings.forEach(r => L.polygon(r, { color: '#7b3fb6', weight: 1, fillOpacity: .15 }).bindTooltip('Class I: ' + c.name).addTo(layer)));
+  RX.concGrid(S, 30).forEach(c => L.polygon(c.ring, { stroke: false, fillColor: RX.pmCat(c.v)[1], fillOpacity: .5 }).bindTooltip(`~${Math.round(c.v)} µg/m³`).addTo(layer));
+  L.polygon(S.cone, { color: '#ff8c00', weight: 1.5, fill: false }).addTo(layer);
+  if (S.drain.path.length > 1) S.night.segs.forEach(g => L.polyline([g.a, g.b], { color: RX.pmCat(g.c)[1], weight: 7, opacity: .95 }).bindTooltip(`Night drainage ~${Math.round(g.c)} µg/m³`).addTo(layer));
+  if (S.drain.path.length > 1) L.polyline(S.drain.path, { color: '#2b6cb0', weight: 1.5, dashArray: '5 4' }).addTo(layer);
+  (unit.rings || []).filter(r => r.length > 2).forEach(r => L.polygon(r.map(p => [p[1], p[0]]), { color: '#00e5ff', weight: 2, fillOpacity: .15 }).addTo(layer));
+  L.circleMarker([unit.lat, unit.lon], { radius: 5, color: '#000', fillColor: '#00e5ff', fillOpacity: 1 }).bindTooltip(unit.name).addTo(layer);
+  const col = { Community: '#b3261e', 'Community (CDP)': '#d1495b', School: '#b26a00', Hospital: '#6a1b9a' };
+  S.rows.forEach(r => L.circleMarker([r.lat, r.lon], { radius: 5, color: '#fff', weight: 1, fillColor: col[r.type] || '#333', fillOpacity: .95 }).bindTooltip(`${r.type}: ${r.name}${r.pmDay != null || r.pmNight != null ? ` · ~${Math.round(Math.max(r.pmDay || 0, r.pmNight || 0))} µg/m³` : ''}`).addTo(layer));
+  map.fitBounds(layer.getBounds().pad(0.05)); setTimeout(() => map.invalidateSize(), 50);
 }
 
-// ---------- run ----------
-const meanBearing = arr => { const s = arr.reduce((a, d) => [a[0] + Math.sin(toRad(d)), a[1] + Math.cos(toRad(d))], [0, 0]); return (toDeg(Math.atan2(s[0], s[1])) + 360) % 360; };
 let running = false;
 async function run() {
-  if (running) return;
-  if (state.lat == null) { setStatus('Choose a unit first: select one on the map, search, upload, or enter coordinates.', true); return; }
+  if (running) return; if (!unit) return setStatus('Choose a unit first: select one on the map, search, upload, or enter coordinates.', true);
   running = true; $('run').disabled = true;
   try {
     const date = $('bDate').value, start = Math.max(0, Math.min(23, +$('bStart').value || 10)), dur = Math.max(1, Math.min(24, +$('bDur').value || 6));
-    const dayMi = Math.max(1, +$('dayMi').value || 15), nightMi = Math.max(1, +$('nightMi').value || 5), bufMi = Math.max(0.2, +$('bufMi').value || 1);
-    setStatus(`Screening ${state.label}… (winds, terrain, receptors, air quality)`);
-    const g = await nwsGrid();
-    const hours = []; for (let ms = Math.floor(Date.now() / 3600e3) * 3600e3 - 3600e3 * 24; ms < Date.now() + 8 * 864e5; ms += 3600e3) { const p = localParts(ms); if (p.date === date && p.hour >= start && p.hour < start + dur) hours.push({ ms, ...p, twd: g.TWD.get(ms), tws: g.TWS.get(ms), mh: g.MH.get(ms), wd: g.WD.get(ms), ws: g.WS.get(ms) }); }
-    const usable = hours.filter(h => h.twd != null || h.wd != null);
-    if (!usable.length) throw new Error('No NWS transport-wind forecast for that date and window (NWS grids run ~7 days). Pick an earlier date.');
-    const downs = usable.map(h => ((h.twd ?? h.wd) + 180) % 360);
-    const mb = meanBearing(downs);
-    const offs = downs.map(d => ((d - mb + 540) % 360) - 180); const lo = Math.min(...offs) - 20, hi = Math.max(...offs) + 20;
-    const cone = [[state.lat, state.lon]]; for (let o = lo; o <= hi + 0.01; o += Math.max(2, (hi - lo) / 30)) cone.push(dest(state.lat, state.lon, mb + o, dayMi)); cone.push([state.lat, state.lon]);
-    const ventAvg = usable.filter(h => h.mh != null && h.tws != null).map(h => h.mh * h.tws * 0.868976 / 1000);
-    const vent = ventAvg.length ? ventAvg.reduce((a, b) => a + b, 0) / ventAvg.length : null;
-    const tws = usable.map(h => h.tws).filter(v => v != null);
-    const [dr, rec, district, aqUnit, aqDown] = await Promise.all([
-      drainage([state.lat, state.lon], nightMi).catch(e => ({ path: [[state.lat, state.lon]], drop: 0, err: e.message })),
-      null, null, null, null]).then(async ([dr]) => {
-        const recp = await receptors(cone, dr.path, bufMi);
-        const dj = await q(L_AIR, `where=1%3D1&geometry=${state.lon},${state.lat}&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=NAME,District_W,District_C,AirDistrict_Email&returnGeometry=false`).catch(() => []);
-        const mid = dest(state.lat, state.lon, mb, dayMi);
-        const [a1, a2] = await Promise.all([aqAt(state.lat, state.lon, date).catch(() => null), aqAt(mid[0], mid[1], date).catch(() => null)]);
-        return [dr, recp, dj[0] && dj[0].attributes, a1, a2];
-      });
-
+    const plan = { start, dur, dayMi: Math.max(1, +$('dayMi').value || 15), nightMi: Math.max(1, +$('nightMi').value || 5), bufMi: Math.max(0.2, +$('bufMi').value || 1),
+      fuel: $('fuel').value, tpa: +$('tpa').value || undefined, acres: +$('acres').value || unit.acres || 50 };
+    setStatus(`Screening ${unit.name}… (winds, terrain, receptors, concentrations)`);
+    const S = await RX.smoke(unit, date, plan);
+    const [district, aqU, aqD] = await Promise.all([RX.airDistrict(unit.lat, unit.lon), aqAt(unit.lat, unit.lon, date).catch(() => null), (() => { const p = RX.dest(unit.lat, unit.lon, S.mb, plan.dayMi); return aqAt(p[0], p[1], date).catch(() => null); })()]);
     $('results').style.display = 'block';
-    const dayHits = rec.rows.filter(r => r.inDay), nightHits = rec.rows.filter(r => r.inNight), c1Hits = rec.class1.filter(c => c.inDay || c.inNight);
-    const nightEnd = dr.path[dr.path.length - 1];
-    const nightDir = dr.path.length > 1 ? compass(bearing(dr.path[0], nightEnd)) : '—';
+    const dayHits = S.rows.filter(r => r.inDay), nightHits = S.rows.filter(r => r.inNight), c1 = S.class1.filter(c => c.inDay || c.inNight);
+    const end = S.drain.path[S.drain.path.length - 1], nightDir = S.drain.path.length > 1 ? RX.compass(RX.bearing(S.drain.path[0], end)) : '—';
+    const cat = RX.pmCat(S.peak);
     $('kpis').innerHTML = [
-      ['Daytime plume toward', `${compass(mb)} (${Math.round(mb)}°)`],
-      ['Plume sweep', `${Math.round(hi - lo)}° over ${usable.length} hr`],
-      ['Transport wind', tws.length ? `${Math.round(Math.min(...tws))}–${Math.round(Math.max(...tws))} mph` : '–'],
-      ['Avg ventilation', vent == null ? '–' : `${Math.round(vent)}k kt-ft`],
-      ['Night drainage toward', `${nightDir}, ${pathLen(dr.path).toFixed(1)} mi trace, ${Math.round(dr.drop * 3.281).toLocaleString()} ft drop`],
-      ['Receptors flagged', `${dayHits.length} day · ${nightHits.length} night · ${c1Hits.length} Class I`]
+      ['Day plume toward', `${RX.compass(S.mb)} (${Math.round(S.mb)}°)`], ['Plume sweep', `${Math.round(S.hi - S.lo)}° over ${S.hours.length} hr`],
+      ['Transport wind', S.twsRange ? `${Math.round(S.twsRange[0])}–${Math.round(S.twsRange[1])} mph` : '–'], ['Avg ventilation', S.vent == null ? '–' : `${Math.round(S.vent)}k kt-ft`],
+      ['Est. PM2.5 emitted', `${S.day.pmTotalTons.toFixed(1)} tons`], ['Night drainage toward', `${nightDir}, ${RX.pathLen(S.drain.path).toFixed(1)} mi`],
+      ['Peak est. PM2.5 at a receptor', S.rows.length ? `${Math.round(S.peak)} µg/m³ (${cat[2]})` : 'none in zones'], ['Receptors flagged', `${dayHits.length} day · ${nightHits.length} night · ${c1.length} Class I`]
     ].map(([k, v]) => `<div class="kpi"><span class="muted">${k}</span><b>${esc(v)}</b></div>`).join('');
-    const dStr = new Date(date + 'T12:00').toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric' });
-    $('summary').innerHTML = `<p>For a burn on <b>${esc(dStr)}</b>, ${String(start).padStart(2, '0')}00–${String(start + dur).padStart(2, '0')}00, NWS ${esc(g.office)} transport winds carry smoke toward <b>${compass(mb)}</b>. The ${dayMi}-mile screening cone sweeps ${Math.round(hi - lo)}° to cover the wind shift over the burn period. After sunset, smoke will tend to drain downslope toward <b>${nightDir}</b> along the traced path${dr.err ? ` (terrain trace unavailable: ${esc(dr.err)})` : ''}.</p>`
-      + (c1Hits.length ? `<p><b>Class I area(s) in the screening zones:</b> ${c1Hits.map(c => esc(c.name)).join(', ')}. Federal land managers and the air district may require additional smoke analysis.</p>` : '<p>No mandatory Class I areas fall in the daytime cone or nighttime drainage buffer.</p>');
-    $('district').innerHTML = district ? `<p><b>${esc(district.NAME)}</b>${district.District_C ? ' · ' + esc(district.District_C) : ''}${district.AirDistrict_Email ? ' · ' + esc(district.AirDistrict_Email) : ''}<br>
-      ${district.District_W ? `<a href="${esc(district.District_W)}" target="_blank" rel="noopener">District burn information</a> · ` : ''}<a href="https://ssl.arb.ca.gov/pfirs/" target="_blank" rel="noopener">CARB PFIRS (burn registration / authorization)</a> · <a href="https://ww2.arb.ca.gov/our-work/programs/smoke-management-program" target="_blank" rel="noopener">CARB Smoke Management Program</a></p>`
-      : '<p class="muted">Air district not found for this point.</p>';
-    $('receptors').innerHTML = rec.rows.length || rec.class1.length
-      ? `<table><thead><tr><th>Type</th><th>Name</th><th>Distance</th><th>Direction</th><th>Zone</th></tr></thead><tbody>${
-        rec.class1.filter(c => c.inDay || c.inNight).map(c => `<tr><td><span class="tag c1">Class I</span></td><td>${esc(c.name)}</td><td>${c.d.toFixed(1)} mi</td><td>${c.brg == null ? '–' : compass(c.brg)}</td><td>${c.inDay ? '<span class="tag day">Day</span> ' : ''}${c.inNight ? '<span class="tag night">Night</span>' : ''}</td></tr>`).join('')
-        }${rec.rows.map(r => `<tr><td>${esc(r.type)}</td><td>${esc(r.name)}</td><td>${r.d.toFixed(1)} mi</td><td>${compass(r.brg)}</td><td>${r.inDay ? '<span class="tag day">Day</span> ' : ''}${r.inNight ? '<span class="tag night">Night</span>' : ''}</td></tr>`).join('')}</tbody></table>`
+    const dStr = RX.dayLabel(date, { weekday: 'long', month: 'long', day: 'numeric' });
+    $('summary').innerHTML = `<p>${esc(unit.name)}: ${Math.round(plan.acres)} acres of ${esc(RX.FUELS[plan.fuel].label.toLowerCase())} on <b>${esc(dStr)}</b>, ${String(start).padStart(2, '0')}00–${String(start + dur).padStart(2, '0')}00. Transport winds carry smoke toward <b>${RX.compass(S.mb)}</b>; the highest estimated daytime concentrations sit ${(() => { const g = RX.concGrid(S, 30).sort((a, b) => b.v - a.v)[0]; if (!g) return 'well aloft (little reaches the ground)'; const c = g.ring[0]; return `about ${RX.dist([unit.lat, unit.lon], c).toFixed(0)} mi downwind (~${Math.round(g.v)} µg/m³)`; })()}. After sunset, smoke drains toward <b>${nightDir}</b>${S.drain.err ? ` (terrain trace unavailable: ${esc(S.drain.err)})` : ''}, starting near ~${Math.round(S.night.at(0))} µg/m³ at the unit.</p>`
+      + (c1.length ? `<p><b>Class I area(s) in a smoke zone:</b> ${c1.map(c => esc(c.name)).join(', ')}.</p>` : '<p>No mandatory Class I areas in the day cone or night drainage buffer.</p>');
+    const ll = `${unit.lat.toFixed(4)}, ${unit.lon.toFixed(4)}`;
+    $('district').innerHTML = (district ? `<p><b>${esc(district.NAME)}</b>${district.District_C ? ' · ' + esc(district.District_C) : ''}${district.AirDistrict_Email ? ' · ' + esc(district.AirDistrict_Email) : ''}<br>${district.District_W ? `<a href="${esc(district.District_W)}" target="_blank" rel="noopener">District burn information</a> · ` : ''}` : '<p>')
+      + `<a href="https://ssl.arb.ca.gov/pfirs/" target="_blank" rel="noopener">CARB PFIRS</a> · <a href="https://ww2.arb.ca.gov/our-work/programs/smoke-management-program" target="_blank" rel="noopener">CARB Smoke Management Program</a></p>
+      <p>Full models for this unit (enter <b>${ll}</b>, ${Math.round(plan.acres)} ac): <a href="https://piedmont.dri.edu/piedmont_about.php" target="_blank" rel="noopener">PB-Piedmont-Web (night smoke & roadway fog)</a> · <a href="https://bluesky4.eos.ubc.ca/playground/" target="_blank" rel="noopener">BlueSky Playground (dispersion)</a></p>`;
+    const pmCell = v => v == null ? '–' : `<span class="sw" style="margin:0 4px 0 0;background:${RX.pmCat(v)[1]}"></span>${Math.round(v)}`;
+    $('receptors').innerHTML = S.rows.length || c1.length ? `<table><thead><tr><th>Type</th><th>Name</th><th>Distance</th><th>Direction</th><th>Zone</th><th>Est. day PM2.5</th><th>Est. night PM2.5</th></tr></thead><tbody>${
+      c1.map(c => `<tr><td><span class="tag c1">Class I</span></td><td>${esc(c.name)}</td><td>${c.d.toFixed(1)} mi</td><td>${RX.compass(c.brg)}</td><td>${c.inDay ? '<span class="tag day">Day</span> ' : ''}${c.inNight ? '<span class="tag night">Night</span>' : ''}</td><td>–</td><td>–</td></tr>`).join('')
+      }${S.rows.map(r => `<tr><td>${esc(r.type)}</td><td>${esc(r.name)}</td><td>${r.d.toFixed(1)} mi</td><td>${RX.compass(r.brg)}</td><td>${r.inDay ? '<span class="tag day">Day</span> ' : ''}${r.inNight ? '<span class="tag night">Night</span>' : ''}</td><td>${pmCell(r.pmDay)}</td><td>${pmCell(r.pmNight)}</td></tr>`).join('')}</tbody></table>`
       : '<p>No communities, schools, hospitals or Class I areas found in the screening zones.</p>';
-    const aqTable = (rows, label) => rows && rows.length ? `<tr><td>${label}</td>${rows.filter(r => r.hour >= Math.max(0, start - 2) && r.hour < Math.min(24, start + dur + 4)).map(r => `<td class="${aqCls(r.aqi)}">${r.aqi ?? '–'}<br><span class="muted">${r.pm == null ? '' : r.pm.toFixed(0) + ' µg'}</span></td>`).join('')}</tr>` : `<tr><td>${label}</td><td>unavailable</td></tr>`;
-    const hrs = (aqUnit || aqDown || []).filter(r => r.hour >= Math.max(0, start - 2) && r.hour < Math.min(24, start + dur + 4)).map(r => r.hour);
-    $('aq').innerHTML = `<table><thead><tr><th>US AQI / PM2.5</th>${hrs.map(h => `<th>${String(h).padStart(2, '0')}00</th>`).join('')}</tr></thead><tbody>${aqTable(aqUnit, 'At unit')}${aqTable(aqDown, `${Math.round(dayMi)} mi downwind (${compass(mb)})`)}</tbody></table>
-      <div class="note">CAMS global forecast (~40 km). Shows background air quality before your burn's smoke is added. Use it to spot days already near Moderate/USG; for burn smoke itself see the NWS smoke forecast layer in the map.</div>`;
-    $('winds').innerHTML = `<table><thead><tr><th>Hour</th><th>20-ft wind</th><th>Transport wind</th><th>Mixing height</th><th>Ventilation</th><th>Smoke goes toward</th></tr></thead><tbody>${usable.map(h => `<tr><td>${String(h.hour).padStart(2, '0')}00</td><td>${h.wd == null ? '–' : compass(h.wd)} ${h.ws == null ? '' : Math.round(h.ws / 1.15) + ' mph'}</td><td>${h.twd == null ? '–' : compass(h.twd)} ${h.tws == null ? '' : Math.round(h.tws) + ' mph'}</td><td>${h.mh == null ? '–' : Math.round(h.mh).toLocaleString() + ' ft'}</td><td>${h.mh == null || h.tws == null ? '–' : Math.round(h.mh * h.tws * 0.868976 / 1000) + 'k kt-ft'}</td><td>${compass(((h.twd ?? h.wd) + 180) % 360)}</td></tr>`).join('')}</tbody></table>`;
-    drawMap(cone, dr.path, rec);
-    setStatus(`${state.label}: day plume toward ${compass(mb)} up to ${dayMi} mi; night drainage toward ${nightDir}. ${dayHits.length + nightHits.length} receptor(s), ${c1Hits.length} Class I area(s) flagged.`);
+    const win = r => r.hour >= Math.max(0, start - 2) && r.hour < Math.min(24, start + dur + 4);
+    const aqRow = (rows, lab) => rows && rows.length ? `<tr><td>${lab}</td>${rows.filter(win).map(r => `<td class="${aqCls(r.aqi)}">${r.aqi ?? '–'}<br><span class="muted">${r.pm == null ? '' : r.pm.toFixed(0) + ' µg'}</span></td>`).join('')}</tr>` : `<tr><td>${lab}</td><td>unavailable</td></tr>`;
+    const hrs = (aqU || aqD || []).filter(win).map(r => r.hour);
+    $('aq').innerHTML = `<table><thead><tr><th>US AQI / PM2.5</th>${hrs.map(h => `<th>${String(h).padStart(2, '0')}00</th>`).join('')}</tr></thead><tbody>${aqRow(aqU, 'At unit')}${aqRow(aqD, `${plan.dayMi} mi downwind (${RX.compass(S.mb)})`)}</tbody></table><div class="note">CAMS global forecast (~40 km): background air quality before this burn's smoke is added.</div>`;
+    $('winds').innerHTML = `<table><thead><tr><th>Hour</th><th>20-ft wind</th><th>Transport wind</th><th>Mixing height</th><th>Ventilation</th><th>Stability</th><th>Plume rise</th><th>Smoke toward</th></tr></thead><tbody>${S.hours.map((h, k) => { const m = S.day.hourly[k];
+      return `<tr><td>${String(h.hour).padStart(2, '0')}00</td><td>${RX.compass(h.wd)} ${h.w20 == null ? '' : Math.round(h.w20) + ' mph'}</td><td>${RX.compass(h.twd)} ${h.tws == null ? '' : Math.round(h.tws) + ' mph'}</td><td>${h.mh == null ? '–' : Math.round(h.mh).toLocaleString() + ' ft'}</td><td>${h.v == null ? '–' : Math.round(h.v) + 'k kt-ft'}</td><td>${m.cls}</td><td>${Math.round(m.he * 3.281).toLocaleString()} ft</td><td>${RX.compass(m.down)}</td></tr>`; }).join('')}</tbody></table>`;
+    drawMap(S);
+    setStatus(`${unit.name}: smoke toward ${RX.compass(S.mb)}, night drainage ${nightDir}; ${dayHits.length + nightHits.length} receptor(s), ${c1.length} Class I; peak est. ${Math.round(S.peak)} µg/m³ at a receptor.`);
     $('print').disabled = false;
   } catch (e) { setStatus(e.message, true); }
   running = false; $('run').disabled = false;
 }
-
-// ---------- wire up ----------
-fillDates();
-['bStart', 'bDur', 'dayMi', 'nightMi'].forEach(k => { const v = P.get(k); if (v != null && Number.isFinite(+v)) $(k).value = v; });
 $('run').onclick = run; $('print').onclick = () => window.print();
-const drop = $('drop'); drop.onclick = () => $('file').click();
-$('file').onchange = e => e.target.files[0] && loadFile(e.target.files[0]);
-['dragenter', 'dragover'].forEach(t => drop.addEventListener(t, e => { e.preventDefault(); drop.classList.add('over'); }));
-['dragleave', 'drop'].forEach(t => drop.addEventListener(t, e => { e.preventDefault(); drop.classList.remove('over'); }));
-drop.addEventListener('drop', e => e.dataTransfer.files[0] && loadFile(e.dataTransfer.files[0]));
-$('coords').addEventListener('change', () => { const n = ($('coords').value.match(/-?\d+(\.\d+)?/g) || []).map(Number); if (n.length < 2) return setStatus('Enter coordinates as lat, lon.', true);
-  let [a, b] = n; if (Math.abs(a) > 90 || (a < 0 && b > 0)) [a, b] = [b, a]; if (b > 0) b = -b; setUnit([[[b, a]]], 'Point ' + a.toFixed(4) + ', ' + b.toFixed(4)); run(); });
-loadFromParams().then(ok => { if (ok) run(); }).catch(e => setStatus(e.message, true));
+(async () => { try {
+  const lat = parseFloat(P.get('lat')), lon = parseFloat(P.get('lon')), name = RX.clean(P.get('unit') || P.get('name'));
+  if (isFinite(lat) && isFinite(lon)) { setUnit(RX.makeUnit([[[lon, lat]]], name || 'Selected point')); return run(); }
+  const id = RX.clean(P.get('id')); if (id && /^\d+$/.test(id)) { let svc = RX.clean(P.get('svc')) || RX.UNITS_SVC; const u = await RX.unitById(id, svc.replace(/\/+$/, '')); if (name) u.name = name; setUnit(u); run(); }
+} catch (e) { setStatus(e.message, true); } })();
 })();
 </script>
 </body>
