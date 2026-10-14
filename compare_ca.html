@@ -83,7 +83,7 @@
   <div class="note"><span class="pm" style="background:#cfe9d1"></span>Burn day (min hours met) <span class="pm" style="background:#fff1b8"></span>Some in-Rx hours <span class="pm" style="background:#fbe5e3"></span>None · italic = 16-day forecast (beyond NWS ~7 days; lower skill)</div>
   <h3>Map (target day)</h3>
   <div id="map"></div>
-  <div class="note" id="mapNote">Numbers = rank. Shaded cones = estimated peak hourly PM2.5 during the burn (screening Gaussian plume); dashed blue = night drainage.</div>
+  <div class="note" id="mapNote">Numbers = rank; each unit's plume is drawn for its ranked day (outlined in the matrix). Shaded cones = estimated peak hourly PM2.5 during the burn (screening Gaussian plume); dashed blue = night drainage.</div>
 </div>
 
 <script>
@@ -154,7 +154,7 @@ $('csvFile').onchange = async e => { const f = e.target.files[0]; if (!f) return
 
 // ----- days -----
 function fillDays() { const s = $('tDay'); const opts = []; for (let d = 0; d < 16; d++) opts.push(RX.local(Date.now() + d * 864e5).date);
-  s.innerHTML = [...new Set(opts)].map((d, i) => `<option value="${d}">${RX.dayLabel(d, { weekday: 'short', month: 'short', day: 'numeric' })}${i === 0 ? ' (today)' : i === 1 ? ' (tomorrow)' : ''}</option>`).join(''); s.selectedIndex = Math.min(1, s.options.length - 1); }
+  s.innerHTML = '<option value="best">Best day for each unit (next 7 days)</option>' + [...new Set(opts)].map((d, i) => `<option value="${d}">${RX.dayLabel(d, { weekday: 'short', month: 'short', day: 'numeric' })}${i === 0 ? ' (today)' : i === 1 ? ' (tomorrow)' : ''}</option>`).join(''); s.selectedIndex = 0; }
 
 // ----- run -----
 let map = null, mapLayer = null;
@@ -171,14 +171,19 @@ async function run() {
       const wx = await RX.blended(x.unit.lat, x.unit.lon); res.wx = wx;
       res.days = RX.dayStats(wx.hours, r);
       res.dates = [...res.days.keys()].sort();
-      res.target = res.days.get(tDay) || null;
-      const ahead = res.dates.filter(d => d >= tDay);
+      const today = RX.local(Date.now()).date;
+      if (tDay === 'best') { // longest run in the next 7 days; earliest wins ties
+        const cand = res.dates.filter(d => d >= today).slice(0, 7);
+        res.day = cand.reduce((b, d) => { const st = res.days.get(d); return !b || st.run > res.days.get(b).run ? d : b; }, null);
+      } else res.day = tDay;
+      res.target = res.day ? res.days.get(res.day) || null : null;
+      const ahead = res.dates.filter(d => d >= (tDay === 'best' ? today : tDay));
       res.burn7 = ahead.slice(0, 7).filter(d => res.days.get(d).burn).length; res.burn16 = ahead.filter(d => res.days.get(d).burn).length;
       res.next = res.dates.find(d => d >= RX.local(Date.now()).date && res.days.get(d).burn) || null;
       if (smokeOn && res.target) {
         setStatus(`Smoke check for ${x.unit.name} (${i + 1}/${units.length})…`);
         const start = res.target.bestStart ?? r.bpS, dur = res.target.run >= 1 ? res.target.run : Math.max(1, r.bpE - r.bpS);
-        res.smoke = await RX.smoke(x.unit, tDay, { start, dur, dayMi, nightMi, bufMi: 1, fuel: x.fuel, acres: x.acres || x.unit.acres }, wx).catch(e => ({ err: e.message }));
+        res.smoke = res.wx.nwsDays.has(res.day) ? await RX.smoke(x.unit, res.day, { start, dur, dayMi, nightMi, bufMi: 1, fuel: x.fuel, acres: x.acres || x.unit.acres }, wx).catch(e => ({ err: e.message })) : { err: 'beyond NWS transport-wind forecast (~7 days)' };
       }
     } catch (e) { res.err = e.message; }
     out.push(res);
@@ -202,21 +207,21 @@ async function run() {
   }
   out.sort((a, b) => b.score - a.score);
   // plume overlap with higher-ranked units (same day)
-  out.forEach((s, i) => { if (!s.smoke || s.smoke.err) return; for (let j = 0; j < i; j++) { const o = out[j]; if (!o.smoke || o.smoke.err) continue;
+  out.forEach((s, i) => { if (!s.smoke || s.smoke.err || !s.target?.burn) return; for (let j = 0; j < i; j++) { const o = out[j]; if (!o.smoke || o.smoke.err || !o.target?.burn || o.day !== s.day) continue;
     const hit = s.smoke.cone.some(p => RX.inPoly(p, o.smoke.cone)) || o.smoke.cone.some(p => RX.inPoly(p, s.smoke.cone));
-    if (hit) { s.score -= 20; s.notes.push(`Plume overlaps #${j + 1} ${o.x.unit.name} — stagger days or pick one`); } } });
+    if (hit) { s.score -= 20; s.notes.push(`Plume overlaps #${j + 1} ${o.x.unit.name} on ${RX.dayLabel(s.day)} — stagger days or pick one`); } } });
   out.sort((a, b) => b.score - a.score);
   results = { out, tDay, smokeOn }; render(); $('run').disabled = false; $('out').disabled = false; $('print').disabled = false;
-  setStatus(`Ranked ${out.length} unit(s) for ${RX.dayLabel(tDay, { weekday: 'long', month: 'long', day: 'numeric' })}.`);
+  setStatus(`Ranked ${out.length} unit(s) for ${tDay === 'best' ? 'each unit\u2019s best day' : RX.dayLabel(tDay, { weekday: 'long', month: 'long', day: 'numeric' })}.`);
 }
 const hh = h => h == null ? '–' : String(h).padStart(2, '0') + '00';
 function render() {
-  const { out, tDay } = results; $('res').style.display = 'block'; $('tLabel').textContent = RX.dayLabel(tDay, { weekday: 'long', month: 'long', day: 'numeric' });
-  $('rankTbl').innerHTML = `<table><thead><tr><th>Rank</th><th class="l">Unit</th><th>Target-day window</th><th>Longest run</th><th>Burn days 7d / 16d</th><th>Next burn day</th><th>Plume toward</th><th>Receptors (day/night)</th><th>Class I</th><th>Est. peak PM2.5</th><th>Score</th><th class="l">Notes</th></tr></thead><tbody>${
+  const { out, tDay } = results; $('res').style.display = 'block'; $('tLabel').textContent = tDay === 'best' ? 'each unit\u2019s best day (next 7 days)' : RX.dayLabel(tDay, { weekday: 'long', month: 'long', day: 'numeric' });
+  $('rankTbl').innerHTML = `<table><thead><tr><th>Rank</th><th class="l">Unit</th><th>Day</th><th>Burn window</th><th>Longest run</th><th>Burn days 7d / 16d</th><th>Next burn day</th><th>Plume toward</th><th>Receptors (day/night)</th><th>Class I</th><th>Est. peak PM2.5</th><th>Score</th><th class="l">Notes</th></tr></thead><tbody>${
     out.map((s, i) => { const t = s.target, sm = s.smoke && !s.smoke.err ? s.smoke : null; const cat = sm ? RX.pmCat(sm.peak) : null;
       const win = !t ? '–' : t.run ? `${hh(t.bestStart)}–${hh(t.bestStart + t.run)}` : 'none';
       return `<tr><td><span class="rank">${i + 1}</span></td><td class="l"><b>${esc(s.x.unit.name)}</b><br><span class="muted">${esc(s.x.unit.agency || '')}</span></td>
-        <td class="${!t ? 'na' : t.burn ? 'go' : t.run ? 'part' : 'none'}">${win}</td><td>${t ? `${t.run} / ${t.period} hr` : '–'}</td>
+        <td>${s.day ? RX.dayLabel(s.day) : '–'}</td><td class="${!t ? 'na' : t.burn ? 'go' : t.run ? 'part' : 'none'}">${win}</td><td>${t ? `${t.run} / ${t.period} hr` : '–'}</td>
         <td>${s.err ? '–' : `${s.burn7} / ${s.burn16}`}</td><td>${s.next ? RX.dayLabel(s.next) : '–'}</td>
         <td>${sm ? RX.compass(sm.mb) : '–'}</td><td>${sm ? `${sm.rows.filter(r => r.inDay).length} / ${sm.rows.filter(r => r.inNight).length}` : '–'}</td>
         <td>${sm ? (sm.class1.filter(c => c.inDay || c.inNight).length || '0') : '–'}</td>
@@ -226,7 +231,7 @@ function render() {
   const allDates = [...new Set(out.flatMap(s => s.dates || []))].filter(d => d >= RX.local(Date.now()).date).sort().slice(0, 16);
   $('matrix').innerHTML = `<table><thead><tr><th class="l">Unit</th>${allDates.map(d => `<th${d === tDay ? ' style="background:#d6e6f7"' : ''}>${RX.dayLabel(d)}</th>`).join('')}</tr></thead><tbody>${
     out.map((s, i) => `<tr><td class="l"><span class="rank" style="width:18px;height:18px;font-size:11px">${i + 1}</span> ${esc(s.x.unit.name)}</td>${allDates.map(d => { const st = s.days && s.days.get(d); if (!st) return '<td class="na">–</td>';
-      const is16 = s.wx && !s.wx.nwsDays.has(d); return `<td class="${st.burn ? 'go' : st.run ? 'part' : 'none'}${is16 ? ' src16' : ''}" title="${st.inRx}/${st.period} hrs in Rx; longest run ${st.run}${st.topFail ? '; limiting: ' + st.topFail : ''}">${st.inRx}/${st.period}</td>`; }).join('')}</tr>`).join('')}</tbody></table>`;
+      const is16 = s.wx && !s.wx.nwsDays.has(d); return `<td class="${st.burn ? 'go' : st.run ? 'part' : 'none'}${is16 ? ' src16' : ''}"${d === s.day ? ' style="outline:2px solid #0b4f8a;outline-offset:-2px"' : ''} title="${st.inRx}/${st.period} hrs in Rx; longest run ${st.run}${st.topFail ? '; limiting: ' + st.topFail : ''}">${st.inRx}/${st.period}</td>`; }).join('')}</tr>`).join('')}</tbody></table>`;
   drawMap();
 }
 function drawMap() {
@@ -243,8 +248,8 @@ function drawMap() {
   if (mapLayer.getLayers().length) map.fitBounds(mapLayer.getBounds().pad(0.05)); setTimeout(() => map.invalidateSize(), 50);
 }
 $('out').onclick = () => { if (!results) return; const { out, tDay } = results;
-  download(`rx_ranking_${tDay}.csv`, ['rank,unit,agency,target_window,longest_run_hr,burn_days_7d,burn_days_16d,next_burn_day,plume_toward,receptors_day,receptors_night,class1,peak_pm25_ugm3,score,notes',
-    ...out.map((s, i) => { const t = s.target, sm = s.smoke && !s.smoke.err ? s.smoke : null; return [i + 1, s.x.unit.name, s.x.unit.agency || '', t && t.run ? `${hh(t.bestStart)}-${hh(t.bestStart + t.run)}` : '', t ? t.run : '', s.burn7 ?? '', s.burn16 ?? '', s.next || '',
+  download(`rx_ranking_${tDay}.csv`, ['rank,unit,agency,day,burn_window,longest_run_hr,burn_days_7d,burn_days_16d,next_burn_day,plume_toward,receptors_day,receptors_night,class1,peak_pm25_ugm3,score,notes',
+    ...out.map((s, i) => { const t = s.target, sm = s.smoke && !s.smoke.err ? s.smoke : null; return [i + 1, s.x.unit.name, s.x.unit.agency || '', s.day || '', t && t.run ? `${hh(t.bestStart)}-${hh(t.bestStart + t.run)}` : '', t ? t.run : '', s.burn7 ?? '', s.burn16 ?? '', s.next || '',
       sm ? RX.compass(sm.mb) : '', sm ? sm.rows.filter(r => r.inDay).length : '', sm ? sm.rows.filter(r => r.inNight).length : '', sm ? sm.class1.filter(c => c.inDay || c.inNight).map(c => c.name).join('; ') : '', sm ? Math.round(sm.peak) : '', Math.round(s.score), s.notes.join(' | ')].map(csvEsc).join(','); })].join('\n')); };
 $('run').onclick = run; $('print').onclick = () => window.print();
 
