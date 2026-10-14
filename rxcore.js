@@ -200,6 +200,8 @@ RX.FUELS = {
   handpile: { label: 'Hand piles (per unit acre)', tpa: 4, ef: 8, smolder: 0.30 },
   custom: { label: 'Custom', tpa: 5, ef: 12, smolder: 0.2 }
 };
+// one day's burn: the unit's acres, capped (large units are rarely burned in a single day)
+RX.burnAcres = u => u && u.acres ? Math.round(Math.min(u.acres, 250)) : null;
 RX.fuelFromType = t => { t = (t || '').toLowerCase(); if (/machine.*pile|landing/.test(t)) return 'machinepile'; if (/hand.*pile|pile/.test(t)) return 'handpile'; if (/grass|range/.test(t)) return 'grass'; if (/brush|chaparral|shrub/.test(t)) return 'brush'; return 'understory'; };
 // Briggs open-country sigmas (m), x in m
 const SIG = { A: [0.22, 0.20, 0, 0], B: [0.16, 0.12, 0, 0], C: [0.11, 0.08, 0.0002, -0.5], D: [0.08, 0.06, 0.0015, -0.5] };
@@ -259,8 +261,10 @@ RX.smoke = async (unit, date, plan, wx) => {
   const ext = [...cone, ...dr.path.flatMap(p => [0, 90, 180, 270].map(b => RX.dest(p[0], p[1], b, plan.bufMi)))];
   const rec = await RX.receptorsIn(RX.bboxOf(ext));
   const rows = [];
-  for (const p of rec.pts) { const pt = [p.lat, p.lon]; const inDay = RX.inPoly(pt, cone); const np = RX.nearOnPath(pt, dr.path); const inNight = np.d <= plan.bufMi;
-    if (!inDay && !inNight) continue; rows.push({ ...p, d: RX.dist([unit.lat, unit.lon], pt), brg: RX.bearing([unit.lat, unit.lon], pt), inDay, inNight, pmDay: inDay ? day.at(p.lat, p.lon) : null, pmNight: inNight ? night.at(np.along) : null }); }
+  // a receptor is a daytime hit only if it is inside the screening cone AND the plume estimate puts ≥ 1 µg/m3 there
+  for (const p of rec.pts) { const pt = [p.lat, p.lon]; const inCone = RX.inPoly(pt, cone); const pmDay = inCone ? day.at(p.lat, p.lon) : null; const inDay = inCone && pmDay >= 1;
+    const np = RX.nearOnPath(pt, dr.path); const inNight = np.d <= plan.bufMi;
+    if (!inDay && !inNight) continue; rows.push({ ...p, d: RX.dist([unit.lat, unit.lon], pt), brg: RX.bearing([unit.lat, unit.lon], pt), inDay, inNight, pmDay: inDay ? pmDay : null, pmNight: inNight ? night.at(np.along) : null }); }
   rows.sort((a, b) => a.d - b.d);
   const class1 = rec.class1.map(c => { const verts = c.rings.flat(); let inDay = verts.some(v => RX.inPoly(v, cone)) || cone.some(v => c.rings.some(r => RX.inPoly(v, r)));
     let minD = Infinity; for (const v of verts) minD = Math.min(minD, RX.nearOnPath(v, dr.path).d);

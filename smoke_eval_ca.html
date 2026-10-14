@@ -52,7 +52,7 @@
     <div><label>Burn date</label><select id="bDate"></select></div>
     <div><label>Ignition start (hour)</label><input id="bStart" type="number" value="10" min="0" max="23"></div>
     <div><label>Burn duration (hrs)</label><input id="bDur" type="number" value="6" min="1" max="24"></div>
-    <div><label>Acres burned</label><input id="acres" type="number" min="1" placeholder="from unit"></div>
+    <div><label>Acres burned this day <span id="acresNote" style="font-weight:400"></span></label><input id="acres" type="number" min="1" placeholder="acres"></div>
     <div style="grid-column:span 2"><label>Fuel (emissions)</label><select id="fuel"></select></div>
     <div><label>Fuel consumed (tons/ac)</label><input id="tpa" type="number" step="0.5" min="0.1"></div>
     <div><label>Day plume screening (mi)</label><input id="dayMi" type="number" value="15" min="1" max="60"></div>
@@ -87,7 +87,7 @@ const P = new URLSearchParams(location.search);
 let unit = null;
 const setStatus = (t, bad) => { $('status').textContent = t; $('status').style.color = bad ? 'var(--no)' : 'var(--brand)'; };
 function setUnit(u) { if (!u) throw new Error('Could not find a usable polygon or point in that unit.'); unit = u; $('title').textContent = 'Smoke Screening · ' + u.name;
-  if (u.acres) $('acres').value = Math.round(u.acres); const f = RX.fuelFromType(u.type); $('fuel').value = f; $('tpa').value = RX.FUELS[f].tpa; }
+  $('acres').value = RX.burnAcres(u) ?? ''; $('acresNote').textContent = u.acres ? `unit is ${Math.round(u.acres).toLocaleString()} ac` : ''; const f = RX.fuelFromType(u.type); $('fuel').value = f; $('tpa').value = RX.FUELS[f].tpa; }
 // fuel select
 $('fuel').innerHTML = Object.entries(RX.FUELS).map(([k, f]) => `<option value="${k}">${esc(f.label)}</option>`).join('');
 $('fuel').value = 'understory'; $('tpa').value = RX.FUELS.understory.tpa;

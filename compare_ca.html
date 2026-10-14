@@ -59,7 +59,7 @@
     </div>
   </div>
   <div class="scroll" style="margin-top:8px"><table id="rxTable"><thead><tr>
-    <th class="l">Unit</th><th>Agency</th><th>Acres</th><th>Fuel (smoke)</th>
+    <th class="l">Unit</th><th>Agency</th><th>Acres / day</th><th>Fuel (smoke)</th>
     <th>Min T</th><th>Max T</th><th>Min RH</th><th>Max RH</th><th>Max wind</th><th>Max gust</th><th>Min vent</th><th>Start</th><th>End</th><th>Min hrs</th><th></th></tr></thead><tbody></tbody></table></div>
   <div class="note">Temp °F · RH % · 20-ft wind and gust mph · vent in 1000 kt-ft (0 = not evaluated) · burn period hours local · min hrs = consecutive in-Rx hours that make a burn day.</div>
   <h3>Ranking settings</h3>
@@ -101,13 +101,13 @@ function addUnit(u, rx) {
   const key = (u.id != null ? 'id' + u.id : 'p' + u.lat.toFixed(5) + u.lon.toFixed(5));
   if (units.some(x => x.key === key)) { setStatus(`${u.name} is already in the list.`); return; }
   const base = units[0] ? { ...units[0].rx } : { ...RX.DEFAULT_RX };
-  units.push({ key, unit: u, rx: { ...base, ...(rx || u.rxFromAttrs || {}) }, fuel: RX.fuelFromType(u.type), acres: u.acres ? Math.round(u.acres) : null });
+  units.push({ key, unit: u, rx: { ...base, ...(rx || u.rxFromAttrs || {}) }, fuel: RX.fuelFromType(u.type), acres: RX.burnAcres(u) });
   renderRx(); setStatus(`${units.length} unit(s). Add more, adjust each Rx, then Rank units.`);
 }
 function renderRx() {
   const fuelOpts = k => Object.entries(RX.FUELS).map(([id, f]) => `<option value="${id}"${id === k ? ' selected' : ''}>${esc(f.label)}</option>`).join('');
   $('rxTable').querySelector('tbody').innerHTML = units.map((x, i) => `<tr data-i="${i}">
-    <td class="l"><b>${esc(x.unit.name)}</b><br><span class="muted">${x.unit.lat.toFixed(4)}, ${x.unit.lon.toFixed(4)}${x.unit.type ? ' · ' + esc(x.unit.type) : ''}</span></td>
+    <td class="l"><b>${esc(x.unit.name)}</b><br><span class="muted">${x.unit.lat.toFixed(4)}, ${x.unit.lon.toFixed(4)}${x.unit.type ? ' · ' + esc(x.unit.type) : ''}${x.unit.acres ? ' · unit ' + Math.round(x.unit.acres).toLocaleString() + ' ac' : ''}</span></td>
     <td>${esc(x.unit.agency || '–')}</td>
     <td><input class="acres" data-k="acres" type="number" value="${x.acres ?? ''}"></td>
     <td><select class="fuel" data-k="fuel">${fuelOpts(x.fuel)}</select></td>
