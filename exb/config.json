@@ -34,6 +34,19 @@
    "header": true,
    "footer": false
   },
+  "page_4": {
+   "id": "page_4",
+   "label": "Compare & Rank",
+   "mode": "FIT_WINDOW",
+   "type": "NORMAL",
+   "layout": {
+    "LARGE": "layout_p4"
+   },
+   "isDefault": false,
+   "isVisible": true,
+   "header": true,
+   "footer": false
+  },
   "page_2": {
    "id": "page_2",
    "label": "Outlooks & Typical Burn Days",
@@ -54,6 +67,9 @@
   },
   {
    "page_3": []
+  },
+  {
+   "page_4": []
   },
   {
    "page_2": []
@@ -100,7 +116,7 @@
      "type": "WIDGET",
      "widgetId": "w_menu",
      "bbox": {
-      "width": "560px",
+      "width": "700px",
       "height": "36px"
      },
      "setting": {
@@ -565,6 +581,34 @@
    "type": "FIXED",
    "order": [],
    "content": {}
+  },
+  "layout_p4": {
+   "type": "FIXED",
+   "order": [
+    "0"
+   ],
+   "content": {
+    "0": {
+     "type": "WIDGET",
+     "widgetId": "w_embed4",
+     "bbox": {
+      "left": "0%",
+      "top": "0%",
+      "width": "100%",
+      "height": "100%"
+     },
+     "setting": {
+      "autoProps": {
+       "left": false,
+       "right": false,
+       "top": false,
+       "bottom": false,
+       "width": "CUSTOM",
+       "height": "CUSTOM"
+      }
+     }
+    }
+   }
   }
  },
  "widgets": {
@@ -1177,6 +1221,22 @@
      "wrap": true
     }
    }
+  },
+  "w_embed4": {
+   "uri": "widgets/common/embed/",
+   "version": "1.21.0",
+   "id": "w_embed4",
+   "label": "Compare & Rank",
+   "config": {
+    "embedType": "url",
+    "expression": "<p>https://shelikes2run.github.io/ca-rx-planner/compare_ca.html</p>",
+    "enableLabel": false,
+    "enableBlankMessage": false,
+    "autoRefresh": false,
+    "honorThemeFont": false,
+    "embedCode": ""
+   },
+   "useDataSourcesEnabled": false
   }
  },
  "sections": {

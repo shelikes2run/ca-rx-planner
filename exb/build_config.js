@@ -35,7 +35,7 @@ function buildExb2({ wm1, wm2, wm3, base, portalUrl = 'https://nifc.maps.arcgis.
     style: { background: { color: '#0b3b63', fillType: 'fill' }, textColor: '#ffffff' } };
   LAY.layout_header = { type: 'FLEX_ROW', order: ['0', '1'], setting: { justifyContent: 'space-between', padding: { number: [0, 12, 0, 12], unit: 'px' } }, content: {
     0: { type: 'WIDGET', widgetId: 'w_title', bbox: { width: '600px', height: '40px' }, setting: { autoProps: { width: 'CUSTOM', height: 'CUSTOM' }, style: { alignSelf: 'center' } } },
-    1: { type: 'WIDGET', widgetId: 'w_menu', bbox: { width: '560px', height: '36px' }, setting: { autoProps: { width: 'AUTO', height: 'CUSTOM' }, style: { alignSelf: 'center' } } } } };
+    1: { type: 'WIDGET', widgetId: 'w_menu', bbox: { width: '700px', height: '36px' }, setting: { autoProps: { width: 'AUTO', height: 'CUSTOM' }, style: { alignSelf: 'center' } } } } };
   LAY.layout_footer = { type: 'FIXED', order: [], content: {} };
 
   // a map + search + help + two-tab tool panel
@@ -107,11 +107,16 @@ function buildExb2({ wm1, wm2, wm3, base, portalUrl = 'https://nifc.maps.arcgis.
   LAY.layout_p2 = fixed([{ w: 'w_map2', bbox: pct(0, 0, 70, 100) }, { w: 'w_layers2', bbox: pct(70.5, 0, 29.5, 56) }, { w: 'w_legend2', bbox: pct(70.5, 56.5, 29.5, 28) }, { w: 'w_help2', bbox: pct(70.5, 85, 29.5, 15) }]);
   LAY.layout_map2 = { type: 'FIXED', order: [], content: {} };
 
+  // Compare & Rank page: full-width tool (multi-unit, per-unit Rx)
+  W.w_embed4 = { uri: 'widgets/common/embed/', version: v, id: 'w_embed4', label: 'Compare & Rank',
+    config: { embedType: 'url', expression: `<p>${base}/compare_ca.html</p>`, enableLabel: false, enableBlankMessage: false, autoRefresh: false, honorThemeFont: false, embedCode: '' }, useDataSourcesEnabled: false };
+  LAY.layout_p4 = fixed([{ w: 'w_embed4', bbox: pct(0, 0, 100, 100) }]);
+
   const page = (id, label, layout, isDefault) => ({ id, label, mode: 'FIT_WINDOW', type: 'NORMAL', layout: { LARGE: layout }, isDefault, isVisible: true, header: true, footer: false });
   return {
     exbVersion: v, mainSizeMode: 'LARGE', template: 'blankfullscreen', theme: 'themes/default/', mainLocale: 'en-us', attributes: { portalUrl },
-    pages: { page_1: page('page_1', 'Weather Evaluator', 'layout_p1', true), page_3: page('page_3', 'Smoke Modeling', 'layout_p3', false), page_2: page('page_2', 'Outlooks & Typical Burn Days', 'layout_p2', false) },
-    pageStructure: [{ page_1: [] }, { page_3: [] }, { page_2: [] }],
+    pages: { page_1: page('page_1', 'Weather Evaluator', 'layout_p1', true), page_3: page('page_3', 'Smoke Modeling', 'layout_p3', false), page_4: page('page_4', 'Compare & Rank', 'layout_p4', false), page_2: page('page_2', 'Outlooks & Typical Burn Days', 'layout_p2', false) },
+    pageStructure: [{ page_1: [] }, { page_3: [] }, { page_4: [] }, { page_2: [] }],
     layouts: LAY, widgets: W, sections: SEC, views: VIEWS, dialogs: {}, controllerPanels: {}, widgetsManifest: {},
     header: { layout: { LARGE: 'layout_header' }, height: { LARGE: 56 }, backgroundColor: '#0b3b63' }, footer: { layout: { LARGE: 'layout_footer' }, height: { LARGE: 0 } },
     dataSources: DS,
