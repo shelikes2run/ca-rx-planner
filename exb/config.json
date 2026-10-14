@@ -1,0 +1,1559 @@
+{
+ "exbVersion": "1.21.0",
+ "mainSizeMode": "LARGE",
+ "template": "blankfullscreen",
+ "theme": "themes/default/",
+ "mainLocale": "en-us",
+ "attributes": {
+  "portalUrl": "https://nifc.maps.arcgis.com"
+ },
+ "pages": {
+  "page_1": {
+   "id": "page_1",
+   "label": "Weather Evaluator",
+   "mode": "FIT_WINDOW",
+   "type": "NORMAL",
+   "layout": {
+    "LARGE": "layout_p1"
+   },
+   "isDefault": true,
+   "isVisible": true,
+   "header": true,
+   "footer": false
+  },
+  "page_3": {
+   "id": "page_3",
+   "label": "Smoke Modeling",
+   "mode": "FIT_WINDOW",
+   "type": "NORMAL",
+   "layout": {
+    "LARGE": "layout_p3"
+   },
+   "isDefault": false,
+   "isVisible": true,
+   "header": true,
+   "footer": false
+  },
+  "page_2": {
+   "id": "page_2",
+   "label": "Outlooks & Typical Burn Days",
+   "mode": "FIT_WINDOW",
+   "type": "NORMAL",
+   "layout": {
+    "LARGE": "layout_p2"
+   },
+   "isDefault": false,
+   "isVisible": true,
+   "header": true,
+   "footer": false
+  }
+ },
+ "pageStructure": [
+  {
+   "page_1": []
+  },
+  {
+   "page_3": []
+  },
+  {
+   "page_2": []
+  }
+ ],
+ "layouts": {
+  "layout_header": {
+   "type": "FLEX_ROW",
+   "order": [
+    "0",
+    "1"
+   ],
+   "setting": {
+    "justifyContent": "space-between",
+    "padding": {
+     "number": [
+      0,
+      12,
+      0,
+      12
+     ],
+     "unit": "px"
+    }
+   },
+   "content": {
+    "0": {
+     "type": "WIDGET",
+     "widgetId": "w_title",
+     "bbox": {
+      "width": "600px",
+      "height": "40px"
+     },
+     "setting": {
+      "autoProps": {
+       "width": "CUSTOM",
+       "height": "CUSTOM"
+      },
+      "style": {
+       "alignSelf": "center"
+      }
+     }
+    },
+    "1": {
+     "type": "WIDGET",
+     "widgetId": "w_menu",
+     "bbox": {
+      "width": "560px",
+      "height": "36px"
+     },
+     "setting": {
+      "autoProps": {
+       "width": "AUTO",
+       "height": "CUSTOM"
+      },
+      "style": {
+       "alignSelf": "center"
+      }
+     }
+    }
+   }
+  },
+  "layout_footer": {
+   "type": "FIXED",
+   "order": [],
+   "content": {}
+  },
+  "layout_view_1_tool": {
+   "type": "FIXED",
+   "order": [
+    "0"
+   ],
+   "content": {
+    "0": {
+     "type": "WIDGET",
+     "widgetId": "w_embed1_tool",
+     "bbox": {
+      "left": "0%",
+      "top": "0%",
+      "width": "100%",
+      "height": "100%"
+     },
+     "setting": {
+      "autoProps": {
+       "left": false,
+       "right": false,
+       "top": false,
+       "bottom": false,
+       "width": "CUSTOM",
+       "height": "CUSTOM"
+      }
+     }
+    }
+   }
+  },
+  "layout_view_1_sel": {
+   "type": "FIXED",
+   "order": [
+    "0"
+   ],
+   "content": {
+    "0": {
+     "type": "WIDGET",
+     "widgetId": "w_embed1_sel",
+     "bbox": {
+      "left": "0%",
+      "top": "0%",
+      "width": "100%",
+      "height": "100%"
+     },
+     "setting": {
+      "autoProps": {
+       "left": false,
+       "right": false,
+       "top": false,
+       "bottom": false,
+       "width": "CUSTOM",
+       "height": "CUSTOM"
+      }
+     }
+    }
+   }
+  },
+  "layout_p1": {
+   "type": "FIXED",
+   "order": [
+    "0",
+    "1",
+    "2"
+   ],
+   "content": {
+    "0": {
+     "type": "WIDGET",
+     "widgetId": "w_map1",
+     "bbox": {
+      "left": "0%",
+      "top": "0%",
+      "width": "56%",
+      "height": "100%"
+     },
+     "setting": {
+      "autoProps": {
+       "left": false,
+       "right": false,
+       "top": false,
+       "bottom": false,
+       "width": "CUSTOM",
+       "height": "CUSTOM"
+      }
+     }
+    },
+    "1": {
+     "type": "WIDGET",
+     "widgetId": "w_nav1",
+     "bbox": {
+      "left": "56.5%",
+      "top": "0px",
+      "width": "43.5%",
+      "height": "44px"
+     },
+     "setting": {
+      "autoProps": {
+       "left": false,
+       "right": false,
+       "top": false,
+       "bottom": false,
+       "width": "CUSTOM",
+       "height": "CUSTOM"
+      }
+     }
+    },
+    "2": {
+     "type": "SECTION",
+     "sectionId": "section_1",
+     "bbox": {
+      "left": "56.5%",
+      "top": "46px",
+      "width": "43.5%",
+      "height": "calc(100% - 46px)"
+     },
+     "setting": {
+      "autoProps": {
+       "left": false,
+       "right": false,
+       "top": false,
+       "bottom": false,
+       "width": "CUSTOM",
+       "height": "CUSTOM"
+      }
+     }
+    }
+   }
+  },
+  "layout_map1": {
+   "type": "FIXED",
+   "order": [
+    "0",
+    "1"
+   ],
+   "content": {
+    "0": {
+     "type": "WIDGET",
+     "widgetId": "w_search1",
+     "bbox": {
+      "left": "60px",
+      "top": "12px",
+      "width": "340px",
+      "height": "40px"
+     },
+     "setting": {
+      "autoProps": {
+       "left": false,
+       "right": false,
+       "top": false,
+       "bottom": false,
+       "width": "CUSTOM",
+       "height": "CUSTOM"
+      }
+     }
+    },
+    "1": {
+     "type": "WIDGET",
+     "widgetId": "w_help1",
+     "bbox": {
+      "left": "60px",
+      "top": "60px",
+      "width": "340px",
+      "height": "78px"
+     },
+     "setting": {
+      "autoProps": {
+       "left": false,
+       "right": false,
+       "top": false,
+       "bottom": false,
+       "width": "CUSTOM",
+       "height": "CUSTOM"
+      }
+     }
+    }
+   }
+  },
+  "layout_view_3_tool": {
+   "type": "FIXED",
+   "order": [
+    "0"
+   ],
+   "content": {
+    "0": {
+     "type": "WIDGET",
+     "widgetId": "w_embed3_tool",
+     "bbox": {
+      "left": "0%",
+      "top": "0%",
+      "width": "100%",
+      "height": "100%"
+     },
+     "setting": {
+      "autoProps": {
+       "left": false,
+       "right": false,
+       "top": false,
+       "bottom": false,
+       "width": "CUSTOM",
+       "height": "CUSTOM"
+      }
+     }
+    }
+   }
+  },
+  "layout_view_3_sel": {
+   "type": "FIXED",
+   "order": [
+    "0"
+   ],
+   "content": {
+    "0": {
+     "type": "WIDGET",
+     "widgetId": "w_embed3_sel",
+     "bbox": {
+      "left": "0%",
+      "top": "0%",
+      "width": "100%",
+      "height": "100%"
+     },
+     "setting": {
+      "autoProps": {
+       "left": false,
+       "right": false,
+       "top": false,
+       "bottom": false,
+       "width": "CUSTOM",
+       "height": "CUSTOM"
+      }
+     }
+    }
+   }
+  },
+  "layout_p3": {
+   "type": "FIXED",
+   "order": [
+    "0",
+    "1",
+    "2"
+   ],
+   "content": {
+    "0": {
+     "type": "WIDGET",
+     "widgetId": "w_map3",
+     "bbox": {
+      "left": "0%",
+      "top": "0%",
+      "width": "56%",
+      "height": "100%"
+     },
+     "setting": {
+      "autoProps": {
+       "left": false,
+       "right": false,
+       "top": false,
+       "bottom": false,
+       "width": "CUSTOM",
+       "height": "CUSTOM"
+      }
+     }
+    },
+    "1": {
+     "type": "WIDGET",
+     "widgetId": "w_nav3",
+     "bbox": {
+      "left": "56.5%",
+      "top": "0px",
+      "width": "43.5%",
+      "height": "44px"
+     },
+     "setting": {
+      "autoProps": {
+       "left": false,
+       "right": false,
+       "top": false,
+       "bottom": false,
+       "width": "CUSTOM",
+       "height": "CUSTOM"
+      }
+     }
+    },
+    "2": {
+     "type": "SECTION",
+     "sectionId": "section_3",
+     "bbox": {
+      "left": "56.5%",
+      "top": "46px",
+      "width": "43.5%",
+      "height": "calc(100% - 46px)"
+     },
+     "setting": {
+      "autoProps": {
+       "left": false,
+       "right": false,
+       "top": false,
+       "bottom": false,
+       "width": "CUSTOM",
+       "height": "CUSTOM"
+      }
+     }
+    }
+   }
+  },
+  "layout_map3": {
+   "type": "FIXED",
+   "order": [
+    "0",
+    "1"
+   ],
+   "content": {
+    "0": {
+     "type": "WIDGET",
+     "widgetId": "w_search3",
+     "bbox": {
+      "left": "60px",
+      "top": "12px",
+      "width": "340px",
+      "height": "40px"
+     },
+     "setting": {
+      "autoProps": {
+       "left": false,
+       "right": false,
+       "top": false,
+       "bottom": false,
+       "width": "CUSTOM",
+       "height": "CUSTOM"
+      }
+     }
+    },
+    "1": {
+     "type": "WIDGET",
+     "widgetId": "w_help3",
+     "bbox": {
+      "left": "60px",
+      "top": "60px",
+      "width": "340px",
+      "height": "78px"
+     },
+     "setting": {
+      "autoProps": {
+       "left": false,
+       "right": false,
+       "top": false,
+       "bottom": false,
+       "width": "CUSTOM",
+       "height": "CUSTOM"
+      }
+     }
+    }
+   }
+  },
+  "layout_p2": {
+   "type": "FIXED",
+   "order": [
+    "0",
+    "1",
+    "2",
+    "3"
+   ],
+   "content": {
+    "0": {
+     "type": "WIDGET",
+     "widgetId": "w_map2",
+     "bbox": {
+      "left": "0%",
+      "top": "0%",
+      "width": "70%",
+      "height": "100%"
+     },
+     "setting": {
+      "autoProps": {
+       "left": false,
+       "right": false,
+       "top": false,
+       "bottom": false,
+       "width": "CUSTOM",
+       "height": "CUSTOM"
+      }
+     }
+    },
+    "1": {
+     "type": "WIDGET",
+     "widgetId": "w_layers2",
+     "bbox": {
+      "left": "70.5%",
+      "top": "0%",
+      "width": "29.5%",
+      "height": "56%"
+     },
+     "setting": {
+      "autoProps": {
+       "left": false,
+       "right": false,
+       "top": false,
+       "bottom": false,
+       "width": "CUSTOM",
+       "height": "CUSTOM"
+      }
+     }
+    },
+    "2": {
+     "type": "WIDGET",
+     "widgetId": "w_legend2",
+     "bbox": {
+      "left": "70.5%",
+      "top": "56.5%",
+      "width": "29.5%",
+      "height": "28%"
+     },
+     "setting": {
+      "autoProps": {
+       "left": false,
+       "right": false,
+       "top": false,
+       "bottom": false,
+       "width": "CUSTOM",
+       "height": "CUSTOM"
+      }
+     }
+    },
+    "3": {
+     "type": "WIDGET",
+     "widgetId": "w_help2",
+     "bbox": {
+      "left": "70.5%",
+      "top": "85%",
+      "width": "29.5%",
+      "height": "15%"
+     },
+     "setting": {
+      "autoProps": {
+       "left": false,
+       "right": false,
+       "top": false,
+       "bottom": false,
+       "width": "CUSTOM",
+       "height": "CUSTOM"
+      }
+     }
+    }
+   }
+  },
+  "layout_map2": {
+   "type": "FIXED",
+   "order": [],
+   "content": {}
+  }
+ },
+ "widgets": {
+  "w_title": {
+   "uri": "widgets/common/text/",
+   "version": "1.21.0",
+   "id": "w_title",
+   "label": "Title",
+   "config": {
+    "text": "<p><strong style=\"font-size:18px;color:#ffffff;\">CA Prescribed Fire Planner</strong><span style=\"font-size:13px;color:#dbe7f3;\"> (Beta) · burn windows, smoke, outlooks, typical burn days</span></p>",
+    "style": {
+     "verticalAlign": "start",
+     "wrap": true
+    }
+   }
+  },
+  "w_menu": {
+   "uri": "widgets/common/menu/",
+   "version": "1.21.0",
+   "id": "w_menu",
+   "label": "Menu",
+   "config": {
+    "type": "nav",
+    "vertical": false,
+    "menuStyle": "pills",
+    "advanced": true,
+    "variants": {
+     "default": {
+      "item": {
+       "default": {
+        "color": "#dbe7f3"
+       },
+       "hover": {
+        "color": "#ffffff",
+        "bg": "#14548a"
+       },
+       "active": {
+        "color": "#0b3b63",
+        "bg": "#ffffff"
+       }
+      }
+     }
+    }
+   },
+   "style": {
+    "background": {
+     "color": "#0b3b63",
+     "fillType": "fill"
+    },
+    "textColor": "#ffffff"
+   }
+  },
+  "w_map1": {
+   "uri": "widgets/arcgis/arcgis-map/",
+   "version": "1.21.0",
+   "id": "w_map1",
+   "label": "Weather Evaluator Map",
+   "config": {
+    "toolConfig": {
+     "canZoom": true,
+     "canHome": true,
+     "canSearch": false,
+     "canNavigation": true,
+     "canBaseMap": true,
+     "canMeasure": true,
+     "canFullScreen": true,
+     "canScaleBar": true,
+     "canLocate": true,
+     "canCompass": true,
+     "canLayers": true,
+     "canSelect": false,
+     "canExtentNavigate": false,
+     "canOverviewMap": false
+    },
+    "isUseCustomMapState": false,
+    "initialMapDataSourceID": "dataSource_1",
+    "initialMapState": null,
+    "disablePopUp": true,
+    "showPopupUponSelection": false,
+    "clientQueryDataSourceIds": []
+   },
+   "useDataSources": [
+    {
+     "dataSourceId": "dataSource_1",
+     "mainDataSourceId": "dataSource_1"
+    }
+   ],
+   "layouts": {
+    "MapFixedLayout": {
+     "LARGE": "layout_map1"
+    }
+   }
+  },
+  "w_search1": {
+   "uri": "widgets/common/search/",
+   "version": "1.21.0",
+   "id": "w_search1",
+   "label": "Unit Search",
+   "useMapWidgetIds": [
+    "w_map1"
+   ],
+   "useUtilities": [
+    {
+     "utilityId": "utility_1"
+    }
+   ],
+   "config": {
+    "sourceType": "MapCentric",
+    "searchResultView": "Result_Panel",
+    "arrangementStyle": "Style1",
+    "maxSuggestions": 6,
+    "resultMaxNumber": 6,
+    "enableFiltering": false,
+    "isAutoSelectFirstResult": true,
+    "dataSourceConfigWithMapCentric": {
+     "w_map1-dataSource_1": {
+      "dataSourceConfig": [
+       {
+        "configId": "cfg_units",
+        "label": "Fuel Treatment Units",
+        "displayLabel": true,
+        "hint": "Search unit name",
+        "searchServiceType": "FeatureService",
+        "searchExact": false,
+        "searchInCurrentMapExtent": false,
+        "useDataSource": {
+         "dataSourceId": "dataSource_1-treatment_units",
+         "mainDataSourceId": "dataSource_1-treatment_units",
+         "rootDataSourceId": "dataSource_1",
+         "fields": [
+          "name",
+          "objectid"
+         ]
+        },
+        "displayFields": [
+         {
+          "jimuName": "name",
+          "name": "name",
+          "type": "STRING",
+          "esriType": "esriFieldTypeString",
+          "alias": "Name"
+         }
+        ],
+        "searchFields": [
+         {
+          "jimuName": "name",
+          "name": "name",
+          "type": "STRING",
+          "esriType": "esriFieldTypeString",
+          "alias": "Name"
+         }
+        ]
+       },
+       {
+        "configId": "cfg_geocode",
+        "label": "Place or address",
+        "useUtility": {
+         "utilityId": "utility_1"
+        },
+        "searchServiceType": "GeocodeService",
+        "singleLineFieldName": "SingleLine",
+        "isSupportSuggest": true,
+        "outputDataSourceId": "w_search1_output_geocode"
+       }
+      ],
+      "synchronizeSettings": false
+     }
+    }
+   },
+   "useDataSources": [
+    {
+     "dataSourceId": "dataSource_1-treatment_units",
+     "mainDataSourceId": "dataSource_1-treatment_units",
+     "rootDataSourceId": "dataSource_1",
+     "fields": [
+      "name",
+      "objectid"
+     ]
+    }
+   ],
+   "outputDataSources": [
+    "w_search1_output_geocode"
+   ]
+  },
+  "w_help1": {
+   "uri": "widgets/common/text/",
+   "version": "1.21.0",
+   "id": "w_help1",
+   "label": "How to use",
+   "config": {
+    "text": "<p style=\"font-size:12px;\"><strong>Two ways in:</strong> click a fuel treatment unit, then open the <em>Unit selected on map</em> tab — or use the <em>Search / upload unit &amp; Rx</em> tab to search by name, upload a shapefile/KML/GeoJSON, or enter lat/lon. Set your Rx in either tab.</p>",
+    "style": {
+     "verticalAlign": "start",
+     "wrap": true
+    }
+   },
+   "style": {
+    "background": {
+     "color": "rgba(255,255,255,0.94)",
+     "fillType": "fill"
+    },
+    "border": {
+     "type": "solid",
+     "color": "#c9d3dd",
+     "width": "1px"
+    },
+    "borderRadius": {
+     "number": [
+      4,
+      4,
+      4,
+      4
+     ],
+     "unit": "px"
+    }
+   }
+  },
+  "w_embed1_tool": {
+   "uri": "widgets/common/embed/",
+   "version": "1.21.0",
+   "id": "w_embed1_tool",
+   "label": "Weather Evaluator – search / upload",
+   "config": {
+    "embedType": "url",
+    "expression": "<p>https://shelikes2run.github.io/ca-rx-planner/burn_eval_ca.html</p>",
+    "enableLabel": false,
+    "enableBlankMessage": false,
+    "autoRefresh": false,
+    "honorThemeFont": false,
+    "embedCode": ""
+   },
+   "useDataSourcesEnabled": false
+  },
+  "w_embed1_sel": {
+   "uri": "widgets/common/embed/",
+   "version": "1.21.0",
+   "id": "w_embed1_sel",
+   "label": "Weather Evaluator – map-selected unit",
+   "config": {
+    "embedType": "url",
+    "expression": "<p>https://shelikes2run.github.io/ca-rx-planner/burn_eval_ca.html?unit=<exp data-uniqueid=\"1x_n\" data-dsid=\"dataSource_1-treatment_units-selection\" data-expression=\"%7B%22name%22%3A%22%7BName%7D%22%2C%22parts%22%3A%5B%7B%22type%22%3A%22FIELD%22%2C%22exp%22%3A%22%7BName%7D%22%2C%22dataSourceId%22%3A%22dataSource_1-treatment_units-selection%22%2C%22jimuFieldName%22%3A%22name%22%2C%22isFromRepeatedDataSourceContext%22%3Afalse%7D%5D%7D\">﻿<span contenteditable=\"false\">{Name}</span>﻿</exp>&amp;id=<exp data-uniqueid=\"1x_i\" data-dsid=\"dataSource_1-treatment_units-selection\" data-expression=\"%7B%22name%22%3A%22%7BObject%20ID%7D%22%2C%22parts%22%3A%5B%7B%22type%22%3A%22FIELD%22%2C%22exp%22%3A%22%7BObject%20ID%7D%22%2C%22dataSourceId%22%3A%22dataSource_1-treatment_units-selection%22%2C%22jimuFieldName%22%3A%22objectid%22%2C%22isFromRepeatedDataSourceContext%22%3Afalse%7D%5D%7D\">﻿<span contenteditable=\"false\">{Object ID}</span>﻿</exp></p>",
+    "enableLabel": true,
+    "label": "Click a fuel treatment unit on the map to run it here.",
+    "enableBlankMessage": true,
+    "blankMessage": "Click a fuel treatment unit on the map to run it here. To upload your own unit, search by name, or enter coordinates, use the \"Search / upload unit & Rx\" tab above.",
+    "autoRefresh": false,
+    "honorThemeFont": false,
+    "embedCode": ""
+   },
+   "useDataSourcesEnabled": true,
+   "useDataSources": [
+    {
+     "dataSourceId": "dataSource_1-treatment_units-selection",
+     "mainDataSourceId": "dataSource_1-treatment_units",
+     "rootDataSourceId": "dataSource_1",
+     "dataViewId": "selection",
+     "fields": [
+      "name",
+      "objectid"
+     ]
+    }
+   ]
+  },
+  "w_nav1": {
+   "uri": "widgets/common/navigator/",
+   "version": "1.21.0",
+   "id": "w_nav1",
+   "label": "Weather Evaluator tabs",
+   "config": {
+    "data": {
+     "type": "AUTO",
+     "section": "section_1",
+     "views": []
+    },
+    "display": {
+     "advanced": false,
+     "vertical": false,
+     "type": "nav",
+     "navStyle": "default",
+     "standard": {
+      "scrollable": true,
+      "textAlign": "center",
+      "gap": "0px",
+      "showText": true,
+      "showIcon": false,
+      "iconPosition": "start"
+     }
+    }
+   }
+  },
+  "w_map3": {
+   "uri": "widgets/arcgis/arcgis-map/",
+   "version": "1.21.0",
+   "id": "w_map3",
+   "label": "Smoke Modeling Map",
+   "config": {
+    "toolConfig": {
+     "canZoom": true,
+     "canHome": true,
+     "canSearch": false,
+     "canNavigation": true,
+     "canBaseMap": true,
+     "canMeasure": true,
+     "canFullScreen": true,
+     "canScaleBar": true,
+     "canLocate": true,
+     "canCompass": true,
+     "canLayers": true,
+     "canSelect": false,
+     "canExtentNavigate": false,
+     "canOverviewMap": false
+    },
+    "isUseCustomMapState": false,
+    "initialMapDataSourceID": "dataSource_3",
+    "initialMapState": null,
+    "disablePopUp": true,
+    "showPopupUponSelection": false,
+    "clientQueryDataSourceIds": []
+   },
+   "useDataSources": [
+    {
+     "dataSourceId": "dataSource_3",
+     "mainDataSourceId": "dataSource_3"
+    }
+   ],
+   "layouts": {
+    "MapFixedLayout": {
+     "LARGE": "layout_map3"
+    }
+   }
+  },
+  "w_search3": {
+   "uri": "widgets/common/search/",
+   "version": "1.21.0",
+   "id": "w_search3",
+   "label": "Unit Search",
+   "useMapWidgetIds": [
+    "w_map3"
+   ],
+   "useUtilities": [
+    {
+     "utilityId": "utility_1"
+    }
+   ],
+   "config": {
+    "sourceType": "MapCentric",
+    "searchResultView": "Result_Panel",
+    "arrangementStyle": "Style1",
+    "maxSuggestions": 6,
+    "resultMaxNumber": 6,
+    "enableFiltering": false,
+    "isAutoSelectFirstResult": true,
+    "dataSourceConfigWithMapCentric": {
+     "w_map3-dataSource_3": {
+      "dataSourceConfig": [
+       {
+        "configId": "cfg_units",
+        "label": "Fuel Treatment Units",
+        "displayLabel": true,
+        "hint": "Search unit name",
+        "searchServiceType": "FeatureService",
+        "searchExact": false,
+        "searchInCurrentMapExtent": false,
+        "useDataSource": {
+         "dataSourceId": "dataSource_3-treatment_units",
+         "mainDataSourceId": "dataSource_3-treatment_units",
+         "rootDataSourceId": "dataSource_3",
+         "fields": [
+          "name",
+          "objectid"
+         ]
+        },
+        "displayFields": [
+         {
+          "jimuName": "name",
+          "name": "name",
+          "type": "STRING",
+          "esriType": "esriFieldTypeString",
+          "alias": "Name"
+         }
+        ],
+        "searchFields": [
+         {
+          "jimuName": "name",
+          "name": "name",
+          "type": "STRING",
+          "esriType": "esriFieldTypeString",
+          "alias": "Name"
+         }
+        ]
+       },
+       {
+        "configId": "cfg_geocode",
+        "label": "Place or address",
+        "useUtility": {
+         "utilityId": "utility_1"
+        },
+        "searchServiceType": "GeocodeService",
+        "singleLineFieldName": "SingleLine",
+        "isSupportSuggest": true,
+        "outputDataSourceId": "w_search3_output_geocode"
+       }
+      ],
+      "synchronizeSettings": false
+     }
+    }
+   },
+   "useDataSources": [
+    {
+     "dataSourceId": "dataSource_3-treatment_units",
+     "mainDataSourceId": "dataSource_3-treatment_units",
+     "rootDataSourceId": "dataSource_3",
+     "fields": [
+      "name",
+      "objectid"
+     ]
+    }
+   ],
+   "outputDataSources": [
+    "w_search3_output_geocode"
+   ]
+  },
+  "w_help3": {
+   "uri": "widgets/common/text/",
+   "version": "1.21.0",
+   "id": "w_help3",
+   "label": "How to use",
+   "config": {
+    "text": "<p style=\"font-size:12px;\"><strong>Smoke screening:</strong> click a unit, then open <em>Unit selected on map</em> — or search / upload in the other tab. Set the burn date, ignition hour and duration, then run. Layers show the NWS smoke forecast, air districts and Class I areas.</p>",
+    "style": {
+     "verticalAlign": "start",
+     "wrap": true
+    }
+   },
+   "style": {
+    "background": {
+     "color": "rgba(255,255,255,0.94)",
+     "fillType": "fill"
+    },
+    "border": {
+     "type": "solid",
+     "color": "#c9d3dd",
+     "width": "1px"
+    },
+    "borderRadius": {
+     "number": [
+      4,
+      4,
+      4,
+      4
+     ],
+     "unit": "px"
+    }
+   }
+  },
+  "w_embed3_tool": {
+   "uri": "widgets/common/embed/",
+   "version": "1.21.0",
+   "id": "w_embed3_tool",
+   "label": "Smoke Modeling – search / upload",
+   "config": {
+    "embedType": "url",
+    "expression": "<p>https://shelikes2run.github.io/ca-rx-planner/smoke_eval_ca.html</p>",
+    "enableLabel": false,
+    "enableBlankMessage": false,
+    "autoRefresh": false,
+    "honorThemeFont": false,
+    "embedCode": ""
+   },
+   "useDataSourcesEnabled": false
+  },
+  "w_embed3_sel": {
+   "uri": "widgets/common/embed/",
+   "version": "1.21.0",
+   "id": "w_embed3_sel",
+   "label": "Smoke Modeling – map-selected unit",
+   "config": {
+    "embedType": "url",
+    "expression": "<p>https://shelikes2run.github.io/ca-rx-planner/smoke_eval_ca.html?unit=<exp data-uniqueid=\"3x_n\" data-dsid=\"dataSource_3-treatment_units-selection\" data-expression=\"%7B%22name%22%3A%22%7BName%7D%22%2C%22parts%22%3A%5B%7B%22type%22%3A%22FIELD%22%2C%22exp%22%3A%22%7BName%7D%22%2C%22dataSourceId%22%3A%22dataSource_3-treatment_units-selection%22%2C%22jimuFieldName%22%3A%22name%22%2C%22isFromRepeatedDataSourceContext%22%3Afalse%7D%5D%7D\">﻿<span contenteditable=\"false\">{Name}</span>﻿</exp>&amp;id=<exp data-uniqueid=\"3x_i\" data-dsid=\"dataSource_3-treatment_units-selection\" data-expression=\"%7B%22name%22%3A%22%7BObject%20ID%7D%22%2C%22parts%22%3A%5B%7B%22type%22%3A%22FIELD%22%2C%22exp%22%3A%22%7BObject%20ID%7D%22%2C%22dataSourceId%22%3A%22dataSource_3-treatment_units-selection%22%2C%22jimuFieldName%22%3A%22objectid%22%2C%22isFromRepeatedDataSourceContext%22%3Afalse%7D%5D%7D\">﻿<span contenteditable=\"false\">{Object ID}</span>﻿</exp></p>",
+    "enableLabel": true,
+    "label": "Click a fuel treatment unit on the map to run it here.",
+    "enableBlankMessage": true,
+    "blankMessage": "Click a fuel treatment unit on the map to run it here. To upload your own unit, search by name, or enter coordinates, use the \"Search / upload unit & Rx\" tab above.",
+    "autoRefresh": false,
+    "honorThemeFont": false,
+    "embedCode": ""
+   },
+   "useDataSourcesEnabled": true,
+   "useDataSources": [
+    {
+     "dataSourceId": "dataSource_3-treatment_units-selection",
+     "mainDataSourceId": "dataSource_3-treatment_units",
+     "rootDataSourceId": "dataSource_3",
+     "dataViewId": "selection",
+     "fields": [
+      "name",
+      "objectid"
+     ]
+    }
+   ]
+  },
+  "w_nav3": {
+   "uri": "widgets/common/navigator/",
+   "version": "1.21.0",
+   "id": "w_nav3",
+   "label": "Smoke Modeling tabs",
+   "config": {
+    "data": {
+     "type": "AUTO",
+     "section": "section_3",
+     "views": []
+    },
+    "display": {
+     "advanced": false,
+     "vertical": false,
+     "type": "nav",
+     "navStyle": "default",
+     "standard": {
+      "scrollable": true,
+      "textAlign": "center",
+      "gap": "0px",
+      "showText": true,
+      "showIcon": false,
+      "iconPosition": "start"
+     }
+    }
+   }
+  },
+  "w_map2": {
+   "uri": "widgets/arcgis/arcgis-map/",
+   "version": "1.21.0",
+   "id": "w_map2",
+   "label": "Outlook Map",
+   "config": {
+    "toolConfig": {
+     "canZoom": true,
+     "canHome": true,
+     "canSearch": true,
+     "canNavigation": true,
+     "canBaseMap": true,
+     "canMeasure": true,
+     "canFullScreen": true,
+     "canScaleBar": true,
+     "canLocate": true,
+     "canCompass": true,
+     "canLayers": true,
+     "canSelect": false,
+     "canExtentNavigate": false,
+     "canOverviewMap": false
+    },
+    "isUseCustomMapState": false,
+    "initialMapDataSourceID": "dataSource_2",
+    "initialMapState": null,
+    "disablePopUp": false
+   },
+   "useDataSources": [
+    {
+     "dataSourceId": "dataSource_2",
+     "mainDataSourceId": "dataSource_2"
+    }
+   ],
+   "layouts": {
+    "MapFixedLayout": {
+     "LARGE": "layout_map2"
+    }
+   }
+  },
+  "w_layers2": {
+   "uri": "widgets/arcgis/map-layers/",
+   "version": "1.21.0",
+   "id": "w_layers2",
+   "label": "Layers",
+   "useMapWidgetIds": [
+    "w_map2"
+   ],
+   "config": {
+    "useMapWidget": true,
+    "enableLegend": true,
+    "showAllLegend": false,
+    "goto": true,
+    "label": true,
+    "opacity": true,
+    "layerOrder": true,
+    "information": true,
+    "setVisibility": true
+   }
+  },
+  "w_legend2": {
+   "uri": "widgets/arcgis/legend/",
+   "version": "1.21.0",
+   "id": "w_legend2",
+   "label": "Legend",
+   "useMapWidgetIds": [
+    "w_map2"
+   ],
+   "config": {
+    "cardLayout": false,
+    "respectLayerVisibility": true
+   }
+  },
+  "w_help2": {
+   "uri": "widgets/common/text/",
+   "version": "1.21.0",
+   "id": "w_help2",
+   "label": "Outlook notes",
+   "config": {
+    "text": "<p style=\"font-size:12px;\"><strong>How to read this page.</strong> Turn on layers in <em>Monthly &amp; Seasonal Outlooks</em> (CPC 6–10/8–14 day, monthly, 3-month seasonal; Predictive Services Month 1–4 fire potential) and <em>Typical Rx Burn Days</em> (gridMET 2016–2025: average days per month meeting a generic broadcast Rx — Tmax 40–80°F, RHmin 20–50%, wind ≤12 mph). Click a grid cell for all 12 months. For your own Rx and unit, use the Weather Evaluator page.</p>",
+    "style": {
+     "verticalAlign": "start",
+     "wrap": true
+    }
+   }
+  }
+ },
+ "sections": {
+  "section_1": {
+   "id": "section_1",
+   "label": "Weather Evaluator panel",
+   "views": [
+    "view_1_tool",
+    "view_1_sel"
+   ],
+   "arrowsNav": {
+    "visible": false
+   },
+   "dotsNav": {
+    "visible": false
+   }
+  },
+  "section_3": {
+   "id": "section_3",
+   "label": "Smoke Modeling panel",
+   "views": [
+    "view_3_tool",
+    "view_3_sel"
+   ],
+   "arrowsNav": {
+    "visible": false
+   },
+   "dotsNav": {
+    "visible": false
+   }
+  }
+ },
+ "views": {
+  "view_1_tool": {
+   "id": "view_1_tool",
+   "label": "Search / upload unit & Rx",
+   "layout": {
+    "LARGE": "layout_view_1_tool"
+   }
+  },
+  "view_1_sel": {
+   "id": "view_1_sel",
+   "label": "Unit selected on map",
+   "layout": {
+    "LARGE": "layout_view_1_sel"
+   }
+  },
+  "view_3_tool": {
+   "id": "view_3_tool",
+   "label": "Search / upload unit & Rx",
+   "layout": {
+    "LARGE": "layout_view_3_tool"
+   }
+  },
+  "view_3_sel": {
+   "id": "view_3_sel",
+   "label": "Unit selected on map",
+   "layout": {
+    "LARGE": "layout_view_3_sel"
+   }
+  }
+ },
+ "dialogs": {},
+ "controllerPanels": {},
+ "widgetsManifest": {},
+ "header": {
+  "layout": {
+   "LARGE": "layout_header"
+  },
+  "height": {
+   "LARGE": 56
+  },
+  "backgroundColor": "#0b3b63"
+ },
+ "footer": {
+  "layout": {
+   "LARGE": "layout_footer"
+  },
+  "height": {
+   "LARGE": 0
+  }
+ },
+ "dataSources": {
+  "dataSource_1": {
+   "id": "dataSource_1",
+   "type": "WEB_MAP",
+   "sourceLabel": "CA Prescribed Fire Planner Map",
+   "itemId": "50c035c0ccaa4de8a3a782f5eb8a2cb2",
+   "portalUrl": "https://nifc.maps.arcgis.com",
+   "childDataSourceJsons": {
+    "treatment_units": {
+     "id": "dataSource_1-treatment_units",
+     "type": "FEATURE_LAYER",
+     "sourceLabel": "Fuel Treatment Units (Reshape Wildfire)",
+     "url": "https://gis.reshapewildfire.org/arcgis/rest/services/Hosted/Treatment_Index_View/FeatureServer/0",
+     "layerId": "0"
+    }
+   }
+  },
+  "dataSource_2": {
+   "id": "dataSource_2",
+   "type": "WEB_MAP",
+   "sourceLabel": "CA Prescribed Fire Planner Map - Outlooks",
+   "itemId": "c4d28c3e35fa4d32a41447b24d80c6e2",
+   "portalUrl": "https://nifc.maps.arcgis.com"
+  },
+  "dataSource_3": {
+   "id": "dataSource_3",
+   "type": "WEB_MAP",
+   "sourceLabel": "CA Prescribed Fire Planner Map - Smoke",
+   "itemId": "93741188dfda4a92bd43a767fdbfd114",
+   "portalUrl": "https://nifc.maps.arcgis.com",
+   "childDataSourceJsons": {
+    "treatment_units": {
+     "id": "dataSource_3-treatment_units",
+     "type": "FEATURE_LAYER",
+     "sourceLabel": "Fuel Treatment Units (Reshape Wildfire)",
+     "url": "https://gis.reshapewildfire.org/arcgis/rest/services/Hosted/Treatment_Index_View/FeatureServer/0",
+     "layerId": "0"
+    }
+   }
+  },
+  "w_search1_output_geocode": {
+   "id": "w_search1_output_geocode",
+   "type": "FEATURE_LAYER",
+   "label": "Search result",
+   "isOutputFromWidget": true,
+   "isDataInDataSourceInstance": false,
+   "originDataSources": [],
+   "geometryType": "esriGeometryPoint",
+   "schema": {
+    "label": "Search result",
+    "idField": "objectid",
+    "fields": {
+     "objectid": {
+      "jimuName": "objectid",
+      "name": "objectid",
+      "alias": "OBJECTID",
+      "type": "NUMBER",
+      "esriType": "esriFieldTypeOID"
+     }
+    }
+   }
+  },
+  "w_search3_output_geocode": {
+   "id": "w_search3_output_geocode",
+   "type": "FEATURE_LAYER",
+   "label": "Search result",
+   "isOutputFromWidget": true,
+   "isDataInDataSourceInstance": false,
+   "originDataSources": [],
+   "geometryType": "esriGeometryPoint",
+   "schema": {
+    "label": "Search result",
+    "idField": "objectid",
+    "fields": {
+     "objectid": {
+      "jimuName": "objectid",
+      "name": "objectid",
+      "alias": "OBJECTID",
+      "type": "NUMBER",
+      "esriType": "esriFieldTypeOID"
+     }
+    }
+   }
+  }
+ },
+ "utilities": {
+  "utility_1": {
+   "id": "utility_1",
+   "type": "GEOCODING",
+   "name": "geocode",
+   "label": "ArcGIS World Geocoding Service",
+   "url": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer",
+   "source": "org",
+   "index": 0
+  }
+ },
+ "messageConfigs": {
+  "msg_mapsel1": {
+   "id": "msg_mapsel1",
+   "widgetId": "w_map1",
+   "messageType": "DATA_RECORDS_SELECTION_CHANGE",
+   "actions": [
+    {
+     "actionId": "sel_units_from_map1",
+     "widgetId": "w_map1",
+     "messageWidgetId": "w_map1",
+     "actionName": "select data record action",
+     "version": "1.21.0",
+     "config": {
+      "messageUseDataSource": {
+       "dataSourceId": "dataSource_1-treatment_units",
+       "mainDataSourceId": "dataSource_1-treatment_units",
+       "rootDataSourceId": "dataSource_1"
+      },
+      "actionUseDataSource": {
+       "dataSourceId": "dataSource_1-treatment_units",
+       "mainDataSourceId": "dataSource_1-treatment_units",
+       "rootDataSourceId": "dataSource_1"
+      },
+      "sqlExprObj": null,
+      "enabledDataRelationShip": true,
+      "connectionType": null
+     },
+     "useDataSources": [
+      {
+       "dataSourceId": "dataSource_1-treatment_units",
+       "mainDataSourceId": "dataSource_1-treatment_units",
+       "rootDataSourceId": "dataSource_1",
+       "fields": []
+      }
+     ]
+    }
+   ]
+  },
+  "msg_searchsel1": {
+   "id": "msg_searchsel1",
+   "widgetId": "w_search1",
+   "messageType": "DATA_RECORDS_SELECTION_CHANGE",
+   "actions": [
+    {
+     "actionId": "zoom_from_search1",
+     "widgetId": "w_map1",
+     "messageWidgetId": "w_search1",
+     "actionName": "zoomToFeature",
+     "version": "1.21.0",
+     "config": {
+      "useDataSources": [
+       {
+        "dataSourceId": "dataSource_1-treatment_units",
+        "mainDataSourceId": "dataSource_1-treatment_units",
+        "rootDataSourceId": "dataSource_1"
+       },
+       {
+        "dataSourceId": "w_search1_output_geocode",
+        "mainDataSourceId": "w_search1_output_geocode",
+        "rootDataSourceId": null
+       }
+      ],
+      "goToInitialMapExtentWhenSelectionCleared": false,
+      "useAnyTriggerData": true
+     }
+    },
+    {
+     "actionId": "sel_units_from_search1",
+     "widgetId": "w_map1",
+     "messageWidgetId": "w_search1",
+     "actionName": "select data record action",
+     "version": "1.21.0",
+     "config": {
+      "messageUseDataSource": {
+       "dataSourceId": "dataSource_1-treatment_units",
+       "mainDataSourceId": "dataSource_1-treatment_units",
+       "rootDataSourceId": "dataSource_1"
+      },
+      "actionUseDataSource": {
+       "dataSourceId": "dataSource_1-treatment_units",
+       "mainDataSourceId": "dataSource_1-treatment_units",
+       "rootDataSourceId": "dataSource_1"
+      },
+      "sqlExprObj": null,
+      "enabledDataRelationShip": true,
+      "connectionType": null
+     },
+     "useDataSources": [
+      {
+       "dataSourceId": "dataSource_1-treatment_units",
+       "mainDataSourceId": "dataSource_1-treatment_units",
+       "rootDataSourceId": "dataSource_1",
+       "fields": []
+      }
+     ]
+    }
+   ]
+  },
+  "msg_mapsel3": {
+   "id": "msg_mapsel3",
+   "widgetId": "w_map3",
+   "messageType": "DATA_RECORDS_SELECTION_CHANGE",
+   "actions": [
+    {
+     "actionId": "sel_units_from_map3",
+     "widgetId": "w_map3",
+     "messageWidgetId": "w_map3",
+     "actionName": "select data record action",
+     "version": "1.21.0",
+     "config": {
+      "messageUseDataSource": {
+       "dataSourceId": "dataSource_3-treatment_units",
+       "mainDataSourceId": "dataSource_3-treatment_units",
+       "rootDataSourceId": "dataSource_3"
+      },
+      "actionUseDataSource": {
+       "dataSourceId": "dataSource_3-treatment_units",
+       "mainDataSourceId": "dataSource_3-treatment_units",
+       "rootDataSourceId": "dataSource_3"
+      },
+      "sqlExprObj": null,
+      "enabledDataRelationShip": true,
+      "connectionType": null
+     },
+     "useDataSources": [
+      {
+       "dataSourceId": "dataSource_3-treatment_units",
+       "mainDataSourceId": "dataSource_3-treatment_units",
+       "rootDataSourceId": "dataSource_3",
+       "fields": []
+      }
+     ]
+    }
+   ]
+  },
+  "msg_searchsel3": {
+   "id": "msg_searchsel3",
+   "widgetId": "w_search3",
+   "messageType": "DATA_RECORDS_SELECTION_CHANGE",
+   "actions": [
+    {
+     "actionId": "zoom_from_search3",
+     "widgetId": "w_map3",
+     "messageWidgetId": "w_search3",
+     "actionName": "zoomToFeature",
+     "version": "1.21.0",
+     "config": {
+      "useDataSources": [
+       {
+        "dataSourceId": "dataSource_3-treatment_units",
+        "mainDataSourceId": "dataSource_3-treatment_units",
+        "rootDataSourceId": "dataSource_3"
+       },
+       {
+        "dataSourceId": "w_search3_output_geocode",
+        "mainDataSourceId": "w_search3_output_geocode",
+        "rootDataSourceId": null
+       }
+      ],
+      "goToInitialMapExtentWhenSelectionCleared": false,
+      "useAnyTriggerData": true
+     }
+    },
+    {
+     "actionId": "sel_units_from_search3",
+     "widgetId": "w_map3",
+     "messageWidgetId": "w_search3",
+     "actionName": "select data record action",
+     "version": "1.21.0",
+     "config": {
+      "messageUseDataSource": {
+       "dataSourceId": "dataSource_3-treatment_units",
+       "mainDataSourceId": "dataSource_3-treatment_units",
+       "rootDataSourceId": "dataSource_3"
+      },
+      "actionUseDataSource": {
+       "dataSourceId": "dataSource_3-treatment_units",
+       "mainDataSourceId": "dataSource_3-treatment_units",
+       "rootDataSourceId": "dataSource_3"
+      },
+      "sqlExprObj": null,
+      "enabledDataRelationShip": true,
+      "connectionType": null
+     },
+     "useDataSources": [
+      {
+       "dataSourceId": "dataSource_3-treatment_units",
+       "mainDataSourceId": "dataSource_3-treatment_units",
+       "rootDataSourceId": "dataSource_3",
+       "fields": []
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "customTheme": {},
+ "permission": {
+  "restrictions": []
+ },
+ "historyLabels": {}
+}
