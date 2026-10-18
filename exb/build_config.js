@@ -80,7 +80,7 @@ function buildExb2({ wm1, wm2, wm3, base, portalUrl = 'https://nifc.maps.arcgis.
       { section: secId, bbox: { left: '56.5%', top: '46px', width: '43.5%', height: 'calc(100% - 46px)' } }]);
     LAY[`layout_map${n}`] = fixed([
       { w: searchId, bbox: px('60px', '12px', '340px', '40px') },
-      { w: helpId, bbox: px('60px', '60px', '340px', '78px') }]);
+      { w: helpId, bbox: px('60px', '60px', '340px', '92px') }]);
     MSG[`msg_mapsel${n}`] = { id: `msg_mapsel${n}`, widgetId: mapId, messageType: 'DATA_RECORDS_SELECTION_CHANGE', actions: [{ actionId: `sel_units_from_map${n}`, widgetId: mapId, messageWidgetId: mapId, actionName: 'select data record action', version: v,
       config: { messageUseDataSource: { dataSourceId: units, mainDataSourceId: units, rootDataSourceId: ds }, actionUseDataSource: { dataSourceId: units, mainDataSourceId: units, rootDataSourceId: ds }, sqlExprObj: null, enabledDataRelationShip: true, connectionType: null },
       useDataSources: [{ dataSourceId: units, mainDataSourceId: units, rootDataSourceId: ds, fields: [] }] }] };
@@ -91,10 +91,10 @@ function buildExb2({ wm1, wm2, wm3, base, portalUrl = 'https://nifc.maps.arcgis.
         useDataSources: [{ dataSourceId: units, mainDataSourceId: units, rootDataSourceId: ds, fields: [] }] }] };
   }
   toolPage(1, 'dataSource_1', 'burn_eval_ca.html', 'Weather Evaluator',
-    '<p style="font-size:12px;"><strong>Two ways in:</strong> click a fuel treatment unit, then open the <em>Unit selected on map</em> tab — or use the <em>Search / upload unit &amp; Rx</em> tab to search by name, upload a shapefile/KML/GeoJSON, or enter lat/lon. Set your Rx in either tab.</p>',
+    '<p style="font-size:12px;"><strong>Two ways in:</strong> zoom to about county level to see fuel treatment units, click one, then open the <em>Unit selected on map</em> tab — or use the <em>Search / upload unit &amp; Rx</em> tab to search by name, upload a shapefile/KML/GeoJSON, or enter lat/lon. Set your Rx in either tab.</p>',
     ['Search / upload unit & Rx', 'Unit selected on map']);
   toolPage(3, 'dataSource_3', 'smoke_eval_ca.html', 'Smoke Modeling',
-    '<p style="font-size:12px;"><strong>Smoke screening:</strong> click a unit, then open <em>Smoke: map-selected unit</em> — or use <em>Smoke: search / upload unit</em>. Set the burn date, ignition hour and duration, then run. Layers show the NWS smoke forecast, air districts and Class I areas.</p>',
+    '<p style="font-size:12px;"><strong>Smoke screening:</strong> zoom in to see units, click one, then open <em>Smoke: map-selected unit</em> — or use <em>Smoke: search / upload unit</em>. Set the burn date, ignition hour and duration, then run. Layers show the NWS smoke forecast, air districts and Class I areas.</p>',
     ['Smoke: search / upload unit', 'Smoke: map-selected unit']);
 
   // Outlooks page
@@ -103,7 +103,7 @@ function buildExb2({ wm1, wm2, wm3, base, portalUrl = 'https://nifc.maps.arcgis.
     useDataSources: [{ dataSourceId: 'dataSource_2', mainDataSourceId: 'dataSource_2' }], layouts: { MapFixedLayout: { LARGE: 'layout_map2' } } };
   W.w_layers2 = { uri: 'widgets/arcgis/map-layers/', version: v, id: 'w_layers2', label: 'Layers', useMapWidgetIds: ['w_map2'], config: { useMapWidget: true, enableLegend: true, showAllLegend: false, goto: true, label: true, opacity: true, layerOrder: true, information: true, setVisibility: true } };
   W.w_legend2 = { uri: 'widgets/arcgis/legend/', version: v, id: 'w_legend2', label: 'Legend', useMapWidgetIds: ['w_map2'], config: { cardLayout: false, respectLayerVisibility: true } };
-  W.w_help2 = text('w_help2', 'Outlook notes', '<p style="font-size:12px;"><strong>How to read this page.</strong> Turn on layers in <em>Monthly &amp; Seasonal Outlooks</em> (CPC 6–10/8–14 day, monthly, 3-month seasonal; Predictive Services Month 1–4 fire potential) and <em>Typical Rx Burn Days</em> (gridMET 2016–2025: average days per month meeting a generic broadcast Rx — Tmax 40–80°F, RHmin 20–50%, wind ≤12 mph). Click a grid cell for all 12 months. For your own Rx and unit, use the Weather Evaluator page.</p>');
+  W.w_help2 = text('w_help2', 'Outlook notes', '<p style="font-size:12px;"><strong>How to read this page.</strong> Turn on layers in <em>Monthly &amp; Seasonal Outlooks</em> (CPC 6–10/8–14 day, monthly, 3-month seasonal; Predictive Services Month 1–4 fire potential) and <em>Typical Rx Burn Days</em> (gridMET 2016–2025: average days per month meeting a generic broadcast Rx — Tmax 40–80°F, RHmin 20–50%, wind ≤12 mph). Click a grid cell for all 12 months. Units, RAWS and other detailed layers draw once you zoom in. For your own Rx and unit, use the Weather Evaluator page.</p>');
   LAY.layout_p2 = fixed([{ w: 'w_map2', bbox: pct(0, 0, 70, 100) }, { w: 'w_layers2', bbox: pct(70.5, 0, 29.5, 56) }, { w: 'w_legend2', bbox: pct(70.5, 56.5, 29.5, 28) }, { w: 'w_help2', bbox: pct(70.5, 85, 29.5, 15) }]);
   LAY.layout_map2 = { type: 'FIXED', order: [], content: {} };
 

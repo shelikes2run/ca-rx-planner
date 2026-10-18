@@ -296,7 +296,7 @@
       "left": "60px",
       "top": "60px",
       "width": "340px",
-      "height": "78px"
+      "height": "92px"
      },
      "setting": {
       "autoProps": {
@@ -471,7 +471,7 @@
       "left": "60px",
       "top": "60px",
       "width": "340px",
-      "height": "78px"
+      "height": "92px"
      },
      "setting": {
       "autoProps": {
@@ -799,7 +799,7 @@
    "id": "w_help1",
    "label": "How to use",
    "config": {
-    "text": "<p style=\"font-size:12px;\"><strong>Two ways in:</strong> click a fuel treatment unit, then open the <em>Unit selected on map</em> tab — or use the <em>Search / upload unit &amp; Rx</em> tab to search by name, upload a shapefile/KML/GeoJSON, or enter lat/lon. Set your Rx in either tab.</p>",
+    "text": "<p style=\"font-size:12px;\"><strong>Two ways in:</strong> zoom to about county level to see fuel treatment units, click one, then open the <em>Unit selected on map</em> tab — or use the <em>Search / upload unit &amp; Rx</em> tab to search by name, upload a shapefile/KML/GeoJSON, or enter lat/lon. Set your Rx in either tab.</p>",
     "style": {
      "verticalAlign": "start",
      "wrap": true
@@ -1037,7 +1037,7 @@
    "id": "w_help3",
    "label": "How to use",
    "config": {
-    "text": "<p style=\"font-size:12px;\"><strong>Smoke screening:</strong> click a unit, then open <em>Smoke: map-selected unit</em> — or use <em>Smoke: search / upload unit</em>. Set the burn date, ignition hour and duration, then run. Layers show the NWS smoke forecast, air districts and Class I areas.</p>",
+    "text": "<p style=\"font-size:12px;\"><strong>Smoke screening:</strong> zoom in to see units, click one, then open <em>Smoke: map-selected unit</em> — or use <em>Smoke: search / upload unit</em>. Set the burn date, ignition hour and duration, then run. Layers show the NWS smoke forecast, air districts and Class I areas.</p>",
     "style": {
      "verticalAlign": "start",
      "wrap": true
@@ -1215,7 +1215,7 @@
    "id": "w_help2",
    "label": "Outlook notes",
    "config": {
-    "text": "<p style=\"font-size:12px;\"><strong>How to read this page.</strong> Turn on layers in <em>Monthly &amp; Seasonal Outlooks</em> (CPC 6–10/8–14 day, monthly, 3-month seasonal; Predictive Services Month 1–4 fire potential) and <em>Typical Rx Burn Days</em> (gridMET 2016–2025: average days per month meeting a generic broadcast Rx — Tmax 40–80°F, RHmin 20–50%, wind ≤12 mph). Click a grid cell for all 12 months. For your own Rx and unit, use the Weather Evaluator page.</p>",
+    "text": "<p style=\"font-size:12px;\"><strong>How to read this page.</strong> Turn on layers in <em>Monthly &amp; Seasonal Outlooks</em> (CPC 6–10/8–14 day, monthly, 3-month seasonal; Predictive Services Month 1–4 fire potential) and <em>Typical Rx Burn Days</em> (gridMET 2016–2025: average days per month meeting a generic broadcast Rx — Tmax 40–80°F, RHmin 20–50%, wind ≤12 mph). Click a grid cell for all 12 months. Units, RAWS and other detailed layers draw once you zoom in. For your own Rx and unit, use the Weather Evaluator page.</p>",
     "style": {
      "verticalAlign": "start",
      "wrap": true
