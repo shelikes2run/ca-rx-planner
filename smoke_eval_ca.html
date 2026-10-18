@@ -7,7 +7,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
 <script src="https://unpkg.com/shpjs@4.0.4/dist/shp.min.js"></script>
-<script src="rxcore.js?v=91cf970"></script>
+<script src="rxcore.js?v=p4ef9cd5"></script>
 <style>
   :root{--ink:#1d2733;--muted:#5b6673;--line:#d9dee4;--bg:#f6f7f9;--brand:#0b4f8a;--no:#b3261e;--no-bg:#fbe5e3}
   *{box-sizing:border-box}
@@ -68,6 +68,7 @@
   <div id="map"></div>
   <div class="muted" style="margin-top:4px">Estimated peak hourly PM2.5 (µg/m³):<span id="legend"></span> · <span class="sw" style="border:2px solid #ff8c00;background:none"></span>Day cone <span class="sw" style="background:#2b6cb0"></span>Night drainage (colored by PM2.5) <span class="sw" style="background:rgba(120,60,180,.3)"></span>Class I</div>
   <h3>Summary</h3><div id="summary"></div>
+  <h3>Other PFIRS burns that day (within 30 mi)</h3><div id="pfirs" class="scroll"></div>
   <h3>Air district & full models</h3><div id="district"></div>
   <h3>Smoke-sensitive receptors</h3><div id="receptors" class="scroll"></div>
   <h3>Background air quality (CAMS forecast)</h3><div id="aq" class="scroll"></div>
@@ -123,7 +124,7 @@ const aqCls = a => a == null ? '' : a <= 50 ? 'aq0' : a <= 100 ? 'aq1' : a <= 15
 
 // map
 let map = null, layer = null;
-function drawMap(S) {
+function drawMap(S, near) {
   if (!map) { map = L.map('map', { scrollWheelZoom: false }); const topo = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}', { maxZoom: 19, attribution: 'Esri' }).addTo(map);
     L.control.layers({ Topographic: topo, Imagery: L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', { maxZoom: 19, attribution: 'Esri, Maxar' }) }).addTo(map); }
   if (layer) layer.remove(); layer = L.featureGroup().addTo(map);
@@ -136,6 +137,8 @@ function drawMap(S) {
   L.circleMarker([unit.lat, unit.lon], { radius: 5, color: '#000', fillColor: '#00e5ff', fillOpacity: 1 }).bindTooltip(unit.name).addTo(layer);
   const col = { Community: '#b3261e', 'Community (CDP)': '#d1495b', School: '#b26a00', Hospital: '#6a1b9a' };
   S.rows.forEach(r => L.circleMarker([r.lat, r.lon], { radius: 5, color: '#fff', weight: 1, fillColor: col[r.type] || '#333', fillOpacity: .95 }).bindTooltip(`${r.type}: ${r.name}${r.pmDay != null || r.pmNight != null ? ` · ~${Math.round(Math.max(r.pmDay || 0, r.pmNight || 0))} µg/m³` : ''}`).addTo(layer));
+  (near || []).forEach(b => L.marker([b.lat, b.lon], { icon: L.divIcon({ className: '', html: `<span style="display:inline-block;width:12px;height:12px;transform:rotate(45deg);border:1.5px solid #fff;background:${b.status === 'Approved' ? '#cc0000' : '#ff9800'}"></span>`, iconSize: [14, 14], iconAnchor: [7, 7] }) })
+    .bindTooltip(`PFIRS: ${b.name} · ${b.status} · ${b.agency || ''} · ${b.acres ?? '?'} ac`).addTo(layer));
   map.fitBounds(layer.getBounds().pad(0.05)); setTimeout(() => map.invalidateSize(), 50);
 }
 
@@ -178,7 +181,11 @@ async function run() {
     $('aq').innerHTML = `<table><thead><tr><th>US AQI / PM2.5</th>${hrs.map(h => `<th>${String(h).padStart(2, '0')}00</th>`).join('')}</tr></thead><tbody>${aqRow(aqU, 'At unit')}${aqRow(aqD, `${plan.dayMi} mi downwind (${RX.compass(S.mb)})`)}</tbody></table><div class="note">CAMS global forecast (~40 km): background air quality before this burn's smoke is added.</div>`;
     $('winds').innerHTML = `<table><thead><tr><th>Hour</th><th>20-ft wind</th><th>Transport wind</th><th>Mixing height</th><th>Ventilation</th><th>Stability</th><th>Plume rise</th><th>Smoke toward</th></tr></thead><tbody>${S.hours.map((h, k) => { const m = S.day.hourly[k];
       return `<tr><td>${String(h.hour).padStart(2, '0')}00</td><td>${RX.compass(h.wd)} ${h.w20 == null ? '' : Math.round(h.w20) + ' mph'}</td><td>${RX.compass(h.twd)} ${h.tws == null ? '' : Math.round(h.tws) + ' mph'}</td><td>${h.mh == null ? '–' : Math.round(h.mh).toLocaleString() + ' ft'}</td><td>${h.v == null ? '–' : Math.round(h.v) + 'k kt-ft'}</td><td>${m.cls}</td><td>${Math.round(m.he * 3.281).toLocaleString()} ft</td><td>${RX.compass(m.down)}</td></tr>`; }).join('')}</tbody></table>`;
-    drawMap(S);
+    const near = await RX.nearbyBurns(S, 30).catch(e => ({ err: e.message }));
+    if (near.err) $('pfirs').innerHTML = `<p class="muted">PFIRS feed unavailable (${esc(near.err)}).</p>`;
+    else $('pfirs').innerHTML = (near.rows.length ? `<table><thead><tr><th>Burn</th><th>Agency</th><th>Type</th><th>Acres</th><th>Status</th><th>Distance</th><th>Direction</th><th>Cumulative smoke</th></tr></thead><tbody>${near.rows.map(b => `<tr><td>${esc(b.name)}</td><td>${esc(b.agency || '')}</td><td>${esc(b.burn_type || '')}</td><td>${b.acres ?? '–'}</td><td><b style="color:${b.status === 'Approved' ? '#cc0000' : '#b26a00'}">${esc(b.status || '')}</b></td><td>${b.d.toFixed(1)} mi</td><td>${RX.compass(b.brg)}</td><td>${[b.downwindOfYou ? '<span class="tag day">Your smoke reaches it</span>' : '', b.youDownwind ? '<span class="tag day">Its smoke reaches you</span>' : ''].join(' ') || '—'}</td></tr>`).join('')}</tbody></table>` : '<p>No other PFIRS burns within 30 mi on this date.</p>')
+      + `<div class="note">CARB PFIRS public map, ${esc(near.meta.date_begin || '')} to ${esc(near.meta.date_end || '')}, refreshed every 2 hours. Cumulative-smoke flags assume the same transport winds at both burns. Confirm current status in <a href="https://ssl.arb.ca.gov/pfirs/" target="_blank" rel="noopener">PFIRS</a>.</div>`;
+    drawMap(S, near.rows);
     setStatus(`${unit.name}: smoke toward ${RX.compass(S.mb)}, night drainage ${nightDir}; ${dayHits.length + nightHits.length} receptor(s), ${c1.length} Class I; peak est. ${Math.round(S.peak)} µg/m³ at a receptor.`);
     $('print').disabled = false;
   } catch (e) { setStatus(e.message, true); }

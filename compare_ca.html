@@ -7,7 +7,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
 <script src="https://unpkg.com/shpjs@4.0.4/dist/shp.min.js"></script>
-<script src="rxcore.js?v=91cf970"></script>
+<script src="rxcore.js?v=p4ef9cd5"></script>
 <style>
   :root{--ink:#1d2733;--muted:#5b6673;--line:#d9dee4;--bg:#f6f7f9;--brand:#0b4f8a;--go:#2e7d32;--go-bg:#cfe9d1;--part:#fff1b8;--no-bg:#fbe5e3;--no:#b3261e}
   *{box-sizing:border-box}
@@ -77,13 +77,13 @@
 <div class="card" id="res" style="display:none">
   <h3 style="margin-top:0">Ranking for <span id="tLabel"></span></h3>
   <div class="scroll" id="rankTbl"></div>
-  <div class="note">Score = burn window on the target day (longest in-Rx run) + burn days in the next 7 and 16 days − smoke penalties (Class I area in a smoke zone, receptors, estimated PM2.5 at receptors) − overlap with a higher-ranked unit's plume. Use it to sort options; the burn boss and air district make the call.</div>
+  <div class="note">Score = burn window on the target day (longest in-Rx run) + burn days in the next 7 and 16 days − smoke penalties (Class I area in a smoke zone, receptors, estimated PM2.5 at receptors) − overlap with a higher-ranked unit's plume − shared smoke with other PFIRS burns that day. Use it to sort options; the burn boss and air district make the call.</div>
   <h3>Burn windows by day (hours in Rx during each unit's burn period)</h3>
   <div class="scroll" id="matrix"></div>
   <div class="note"><span class="pm" style="background:#cfe9d1"></span>Burn day (min hours met) <span class="pm" style="background:#fff1b8"></span>Some in-Rx hours <span class="pm" style="background:#fbe5e3"></span>None · italic = 16-day forecast (beyond NWS ~7 days; lower skill)</div>
   <h3>Map (target day)</h3>
   <div id="map"></div>
-  <div class="note" id="mapNote">Numbers = rank; each unit's plume is drawn for its ranked day (outlined in the matrix). Shaded cones = estimated peak hourly PM2.5 during the burn (screening Gaussian plume); dashed blue = night drainage.</div>
+  <div class="note" id="mapNote">Numbers = rank; each unit's plume is drawn for its ranked day (outlined in the matrix). Diamonds = other PFIRS burns the same day (red approved, orange pre-planned). Shaded cones = estimated peak hourly PM2.5 during the burn (screening Gaussian plume); dashed blue = night drainage.</div>
 </div>
 
 <script>
@@ -207,6 +207,11 @@ async function run() {
   }
   out.sort((a, b) => b.score - a.score);
   // plume overlap with higher-ranked units (same day)
+  // other PFIRS burns the same day near each unit (cumulative smoke)
+  for (const s of out) { if (!s.smoke || s.smoke.err) continue; const near = await RX.nearbyBurns(s.smoke, Math.max(15, dayMi)).catch(() => null); if (!near) continue;
+    s.pfirs = near.rows; const hits = near.rows.filter(b => b.downwindOfYou || b.youDownwind);
+    if (hits.length) { s.score -= 10 * hits.length; s.notes.push(`PFIRS same day: ${hits.map(b => `${b.name} (${b.agency || ''}, ${b.status})`).join('; ')} — shared smoke`); }
+    else if (near.rows.length) s.notes.push(`PFIRS same day within ${Math.max(15, dayMi)} mi: ${near.rows.length} (no plume overlap)`); }
   out.forEach((s, i) => { if (!s.smoke || s.smoke.err || !s.target?.burn) return; for (let j = 0; j < i; j++) { const o = out[j]; if (!o.smoke || o.smoke.err || !o.target?.burn || o.day !== s.day) continue;
     const hit = s.smoke.cone.some(p => RX.inPoly(p, o.smoke.cone)) || o.smoke.cone.some(p => RX.inPoly(p, s.smoke.cone));
     if (hit) { s.score -= 20; s.notes.push(`Plume overlaps #${j + 1} ${o.x.unit.name} on ${RX.dayLabel(s.day)} — stagger days or pick one`); } } });
@@ -245,6 +250,9 @@ function drawMap() {
       if (sm.drain.path.length > 1) sm.night.segs.forEach(g => L.polyline([g.a, g.b], { color: RX.pmCat(g.c)[1], weight: 5, opacity: .9 }).addTo(mapLayer)); }
     (s.x.unit.rings || []).filter(r => r.length > 2).forEach(r => L.polygon(r.map(p => [p[1], p[0]]), { color: '#00b8d4', weight: 2, fillOpacity: .15 }).addTo(mapLayer));
     L.marker([s.x.unit.lat, s.x.unit.lon], { icon: L.divIcon({ className: '', html: `<span class="rank">${i + 1}</span>`, iconSize: [22, 22], iconAnchor: [11, 11] }) }).bindTooltip(`#${i + 1} ${s.x.unit.name}`).addTo(mapLayer); });
+  const seen = new Set(); out.forEach(s => (s.pfirs || []).forEach(b => { const k = b.pfirs_id + b.burn_date; if (seen.has(k)) return; seen.add(k);
+    L.marker([b.lat, b.lon], { icon: L.divIcon({ className: '', html: `<span style="display:inline-block;width:12px;height:12px;transform:rotate(45deg);border:1.5px solid #fff;background:${b.status === 'Approved' ? '#cc0000' : '#ff9800'}"></span>`, iconSize: [14, 14], iconAnchor: [7, 7] }) })
+      .bindTooltip(`PFIRS ${b.burn_date}: ${b.name} · ${b.status} · ${b.agency || ''}`).addTo(mapLayer); }));
   if (mapLayer.getLayers().length) map.fitBounds(mapLayer.getBounds().pad(0.05)); setTimeout(() => map.invalidateSize(), 50);
 }
 $('out').onclick = () => { if (!results) return; const { out, tDay } = results;

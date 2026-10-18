@@ -281,5 +281,24 @@ RX.concGrid = (S, n = 26) => { const cells = []; const step = S.plan.dayMi / n; 
     if (v > 1) cells.push({ ring: [RX.dest(S.unit.lat, S.unit.lon, S.mb + o, r - step / 2), RX.dest(S.unit.lat, S.unit.lon, S.mb + o + aStep, r - step / 2), RX.dest(S.unit.lat, S.unit.lon, S.mb + o + aStep, r + step / 2), RX.dest(S.unit.lat, S.unit.lon, S.mb + o, r + step / 2)], v }); }
   return cells; };
 
+// ---------- PFIRS (CARB) planned / approved burns, refreshed every 2 h by a GitHub Action ----------
+RX.PFIRS_URL = 'data/pfirs_burns.geojson';
+let pfirsP = null;
+RX.pfirs = () => pfirsP || (pfirsP = fetch(RX.PFIRS_URL + '?t=' + Math.floor(Date.now() / 6e5), { cache: 'no-store' }).then(r => { if (!r.ok) throw new Error('PFIRS feed unavailable'); return r.json(); })
+  .then(g => ({ meta: g.metadata || {}, burns: (g.features || []).map(f => ({ ...f.properties, lat: f.geometry.coordinates[1], lon: f.geometry.coordinates[0] })) }))
+  .catch(e => { pfirsP = null; throw e; }));
+/* Other PFIRS burns on `date` within `mi` of the unit. Using the same transport-wind cone (S.mb, S.lo..S.hi):
+   downwindOfYou = their burn sits in your day cone; youDownwind = your unit sits in the same-shaped cone drawn from their burn. */
+RX.nearbyBurns = async (S, mi = 30) => {
+  const { burns, meta } = await RX.pfirs();
+  const me = [S.unit.lat, S.unit.lon];
+  const rows = burns.filter(b => b.burn_date === S.date).map(b => {
+    const p = [b.lat, b.lon], d = RX.dist(me, p); if (d > mi || d < 0.05) return null;
+    const theirCone = [p]; for (let o = S.lo; o <= S.hi + 0.01; o += Math.max(2, (S.hi - S.lo) / 30)) theirCone.push(RX.dest(p[0], p[1], S.mb + o, S.plan.dayMi)); theirCone.push(p);
+    return { ...b, d, brg: RX.bearing(me, p), downwindOfYou: RX.inPoly(p, S.cone), youDownwind: RX.inPoly(me, theirCone) };
+  }).filter(Boolean).sort((a, b) => a.d - b.d);
+  return { rows, meta };
+};
+
 window.RX = RX;
 })();
