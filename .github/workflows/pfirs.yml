@@ -27,9 +27,9 @@ jobs:
         run: python scripts/pfirs_fetch.py data/pfirs_burns.geojson --days-back 1 --days-ahead 7
       - name: Commit if changed
         run: |
-          if git diff --quiet -- data/pfirs_burns.geojson; then echo "no change"; exit 0; fi
+          git add data/pfirs_burns.geojson
+          if git diff --cached --quiet; then echo "no change"; exit 0; fi
           git config user.name "github-actions[bot]"
           git config user.email "41898299+github-actions[bot]@users.noreply.github.com"
-          git add data/pfirs_burns.geojson
           git commit -m "PFIRS burns refresh $(date -u +%Y-%m-%dT%H:%MZ)"
           git push

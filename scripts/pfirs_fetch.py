@@ -8,7 +8,7 @@ via GitHub Pages, which the CA Prescribed Fire Planner maps and tools read.
 
 Usage: pfirs_fetch.py [out.geojson] [--days-back N] [--days-ahead N] [--html saved_page.html]
 """
-import argparse, datetime as dt, html, json, re, sys, urllib.parse, urllib.request
+import argparse, datetime as dt, html, json, os, re, sys, urllib.parse, urllib.request
 from zoneinfo import ZoneInfo
 
 URL = "https://ssl.arb.ca.gov/pfirs/index.php"
@@ -110,6 +110,7 @@ def main(argv=None):
                        "date_begin": start.isoformat(), "date_end": end.isoformat(), "count": len(feats),
                        "note": "Planned and approved ignitions as published by PFIRS. Status can change through the day; confirm in PFIRS."},
           "features": sorted(feats, key=lambda f: (f["properties"]["burn_date"] or "", f["properties"]["name"] or ""))}
+    os.makedirs(os.path.dirname(a.out) or ".", exist_ok=True)
     with open(a.out, "w", encoding="utf-8") as fh:
         json.dump(fc, fh, indent=1)
     print(f"{len(feats)} burns {start}..{end} -> {a.out}")
