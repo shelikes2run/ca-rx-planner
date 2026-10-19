@@ -5,7 +5,7 @@
   "source_url": "https://ssl.arb.ca.gov/pfirs/index.php?submit=Map+Page",
   "date_begin": "2026-10-17",
   "date_end": "2026-10-25",
-  "count": 66,
+  "count": 67,
   "note": "Planned and approved ignitions as published by PFIRS. Status can change through the day; confirm in PFIRS."
  },
  "features": [
@@ -490,6 +490,29 @@
     "status": "Approved",
     "planned_on": "2026-10-15T00:27:00-07:00",
     "approved_on": "2026-10-17T09:25:00-07:00"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -120.694793,
+     35.225539
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192966059",
+    "name": "JROS Cultural Burn",
+    "burn_date": "2026-10-19",
+    "agency": "CAL FIRE",
+    "agency_group": "CAL FIRE",
+    "burn_type": "Underburn",
+    "acres": 2.0,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-10-18T20:45:00-07:00",
+    "approved_on": null
    }
   },
   {
