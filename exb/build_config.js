@@ -98,15 +98,6 @@ function buildExb2({ wm1, wm2, wm3, wm4, base, portalUrl = 'https://nifc.maps.ar
     '<p style="font-size:12px;"><strong>Smoke screening:</strong> zoom in to see units, click one, then open <em>Smoke: map-selected unit</em> — or use <em>Smoke: search / upload unit</em>. Set the burn date, ignition hour and duration, then run. Layers show the NWS smoke forecast, air districts and Class I areas.</p>',
     ['Smoke: search / upload unit', 'Smoke: map-selected unit']);
 
-  // a unit picked on either tool map (click or search) also zooms the other tool map to it
-  const crossZoom = (from, to) => {
-    const ds = `dataSource_${from}`, units = `${ds}-treatment_units`;
-    [['msg_mapsel', `w_map${from}`], ['msg_searchsel', `w_search${from}`]].forEach(([m, src]) => MSG[`${m}${from}`].actions.push({
-      actionId: `zoom_${from}_to_${to}_${src}`, widgetId: `w_map${to}`, messageWidgetId: src, actionName: 'zoomToFeature', version: v,
-      config: { useDataSources: [{ dataSourceId: units, mainDataSourceId: units, rootDataSourceId: ds }], goToInitialMapExtentWhenSelectionCleared: false, useAnyTriggerData: false } }));
-  };
-  crossZoom(1, 3); crossZoom(3, 1);
-
   // Outlooks page
   W.w_map2 = { uri: 'widgets/arcgis/arcgis-map/', version: v, id: 'w_map2', label: 'Outlook Map',
     config: { toolConfig: { ...mapTools, canSearch: true }, isUseCustomMapState: false, initialMapDataSourceID: 'dataSource_2', initialMapState: null, disablePopUp: false },

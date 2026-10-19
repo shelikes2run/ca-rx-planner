@@ -1703,24 +1703,6 @@
        "fields": []
       }
      ]
-    },
-    {
-     "actionId": "zoom_1_to_3_w_map1",
-     "widgetId": "w_map3",
-     "messageWidgetId": "w_map1",
-     "actionName": "zoomToFeature",
-     "version": "1.21.0",
-     "config": {
-      "useDataSources": [
-       {
-        "dataSourceId": "dataSource_1-treatment_units",
-        "mainDataSourceId": "dataSource_1-treatment_units",
-        "rootDataSourceId": "dataSource_1"
-       }
-      ],
-      "goToInitialMapExtentWhenSelectionCleared": false,
-      "useAnyTriggerData": false
-     }
     }
    ]
   },
@@ -1781,24 +1763,6 @@
        "fields": []
       }
      ]
-    },
-    {
-     "actionId": "zoom_1_to_3_w_search1",
-     "widgetId": "w_map3",
-     "messageWidgetId": "w_search1",
-     "actionName": "zoomToFeature",
-     "version": "1.21.0",
-     "config": {
-      "useDataSources": [
-       {
-        "dataSourceId": "dataSource_1-treatment_units",
-        "mainDataSourceId": "dataSource_1-treatment_units",
-        "rootDataSourceId": "dataSource_1"
-       }
-      ],
-      "goToInitialMapExtentWhenSelectionCleared": false,
-      "useAnyTriggerData": false
-     }
     }
    ]
   },
@@ -1836,24 +1800,6 @@
        "fields": []
       }
      ]
-    },
-    {
-     "actionId": "zoom_3_to_1_w_map3",
-     "widgetId": "w_map1",
-     "messageWidgetId": "w_map3",
-     "actionName": "zoomToFeature",
-     "version": "1.21.0",
-     "config": {
-      "useDataSources": [
-       {
-        "dataSourceId": "dataSource_3-treatment_units",
-        "mainDataSourceId": "dataSource_3-treatment_units",
-        "rootDataSourceId": "dataSource_3"
-       }
-      ],
-      "goToInitialMapExtentWhenSelectionCleared": false,
-      "useAnyTriggerData": false
-     }
     }
    ]
   },
@@ -1914,24 +1860,6 @@
        "fields": []
       }
      ]
-    },
-    {
-     "actionId": "zoom_3_to_1_w_search3",
-     "widgetId": "w_map1",
-     "messageWidgetId": "w_search3",
-     "actionName": "zoomToFeature",
-     "version": "1.21.0",
-     "config": {
-      "useDataSources": [
-       {
-        "dataSourceId": "dataSource_3-treatment_units",
-        "mainDataSourceId": "dataSource_3-treatment_units",
-        "rootDataSourceId": "dataSource_3"
-       }
-      ],
-      "goToInitialMapExtentWhenSelectionCleared": false,
-      "useAnyTriggerData": false
-     }
     }
    ]
   }
