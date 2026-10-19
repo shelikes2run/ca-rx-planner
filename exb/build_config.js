@@ -1,5 +1,5 @@
 // Experience Builder config v2: Weather Evaluator, Smoke Modeling, Compare & Rank, Outlooks & Typical Burn Days, Risk (RPI)
-function buildExb2({ wm1, wm2, wm3, wm4, base, portalUrl = 'https://nifc.maps.arcgis.com' }) {
+function buildExb2({ wm1, wm2, wm3, wm4, base, ver = '1', portalUrl = 'https://nifc.maps.arcgis.com' }) {
   const v = '1.21.0';
   const UNITS_URL = 'https://gis.reshapewildfire.org/arcgis/rest/services/Hosted/Treatment_Index_View/FeatureServer/0';
   const mapTools = { canZoom: true, canHome: true, canSearch: false, canNavigation: true, canBaseMap: true, canMeasure: true, canFullScreen: true, canScaleBar: true, canLocate: true, canCompass: true, canLayers: true, canSelect: false, canExtentNavigate: false, canOverviewMap: false };
@@ -16,7 +16,7 @@ function buildExb2({ wm1, wm2, wm3, wm4, base, portalUrl = 'https://nifc.maps.ar
     const e = encodeURIComponent(JSON.stringify({ name: `{${label}}`, parts: [{ type: 'FIELD', exp: `{${label}}`, dataSourceId: sel, jimuFieldName: field, isFromRepeatedDataSourceContext: false }] }));
     return `<exp data-uniqueid="${uid}" data-dsid="${sel}" data-expression="${e}">﻿<span contenteditable="false">{${label}}</span>﻿</exp>`;
   };
-  const dynUrl = (page, ds, k) => `<p>${base}/${page}?unit=${exp(ds, k + '_n', 'Name', 'name')}&amp;id=${exp(ds, k + '_i', 'Object ID', 'objectid')}</p>`;
+  const dynUrl = (page, ds, k) => `<p>${base}/${page}?v=${ver}&amp;unit=${exp(ds, k + '_n', 'Name', 'name')}&amp;id=${exp(ds, k + '_i', 'Object ID', 'objectid')}</p>`;
   const W = {}, LAY = {}, SEC = {}, VIEWS = {}, DS = {}, MSG = {};
 
   // data sources
@@ -62,7 +62,7 @@ function buildExb2({ wm1, wm2, wm3, wm4, base, portalUrl = 'https://nifc.maps.ar
     W[helpId] = text(helpId, 'How to use', helpHtml, card);
     // static (always available) and selection-driven embeds
     W[eStatic] = { uri: 'widgets/common/embed/', version: v, id: eStatic, label: `${toolName} – search / upload`,
-      config: { embedType: 'url', expression: `<p>${base}/${toolFile}</p>`, enableLabel: false, enableBlankMessage: false, autoRefresh: false, honorThemeFont: false, embedCode: '' }, useDataSourcesEnabled: false };
+      config: { embedType: 'url', expression: `<p>${base}/${toolFile}?v=${ver}</p>`, enableLabel: false, enableBlankMessage: false, autoRefresh: false, honorThemeFont: false, embedCode: '' }, useDataSourcesEnabled: false };
     W[eDyn] = { uri: 'widgets/common/embed/', version: v, id: eDyn, label: `${toolName} – map-selected unit`,
       config: { embedType: 'url', expression: dynUrl(toolFile, ds, `${n}x`), enableLabel: true, label: 'Click a fuel treatment unit on the map to run it here.',
         enableBlankMessage: true, blankMessage: `Click a fuel treatment unit on the map to run it here. To upload your own unit, search by name, or enter coordinates, use the "${tabLabels[0]}" tab above.`, autoRefresh: false, honorThemeFont: false, embedCode: '' },
@@ -110,7 +110,7 @@ function buildExb2({ wm1, wm2, wm3, wm4, base, portalUrl = 'https://nifc.maps.ar
 
   // Compare & Rank page: full-width tool (multi-unit, per-unit Rx)
   W.w_embed4 = { uri: 'widgets/common/embed/', version: v, id: 'w_embed4', label: 'Compare & Rank',
-    config: { embedType: 'url', expression: `<p>${base}/compare_ca.html</p>`, enableLabel: false, enableBlankMessage: false, autoRefresh: false, honorThemeFont: false, embedCode: '' }, useDataSourcesEnabled: false };
+    config: { embedType: 'url', expression: `<p>${base}/compare_ca.html?v=${ver}</p>`, enableLabel: false, enableBlankMessage: false, autoRefresh: false, honorThemeFont: false, embedCode: '' }, useDataSourcesEnabled: false };
   LAY.layout_p4 = fixed([{ w: 'w_embed4', bbox: pct(0, 0, 100, 100) }]);
 
   // Risk (RPI) page: R5 RPI with swipe + transparency sliders (layers secured in the USFS org)

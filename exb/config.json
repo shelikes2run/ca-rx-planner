@@ -968,7 +968,7 @@
    "label": "Weather Evaluator – search / upload",
    "config": {
     "embedType": "url",
-    "expression": "<p>https://shelikes2run.github.io/ca-rx-planner/burn_eval_ca.html</p>",
+    "expression": "<p>https://shelikes2run.github.io/ca-rx-planner/burn_eval_ca.html?v=3fd80f1</p>",
     "enableLabel": false,
     "enableBlankMessage": false,
     "autoRefresh": false,
@@ -984,7 +984,7 @@
    "label": "Weather Evaluator – map-selected unit",
    "config": {
     "embedType": "url",
-    "expression": "<p>https://shelikes2run.github.io/ca-rx-planner/burn_eval_ca.html?unit=<exp data-uniqueid=\"1x_n\" data-dsid=\"dataSource_1-treatment_units-selection\" data-expression=\"%7B%22name%22%3A%22%7BName%7D%22%2C%22parts%22%3A%5B%7B%22type%22%3A%22FIELD%22%2C%22exp%22%3A%22%7BName%7D%22%2C%22dataSourceId%22%3A%22dataSource_1-treatment_units-selection%22%2C%22jimuFieldName%22%3A%22name%22%2C%22isFromRepeatedDataSourceContext%22%3Afalse%7D%5D%7D\">﻿<span contenteditable=\"false\">{Name}</span>﻿</exp>&amp;id=<exp data-uniqueid=\"1x_i\" data-dsid=\"dataSource_1-treatment_units-selection\" data-expression=\"%7B%22name%22%3A%22%7BObject%20ID%7D%22%2C%22parts%22%3A%5B%7B%22type%22%3A%22FIELD%22%2C%22exp%22%3A%22%7BObject%20ID%7D%22%2C%22dataSourceId%22%3A%22dataSource_1-treatment_units-selection%22%2C%22jimuFieldName%22%3A%22objectid%22%2C%22isFromRepeatedDataSourceContext%22%3Afalse%7D%5D%7D\">﻿<span contenteditable=\"false\">{Object ID}</span>﻿</exp></p>",
+    "expression": "<p>https://shelikes2run.github.io/ca-rx-planner/burn_eval_ca.html?v=3fd80f1&amp;unit=<exp data-uniqueid=\"1x_n\" data-dsid=\"dataSource_1-treatment_units-selection\" data-expression=\"%7B%22name%22%3A%22%7BName%7D%22%2C%22parts%22%3A%5B%7B%22type%22%3A%22FIELD%22%2C%22exp%22%3A%22%7BName%7D%22%2C%22dataSourceId%22%3A%22dataSource_1-treatment_units-selection%22%2C%22jimuFieldName%22%3A%22name%22%2C%22isFromRepeatedDataSourceContext%22%3Afalse%7D%5D%7D\">﻿<span contenteditable=\"false\">{Name}</span>﻿</exp>&amp;id=<exp data-uniqueid=\"1x_i\" data-dsid=\"dataSource_1-treatment_units-selection\" data-expression=\"%7B%22name%22%3A%22%7BObject%20ID%7D%22%2C%22parts%22%3A%5B%7B%22type%22%3A%22FIELD%22%2C%22exp%22%3A%22%7BObject%20ID%7D%22%2C%22dataSourceId%22%3A%22dataSource_1-treatment_units-selection%22%2C%22jimuFieldName%22%3A%22objectid%22%2C%22isFromRepeatedDataSourceContext%22%3Afalse%7D%5D%7D\">﻿<span contenteditable=\"false\">{Object ID}</span>﻿</exp></p>",
     "enableLabel": true,
     "label": "Click a fuel treatment unit on the map to run it here.",
     "enableBlankMessage": true,
@@ -1206,7 +1206,7 @@
    "label": "Smoke Modeling – search / upload",
    "config": {
     "embedType": "url",
-    "expression": "<p>https://shelikes2run.github.io/ca-rx-planner/smoke_eval_ca.html</p>",
+    "expression": "<p>https://shelikes2run.github.io/ca-rx-planner/smoke_eval_ca.html?v=3fd80f1</p>",
     "enableLabel": false,
     "enableBlankMessage": false,
     "autoRefresh": false,
@@ -1222,7 +1222,7 @@
    "label": "Smoke Modeling – map-selected unit",
    "config": {
     "embedType": "url",
-    "expression": "<p>https://shelikes2run.github.io/ca-rx-planner/smoke_eval_ca.html?unit=<exp data-uniqueid=\"3x_n\" data-dsid=\"dataSource_3-treatment_units-selection\" data-expression=\"%7B%22name%22%3A%22%7BName%7D%22%2C%22parts%22%3A%5B%7B%22type%22%3A%22FIELD%22%2C%22exp%22%3A%22%7BName%7D%22%2C%22dataSourceId%22%3A%22dataSource_3-treatment_units-selection%22%2C%22jimuFieldName%22%3A%22name%22%2C%22isFromRepeatedDataSourceContext%22%3Afalse%7D%5D%7D\">﻿<span contenteditable=\"false\">{Name}</span>﻿</exp>&amp;id=<exp data-uniqueid=\"3x_i\" data-dsid=\"dataSource_3-treatment_units-selection\" data-expression=\"%7B%22name%22%3A%22%7BObject%20ID%7D%22%2C%22parts%22%3A%5B%7B%22type%22%3A%22FIELD%22%2C%22exp%22%3A%22%7BObject%20ID%7D%22%2C%22dataSourceId%22%3A%22dataSource_3-treatment_units-selection%22%2C%22jimuFieldName%22%3A%22objectid%22%2C%22isFromRepeatedDataSourceContext%22%3Afalse%7D%5D%7D\">﻿<span contenteditable=\"false\">{Object ID}</span>﻿</exp></p>",
+    "expression": "<p>https://shelikes2run.github.io/ca-rx-planner/smoke_eval_ca.html?v=3fd80f1&amp;unit=<exp data-uniqueid=\"3x_n\" data-dsid=\"dataSource_3-treatment_units-selection\" data-expression=\"%7B%22name%22%3A%22%7BName%7D%22%2C%22parts%22%3A%5B%7B%22type%22%3A%22FIELD%22%2C%22exp%22%3A%22%7BName%7D%22%2C%22dataSourceId%22%3A%22dataSource_3-treatment_units-selection%22%2C%22jimuFieldName%22%3A%22name%22%2C%22isFromRepeatedDataSourceContext%22%3Afalse%7D%5D%7D\">﻿<span contenteditable=\"false\">{Name}</span>﻿</exp>&amp;id=<exp data-uniqueid=\"3x_i\" data-dsid=\"dataSource_3-treatment_units-selection\" data-expression=\"%7B%22name%22%3A%22%7BObject%20ID%7D%22%2C%22parts%22%3A%5B%7B%22type%22%3A%22FIELD%22%2C%22exp%22%3A%22%7BObject%20ID%7D%22%2C%22dataSourceId%22%3A%22dataSource_3-treatment_units-selection%22%2C%22jimuFieldName%22%3A%22objectid%22%2C%22isFromRepeatedDataSourceContext%22%3Afalse%7D%5D%7D\">﻿<span contenteditable=\"false\">{Object ID}</span>﻿</exp></p>",
     "enableLabel": true,
     "label": "Click a fuel treatment unit on the map to run it here.",
     "enableBlankMessage": true,
@@ -1364,7 +1364,7 @@
    "label": "Compare & Rank",
    "config": {
     "embedType": "url",
-    "expression": "<p>https://shelikes2run.github.io/ca-rx-planner/compare_ca.html</p>",
+    "expression": "<p>https://shelikes2run.github.io/ca-rx-planner/compare_ca.html?v=3fd80f1</p>",
     "enableLabel": false,
     "enableBlankMessage": false,
     "autoRefresh": false,
