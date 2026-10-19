@@ -36,6 +36,7 @@
   .scroll{overflow-x:auto}
   details summary{cursor:pointer;color:var(--brand);font-weight:600}
   @media print{.noprint{display:none!important}body{background:#fff}}
+  #umap{height:220px;border:1px solid var(--line);border-radius:6px;margin-top:8px;display:none}
 </style>
 </head>
 <body>
@@ -47,6 +48,7 @@
     <div style="flex:1 1 160px"><label for="coords">Or lat, lon</label><input id="coords" type="text" placeholder="38.95, -120.62"></div>
   </div>
   <div id="drop" class="drop noprint" style="margin-top:8px">Upload unit: zipped shapefile, KML, or GeoJSON<input id="file" type="file" accept=".zip,.kml,.geojson,.json" hidden></div>
+  <div id="umap"></div>
 
   <h3>Burn plan</h3>
   <div class="grid">
@@ -90,7 +92,23 @@ let unit = null;
 const setStatus = (t, bad) => { $('status').textContent = t; $('status').style.color = bad ? 'var(--no)' : 'var(--brand)'; };
 function setUnit(u, restore) { if (!u) throw new Error('Could not find a usable polygon or point in that unit.'); unit = u; $('title').textContent = 'Smoke Screening · ' + u.name;
   if (window.STICKY && !restore) { STICKY.saveUnit(u); STICKY.refresh(); }
+  showUnitMap(u);
   $('acres').value = RX.burnAcres(u) ?? ''; $('acresNote').textContent = u.acres ? `unit is ${Math.round(u.acres).toLocaleString()} ac` : ''; const f = RX.fuelFromType(u.type); $('fuel').value = f; $('tpa').value = RX.FUELS[f].tpa; }
+// zoomed preview of the current unit (same as the Weather Evaluator)
+let umap = null, ulayer = null;
+function showUnitMap(u) {
+  if (typeof L === 'undefined') return;
+  $('umap').style.display = 'block';
+  if (!umap) { umap = L.map('umap', { scrollWheelZoom: false });
+    const img = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', { maxZoom: 19, attribution: 'Esri, Maxar' }).addTo(umap);
+    L.control.layers({ Imagery: img, Topographic: L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}', { maxZoom: 19, attribution: 'Esri' }) }).addTo(umap); }
+  if (ulayer) ulayer.remove(); ulayer = L.featureGroup().addTo(umap);
+  const polys = (u.rings || []).filter(r => r.length > 2);
+  polys.forEach(r => L.polygon(r.map(p => [p[1], p[0]]), { color: '#00e5ff', weight: 2, fillOpacity: .2 }).addTo(ulayer));
+  L.circleMarker([u.lat, u.lon], { radius: 5, color: '#000', fillColor: '#ff3b30', fillOpacity: 1 }).bindTooltip(u.name).addTo(ulayer);
+  if (polys.length) umap.fitBounds(ulayer.getBounds().pad(0.3)); else umap.setView([u.lat, u.lon], 13);
+  setTimeout(() => umap.invalidateSize(), 50);
+}
 // fuel select
 $('fuel').innerHTML = Object.entries(RX.FUELS).map(([k, f]) => `<option value="${k}">${esc(f.label)}</option>`).join('');
 $('fuel').value = 'understory'; $('tpa').value = RX.FUELS.understory.tpa;
