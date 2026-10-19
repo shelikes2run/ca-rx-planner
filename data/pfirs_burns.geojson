@@ -5,7 +5,7 @@
   "source_url": "https://ssl.arb.ca.gov/pfirs/index.php?submit=Map+Page",
   "date_begin": "2026-10-18",
   "date_end": "2026-10-26",
-  "count": 76,
+  "count": 80,
   "note": "Planned and approved ignitions as published by PFIRS. Status can change through the day; confirm in PFIRS."
  },
  "features": [
@@ -497,29 +497,6 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -123.292989,
-     38.57764
-    ]
-   },
-   "properties": {
-    "pfirs_id": "192962979",
-    "name": "Stockoff Complex",
-    "burn_date": "2026-10-19",
-    "agency": "California State Parks",
-    "agency_group": "CA Parks",
-    "burn_type": "Underburn",
-    "acres": 49.0,
-    "piles": null,
-    "status": "Approved",
-    "planned_on": "2026-10-16T11:15:00-07:00",
-    "approved_on": "2026-10-17T09:26:00-07:00"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
      -123.507212,
      41.542171
     ]
@@ -536,29 +513,6 @@
     "status": "Approved",
     "planned_on": "2026-10-16T14:26:00-07:00",
     "approved_on": "2026-10-19T08:11:00-07:00"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -123.295567,
-     38.572206
-    ]
-   },
-   "properties": {
-    "pfirs_id": "192962978",
-    "name": "Upper Prairie",
-    "burn_date": "2026-10-19",
-    "agency": "California State Parks",
-    "agency_group": "CA Parks",
-    "burn_type": "Underburn",
-    "acres": 27.0,
-    "piles": null,
-    "status": "Approved",
-    "planned_on": "2026-10-16T11:15:00-07:00",
-    "approved_on": "2026-10-17T09:25:00-07:00"
    }
   },
   {
@@ -617,6 +571,98 @@
     ]
    },
    "properties": {
+    "pfirs_id": "192970884",
+    "name": "2026-4 Lanes Unit 2",
+    "burn_date": "2026-10-20",
+    "agency": "Fresno County",
+    "agency_group": "Private",
+    "burn_type": "Hand Pile",
+    "acres": 31.0,
+    "piles": null,
+    "status": "Approved",
+    "planned_on": "2026-10-19T15:41:00-07:00",
+    "approved_on": "2026-10-19T15:41:00-07:00"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -118.973,
+     36.749
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192970867",
+    "name": "2026-Grant Grove",
+    "burn_date": "2026-10-20",
+    "agency": "National Park Service",
+    "agency_group": "NPS",
+    "burn_type": "Underburn",
+    "acres": 482.0,
+    "piles": null,
+    "status": "Approved",
+    "planned_on": "2026-10-19T15:32:00-07:00",
+    "approved_on": "2026-10-19T15:32:00-07:00"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -118.932156,
+     36.705318
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192970860",
+    "name": "2026-Riparian",
+    "burn_date": "2026-10-20",
+    "agency": "UC Berkeley",
+    "agency_group": "Private",
+    "burn_type": "Hand Pile",
+    "acres": 1.5,
+    "piles": null,
+    "status": "Approved",
+    "planned_on": "2026-10-19T15:27:00-07:00",
+    "approved_on": "2026-10-19T15:27:00-07:00"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -119.288965,
+     37.107236
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192970876",
+    "name": "2026-Shaver Lake Understory",
+    "burn_date": "2026-10-20",
+    "agency": "Southern California Edison",
+    "agency_group": "Private",
+    "burn_type": "Underburn",
+    "acres": 20.0,
+    "piles": null,
+    "status": "Approved",
+    "planned_on": "2026-10-19T15:37:00-07:00",
+    "approved_on": "2026-10-19T15:37:00-07:00"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -119.37947,
+     37.05787
+    ]
+   },
+   "properties": {
     "pfirs_id": "192956095",
     "name": "4 Lanes Unit 2",
     "burn_date": "2026-10-20",
@@ -648,9 +694,9 @@
     "burn_type": "Underburn",
     "acres": 149.0,
     "piles": null,
-    "status": "Pre-Planned",
+    "status": "Approved",
     "planned_on": "2026-10-19T11:54:00-07:00",
-    "approved_on": null
+    "approved_on": "2026-10-19T13:42:00-07:00"
    }
   },
   {
@@ -671,9 +717,9 @@
     "burn_type": "Underburn",
     "acres": 174.0,
     "piles": null,
-    "status": "Pre-Planned",
+    "status": "Approved",
     "planned_on": "2026-10-19T12:17:00-07:00",
-    "approved_on": null
+    "approved_on": "2026-10-19T13:24:00-07:00"
    }
   },
   {
@@ -694,9 +740,9 @@
     "burn_type": "Underburn",
     "acres": 374.0,
     "piles": null,
-    "status": "Pre-Planned",
+    "status": "Approved",
     "planned_on": "2026-10-19T11:54:00-07:00",
-    "approved_on": null
+    "approved_on": "2026-10-19T13:39:00-07:00"
    }
   },
   {
@@ -717,9 +763,9 @@
     "burn_type": "Underburn",
     "acres": 217.0,
     "piles": null,
-    "status": "Pre-Planned",
+    "status": "Approved",
     "planned_on": "2026-10-19T11:54:00-07:00",
-    "approved_on": null
+    "approved_on": "2026-10-19T13:34:00-07:00"
    }
   },
   {
@@ -740,9 +786,78 @@
     "burn_type": "Underburn",
     "acres": 504.0,
     "piles": null,
-    "status": "Pre-Planned",
+    "status": "Approved",
     "planned_on": "2026-10-15T15:33:00-07:00",
-    "approved_on": null
+    "approved_on": "2026-10-19T15:45:00-07:00"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -123.515569,
+     41.547181
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192968843",
+    "name": "Creasy B",
+    "burn_date": "2026-10-20",
+    "agency": "Mid Klamath Watershed Council",
+    "agency_group": "Private",
+    "burn_type": "Underburn",
+    "acres": 2.8,
+    "piles": null,
+    "status": "Approved",
+    "planned_on": "2026-10-19T14:50:00-07:00",
+    "approved_on": "2026-10-19T15:46:00-07:00"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -123.514819,
+     41.546773
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192968841",
+    "name": "Creasy E",
+    "burn_date": "2026-10-20",
+    "agency": "Mid Klamath Watershed Council",
+    "agency_group": "Private",
+    "burn_type": "Underburn",
+    "acres": 1.5,
+    "piles": null,
+    "status": "Approved",
+    "planned_on": "2026-10-19T14:50:00-07:00",
+    "approved_on": "2026-10-19T15:43:00-07:00"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -123.515053,
+     41.547763
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192968842",
+    "name": "Creasy F",
+    "burn_date": "2026-10-20",
+    "agency": "Mid Klamath Watershed Council",
+    "agency_group": "Private",
+    "burn_type": "Underburn",
+    "acres": 1.74,
+    "piles": null,
+    "status": "Approved",
+    "planned_on": "2026-10-19T14:50:00-07:00",
+    "approved_on": "2026-10-19T15:44:00-07:00"
    }
   },
   {
@@ -763,32 +878,9 @@
     "burn_type": "Underburn",
     "acres": 186.0,
     "piles": null,
-    "status": "Pre-Planned",
+    "status": "Approved",
     "planned_on": "2026-10-19T11:54:00-07:00",
-    "approved_on": null
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -121.226294,
-     40.701386
-    ]
-   },
-   "properties": {
-    "pfirs_id": "192966397",
-    "name": "Ebey Underburn",
-    "burn_date": "2026-10-20",
-    "agency": "US Forest Service",
-    "agency_group": "USFS",
-    "burn_type": "Underburn",
-    "acres": 345.0,
-    "piles": null,
-    "status": "Pre-Planned",
-    "planned_on": "2026-10-19T10:13:00-07:00",
-    "approved_on": null
+    "approved_on": "2026-10-19T13:33:00-07:00"
    }
   },
   {
@@ -809,9 +901,9 @@
     "burn_type": "Underburn",
     "acres": 50.0,
     "piles": null,
-    "status": "Pre-Planned",
+    "status": "Approved",
     "planned_on": "2026-10-19T11:00:00-07:00",
-    "approved_on": null
+    "approved_on": "2026-10-19T14:01:00-07:00"
    }
   },
   {
@@ -832,32 +924,9 @@
     "burn_type": "Hand Pile",
     "acres": 1.0,
     "piles": null,
-    "status": "Pre-Planned",
+    "status": "Approved",
     "planned_on": "2026-10-15T00:27:00-07:00",
-    "approved_on": null
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -123.312379,
-     38.561075
-    ]
-   },
-   "properties": {
-    "pfirs_id": "192962980",
-    "name": "Highway 1 Post-Wildfire",
-    "burn_date": "2026-10-20",
-    "agency": "California State Parks",
-    "agency_group": "CA Parks",
-    "burn_type": "Hand Pile",
-    "acres": 2.0,
-    "piles": null,
-    "status": "Pre-Planned",
-    "planned_on": "2026-10-16T11:15:00-07:00",
-    "approved_on": null
+    "approved_on": "2026-10-19T14:44:00-07:00"
    }
   },
   {
@@ -878,9 +947,9 @@
     "burn_type": "Underburn",
     "acres": 118.0,
     "piles": null,
-    "status": "Pre-Planned",
+    "status": "Approved",
     "planned_on": "2026-10-19T11:54:00-07:00",
-    "approved_on": null
+    "approved_on": "2026-10-19T13:32:00-07:00"
    }
   },
   {
@@ -901,9 +970,9 @@
     "burn_type": "Underburn",
     "acres": 120.0,
     "piles": null,
-    "status": "Pre-Planned",
+    "status": "Approved",
     "planned_on": "2026-10-19T11:54:00-07:00",
-    "approved_on": null
+    "approved_on": "2026-10-19T13:31:00-07:00"
    }
   },
   {
@@ -970,9 +1039,9 @@
     "burn_type": "Hand Pile",
     "acres": 101.0,
     "piles": null,
-    "status": "Pre-Planned",
+    "status": "Approved",
     "planned_on": "2026-10-19T11:09:00-07:00",
-    "approved_on": null
+    "approved_on": "2026-10-19T13:57:00-07:00"
    }
   },
   {
@@ -993,9 +1062,9 @@
     "burn_type": "Hand Pile",
     "acres": 30.0,
     "piles": null,
-    "status": "Pre-Planned",
+    "status": "Approved",
     "planned_on": "2026-10-19T11:09:00-07:00",
-    "approved_on": null
+    "approved_on": "2026-10-19T13:55:00-07:00"
    }
   },
   {
@@ -1039,9 +1108,9 @@
     "burn_type": "Underburn",
     "acres": 45.0,
     "piles": null,
-    "status": "Pre-Planned",
+    "status": "Approved",
     "planned_on": "2026-10-18T13:04:00-07:00",
-    "approved_on": null
+    "approved_on": "2026-10-19T15:23:00-07:00"
    }
   },
   {
@@ -1062,9 +1131,9 @@
     "burn_type": "Underburn",
     "acres": 207.0,
     "piles": null,
-    "status": "Pre-Planned",
+    "status": "Approved",
     "planned_on": "2026-10-16T14:06:00-07:00",
-    "approved_on": null
+    "approved_on": "2026-10-19T15:49:00-07:00"
    }
   },
   {
@@ -1072,22 +1141,45 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -123.292989,
-     38.57764
+     -123.507212,
+     41.542171
     ]
    },
    "properties": {
-    "pfirs_id": "192962982",
-    "name": "Stockoff Complex",
+    "pfirs_id": "192968817",
+    "name": "Ti Bar",
     "burn_date": "2026-10-20",
-    "agency": "California State Parks",
-    "agency_group": "CA Parks",
+    "agency": "US Forest Service",
+    "agency_group": "USFS",
     "burn_type": "Underburn",
-    "acres": 90.0,
+    "acres": 100.0,
     "piles": null,
-    "status": "Pre-Planned",
-    "planned_on": "2026-10-16T11:15:00-07:00",
-    "approved_on": null
+    "status": "Approved",
+    "planned_on": "2026-10-19T14:31:00-07:00",
+    "approved_on": "2026-10-19T15:47:00-07:00"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -123.518245,
+     41.546518
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192970971",
+    "name": "Ti Bar 1 A/B",
+    "burn_date": "2026-10-20",
+    "agency": "Mid Klamath Watershed Council",
+    "agency_group": "Private",
+    "burn_type": "Underburn",
+    "acres": 15.0,
+    "piles": null,
+    "status": "Approved",
+    "planned_on": "2026-10-19T16:27:00-07:00",
+    "approved_on": "2026-10-19T16:27:00-07:00"
    }
   },
   {
@@ -1223,9 +1315,9 @@
     "burn_type": "Hand Pile",
     "acres": 101.0,
     "piles": null,
-    "status": "Pre-Planned",
+    "status": "Approved",
     "planned_on": "2026-10-19T11:09:00-07:00",
-    "approved_on": null
+    "approved_on": "2026-10-19T15:45:00-07:00"
    }
   },
   {
@@ -1246,8 +1338,31 @@
     "burn_type": "Hand Pile",
     "acres": 30.0,
     "piles": null,
-    "status": "Pre-Planned",
+    "status": "Approved",
     "planned_on": "2026-10-19T11:09:00-07:00",
+    "approved_on": "2026-10-19T13:58:00-07:00"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -120.73142,
+     35.35685
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192966744",
+    "name": "Pennington Rx",
+    "burn_date": "2026-10-21",
+    "agency": "Cal Poly San Luis Obispo",
+    "agency_group": "Private",
+    "burn_type": "Underburn",
+    "acres": 35.0,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-10-19T13:15:00-07:00",
     "approved_on": null
    }
   },
@@ -1294,29 +1409,6 @@
     "piles": null,
     "status": "Pre-Planned",
     "planned_on": "2026-10-16T14:06:00-07:00",
-    "approved_on": null
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -123.292989,
-     38.57764
-    ]
-   },
-   "properties": {
-    "pfirs_id": "192962984",
-    "name": "Stockoff Complex",
-    "burn_date": "2026-10-21",
-    "agency": "California State Parks",
-    "agency_group": "CA Parks",
-    "burn_type": "Underburn",
-    "acres": 95.0,
-    "piles": null,
-    "status": "Pre-Planned",
-    "planned_on": "2026-10-16T11:15:00-07:00",
     "approved_on": null
    }
   },
