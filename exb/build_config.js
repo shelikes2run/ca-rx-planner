@@ -125,7 +125,7 @@ function buildExb2({ wm1, wm2, wm3, wm4, base, portalUrl = 'https://nifc.maps.ar
     W.w_legend5 = { uri: 'widgets/arcgis/legend/', version: v, id: 'w_legend5', label: 'Legend', useMapWidgetIds: ['w_map5'], config: { cardLayout: false, respectLayerVisibility: true } };
     W.w_help5 = text('w_help5', 'RPI notes', '<p style="font-size:12px;"><strong>R5 Risk Potential Index (FY27).</strong> Drag the swipe bar across the map to compare RPI with what is underneath (imagery, units, fire history). For transparency, open a layer\'s <em>…</em> menu in <em>Layers &amp; transparency</em> and use the slider. Turn on Hazard, Forest-only components, FY27 implementation areas or planned FACTS as needed. <strong>The RPI and planned-work layers are in the USFS org:</strong> sign in with a USFS account when prompted; others can cancel and use the rest of the map.</p>');
     LAY.layout_p5 = fixed([{ w: 'w_map5', bbox: pct(0, 0, 70, 100) }, { w: 'w_layers5', bbox: pct(70.5, 0, 29.5, 50) }, { w: 'w_legend5', bbox: pct(70.5, 50.5, 29.5, 30) }, { w: 'w_help5', bbox: pct(70.5, 81, 29.5, 19) }]);
-    LAY.layout_map5 = fixed([{ w: 'w_swipe5', bbox: px('60px', '12px', '48px', '48px') }]);
+    LAY.layout_map5 = fixed([{ w: 'w_swipe5', bbox: px('60px', '12px', '280px', '230px') }]);
   }
 
   const page = (id, label, layout, isDefault) => ({ id, label, mode: 'FIT_WINDOW', type: 'NORMAL', layout: { LARGE: layout }, isDefault, isVisible: true, header: true, footer: false });
