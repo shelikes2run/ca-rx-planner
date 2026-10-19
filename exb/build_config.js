@@ -1,5 +1,5 @@
-// Experience Builder config v2: Weather Evaluator, Smoke Modeling, Outlooks & Typical Burn Days
-function buildExb2({ wm1, wm2, wm3, base, portalUrl = 'https://nifc.maps.arcgis.com' }) {
+// Experience Builder config v2: Weather Evaluator, Smoke Modeling, Compare & Rank, Outlooks & Typical Burn Days, Risk (RPI)
+function buildExb2({ wm1, wm2, wm3, wm4, base, portalUrl = 'https://nifc.maps.arcgis.com' }) {
   const v = '1.21.0';
   const UNITS_URL = 'https://gis.reshapewildfire.org/arcgis/rest/services/Hosted/Treatment_Index_View/FeatureServer/0';
   const mapTools = { canZoom: true, canHome: true, canSearch: false, canNavigation: true, canBaseMap: true, canMeasure: true, canFullScreen: true, canScaleBar: true, canLocate: true, canCompass: true, canLayers: true, canSelect: false, canExtentNavigate: false, canOverviewMap: false };
@@ -27,6 +27,7 @@ function buildExb2({ wm1, wm2, wm3, base, portalUrl = 'https://nifc.maps.arcgis.
   webmap('dataSource_1', 'CA Prescribed Fire Planner Map', wm1, true);
   webmap('dataSource_2', 'CA Prescribed Fire Planner Map - Outlooks', wm2, false);
   webmap('dataSource_3', 'CA Prescribed Fire Planner Map - Smoke', wm3, true);
+  if (wm4) webmap('dataSource_4', 'CA Prescribed Fire Planner Map - Risk (RPI)', wm4, false);
 
   // header
   W.w_title = text('w_title', 'Title', '<p><strong style="font-size:18px;color:#ffffff;">CA Prescribed Fire Planner</strong><span style="font-size:13px;color:#dbe7f3;"> (Beta) · burn windows, smoke, outlooks, typical burn days</span></p>');
@@ -35,7 +36,7 @@ function buildExb2({ wm1, wm2, wm3, base, portalUrl = 'https://nifc.maps.arcgis.
     style: { background: { color: '#0b3b63', fillType: 'fill' }, textColor: '#ffffff' } };
   LAY.layout_header = { type: 'FLEX_ROW', order: ['0', '1'], setting: { justifyContent: 'space-between', padding: { number: [0, 12, 0, 12], unit: 'px' } }, content: {
     0: { type: 'WIDGET', widgetId: 'w_title', bbox: { width: '600px', height: '40px' }, setting: { autoProps: { width: 'CUSTOM', height: 'CUSTOM' }, style: { alignSelf: 'center' } } },
-    1: { type: 'WIDGET', widgetId: 'w_menu', bbox: { width: '700px', height: '36px' }, setting: { autoProps: { width: 'AUTO', height: 'CUSTOM' }, style: { alignSelf: 'center' } } } } };
+    1: { type: 'WIDGET', widgetId: 'w_menu', bbox: { width: '820px', height: '36px' }, setting: { autoProps: { width: 'AUTO', height: 'CUSTOM' }, style: { alignSelf: 'center' } } } } };
   LAY.layout_footer = { type: 'FIXED', order: [], content: {} };
 
   // a map + search + help + two-tab tool panel
@@ -112,11 +113,26 @@ function buildExb2({ wm1, wm2, wm3, base, portalUrl = 'https://nifc.maps.arcgis.
     config: { embedType: 'url', expression: `<p>${base}/compare_ca.html</p>`, enableLabel: false, enableBlankMessage: false, autoRefresh: false, honorThemeFont: false, embedCode: '' }, useDataSourcesEnabled: false };
   LAY.layout_p4 = fixed([{ w: 'w_embed4', bbox: pct(0, 0, 100, 100) }]);
 
+  // Risk (RPI) page: R5 RPI with swipe + transparency sliders (layers secured in the USFS org)
+  if (wm4) {
+    W.w_map5 = { uri: 'widgets/arcgis/arcgis-map/', version: v, id: 'w_map5', label: 'Risk Map',
+      config: { toolConfig: { ...mapTools, canSearch: true }, isUseCustomMapState: false, initialMapDataSourceID: 'dataSource_4', initialMapState: null, disablePopUp: false },
+      useDataSources: [{ dataSourceId: 'dataSource_4', mainDataSourceId: 'dataSource_4' }], layouts: { MapFixedLayout: { LARGE: 'layout_map5' } } };
+    W.w_swipe5 = { uri: 'widgets/arcgis/swipe/', version: v, id: 'w_swipe5', label: 'RPI Swipe', useMapWidgetIds: ['w_map5'],
+      config: { swipeMode: 'SWIPE_BETWEEN_LAYERS_OF_ONE_MAP', swipeStyle: 'ADVANCED_VERTICAL', swipeMapViewList: { 'w_map5-dataSource_4': { leadingLayersId: ['w_map5-dataSource_4-rpi_regional'], trailingLayersId: [] } },
+        styleConfig: { defaultActivation: true, isAllowDeactivateLayers: true, detailsVisibility: true } } };
+    W.w_layers5 = { uri: 'widgets/arcgis/map-layers/', version: v, id: 'w_layers5', label: 'Layers & transparency', useMapWidgetIds: ['w_map5'], config: { useMapWidget: true, enableLegend: true, showAllLegend: false, goto: true, label: true, opacity: true, layerOrder: true, information: true, setVisibility: true } };
+    W.w_legend5 = { uri: 'widgets/arcgis/legend/', version: v, id: 'w_legend5', label: 'Legend', useMapWidgetIds: ['w_map5'], config: { cardLayout: false, respectLayerVisibility: true } };
+    W.w_help5 = text('w_help5', 'RPI notes', '<p style="font-size:12px;"><strong>R5 Risk Potential Index (FY27).</strong> Drag the swipe bar across the map to compare RPI with what is underneath (imagery, units, fire history). For transparency, open a layer\'s <em>…</em> menu in <em>Layers &amp; transparency</em> and use the slider. Turn on Hazard, Forest-only components, FY27 implementation areas or planned FACTS as needed. <strong>The RPI and planned-work layers are in the USFS org:</strong> sign in with a USFS account when prompted; others can cancel and use the rest of the map.</p>');
+    LAY.layout_p5 = fixed([{ w: 'w_map5', bbox: pct(0, 0, 70, 100) }, { w: 'w_layers5', bbox: pct(70.5, 0, 29.5, 50) }, { w: 'w_legend5', bbox: pct(70.5, 50.5, 29.5, 30) }, { w: 'w_help5', bbox: pct(70.5, 81, 29.5, 19) }]);
+    LAY.layout_map5 = fixed([{ w: 'w_swipe5', bbox: px('60px', '12px', '48px', '48px') }]);
+  }
+
   const page = (id, label, layout, isDefault) => ({ id, label, mode: 'FIT_WINDOW', type: 'NORMAL', layout: { LARGE: layout }, isDefault, isVisible: true, header: true, footer: false });
   return {
     exbVersion: v, mainSizeMode: 'LARGE', template: 'blankfullscreen', theme: 'themes/default/', mainLocale: 'en-us', attributes: { portalUrl },
-    pages: { page_1: page('page_1', 'Weather Evaluator', 'layout_p1', true), page_3: page('page_3', 'Smoke Modeling', 'layout_p3', false), page_4: page('page_4', 'Compare & Rank', 'layout_p4', false), page_2: page('page_2', 'Outlooks & Typical Burn Days', 'layout_p2', false) },
-    pageStructure: [{ page_1: [] }, { page_3: [] }, { page_4: [] }, { page_2: [] }],
+    pages: { page_1: page('page_1', 'Weather Evaluator', 'layout_p1', true), page_3: page('page_3', 'Smoke Modeling', 'layout_p3', false), page_4: page('page_4', 'Compare & Rank', 'layout_p4', false), page_2: page('page_2', 'Outlooks & Typical Burn Days', 'layout_p2', false), ...(wm4 ? { page_5: page('page_5', 'Risk (RPI)', 'layout_p5', false) } : {}) },
+    pageStructure: [{ page_1: [] }, { page_3: [] }, { page_4: [] }, { page_2: [] }, ...(wm4 ? [{ page_5: [] }] : [])],
     layouts: LAY, widgets: W, sections: SEC, views: VIEWS, dialogs: {}, controllerPanels: {}, widgetsManifest: {},
     header: { layout: { LARGE: 'layout_header' }, height: { LARGE: 56 }, backgroundColor: '#0b3b63' }, footer: { layout: { LARGE: 'layout_footer' }, height: { LARGE: 0 } },
     dataSources: DS,

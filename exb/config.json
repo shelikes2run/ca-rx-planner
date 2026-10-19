@@ -59,6 +59,19 @@
    "isVisible": true,
    "header": true,
    "footer": false
+  },
+  "page_5": {
+   "id": "page_5",
+   "label": "Risk (RPI)",
+   "mode": "FIT_WINDOW",
+   "type": "NORMAL",
+   "layout": {
+    "LARGE": "layout_p5"
+   },
+   "isDefault": false,
+   "isVisible": true,
+   "header": true,
+   "footer": false
   }
  },
  "pageStructure": [
@@ -73,6 +86,9 @@
   },
   {
    "page_2": []
+  },
+  {
+   "page_5": []
   }
  ],
  "layouts": {
@@ -116,7 +132,7 @@
      "type": "WIDGET",
      "widgetId": "w_menu",
      "bbox": {
-      "width": "700px",
+      "width": "820px",
       "height": "36px"
      },
      "setting": {
@@ -596,6 +612,125 @@
       "top": "0%",
       "width": "100%",
       "height": "100%"
+     },
+     "setting": {
+      "autoProps": {
+       "left": false,
+       "right": false,
+       "top": false,
+       "bottom": false,
+       "width": "CUSTOM",
+       "height": "CUSTOM"
+      }
+     }
+    }
+   }
+  },
+  "layout_p5": {
+   "type": "FIXED",
+   "order": [
+    "0",
+    "1",
+    "2",
+    "3"
+   ],
+   "content": {
+    "0": {
+     "type": "WIDGET",
+     "widgetId": "w_map5",
+     "bbox": {
+      "left": "0%",
+      "top": "0%",
+      "width": "70%",
+      "height": "100%"
+     },
+     "setting": {
+      "autoProps": {
+       "left": false,
+       "right": false,
+       "top": false,
+       "bottom": false,
+       "width": "CUSTOM",
+       "height": "CUSTOM"
+      }
+     }
+    },
+    "1": {
+     "type": "WIDGET",
+     "widgetId": "w_layers5",
+     "bbox": {
+      "left": "70.5%",
+      "top": "0%",
+      "width": "29.5%",
+      "height": "50%"
+     },
+     "setting": {
+      "autoProps": {
+       "left": false,
+       "right": false,
+       "top": false,
+       "bottom": false,
+       "width": "CUSTOM",
+       "height": "CUSTOM"
+      }
+     }
+    },
+    "2": {
+     "type": "WIDGET",
+     "widgetId": "w_legend5",
+     "bbox": {
+      "left": "70.5%",
+      "top": "50.5%",
+      "width": "29.5%",
+      "height": "30%"
+     },
+     "setting": {
+      "autoProps": {
+       "left": false,
+       "right": false,
+       "top": false,
+       "bottom": false,
+       "width": "CUSTOM",
+       "height": "CUSTOM"
+      }
+     }
+    },
+    "3": {
+     "type": "WIDGET",
+     "widgetId": "w_help5",
+     "bbox": {
+      "left": "70.5%",
+      "top": "81%",
+      "width": "29.5%",
+      "height": "19%"
+     },
+     "setting": {
+      "autoProps": {
+       "left": false,
+       "right": false,
+       "top": false,
+       "bottom": false,
+       "width": "CUSTOM",
+       "height": "CUSTOM"
+      }
+     }
+    }
+   }
+  },
+  "layout_map5": {
+   "type": "FIXED",
+   "order": [
+    "0"
+   ],
+   "content": {
+    "0": {
+     "type": "WIDGET",
+     "widgetId": "w_swipe5",
+     "bbox": {
+      "left": "60px",
+      "top": "12px",
+      "width": "48px",
+      "height": "48px"
      },
      "setting": {
       "autoProps": {
@@ -1237,6 +1372,117 @@
     "embedCode": ""
    },
    "useDataSourcesEnabled": false
+  },
+  "w_map5": {
+   "uri": "widgets/arcgis/arcgis-map/",
+   "version": "1.21.0",
+   "id": "w_map5",
+   "label": "Risk Map",
+   "config": {
+    "toolConfig": {
+     "canZoom": true,
+     "canHome": true,
+     "canSearch": true,
+     "canNavigation": true,
+     "canBaseMap": true,
+     "canMeasure": true,
+     "canFullScreen": true,
+     "canScaleBar": true,
+     "canLocate": true,
+     "canCompass": true,
+     "canLayers": true,
+     "canSelect": false,
+     "canExtentNavigate": false,
+     "canOverviewMap": false
+    },
+    "isUseCustomMapState": false,
+    "initialMapDataSourceID": "dataSource_4",
+    "initialMapState": null,
+    "disablePopUp": false
+   },
+   "useDataSources": [
+    {
+     "dataSourceId": "dataSource_4",
+     "mainDataSourceId": "dataSource_4"
+    }
+   ],
+   "layouts": {
+    "MapFixedLayout": {
+     "LARGE": "layout_map5"
+    }
+   }
+  },
+  "w_swipe5": {
+   "uri": "widgets/arcgis/swipe/",
+   "version": "1.21.0",
+   "id": "w_swipe5",
+   "label": "RPI Swipe",
+   "useMapWidgetIds": [
+    "w_map5"
+   ],
+   "config": {
+    "swipeMode": "SWIPE_BETWEEN_LAYERS_OF_ONE_MAP",
+    "swipeStyle": "ADVANCED_VERTICAL",
+    "swipeMapViewList": {
+     "w_map5-dataSource_4": {
+      "leadingLayersId": [
+       "w_map5-dataSource_4-rpi_regional"
+      ],
+      "trailingLayersId": []
+     }
+    },
+    "styleConfig": {
+     "defaultActivation": true,
+     "isAllowDeactivateLayers": true,
+     "detailsVisibility": true
+    }
+   }
+  },
+  "w_layers5": {
+   "uri": "widgets/arcgis/map-layers/",
+   "version": "1.21.0",
+   "id": "w_layers5",
+   "label": "Layers & transparency",
+   "useMapWidgetIds": [
+    "w_map5"
+   ],
+   "config": {
+    "useMapWidget": true,
+    "enableLegend": true,
+    "showAllLegend": false,
+    "goto": true,
+    "label": true,
+    "opacity": true,
+    "layerOrder": true,
+    "information": true,
+    "setVisibility": true
+   }
+  },
+  "w_legend5": {
+   "uri": "widgets/arcgis/legend/",
+   "version": "1.21.0",
+   "id": "w_legend5",
+   "label": "Legend",
+   "useMapWidgetIds": [
+    "w_map5"
+   ],
+   "config": {
+    "cardLayout": false,
+    "respectLayerVisibility": true
+   }
+  },
+  "w_help5": {
+   "uri": "widgets/common/text/",
+   "version": "1.21.0",
+   "id": "w_help5",
+   "label": "RPI notes",
+   "config": {
+    "text": "<p style=\"font-size:12px;\"><strong>R5 Risk Potential Index (FY27).</strong> Drag the swipe bar across the map to compare RPI with what is underneath (imagery, units, fire history). For transparency, open a layer's <em>…</em> menu in <em>Layers &amp; transparency</em> and use the slider. Turn on Hazard, Forest-only components, FY27 implementation areas or planned FACTS as needed. <strong>The RPI and planned-work layers are in the USFS org:</strong> sign in with a USFS account when prompted; others can cancel and use the rest of the map.</p>",
+    "style": {
+     "verticalAlign": "start",
+     "wrap": true
+    }
+   }
   }
  },
  "sections": {
@@ -1358,6 +1604,13 @@
      "layerId": "0"
     }
    }
+  },
+  "dataSource_4": {
+   "id": "dataSource_4",
+   "type": "WEB_MAP",
+   "sourceLabel": "CA Prescribed Fire Planner Map - Risk (RPI)",
+   "itemId": "bcfb0cd066884ea8ac42804cb8d0e6f5",
+   "portalUrl": "https://nifc.maps.arcgis.com"
   },
   "w_search1_output_geocode": {
    "id": "w_search1_output_geocode",
