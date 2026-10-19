@@ -8,6 +8,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
 <script src="https://unpkg.com/shpjs@4.0.4/dist/shp.min.js"></script>
 <script src="rxcore.js?v=p4ef9cd5"></script>
+<script src="sticky.js?v=s1"></script>
 <style>
   :root{--ink:#1d2733;--muted:#5b6673;--line:#d9dee4;--bg:#f6f7f9;--brand:#0b4f8a;--go:#2e7d32;--go-bg:#cfe9d1;--part:#fff1b8;--no-bg:#fbe5e3;--no:#b3261e}
   *{box-sizing:border-box}
@@ -115,7 +116,9 @@ function renderRx() {
     <td><button class="x" data-del="${i}" title="Remove">✕</button></td></tr>`).join('') || `<tr><td colspan="15" class="muted">No units yet.</td></tr>`;
 }
 $('rxTable').addEventListener('input', e => { const tr = e.target.closest('tr[data-i]'); if (!tr) return; const x = units[+tr.dataset.i], k = e.target.dataset.k;
-  if (k === 'fuel') x.fuel = e.target.value; else if (k === 'acres') x.acres = +e.target.value || null; else x.rx[k] = e.target.value === '' ? null : +e.target.value; });
+  if (k === 'fuel') x.fuel = e.target.value; else if (k === 'acres') x.acres = +e.target.value || null; else x.rx[k] = e.target.value === '' ? null : +e.target.value;
+  // Rx edits on the current (sticky) unit carry back to the other tabs
+  if (window.STICKY && RX.RX_KEYS.includes(k)) { const s = STICKY.unit(); if (s && s.key === STICKY.keyOf(x.unit)) STICKY.saveRx(x.rx); } });
 $('rxTable').addEventListener('click', e => { const d = e.target.dataset.del; if (d != null) { units.splice(+d, 1); renderRx(); } });
 $('copyRx').onclick = () => { if (!units.length) return; units.forEach(x => x.rx = { ...units[0].rx }); renderRx(); };
 
@@ -263,8 +266,18 @@ $('run').onclick = run; $('print').onclick = () => window.print();
 
 // ----- start -----
 fillDays(); renderRx();
+// sticky unit: the unit chosen in any other tab starts the list, with the Rx last used there
+const fromSticky = s => s && s.rings && s.rings.length ? (u => u && Object.assign(u, { stickyKey: s.key }))(RX.makeUnit(s.rings, s.name, { objectid: s.id, acres: s.acres, type: s.type, agency: s.agency })) : null;
+const addSticky = (s, quiet) => { const u = fromSticky(s); if (!u || units.some(x => x.key === (u.id != null ? 'id' + u.id : 'p' + u.lat.toFixed(5) + u.lon.toFixed(5)))) return;
+  addUnit(u, STICKY.rx()); if (!quiet) setStatus(`Added the current unit ${u.name} from another tab. Add more units, then Rank units.`); };
+if (window.STICKY) {
+  STICKY.note(document.querySelector('h2'));
+  STICKY.onChange((kind, v) => { if (kind === 'unit' && v) addSticky(v);
+    if (kind === 'rx' && v) { const s = STICKY.unit(); const x = s && units.find(x => STICKY.keyOf(x.unit) === s.key); if (x) { x.rx = { ...x.rx, ...v }; renderRx(); } } });
+}
 (async () => { const ids = (P.get('ids') || P.get('id') || '').split(/[ ,;]+/).filter(s => /^\d+$/.test(s));
-  for (const id of ids) { try { addUnit(await RX.unitById(id)); } catch (e) { setStatus(e.message, true); } } })();
+  for (const id of ids) { try { addUnit(await RX.unitById(id)); } catch (e) { setStatus(e.message, true); } }
+  if (!ids.length && window.STICKY && STICKY.unit()) { addSticky(STICKY.unit(), true); setStatus(`Started with the current unit ${STICKY.unit().name}. Add more units to compare, then Rank units.`); } })();
 })();
 </script>
 </body>

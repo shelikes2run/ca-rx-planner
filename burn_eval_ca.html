@@ -7,6 +7,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
 <script src="https://unpkg.com/shpjs@4.0.4/dist/shp.min.js"></script>
+<script src="sticky.js?v=s1"></script>
 <style>
   :root{--ink:#1d2733;--muted:#5b6673;--line:#d9dee4;--bg:#f6f7f9;--card:#fff;--brand:#0b4f8a;--go:#2e7d32;--go-bg:#e3f1e4;--no:#b3261e;--no-bg:#fbe5e3;--mid:#b26a00;--mid-bg:#fdf0dc}
   *{box-sizing:border-box}
@@ -211,11 +212,14 @@ function ringsFromKML(text) {
   const nm = doc.querySelector('Placemark > name, Document > name');
   return { rings, name: nm ? clean(nm.textContent) : null };
 }
-function setUnit(rings, label) {
+function setUnit(rings, label, meta = {}) {
   const c = centroid(rings);
   if (!c || !Number.isFinite(c.lat) || !Number.isFinite(c.lon)) throw new Error('Could not find a usable polygon or point in that unit.');
   if (c.lat < 32 || c.lat > 42.2 || c.lon < -124.6 || c.lon > -113.9) setStatus(`Unit centroid ${c.lat.toFixed(3)}, ${c.lon.toFixed(3)} is outside California. Results will still run.`, true);
   Object.assign(state, { lat: c.lat, lon: c.lon, rings, label: label || 'Uploaded unit' });
+  const su = { name: state.label, lat: c.lat, lon: c.lon, rings, id: meta.id ?? null, stickyKey: meta.key };
+  state.key = window.STICKY ? STICKY.keyOf(su) : null;
+  if (window.STICKY && !meta.restore) { STICKY.saveUnit(su); STICKY.refresh(); }
   $('title').textContent = state.label;
   showUnitMap();
 }
@@ -242,7 +246,7 @@ let searchTimer = null, lastHits = [];
 async function loadUnitById(id, label, svc = DEFAULT_SVC) {
   const j = await fetch(`${svc}/query?where=${encodeURIComponent('objectid=' + id)}&outFields=name,objectid&returnGeometry=true&outSR=4326&f=json`).then(r => r.json());
   const f = j.features && j.features[0]; if (!f || !f.geometry) throw new Error('That unit could not be found in the treatment layer.');
-  const g = f.geometry; setUnit(g.rings || [[[g.x, g.y]]], label || clean(f.attributes.name) || 'Unit ' + id);
+  const g = f.geometry; setUnit(g.rings || [[[g.x, g.y]]], label || clean(f.attributes.name) || 'Unit ' + id, { id });
 }
 document.getElementById('search').addEventListener('input', () => {
   clearTimeout(searchTimer); const q = $('search').value.trim();
@@ -291,7 +295,7 @@ async function loadFromParams() {
   const rings = g.rings || (g.x != null ? [[[g.x, g.y]]] : null);
   const attrs = f.attributes || {};
   const nk = Object.keys(attrs).find(k => /^name$/i.test(k));
-  setUnit(rings, label || (nk && clean(attrs[nk])) || 'Unit ' + id);
+  setUnit(rings, label || (nk && clean(attrs[nk])) || 'Unit ' + id, { id: svc === DEFAULT_SVC ? +id : null });
   return true;
 }
 
@@ -520,10 +524,24 @@ $('coords').addEventListener('change', () => {
   if (b > 0) b = -b; // western hemisphere
   setUnit([[[b, a]]], 'Point ' + a.toFixed(4) + ', ' + b.toFixed(4)); run();
 });
-// Rx can be prefilled from URL (e.g. &minT=35&maxRH=45)
-['minT', 'maxT', 'minRH', 'maxRH', 'maxW', 'maxG', 'minV', 'bpS', 'bpE', 'minRun'].forEach(k => { const v = P.get(k); if (v != null && Number.isFinite(+v)) $(k).value = v; });
+// Rx: URL (e.g. &minT=35&maxRH=45) wins, otherwise the Rx last used in any tab
+const RXK = ['minT', 'maxT', 'minRH', 'maxRH', 'maxW', 'maxG', 'minV', 'bpS', 'bpE', 'minRun'];
+const fillRx = r => RXK.forEach(k => { if (r && r[k] != null && Number.isFinite(+r[k])) $(k).value = r[k]; });
+if (RXK.some(k => P.get(k) != null)) RXK.forEach(k => { const v = P.get(k); if (v != null && Number.isFinite(+v)) $(k).value = v; });
+else if (window.STICKY) fillRx(STICKY.rx());
+const saveRx = () => { if (!window.STICKY) return; const r = rx(); STICKY.saveRx(Object.fromEntries(RXK.map(k => [k, r[k]]))); };
+RXK.forEach(k => $(k).addEventListener('change', saveRx));
 
-loadFromParams().then(ok => { if (ok) run(); }).catch(e => setStatus(e.message, true));
+// sticky unit: a unit chosen in any tab is already loaded here
+const restoreSticky = u => { if (!u || !u.rings || !u.rings.length) return false; setUnit(u.rings, u.name, { id: u.id, key: u.key, restore: true }); return true; };
+if (window.STICKY) {
+  STICKY.note($('title'), () => setStatus('Current unit cleared. Choose a unit to evaluate.'));
+  STICKY.onChange((kind, v) => {
+    if (kind === 'rx') { fillRx(v); if (state.lat != null) setStatus('Rx updated from another tab. Press Evaluate to re-run.'); return; }
+    if (v && v.key !== state.key && restoreSticky(v)) { setStatus(`Unit changed in another tab: ${v.name}. Evaluating…`); const k = state.key; STICKY.whenVisible(() => { if (state.key === k) run(); }); }
+  });
+}
+loadFromParams().then(ok => { if (ok) return run(); if (window.STICKY && restoreSticky(STICKY.unit())) { setStatus(`Loaded current unit ${state.label}. Evaluating…`); run(); } }).catch(e => setStatus(e.message, true));
 })();
 </script>
 </body>

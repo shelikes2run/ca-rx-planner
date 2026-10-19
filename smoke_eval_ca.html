@@ -8,6 +8,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
 <script src="https://unpkg.com/shpjs@4.0.4/dist/shp.min.js"></script>
 <script src="rxcore.js?v=p4ef9cd5"></script>
+<script src="sticky.js?v=s1"></script>
 <style>
   :root{--ink:#1d2733;--muted:#5b6673;--line:#d9dee4;--bg:#f6f7f9;--brand:#0b4f8a;--no:#b3261e;--no-bg:#fbe5e3}
   *{box-sizing:border-box}
@@ -87,7 +88,8 @@ const $ = id => document.getElementById(id), RX = window.RX, esc = RX.esc;
 const P = new URLSearchParams(location.search);
 let unit = null;
 const setStatus = (t, bad) => { $('status').textContent = t; $('status').style.color = bad ? 'var(--no)' : 'var(--brand)'; };
-function setUnit(u) { if (!u) throw new Error('Could not find a usable polygon or point in that unit.'); unit = u; $('title').textContent = 'Smoke Screening · ' + u.name;
+function setUnit(u, restore) { if (!u) throw new Error('Could not find a usable polygon or point in that unit.'); unit = u; $('title').textContent = 'Smoke Screening · ' + u.name;
+  if (window.STICKY && !restore) { STICKY.saveUnit(u); STICKY.refresh(); }
   $('acres').value = RX.burnAcres(u) ?? ''; $('acresNote').textContent = u.acres ? `unit is ${Math.round(u.acres).toLocaleString()} ac` : ''; const f = RX.fuelFromType(u.type); $('fuel').value = f; $('tpa').value = RX.FUELS[f].tpa; }
 // fuel select
 $('fuel').innerHTML = Object.entries(RX.FUELS).map(([k, f]) => `<option value="${k}">${esc(f.label)}</option>`).join('');
@@ -192,10 +194,18 @@ async function run() {
   running = false; $('run').disabled = false;
 }
 $('run').onclick = run; $('print').onclick = () => window.print();
+// sticky unit: a unit chosen in any tab is already loaded here
+const fromSticky = s => s && s.rings && s.rings.length ? (u => u && Object.assign(u, { stickyKey: s.key }))(RX.makeUnit(s.rings, s.name, { objectid: s.id, acres: s.acres, type: s.type, agency: s.agency })) : null;
+if (window.STICKY) {
+  STICKY.note($('title'), () => setStatus('Current unit cleared. Choose a unit to screen.'));
+  STICKY.onChange((kind, v) => { if (kind !== 'unit' || !v || (unit && STICKY.keyOf(unit) === v.key)) return; const u = fromSticky(v); if (!u) return;
+    setUnit(u, true); setStatus(`Unit changed in another tab: ${u.name}. Screening…`); STICKY.whenVisible(() => { if (unit === u) run(); }); });
+}
 (async () => { try {
   const lat = parseFloat(P.get('lat')), lon = parseFloat(P.get('lon')), name = RX.clean(P.get('unit') || P.get('name'));
   if (isFinite(lat) && isFinite(lon)) { setUnit(RX.makeUnit([[[lon, lat]]], name || 'Selected point')); return run(); }
-  const id = RX.clean(P.get('id')); if (id && /^\d+$/.test(id)) { let svc = RX.clean(P.get('svc')) || RX.UNITS_SVC; const u = await RX.unitById(id, svc.replace(/\/+$/, '')); if (name) u.name = name; setUnit(u); run(); }
+  const id = RX.clean(P.get('id')); if (id && /^\d+$/.test(id)) { let svc = RX.clean(P.get('svc')) || RX.UNITS_SVC; const u = await RX.unitById(id, svc.replace(/\/+$/, '')); if (name) u.name = name; setUnit(u); return run(); }
+  const su = window.STICKY && fromSticky(STICKY.unit()); if (su) { setUnit(su, true); setStatus(`Loaded current unit ${su.name}. Screening…`); run(); }
 } catch (e) { setStatus(e.message, true); } })();
 })();
 </script>
