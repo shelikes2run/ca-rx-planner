@@ -1426,7 +1426,7 @@
     "swipeMapViewList": {
      "w_map5-dataSource_4": {
       "leadingLayersId": [
-       "w_map5-dataSource_4-rpi_regional"
+       "w_map5-dataSource_4-grp_rpi"
       ],
       "trailingLayersId": []
      }
