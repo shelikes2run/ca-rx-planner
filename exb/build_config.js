@@ -119,7 +119,7 @@ function buildExb2({ wm1, wm2, wm3, wm4, base, portalUrl = 'https://nifc.maps.ar
       config: { toolConfig: { ...mapTools, canSearch: true }, isUseCustomMapState: false, initialMapDataSourceID: 'dataSource_4', initialMapState: null, disablePopUp: false },
       useDataSources: [{ dataSourceId: 'dataSource_4', mainDataSourceId: 'dataSource_4' }], layouts: { MapFixedLayout: { LARGE: 'layout_map5' } } };
     W.w_swipe5 = { uri: 'widgets/arcgis/swipe/', version: v, id: 'w_swipe5', label: 'RPI Swipe', useMapWidgetIds: ['w_map5'],
-      config: { swipeMode: 'SWIPE_BETWEEN_LAYERS_OF_ONE_MAP', swipeStyle: 'ADVANCED_VERTICAL', swipeMapViewList: { 'w_map5-dataSource_4': { leadingLayersId: ['w_map5-dataSource_4-grp_rpi'], trailingLayersId: [] } },
+      config: { swipeMode: 'SWIPE_BETWEEN_LAYERS_OF_ONE_MAP', swipeStyle: 'SIMPLE_VERTICAL', swipeMapViewList: { 'w_map5-dataSource_4': { leadingLayersId: ['w_map5-dataSource_4-grp_rpi'], trailingLayersId: [] } },
         styleConfig: { defaultActivation: true, isAllowDeactivateLayers: true, detailsVisibility: true } } };
     W.w_layers5 = { uri: 'widgets/arcgis/map-layers/', version: v, id: 'w_layers5', label: 'Layers & transparency', useMapWidgetIds: ['w_map5'], config: { useMapWidget: true, enableLegend: true, showAllLegend: false, goto: true, label: true, opacity: true, layerOrder: true, information: true, setVisibility: true } };
     W.w_legend5 = { uri: 'widgets/arcgis/legend/', version: v, id: 'w_legend5', label: 'Legend', useMapWidgetIds: ['w_map5'], config: { cardLayout: false, respectLayerVisibility: true } };

@@ -1422,7 +1422,7 @@
    ],
    "config": {
     "swipeMode": "SWIPE_BETWEEN_LAYERS_OF_ONE_MAP",
-    "swipeStyle": "ADVANCED_VERTICAL",
+    "swipeStyle": "SIMPLE_VERTICAL",
     "swipeMapViewList": {
      "w_map5-dataSource_4": {
       "leadingLayersId": [
