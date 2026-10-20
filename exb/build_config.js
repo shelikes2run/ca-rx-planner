@@ -32,7 +32,9 @@ function buildExb2({ wm1, wm2, wm3, wm4, base, ver = '1', portalUrl = 'https://n
   // header
   W.w_title = text('w_title', 'Title', '<p><strong style="font-size:18px;color:#ffffff;">CA Prescribed Fire Planner</strong><span style="font-size:13px;color:#dbe7f3;"> (Beta) · burn windows, smoke, outlooks, typical burn days</span></p>');
   W.w_menu = { uri: 'widgets/common/menu/', version: v, id: 'w_menu', label: 'Menu', config: { type: 'nav', vertical: false, menuStyle: 'pills', advanced: true,
-    variants: { default: { item: { default: { color: '#dbe7f3' }, hover: { color: '#ffffff', bg: '#14548a' }, active: { color: '#0b3b63', bg: '#ffffff' } } } } },
+    standard: { textAlign: 'center', showText: true, showIcon: false, iconPosition: 'start', gap: '4px', submenuMode: 'foldable' },
+    // white labels on the navy header; active page = white pill with navy text
+    variant: { item: { default: { color: '#ffffff' }, hover: { color: '#ffffff', bg: '#14548a' }, active: { color: '#0b3b63', bg: '#ffffff' } } } },
     style: { background: { color: '#0b3b63', fillType: 'fill' }, textColor: '#ffffff' } };
   LAY.layout_header = { type: 'FLEX_ROW', order: ['0', '1'], setting: { justifyContent: 'space-between', padding: { number: [0, 12, 0, 12], unit: 'px' } }, content: {
     0: { type: 'WIDGET', widgetId: 'w_title', bbox: { width: '600px', height: '40px' }, setting: { autoProps: { width: 'CUSTOM', height: 'CUSTOM' }, style: { alignSelf: 'center' } } },
