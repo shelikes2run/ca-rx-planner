@@ -520,29 +520,6 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -122.39944,
-     38.57361
-    ]
-   },
-   "properties": {
-    "pfirs_id": "192958046",
-    "name": "1",
-    "burn_date": "2026-10-20",
-    "agency": "CAL FIRE",
-    "agency_group": "CAL FIRE",
-    "burn_type": "Underburn",
-    "acres": 40.0,
-    "piles": null,
-    "status": "Pre-Planned",
-    "planned_on": "2026-10-13T13:10:00-07:00",
-    "approved_on": null
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
      -120.238583,
      38.247483
     ]
@@ -1016,9 +993,9 @@
     "burn_type": "Unknown",
     "acres": 30.0,
     "piles": null,
-    "status": "Pre-Planned",
+    "status": "Approved",
     "planned_on": "2026-10-19T12:55:00-07:00",
-    "approved_on": null
+    "approved_on": "2026-10-19T17:13:00-07:00"
    }
   },
   {
@@ -1203,6 +1180,29 @@
     "status": "Approved",
     "planned_on": "2026-10-16T05:14:00-07:00",
     "approved_on": "2026-10-19T09:05:00-07:00"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -122.6952,
+     38.8634
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192971101",
+    "name": "Unit 2: North Oak",
+    "burn_date": "2026-10-20",
+    "agency": "Private Landowner",
+    "agency_group": "Private",
+    "burn_type": "Underburn",
+    "acres": 7.3,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-10-19T20:33:00-07:00",
+    "approved_on": null
    }
   },
   {
