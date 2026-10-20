@@ -5,7 +5,7 @@
   "source_url": "https://ssl.arb.ca.gov/pfirs/index.php?submit=Map+Page",
   "date_begin": "2026-10-19",
   "date_end": "2026-10-27",
-  "count": 78,
+  "count": 81,
   "note": "Planned and approved ignitions as published by PFIRS. Status can change through the day; confirm in PFIRS."
  },
  "features": [
@@ -704,75 +704,6 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -123.515569,
-     41.547181
-    ]
-   },
-   "properties": {
-    "pfirs_id": "192968843",
-    "name": "Creasy B",
-    "burn_date": "2026-10-20",
-    "agency": "Mid Klamath Watershed Council",
-    "agency_group": "Private",
-    "burn_type": "Underburn",
-    "acres": 2.8,
-    "piles": null,
-    "status": "Approved",
-    "planned_on": "2026-10-19T14:50:00-07:00",
-    "approved_on": "2026-10-19T15:46:00-07:00"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -123.514819,
-     41.546773
-    ]
-   },
-   "properties": {
-    "pfirs_id": "192968841",
-    "name": "Creasy E",
-    "burn_date": "2026-10-20",
-    "agency": "Mid Klamath Watershed Council",
-    "agency_group": "Private",
-    "burn_type": "Underburn",
-    "acres": 1.5,
-    "piles": null,
-    "status": "Approved",
-    "planned_on": "2026-10-19T14:50:00-07:00",
-    "approved_on": "2026-10-19T15:43:00-07:00"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -123.515053,
-     41.547763
-    ]
-   },
-   "properties": {
-    "pfirs_id": "192968842",
-    "name": "Creasy F",
-    "burn_date": "2026-10-20",
-    "agency": "Mid Klamath Watershed Council",
-    "agency_group": "Private",
-    "burn_type": "Underburn",
-    "acres": 1.74,
-    "piles": null,
-    "status": "Approved",
-    "planned_on": "2026-10-19T14:50:00-07:00",
-    "approved_on": "2026-10-19T15:44:00-07:00"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
      -120.995331,
      41.471685
     ]
@@ -809,7 +740,7 @@
     "burn_type": "Underburn",
     "acres": 50.0,
     "piles": null,
-    "status": "Approved",
+    "status": "Active",
     "planned_on": "2026-10-19T11:00:00-07:00",
     "approved_on": "2026-10-19T14:01:00-07:00"
    }
@@ -980,6 +911,29 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     -123.341559,
+     41.79842
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192971546",
+    "name": "Perez B",
+    "burn_date": "2026-10-20",
+    "agency": "Mid Klamath Watershed Council",
+    "agency_group": "Private",
+    "burn_type": "Underburn",
+    "acres": 5.0,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-10-20T12:59:00-07:00",
+    "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      -115.588481,
      33.189756
     ]
@@ -1065,29 +1019,6 @@
     "status": "Approved",
     "planned_on": "2026-10-19T14:31:00-07:00",
     "approved_on": "2026-10-19T15:47:00-07:00"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -123.518245,
-     41.546518
-    ]
-   },
-   "properties": {
-    "pfirs_id": "192970971",
-    "name": "Ti Bar 1 A/B",
-    "burn_date": "2026-10-20",
-    "agency": "Mid Klamath Watershed Council",
-    "agency_group": "Private",
-    "burn_type": "Underburn",
-    "acres": 15.0,
-    "piles": null,
-    "status": "Approved",
-    "planned_on": "2026-10-19T16:27:00-07:00",
-    "approved_on": "2026-10-19T16:27:00-07:00"
    }
   },
   {
@@ -1200,9 +1131,9 @@
     "burn_type": "Underburn",
     "acres": 79.0,
     "piles": null,
-    "status": "Pre-Planned",
+    "status": "Approved",
     "planned_on": "2026-10-19T12:48:00-07:00",
-    "approved_on": null
+    "approved_on": "2026-10-20T13:37:00-07:00"
    }
   },
   {
@@ -1279,21 +1210,44 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -120.73142,
-     35.35685
+     -123.341559,
+     41.79842
     ]
    },
    "properties": {
-    "pfirs_id": "192966744",
-    "name": "Pennington Rx",
+    "pfirs_id": "192971547",
+    "name": "Perez B",
     "burn_date": "2026-10-21",
-    "agency": "Cal Poly San Luis Obispo",
+    "agency": "Mid Klamath Watershed Council",
     "agency_group": "Private",
     "burn_type": "Underburn",
-    "acres": 35.0,
+    "acres": 10.0,
     "piles": null,
     "status": "Pre-Planned",
-    "planned_on": "2026-10-19T13:15:00-07:00",
+    "planned_on": "2026-10-20T12:59:00-07:00",
+    "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -123.342758,
+     41.80233
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192971548",
+    "name": "Perez Unit A",
+    "burn_date": "2026-10-21",
+    "agency": "Mid Klamath Watershed Council",
+    "agency_group": "Private",
+    "burn_type": "Underburn",
+    "acres": 7.0,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-10-20T12:59:00-07:00",
     "approved_on": null
    }
   },
@@ -1348,6 +1302,29 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     -122.7245,
+     38.8753
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192971655",
+    "name": "Unit 1: North",
+    "burn_date": "2026-10-21",
+    "agency": "Private Landowner",
+    "agency_group": "Private",
+    "burn_type": "Underburn",
+    "acres": 6.7,
+    "piles": null,
+    "status": "Approved",
+    "planned_on": "2026-10-20T14:15:00-07:00",
+    "approved_on": "2026-10-20T14:28:00-07:00"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      -122.6952,
      38.8634
     ]
@@ -1371,6 +1348,52 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     -122.722767,
+     38.872633
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192971656",
+    "name": "Unit 3: Central",
+    "burn_date": "2026-10-21",
+    "agency": "Private Landowner",
+    "agency_group": "Private",
+    "burn_type": "Underburn",
+    "acres": 8.9,
+    "piles": null,
+    "status": "Approved",
+    "planned_on": "2026-10-20T14:15:00-07:00",
+    "approved_on": "2026-10-20T14:31:00-07:00"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -122.7234,
+     38.87245
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192971657",
+    "name": "Unit 4: Western Edge",
+    "burn_date": "2026-10-21",
+    "agency": "Private Landowner",
+    "agency_group": "Private",
+    "burn_type": "Underburn",
+    "acres": 4.4,
+    "piles": null,
+    "status": "Approved",
+    "planned_on": "2026-10-20T14:15:00-07:00",
+    "approved_on": "2026-10-20T14:29:00-07:00"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      -122.214444,
      38.31167
     ]
@@ -1387,6 +1410,52 @@
     "status": "Pre-Planned",
     "planned_on": "2026-10-13T13:10:00-07:00",
     "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -121.013399,
+     40.379606
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192971495",
+    "name": "Admin Piles Lassen County",
+    "burn_date": "2026-10-22",
+    "agency": "US Forest Service",
+    "agency_group": "USFS",
+    "burn_type": "Hand Pile",
+    "acres": 50.0,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-10-20T11:37:00-07:00",
+    "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -121.244353,
+     40.292111
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192971518",
+    "name": "Admin Piles Plumas County",
+    "burn_date": "2026-10-22",
+    "agency": "US Forest Service",
+    "agency_group": "USFS",
+    "burn_type": "Hand Pile",
+    "acres": 10.0,
+    "piles": null,
+    "status": "Approved",
+    "planned_on": "2026-10-20T12:44:00-07:00",
+    "approved_on": "2026-10-20T13:02:00-07:00"
    }
   },
   {
@@ -1752,9 +1821,9 @@
     "burn_type": "Underburn",
     "acres": 128.3,
     "piles": null,
-    "status": "Pre-Planned",
+    "status": "Approved",
     "planned_on": "2026-10-20T08:39:00-07:00",
-    "approved_on": null
+    "approved_on": "2026-10-20T13:55:00-07:00"
    }
   },
   {
