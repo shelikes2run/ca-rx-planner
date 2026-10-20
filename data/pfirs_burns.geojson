@@ -3,150 +3,12 @@
  "metadata": {
   "source": "CARB PFIRS public map page",
   "source_url": "https://ssl.arb.ca.gov/pfirs/index.php?submit=Map+Page",
-  "date_begin": "2026-10-18",
-  "date_end": "2026-10-26",
-  "count": 80,
+  "date_begin": "2026-10-19",
+  "date_end": "2026-10-27",
+  "count": 77,
   "note": "Planned and approved ignitions as published by PFIRS. Status can change through the day; confirm in PFIRS."
  },
  "features": [
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -120.238583,
-     38.247483
-    ]
-   },
-   "properties": {
-    "pfirs_id": "192962918",
-    "name": "2025-South Grove",
-    "burn_date": "2026-10-18",
-    "agency": "California State Parks",
-    "agency_group": "CA Parks",
-    "burn_type": "Underburn",
-    "acres": 175.0,
-    "piles": null,
-    "status": "Approved",
-    "planned_on": "2026-10-16T10:33:00-07:00",
-    "approved_on": "2026-10-16T10:48:00-07:00"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -123.54626,
-     41.35049
-    ]
-   },
-   "properties": {
-    "pfirs_id": "192965674",
-    "name": "2026 OCFR North",
-    "burn_date": "2026-10-18",
-    "agency": "US Forest Service",
-    "agency_group": "USFS",
-    "burn_type": "Hand Pile",
-    "acres": 80.0,
-    "piles": null,
-    "status": "Approved",
-    "planned_on": "2026-10-16T15:43:00-07:00",
-    "approved_on": "2026-10-16T16:15:00-07:00"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -118.973,
-     36.749
-    ]
-   },
-   "properties": {
-    "pfirs_id": "192965836",
-    "name": "2026-Grant Grove",
-    "burn_date": "2026-10-18",
-    "agency": "National Park Service",
-    "agency_group": "NPS",
-    "burn_type": "Underburn",
-    "acres": 482.0,
-    "piles": null,
-    "status": "Approved",
-    "planned_on": "2026-10-17T14:37:00-07:00",
-    "approved_on": "2026-10-17T14:37:00-07:00"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -120.659262,
-     38.919829
-    ]
-   },
-   "properties": {
-    "pfirs_id": "192965731",
-    "name": "C70/100",
-    "burn_date": "2026-10-18",
-    "agency": "UC Berkeley",
-    "agency_group": "Private",
-    "burn_type": "Underburn",
-    "acres": 10.0,
-    "piles": null,
-    "status": "Approved",
-    "planned_on": "2026-10-16T17:03:00-07:00",
-    "approved_on": "2026-10-19T08:01:00-07:00"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -123.498674,
-     41.491676
-    ]
-   },
-   "properties": {
-    "pfirs_id": "192965850",
-    "name": "Patterson",
-    "burn_date": "2026-10-18",
-    "agency": "US Forest Service",
-    "agency_group": "USFS",
-    "burn_type": "Underburn",
-    "acres": 40.0,
-    "piles": null,
-    "status": "Approved",
-    "planned_on": "2026-10-17T16:53:00-07:00",
-    "approved_on": "2026-10-17T16:57:00-07:00"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -120.968898,
-     38.383922
-    ]
-   },
-   "properties": {
-    "pfirs_id": "192961701",
-    "name": "Rancho Arroyo Seco Grasslands",
-    "burn_date": "2026-10-18",
-    "agency": "CAL FIRE",
-    "agency_group": "CAL FIRE",
-    "burn_type": "Underburn",
-    "acres": 47.0,
-    "piles": null,
-    "status": "Approved",
-    "planned_on": "2026-10-15T17:14:00-07:00",
-    "approved_on": "2026-10-16T07:30:00-07:00"
-   }
-  },
   {
    "type": "Feature",
    "geometry": {
@@ -326,7 +188,7 @@
     "burn_type": "Hand Pile",
     "acres": 1.0,
     "piles": null,
-    "status": "Approved",
+    "status": "Patrol",
     "planned_on": "2026-10-15T00:27:00-07:00",
     "approved_on": "2026-10-17T09:25:00-07:00"
    }
@@ -1839,6 +1701,75 @@
     "pfirs_id": "192944857",
     "name": "Unit 3",
     "burn_date": "2026-10-26",
+    "agency": "CAL FIRE",
+    "agency_group": "CAL FIRE",
+    "burn_type": "Underburn",
+    "acres": 227.0,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-09-30T11:21:00-07:00",
+    "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -119.37947,
+     37.05787
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192956096",
+    "name": "4 Lanes Unit 2",
+    "burn_date": "2026-10-27",
+    "agency": "Fresno County",
+    "agency_group": "Private",
+    "burn_type": "Hand Pile",
+    "acres": 6.0,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-10-12T08:33:00-07:00",
+    "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -122.795252,
+     40.318665
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192944855",
+    "name": "Unit 1",
+    "burn_date": "2026-10-27",
+    "agency": "CAL FIRE",
+    "agency_group": "CAL FIRE",
+    "burn_type": "Underburn",
+    "acres": 747.0,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-09-30T11:21:00-07:00",
+    "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -122.791632,
+     40.321481
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192944858",
+    "name": "Unit 3",
+    "burn_date": "2026-10-27",
     "agency": "CAL FIRE",
     "agency_group": "CAL FIRE",
     "burn_type": "Underburn",
