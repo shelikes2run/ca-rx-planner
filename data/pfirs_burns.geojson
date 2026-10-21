@@ -5,7 +5,7 @@
   "source_url": "https://ssl.arb.ca.gov/pfirs/index.php?submit=Map+Page",
   "date_begin": "2026-10-20",
   "date_end": "2026-10-28",
-  "count": 94,
+  "count": 95,
   "note": "Planned and approved ignitions as published by PFIRS. Status can change through the day; confirm in PFIRS."
  },
  "features": [
@@ -717,9 +717,9 @@
     "burn_type": "Hand Pile",
     "acres": 67.3,
     "piles": null,
-    "status": "Pre-Planned",
+    "status": "Approved",
     "planned_on": "2026-10-21T10:47:00-07:00",
-    "approved_on": null
+    "approved_on": "2026-10-21T14:16:00-07:00"
    }
   },
   {
@@ -786,9 +786,9 @@
     "burn_type": "Hand Pile",
     "acres": 128.9,
     "piles": null,
-    "status": "Pre-Planned",
+    "status": "Approved",
     "planned_on": "2026-10-21T10:47:00-07:00",
-    "approved_on": null
+    "approved_on": "2026-10-21T14:20:00-07:00"
    }
   },
   {
@@ -809,9 +809,9 @@
     "burn_type": "Machine Pile",
     "acres": 111.0,
     "piles": null,
-    "status": "Pre-Planned",
+    "status": "Approved",
     "planned_on": "2026-10-21T10:47:00-07:00",
-    "approved_on": null
+    "approved_on": "2026-10-21T13:21:00-07:00"
    }
   },
   {
@@ -855,9 +855,9 @@
     "burn_type": "Machine Pile",
     "acres": 79.7,
     "piles": null,
-    "status": "Pre-Planned",
+    "status": "Approved",
     "planned_on": "2026-10-21T10:47:00-07:00",
-    "approved_on": null
+    "approved_on": "2026-10-21T14:33:00-07:00"
    }
   },
   {
@@ -878,9 +878,9 @@
     "burn_type": "Machine Pile",
     "acres": 54.1,
     "piles": null,
-    "status": "Pre-Planned",
+    "status": "Approved",
     "planned_on": "2026-10-21T10:47:00-07:00",
-    "approved_on": null
+    "approved_on": "2026-10-21T14:29:00-07:00"
    }
   },
   {
@@ -924,9 +924,9 @@
     "burn_type": "Hand Pile",
     "acres": 152.0,
     "piles": null,
-    "status": "Pre-Planned",
+    "status": "Approved",
     "planned_on": "2026-10-21T10:47:00-07:00",
-    "approved_on": null
+    "approved_on": "2026-10-21T14:37:00-07:00"
    }
   },
   {
@@ -947,7 +947,7 @@
     "burn_type": "Underburn",
     "acres": 36.0,
     "piles": null,
-    "status": "Approved",
+    "status": "Active",
     "planned_on": "2026-10-20T15:29:00-07:00",
     "approved_on": "2026-10-20T15:39:00-07:00"
    }
@@ -970,9 +970,9 @@
     "burn_type": "Machine Pile",
     "acres": 165.0,
     "piles": null,
-    "status": "Pre-Planned",
+    "status": "Approved",
     "planned_on": "2026-10-21T10:47:00-07:00",
-    "approved_on": null
+    "approved_on": "2026-10-21T14:03:00-07:00"
    }
   },
   {
@@ -991,9 +991,9 @@
     "agency": "Cache Creek Conservancy",
     "agency_group": "Private",
     "burn_type": "Underburn",
-    "acres": 2.0,
+    "acres": 0.26,
     "piles": null,
-    "status": "Approved",
+    "status": "Completed",
     "planned_on": "2026-10-19T08:56:00-07:00",
     "approved_on": "2026-10-21T09:58:00-07:00"
    }
@@ -1131,9 +1131,9 @@
     "burn_type": "Machine Pile",
     "acres": 312.0,
     "piles": null,
-    "status": "Pre-Planned",
+    "status": "Approved",
     "planned_on": "2026-10-21T10:47:00-07:00",
-    "approved_on": null
+    "approved_on": "2026-10-21T14:02:00-07:00"
    }
   },
   {
@@ -1177,9 +1177,9 @@
     "burn_type": "Machine Pile",
     "acres": 757.0,
     "piles": null,
-    "status": "Pre-Planned",
+    "status": "Approved",
     "planned_on": "2026-10-21T10:47:00-07:00",
-    "approved_on": null
+    "approved_on": "2026-10-21T14:21:00-07:00"
    }
   },
   {
@@ -1200,9 +1200,9 @@
     "burn_type": "Machine Pile",
     "acres": 1025.0,
     "piles": null,
-    "status": "Pre-Planned",
+    "status": "Approved",
     "planned_on": "2026-10-21T10:47:00-07:00",
-    "approved_on": null
+    "approved_on": "2026-10-21T14:18:00-07:00"
    }
   },
   {
@@ -1292,9 +1292,9 @@
     "burn_type": "Machine Pile",
     "acres": 12.0,
     "piles": null,
-    "status": "Pre-Planned",
+    "status": "Approved",
     "planned_on": "2026-10-21T10:47:00-07:00",
-    "approved_on": null
+    "approved_on": "2026-10-21T14:00:00-07:00"
    }
   },
   {
@@ -1318,6 +1318,52 @@
     "status": "Pre-Planned",
     "planned_on": "2026-10-13T13:10:00-07:00",
     "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -118.932156,
+     36.705318
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192973508",
+    "name": "2026-Riparian",
+    "burn_date": "2026-10-22",
+    "agency": "UC Berkeley",
+    "agency_group": "Private",
+    "burn_type": "Hand Pile",
+    "acres": 1.5,
+    "piles": null,
+    "status": "Approved",
+    "planned_on": "2026-10-21T15:46:00-07:00",
+    "approved_on": "2026-10-21T15:46:00-07:00"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -119.288965,
+     37.107236
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192973501",
+    "name": "2026-Shaver Lake Understory",
+    "burn_date": "2026-10-22",
+    "agency": "Southern California Edison",
+    "agency_group": "Private",
+    "burn_type": "Underburn",
+    "acres": 20.0,
+    "piles": null,
+    "status": "Approved",
+    "planned_on": "2026-10-21T15:41:00-07:00",
+    "approved_on": "2026-10-21T15:41:00-07:00"
    }
   },
   {
@@ -1384,9 +1430,9 @@
     "burn_type": "Underburn",
     "acres": 5.0,
     "piles": null,
-    "status": "Pre-Planned",
+    "status": "Approved",
     "planned_on": "2026-10-21T10:29:00-07:00",
-    "approved_on": null
+    "approved_on": "2026-10-21T16:20:00-07:00"
    }
   },
   {
@@ -2122,29 +2168,6 @@
     "piles": null,
     "status": "Pre-Planned",
     "planned_on": "2025-11-06T16:06:00-08:00",
-    "approved_on": null
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -120.525899,
-     35.322024
-    ]
-   },
-   "properties": {
-    "pfirs_id": "192971200",
-    "name": "Riconada burn 2",
-    "burn_date": "2026-10-28",
-    "agency": "CAL FIRE",
-    "agency_group": "CAL FIRE",
-    "burn_type": "Underburn",
-    "acres": 470.0,
-    "piles": null,
-    "status": "Pre-Planned",
-    "planned_on": "2026-10-20T08:31:00-07:00",
     "approved_on": null
    }
   },
