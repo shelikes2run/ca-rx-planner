@@ -5,7 +5,7 @@
   "source_url": "https://ssl.arb.ca.gov/pfirs/index.php?submit=Map+Page",
   "date_begin": "2026-10-19",
   "date_end": "2026-10-27",
-  "count": 81,
+  "count": 82,
   "note": "Planned and approved ignitions as published by PFIRS. Status can change through the day; confirm in PFIRS."
  },
  "features": [
@@ -255,9 +255,9 @@
     "agency": "CAL FIRE",
     "agency_group": "CAL FIRE",
     "burn_type": "Unknown",
-    "acres": 70.0,
+    "acres": 68.0,
     "piles": null,
-    "status": "Approved",
+    "status": "Patrol",
     "planned_on": "2026-10-19T09:06:00-07:00",
     "approved_on": "2026-10-19T09:20:00-07:00"
    }
@@ -612,29 +612,6 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -120.561383,
-     41.361779
-    ]
-   },
-   "properties": {
-    "pfirs_id": "192966611",
-    "name": "Alturas Ranches Co Rd 60/62",
-    "burn_date": "2026-10-20",
-    "agency": "CAL FIRE",
-    "agency_group": "CAL FIRE",
-    "burn_type": "Underburn",
-    "acres": 174.0,
-    "piles": null,
-    "status": "Approved",
-    "planned_on": "2026-10-19T12:17:00-07:00",
-    "approved_on": "2026-10-19T13:24:00-07:00"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
      -120.988049,
      41.487902
     ]
@@ -855,7 +832,7 @@
     "burn_type": "Unknown",
     "acres": 30.0,
     "piles": null,
-    "status": "Approved",
+    "status": "Patrol",
     "planned_on": "2026-10-19T12:55:00-07:00",
     "approved_on": "2026-10-19T17:13:00-07:00"
    }
@@ -924,9 +901,9 @@
     "burn_type": "Underburn",
     "acres": 5.0,
     "piles": null,
-    "status": "Pre-Planned",
+    "status": "Approved",
     "planned_on": "2026-10-20T12:59:00-07:00",
-    "approved_on": null
+    "approved_on": "2026-10-20T15:40:00-07:00"
    }
   },
   {
@@ -993,7 +970,7 @@
     "burn_type": "Underburn",
     "acres": 207.0,
     "piles": null,
-    "status": "Approved",
+    "status": "Patrol",
     "planned_on": "2026-10-16T14:06:00-07:00",
     "approved_on": "2026-10-19T15:49:00-07:00"
    }
@@ -1095,22 +1072,114 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -121.868363,
-     41.726511
+     -119.37947,
+     37.05787
     ]
    },
    "properties": {
-    "pfirs_id": "192961397",
-    "name": "Cedar Mountain",
+    "pfirs_id": "192972004",
+    "name": "2026-4 Lanes Unit 2",
     "burn_date": "2026-10-21",
-    "agency": "US Forest Service",
-    "agency_group": "USFS",
-    "burn_type": "Underburn",
-    "acres": 306.0,
+    "agency": "Fresno County",
+    "agency_group": "Private",
+    "burn_type": "Hand Pile",
+    "acres": 31.0,
     "piles": null,
-    "status": "Pre-Planned",
-    "planned_on": "2026-10-15T15:33:00-07:00",
-    "approved_on": null
+    "status": "Approved",
+    "planned_on": "2026-10-20T16:06:00-07:00",
+    "approved_on": "2026-10-20T16:06:00-07:00"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -118.973,
+     36.749
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192971959",
+    "name": "2026-Grant Grove",
+    "burn_date": "2026-10-21",
+    "agency": "National Park Service",
+    "agency_group": "NPS",
+    "burn_type": "Underburn",
+    "acres": 482.0,
+    "piles": null,
+    "status": "Approved",
+    "planned_on": "2026-10-20T15:53:00-07:00",
+    "approved_on": "2026-10-20T15:53:00-07:00"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -118.932156,
+     36.705318
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192971939",
+    "name": "2026-Riparian",
+    "burn_date": "2026-10-21",
+    "agency": "UC Berkeley",
+    "agency_group": "Private",
+    "burn_type": "Hand Pile",
+    "acres": 1.5,
+    "piles": null,
+    "status": "Approved",
+    "planned_on": "2026-10-20T15:51:00-07:00",
+    "approved_on": "2026-10-20T15:51:00-07:00"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -118.932156,
+     36.705318
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192972024",
+    "name": "2026-Riparian",
+    "burn_date": "2026-10-21",
+    "agency": "UC Berkeley",
+    "agency_group": "Private",
+    "burn_type": "Hand Pile",
+    "acres": 1.5,
+    "piles": null,
+    "status": "Approved",
+    "planned_on": "2026-10-20T16:12:00-07:00",
+    "approved_on": "2026-10-20T16:12:00-07:00"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -119.288965,
+     37.107236
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192971985",
+    "name": "2026-Shaver Lake Understory",
+    "burn_date": "2026-10-21",
+    "agency": "Southern California Edison",
+    "agency_group": "Private",
+    "burn_type": "Underburn",
+    "acres": 20.0,
+    "piles": null,
+    "status": "Approved",
+    "planned_on": "2026-10-20T16:01:00-07:00",
+    "approved_on": "2026-10-20T16:01:00-07:00"
    }
   },
   {
@@ -1134,6 +1203,29 @@
     "status": "Approved",
     "planned_on": "2026-10-19T12:48:00-07:00",
     "approved_on": "2026-10-20T13:37:00-07:00"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -122.93847,
+     40.759982
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192971767",
+    "name": "Five Cent",
+    "burn_date": "2026-10-21",
+    "agency": "US Forest Service",
+    "agency_group": "USFS",
+    "burn_type": "Underburn",
+    "acres": 36.0,
+    "piles": null,
+    "status": "Approved",
+    "planned_on": "2026-10-20T15:29:00-07:00",
+    "approved_on": "2026-10-20T15:39:00-07:00"
    }
   },
   {
@@ -1223,9 +1315,9 @@
     "burn_type": "Underburn",
     "acres": 10.0,
     "piles": null,
-    "status": "Pre-Planned",
+    "status": "Approved",
     "planned_on": "2026-10-20T12:59:00-07:00",
-    "approved_on": null
+    "approved_on": "2026-10-20T15:42:00-07:00"
    }
   },
   {
@@ -1246,9 +1338,9 @@
     "burn_type": "Underburn",
     "acres": 7.0,
     "piles": null,
-    "status": "Pre-Planned",
+    "status": "Approved",
     "planned_on": "2026-10-20T12:59:00-07:00",
-    "approved_on": null
+    "approved_on": "2026-10-20T15:42:00-07:00"
    }
   },
   {
@@ -1272,29 +1364,6 @@
     "status": "Approved",
     "planned_on": "2026-10-19T10:47:00-07:00",
     "approved_on": "2026-10-19T11:42:00-07:00"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -122.224,
-     41.2646
-    ]
-   },
-   "properties": {
-    "pfirs_id": "192965287",
-    "name": "Snowmans",
-    "burn_date": "2026-10-21",
-    "agency": "US Forest Service",
-    "agency_group": "USFS",
-    "burn_type": "Underburn",
-    "acres": 140.0,
-    "piles": null,
-    "status": "Pre-Planned",
-    "planned_on": "2026-10-16T14:06:00-07:00",
-    "approved_on": null
    }
   },
   {
@@ -1463,29 +1532,6 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -121881284.0,
-     41.729545
-    ]
-   },
-   "properties": {
-    "pfirs_id": "192961419",
-    "name": "Cedar Mountain",
-    "burn_date": "2026-10-22",
-    "agency": "US Forest Service",
-    "agency_group": "USFS",
-    "burn_type": "Underburn",
-    "acres": 167.0,
-    "piles": null,
-    "status": "Pre-Planned",
-    "planned_on": "2026-10-15T15:33:00-07:00",
-    "approved_on": null
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
      -121.770799,
      39.771744
     ]
@@ -1570,29 +1616,6 @@
     "piles": null,
     "status": "Pre-Planned",
     "planned_on": "2026-10-13T13:10:00-07:00",
-    "approved_on": null
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -121892010.0,
-     41.726589
-    ]
-   },
-   "properties": {
-    "pfirs_id": "192961418",
-    "name": "Cedar Mountain",
-    "burn_date": "2026-10-23",
-    "agency": "US Forest Service",
-    "agency_group": "USFS",
-    "burn_type": "Underburn",
-    "acres": 151.0,
-    "piles": null,
-    "status": "Pre-Planned",
-    "planned_on": "2026-10-15T15:33:00-07:00",
     "approved_on": null
    }
   },
