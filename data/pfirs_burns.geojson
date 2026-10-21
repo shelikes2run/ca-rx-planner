@@ -5,7 +5,7 @@
   "source_url": "https://ssl.arb.ca.gov/pfirs/index.php?submit=Map+Page",
   "date_begin": "2026-10-20",
   "date_end": "2026-10-28",
-  "count": 71,
+  "count": 94,
   "note": "Planned and approved ignitions as published by PFIRS. Status can change through the day; confirm in PFIRS."
  },
  "features": [
@@ -30,29 +30,6 @@
     "status": "Approved",
     "planned_on": "2026-10-16T10:33:00-07:00",
     "approved_on": "2026-10-16T11:22:00-07:00"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -119.37947,
-     37.05787
-    ]
-   },
-   "properties": {
-    "pfirs_id": "192970884",
-    "name": "2026-4 Lanes Unit 2",
-    "burn_date": "2026-10-20",
-    "agency": "Fresno County",
-    "agency_group": "Private",
-    "burn_type": "Hand Pile",
-    "acres": 31.0,
-    "piles": null,
-    "status": "Approved",
-    "planned_on": "2026-10-19T15:41:00-07:00",
-    "approved_on": "2026-10-19T15:41:00-07:00"
    }
   },
   {
@@ -349,7 +326,7 @@
     "burn_type": "Underburn",
     "acres": 25.0,
     "piles": null,
-    "status": "Approved",
+    "status": "Patrol",
     "planned_on": "2026-10-19T07:10:00-07:00",
     "approved_on": "2026-10-20T05:09:00-07:00"
    }
@@ -635,29 +612,6 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -119.37947,
-     37.05787
-    ]
-   },
-   "properties": {
-    "pfirs_id": "192972004",
-    "name": "2026-4 Lanes Unit 2",
-    "burn_date": "2026-10-21",
-    "agency": "Fresno County",
-    "agency_group": "Private",
-    "burn_type": "Hand Pile",
-    "acres": 31.0,
-    "piles": null,
-    "status": "Approved",
-    "planned_on": "2026-10-20T16:06:00-07:00",
-    "approved_on": "2026-10-20T16:06:00-07:00"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
      -118.973,
      36.749
     ]
@@ -750,6 +704,29 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     -120.0548,
+     38.1955
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192973004",
+    "name": "Black Oak CG Unit 2B",
+    "burn_date": "2026-10-21",
+    "agency": "US Forest Service",
+    "agency_group": "USFS",
+    "burn_type": "Hand Pile",
+    "acres": 67.3,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-10-21T10:47:00-07:00",
+    "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      -120.998115,
      41.478376
     ]
@@ -766,6 +743,75 @@
     "status": "Active",
     "planned_on": "2026-10-19T11:54:00-07:00",
     "approved_on": "2026-10-19T13:34:00-07:00"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -120.652413,
+     38.915693
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192972973",
+    "name": "C141",
+    "burn_date": "2026-10-21",
+    "agency": "UC Berkeley",
+    "agency_group": "Private",
+    "burn_type": "Underburn",
+    "acres": 5.0,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-10-21T10:29:00-07:00",
+    "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -120.0092,
+     38.181
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192973002",
+    "name": "Camp Blue and Gold",
+    "burn_date": "2026-10-21",
+    "agency": "US Forest Service",
+    "agency_group": "USFS",
+    "burn_type": "Hand Pile",
+    "acres": 128.9,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-10-21T10:47:00-07:00",
+    "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -119.80087,
+     38.39674
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192973008",
+    "name": "Clark Fork CG",
+    "burn_date": "2026-10-21",
+    "agency": "US Forest Service",
+    "agency_group": "USFS",
+    "burn_type": "Machine Pile",
+    "acres": 111.0,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-10-21T10:47:00-07:00",
+    "approved_on": null
    }
   },
   {
@@ -796,6 +842,52 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     -120.0514,
+     38.1483
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192972999",
+    "name": "Cold Springs Unit 8",
+    "burn_date": "2026-10-21",
+    "agency": "US Forest Service",
+    "agency_group": "USFS",
+    "burn_type": "Machine Pile",
+    "acres": 79.7,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-10-21T10:47:00-07:00",
+    "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -120.0464,
+     38.1612
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192973000",
+    "name": "Cold Springs Unit 9",
+    "burn_date": "2026-10-21",
+    "agency": "US Forest Service",
+    "agency_group": "USFS",
+    "burn_type": "Machine Pile",
+    "acres": 54.1,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-10-21T10:47:00-07:00",
+    "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      -120.995331,
      41.471685
     ]
@@ -812,6 +904,29 @@
     "status": "Active",
     "planned_on": "2026-10-19T11:54:00-07:00",
     "approved_on": "2026-10-19T13:33:00-07:00"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -120.021952,
+     38.175007
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192972998",
+    "name": "Excelsior Unit 19E",
+    "burn_date": "2026-10-21",
+    "agency": "US Forest Service",
+    "agency_group": "USFS",
+    "burn_type": "Hand Pile",
+    "acres": 152.0,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-10-21T10:47:00-07:00",
+    "approved_on": null
    }
   },
   {
@@ -842,6 +957,29 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     -120.099538,
+     38.23868
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192973005",
+    "name": "G-Z TS",
+    "burn_date": "2026-10-21",
+    "agency": "US Forest Service",
+    "agency_group": "USFS",
+    "burn_type": "Machine Pile",
+    "acres": 165.0,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-10-21T10:47:00-07:00",
+    "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      -121.877644,
      38.689421
     ]
@@ -855,9 +993,9 @@
     "burn_type": "Underburn",
     "acres": 2.0,
     "piles": null,
-    "status": "Pre-Planned",
+    "status": "Approved",
     "planned_on": "2026-10-19T08:56:00-07:00",
-    "approved_on": null
+    "approved_on": "2026-10-21T09:58:00-07:00"
    }
   },
   {
@@ -980,6 +1118,29 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     -119.990242,
+     38.191529
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192973006",
+    "name": "Recharge TS Pinecrest",
+    "burn_date": "2026-10-21",
+    "agency": "US Forest Service",
+    "agency_group": "USFS",
+    "burn_type": "Machine Pile",
+    "acres": 312.0,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-10-21T10:47:00-07:00",
+    "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      -115.588481,
      33.189756
     ]
@@ -996,6 +1157,52 @@
     "status": "Approved",
     "planned_on": "2026-10-19T10:47:00-07:00",
     "approved_on": "2026-10-19T11:42:00-07:00"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -120.001101,
+     38.132178
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192973001",
+    "name": "Trout Creek TS",
+    "burn_date": "2026-10-21",
+    "agency": "US Forest Service",
+    "agency_group": "USFS",
+    "burn_type": "Machine Pile",
+    "acres": 757.0,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-10-21T10:47:00-07:00",
+    "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -120.1261,
+     38.1595
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192973003",
+    "name": "Tunnel Creek TS",
+    "burn_date": "2026-10-21",
+    "agency": "US Forest Service",
+    "agency_group": "USFS",
+    "burn_type": "Machine Pile",
+    "acres": 1025.0,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-10-21T10:47:00-07:00",
+    "approved_on": null
    }
   },
   {
@@ -1072,6 +1279,29 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     -119.819708,
+     38.342491
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192973007",
+    "name": "Upper Hwy 108",
+    "burn_date": "2026-10-21",
+    "agency": "US Forest Service",
+    "agency_group": "USFS",
+    "burn_type": "Machine Pile",
+    "acres": 12.0,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-10-21T10:47:00-07:00",
+    "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      -122.214444,
      38.31167
     ]
@@ -1134,6 +1364,29 @@
     "status": "Approved",
     "planned_on": "2026-10-20T12:44:00-07:00",
     "approved_on": "2026-10-20T13:02:00-07:00"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -120.652413,
+     38.915693
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192972974",
+    "name": "C141",
+    "burn_date": "2026-10-22",
+    "agency": "UC Berkeley",
+    "agency_group": "Private",
+    "burn_type": "Underburn",
+    "acres": 5.0,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-10-21T10:29:00-07:00",
+    "approved_on": null
    }
   },
   {
@@ -1233,6 +1486,52 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     -123.59202,
+     39.76106
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192972709",
+    "name": "Torchbearr Brown SMP 24-26 Broadcast",
+    "burn_date": "2026-10-23",
+    "agency": "Private Landowner",
+    "agency_group": "Private",
+    "burn_type": "Underburn",
+    "acres": 10.0,
+    "piles": null,
+    "status": "Approved",
+    "planned_on": "2026-10-21T07:57:00-07:00",
+    "approved_on": "2026-10-21T10:32:00-07:00"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -123.59202,
+     39.76106
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192972712",
+    "name": "Torchbearr Brown SMP 24-26 Piles",
+    "burn_date": "2026-10-23",
+    "agency": "Private Landowner",
+    "agency_group": "Private",
+    "burn_type": "Hand Pile",
+    "acres": 15.0,
+    "piles": null,
+    "status": "Approved",
+    "planned_on": "2026-10-21T07:57:00-07:00",
+    "approved_on": "2026-10-21T08:35:00-07:00"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      -122.7245,
      38.8753
     ]
@@ -1272,6 +1571,121 @@
     "status": "Approved",
     "planned_on": "2026-10-20T08:04:00-07:00",
     "approved_on": "2026-10-20T09:10:00-07:00"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -123.59202,
+     39.76106
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192972710",
+    "name": "Torchbearr Brown SMP 24-26 Broadcast",
+    "burn_date": "2026-10-24",
+    "agency": "Private Landowner",
+    "agency_group": "Private",
+    "burn_type": "Underburn",
+    "acres": 10.0,
+    "piles": null,
+    "status": "Approved",
+    "planned_on": "2026-10-21T07:57:00-07:00",
+    "approved_on": "2026-10-21T10:36:00-07:00"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -123.59202,
+     39.76106
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192972713",
+    "name": "Torchbearr Brown SMP 24-26 Piles",
+    "burn_date": "2026-10-24",
+    "agency": "Private Landowner",
+    "agency_group": "Private",
+    "burn_type": "Hand Pile",
+    "acres": 15.0,
+    "piles": null,
+    "status": "Approved",
+    "planned_on": "2026-10-21T07:57:00-07:00",
+    "approved_on": "2026-10-21T10:33:00-07:00"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -123.294853,
+     38.627865
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192972117",
+    "name": "Harold Richardson Redwoods Reserve",
+    "burn_date": "2026-10-25",
+    "agency": "Biswell Forestry",
+    "agency_group": "Private",
+    "burn_type": "Hand Pile",
+    "acres": 1.0,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-10-21T07:05:00-07:00",
+    "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -123.59202,
+     39.76106
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192972711",
+    "name": "Torchbearr Brown SMP 24-26 Broadcast",
+    "burn_date": "2026-10-25",
+    "agency": "Private Landowner",
+    "agency_group": "Private",
+    "burn_type": "Underburn",
+    "acres": 10.0,
+    "piles": null,
+    "status": "Approved",
+    "planned_on": "2026-10-21T07:57:00-07:00",
+    "approved_on": "2026-10-21T08:25:00-07:00"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -123.59202,
+     39.76106
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192972714",
+    "name": "Torchbearr Brown SMP 24-26 Piles",
+    "burn_date": "2026-10-25",
+    "agency": "Private Landowner",
+    "agency_group": "Private",
+    "burn_type": "Hand Pile",
+    "acres": 15.0,
+    "piles": null,
+    "status": "Approved",
+    "planned_on": "2026-10-21T07:57:00-07:00",
+    "approved_on": "2026-10-21T10:37:00-07:00"
    }
   },
   {
@@ -1371,6 +1785,98 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     -122.39944,
+     38.57361
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192972790",
+    "name": "1",
+    "burn_date": "2026-10-26",
+    "agency": "CAL FIRE",
+    "agency_group": "CAL FIRE",
+    "burn_type": "Underburn",
+    "acres": 60.0,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-10-21T09:09:00-07:00",
+    "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -122.786,
+     41.345
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192973043",
+    "name": "547-189-F",
+    "burn_date": "2026-10-26",
+    "agency": "US Forest Service",
+    "agency_group": "USFS",
+    "burn_type": "Underburn",
+    "acres": 122.0,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-10-21T10:52:00-07:00",
+    "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -122.786,
+     41.345
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192973045",
+    "name": "547-189-F",
+    "burn_date": "2026-10-26",
+    "agency": "US Forest Service",
+    "agency_group": "USFS",
+    "burn_type": "Underburn",
+    "acres": 122.0,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-10-21T10:52:00-07:00",
+    "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -123.29186,
+     38.63113
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192972121",
+    "name": "HRRR #0105",
+    "burn_date": "2026-10-26",
+    "agency": "Biswell Forestry",
+    "agency_group": "Private",
+    "burn_type": "Underburn",
+    "acres": 21.0,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-10-21T07:06:00-07:00",
+    "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      -122.795252,
      40.318665
     ]
@@ -1409,6 +1915,29 @@
     "piles": null,
     "status": "Pre-Planned",
     "planned_on": "2026-09-30T11:21:00-07:00",
+    "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -122.39944,
+     38.57361
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192972791",
+    "name": "1",
+    "burn_date": "2026-10-27",
+    "agency": "CAL FIRE",
+    "agency_group": "CAL FIRE",
+    "burn_type": "Underburn",
+    "acres": 44.0,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-10-21T09:09:00-07:00",
     "approved_on": null
    }
   },
