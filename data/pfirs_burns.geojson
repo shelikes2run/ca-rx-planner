@@ -5,7 +5,7 @@
   "source_url": "https://ssl.arb.ca.gov/pfirs/index.php?submit=Map+Page",
   "date_begin": "2026-10-21",
   "date_end": "2026-10-29",
-  "count": 78,
+  "count": 98,
   "note": "Planned and approved ignitions as published by PFIRS. Status can change through the day; confirm in PFIRS."
  },
  "features": [
@@ -257,7 +257,7 @@
     "burn_type": "Underburn",
     "acres": 79.0,
     "piles": null,
-    "status": "Approved",
+    "status": "Patrol",
     "planned_on": "2026-10-19T12:48:00-07:00",
     "approved_on": "2026-10-20T13:37:00-07:00"
    }
@@ -704,29 +704,6 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -122.214444,
-     38.31167
-    ]
-   },
-   "properties": {
-    "pfirs_id": "192958047",
-    "name": "1",
-    "burn_date": "2026-10-22",
-    "agency": "CAL FIRE",
-    "agency_group": "CAL FIRE",
-    "burn_type": "Underburn",
-    "acres": 90.0,
-    "piles": null,
-    "status": "Pre-Planned",
-    "planned_on": "2026-10-13T13:10:00-07:00",
-    "approved_on": null
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
      -118.932156,
      36.705318
     ]
@@ -786,9 +763,9 @@
     "burn_type": "Hand Pile",
     "acres": 50.0,
     "piles": null,
-    "status": "Pre-Planned",
+    "status": "Approved",
     "planned_on": "2026-10-20T11:37:00-07:00",
-    "approved_on": null
+    "approved_on": "2026-10-22T13:56:00-07:00"
    }
   },
   {
@@ -865,6 +842,236 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     -120.2672,
+     38.0714
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192973689",
+    "name": "Cedar Ridge Unit 208A",
+    "burn_date": "2026-10-22",
+    "agency": "US Forest Service",
+    "agency_group": "USFS",
+    "burn_type": "Hand Pile",
+    "acres": 1032.7,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-10-22T10:32:00-07:00",
+    "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -120.042065,
+     38.152161
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192973690",
+    "name": "Excelsior Unit 19G",
+    "burn_date": "2026-10-22",
+    "agency": "US Forest Service",
+    "agency_group": "USFS",
+    "burn_type": "Hand Pile",
+    "acres": 10.0,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-10-22T10:32:00-07:00",
+    "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -120.013159,
+     38.234695
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192973674",
+    "name": "G-Z Handthin 1",
+    "burn_date": "2026-10-22",
+    "agency": "US Forest Service",
+    "agency_group": "USFS",
+    "burn_type": "Hand Pile",
+    "acres": 38.0,
+    "piles": null,
+    "status": "Approved",
+    "planned_on": "2026-10-22T10:32:00-07:00",
+    "approved_on": "2026-10-22T11:15:00-07:00"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -120.031301,
+     38.208774
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192973675",
+    "name": "G-Z Handthin 2",
+    "burn_date": "2026-10-22",
+    "agency": "US Forest Service",
+    "agency_group": "USFS",
+    "burn_type": "Hand Pile",
+    "acres": 35.0,
+    "piles": null,
+    "status": "Approved",
+    "planned_on": "2026-10-22T10:32:00-07:00",
+    "approved_on": "2026-10-22T11:17:00-07:00"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -120.077142,
+     38.213277
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192973676",
+    "name": "G-Z Handthin 3",
+    "burn_date": "2026-10-22",
+    "agency": "US Forest Service",
+    "agency_group": "USFS",
+    "burn_type": "Hand Pile",
+    "acres": 49.0,
+    "piles": null,
+    "status": "Approved",
+    "planned_on": "2026-10-22T10:32:00-07:00",
+    "approved_on": "2026-10-22T11:19:00-07:00"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -120.054079,
+     38.268584
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192973678",
+    "name": "G-Z Handthin 4",
+    "burn_date": "2026-10-22",
+    "agency": "US Forest Service",
+    "agency_group": "USFS",
+    "burn_type": "Hand Pile",
+    "acres": 33.0,
+    "piles": null,
+    "status": "Approved",
+    "planned_on": "2026-10-22T10:32:00-07:00",
+    "approved_on": "2026-10-22T11:21:00-07:00"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -120.033739,
+     38.244938
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192973679",
+    "name": "G-Z Handthin 5",
+    "burn_date": "2026-10-22",
+    "agency": "US Forest Service",
+    "agency_group": "USFS",
+    "burn_type": "Hand Pile",
+    "acres": 8.0,
+    "piles": null,
+    "status": "Approved",
+    "planned_on": "2026-10-22T10:32:00-07:00",
+    "approved_on": "2026-10-22T11:29:00-07:00"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -122.598651,
+     37.953404
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192966120",
+    "name": "Lag Meadow",
+    "burn_date": "2026-10-22",
+    "agency": "Marin Municipal Water District",
+    "agency_group": "Local Non-Fire",
+    "burn_type": "Underburn",
+    "acres": 25.0,
+    "piles": null,
+    "status": "Completed",
+    "planned_on": "2026-10-19T07:10:00-07:00",
+    "approved_on": "2026-10-20T05:09:00-07:00"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -119.975997,
+     38.233708
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192973688",
+    "name": "Leland Unit 4E2",
+    "burn_date": "2026-10-22",
+    "agency": "US Forest Service",
+    "agency_group": "USFS",
+    "burn_type": "Hand Pile",
+    "acres": 18.0,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-10-22T10:32:00-07:00",
+    "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -119.942121,
+     38.300364
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192973685",
+    "name": "Mill Creek CG",
+    "burn_date": "2026-10-22",
+    "agency": "US Forest Service",
+    "agency_group": "USFS",
+    "burn_type": "Machine Pile",
+    "acres": 44.0,
+    "piles": null,
+    "status": "Approved",
+    "planned_on": "2026-10-22T10:32:00-07:00",
+    "approved_on": "2026-10-22T11:32:00-07:00"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      -121.770799,
      39.771744
     ]
@@ -927,6 +1134,52 @@
     "status": "Approved",
     "planned_on": "2026-10-21T19:13:00-07:00",
     "approved_on": "2026-10-22T10:07:00-07:00"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -119.990242,
+     38.191529
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192973683",
+    "name": "Recharge TS Pinecrest",
+    "burn_date": "2026-10-22",
+    "agency": "US Forest Service",
+    "agency_group": "USFS",
+    "burn_type": "Machine Pile",
+    "acres": 312.0,
+    "piles": null,
+    "status": "Approved",
+    "planned_on": "2026-10-22T10:32:00-07:00",
+    "approved_on": "2026-10-22T11:30:00-07:00"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -119.985474,
+     38.271253
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192973686",
+    "name": "Sno-Park",
+    "burn_date": "2026-10-22",
+    "agency": "US Forest Service",
+    "agency_group": "USFS",
+    "burn_type": "Machine Pile",
+    "acres": 28.0,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-10-22T10:32:00-07:00",
+    "approved_on": null
    }
   },
   {
@@ -1095,6 +1348,75 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     -122.371844,
+     37.268753
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192974431",
+    "name": "14",
+    "burn_date": "2026-10-24",
+    "agency": "CAL FIRE",
+    "agency_group": "CAL FIRE",
+    "burn_type": "Underburn",
+    "acres": 23.5,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-10-22T12:12:00-07:00",
+    "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -122.3727,
+     37.2666
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192974432",
+    "name": "15",
+    "burn_date": "2026-10-24",
+    "agency": "CAL FIRE",
+    "agency_group": "CAL FIRE",
+    "burn_type": "Underburn",
+    "acres": 20.4,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-10-22T12:12:00-07:00",
+    "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -122.3684,
+     37.2675
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192974410",
+    "name": "9",
+    "burn_date": "2026-10-24",
+    "agency": "CAL FIRE",
+    "agency_group": "CAL FIRE",
+    "burn_type": "Underburn",
+    "acres": 15.0,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-10-22T12:08:00-07:00",
+    "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      -123.59202,
      39.76106
     ]
@@ -1154,9 +1476,9 @@
     "burn_type": "Hand Pile",
     "acres": 1.0,
     "piles": null,
-    "status": "Pre-Planned",
+    "status": "Approved",
     "planned_on": "2026-10-21T07:05:00-07:00",
-    "approved_on": null
+    "approved_on": "2026-10-22T10:28:00-07:00"
    }
   },
   {
@@ -1394,22 +1716,22 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -122.795252,
-     40.318665
+     -120.811189,
+     38.246152
     ]
    },
    "properties": {
-    "pfirs_id": "192944854",
-    "name": "Unit 1",
+    "pfirs_id": "192973800",
+    "name": "Unit 510",
     "burn_date": "2026-10-26",
-    "agency": "CAL FIRE",
-    "agency_group": "CAL FIRE",
+    "agency": "East Bay Municipal Utility District",
+    "agency_group": "Local Non-Fire",
     "burn_type": "Underburn",
-    "acres": 747.0,
+    "acres": 275.0,
     "piles": null,
-    "status": "Pre-Planned",
-    "planned_on": "2026-09-30T11:21:00-07:00",
-    "approved_on": null
+    "status": "Approved",
+    "planned_on": "2026-10-22T11:00:00-07:00",
+    "approved_on": "2026-10-22T11:29:00-07:00"
    }
   },
   {
@@ -1417,22 +1739,22 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -122.791632,
-     40.321481
+     -120.825686,
+     38.263025
     ]
    },
    "properties": {
-    "pfirs_id": "192944857",
-    "name": "Unit 3",
+    "pfirs_id": "192973804",
+    "name": "Unit 520",
     "burn_date": "2026-10-26",
-    "agency": "CAL FIRE",
-    "agency_group": "CAL FIRE",
+    "agency": "East Bay Municipal Utility District",
+    "agency_group": "Local Non-Fire",
     "burn_type": "Underburn",
-    "acres": 227.0,
+    "acres": 275.0,
     "piles": null,
-    "status": "Pre-Planned",
-    "planned_on": "2026-09-30T11:21:00-07:00",
-    "approved_on": null
+    "status": "Approved",
+    "planned_on": "2026-10-22T11:00:00-07:00",
+    "approved_on": "2026-10-22T11:28:00-07:00"
    }
   },
   {
@@ -1486,6 +1808,29 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     -121.702509,
+     39.845911
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192973894",
+    "name": "BCCER Broadcast Units",
+    "burn_date": "2026-10-27",
+    "agency": "CSU Chico Research Foundation",
+    "agency_group": "Private",
+    "burn_type": "Underburn",
+    "acres": 38.5,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-10-22T11:18:00-07:00",
+    "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      -118.932669,
      37.669349
     ]
@@ -1509,22 +1854,22 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -122.795252,
-     40.318665
+     -120.811189,
+     38.246152
     ]
    },
    "properties": {
-    "pfirs_id": "192944855",
-    "name": "Unit 1",
+    "pfirs_id": "192973805",
+    "name": "Unit 510",
     "burn_date": "2026-10-27",
-    "agency": "CAL FIRE",
-    "agency_group": "CAL FIRE",
+    "agency": "East Bay Municipal Utility District",
+    "agency_group": "Local Non-Fire",
     "burn_type": "Underburn",
-    "acres": 747.0,
+    "acres": 275.0,
     "piles": null,
-    "status": "Pre-Planned",
-    "planned_on": "2026-09-30T11:21:00-07:00",
-    "approved_on": null
+    "status": "Approved",
+    "planned_on": "2026-10-22T11:00:00-07:00",
+    "approved_on": "2026-10-22T11:32:00-07:00"
    }
   },
   {
@@ -1532,21 +1877,44 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -122.791632,
-     40.321481
+     -120.825686,
+     38.263025
     ]
    },
    "properties": {
-    "pfirs_id": "192944858",
-    "name": "Unit 3",
+    "pfirs_id": "192973806",
+    "name": "Unit 520",
     "burn_date": "2026-10-27",
-    "agency": "CAL FIRE",
-    "agency_group": "CAL FIRE",
+    "agency": "East Bay Municipal Utility District",
+    "agency_group": "Local Non-Fire",
     "burn_type": "Underburn",
-    "acres": 227.0,
+    "acres": 275.0,
+    "piles": null,
+    "status": "Approved",
+    "planned_on": "2026-10-22T11:00:00-07:00",
+    "approved_on": "2026-10-22T11:30:00-07:00"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -122.330467,
+     37.159997
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192973859",
+    "name": "Broadcast Burn Unit",
+    "burn_date": "2026-10-28",
+    "agency": "California State Parks",
+    "agency_group": "CA Parks",
+    "burn_type": "Underburn",
+    "acres": 14.5,
     "piles": null,
     "status": "Pre-Planned",
-    "planned_on": "2026-09-30T11:21:00-07:00",
+    "planned_on": "2026-10-22T11:15:00-07:00",
     "approved_on": null
    }
   },
@@ -1555,67 +1923,21 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -122.371844,
-     37.268753
+     -122.330467,
+     37.159997
     ]
    },
    "properties": {
-    "pfirs_id": "192972040",
-    "name": "14",
+    "pfirs_id": "192973860",
+    "name": "Burn Piles within Broadcast Burn Unit",
     "burn_date": "2026-10-28",
-    "agency": "CAL FIRE",
-    "agency_group": "CAL FIRE",
-    "burn_type": "Underburn",
-    "acres": 23.5,
-    "piles": null,
+    "agency": "California State Parks",
+    "agency_group": "CA Parks",
+    "burn_type": "Hand Pile",
+    "acres": null,
+    "piles": 25.0,
     "status": "Pre-Planned",
-    "planned_on": "2026-10-20T16:30:00-07:00",
-    "approved_on": null
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -122.3727,
-     37.2666
-    ]
-   },
-   "properties": {
-    "pfirs_id": "192972042",
-    "name": "15",
-    "burn_date": "2026-10-28",
-    "agency": "CAL FIRE",
-    "agency_group": "CAL FIRE",
-    "burn_type": "Underburn",
-    "acres": 20.4,
-    "piles": null,
-    "status": "Pre-Planned",
-    "planned_on": "2026-10-20T16:30:00-07:00",
-    "approved_on": null
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -122.3684,
-     37.2675
-    ]
-   },
-   "properties": {
-    "pfirs_id": "192972038",
-    "name": "9",
-    "burn_date": "2026-10-28",
-    "agency": "CAL FIRE",
-    "agency_group": "CAL FIRE",
-    "burn_type": "Underburn",
-    "acres": 15.0,
-    "piles": null,
-    "status": "Pre-Planned",
-    "planned_on": "2026-10-20T16:30:00-07:00",
+    "planned_on": "2026-10-22T11:15:00-07:00",
     "approved_on": null
    }
   },
@@ -1739,6 +2061,52 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     -120.811189,
+     38.246152
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192973807",
+    "name": "Unit 510",
+    "burn_date": "2026-10-28",
+    "agency": "East Bay Municipal Utility District",
+    "agency_group": "Local Non-Fire",
+    "burn_type": "Underburn",
+    "acres": 275.0,
+    "piles": null,
+    "status": "Approved",
+    "planned_on": "2026-10-22T11:00:00-07:00",
+    "approved_on": "2026-10-22T11:41:00-07:00"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -120.825686,
+     38.263025
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192973808",
+    "name": "Unit 520",
+    "burn_date": "2026-10-28",
+    "agency": "East Bay Municipal Utility District",
+    "agency_group": "Local Non-Fire",
+    "burn_type": "Underburn",
+    "acres": 275.0,
+    "piles": null,
+    "status": "Approved",
+    "planned_on": "2026-10-22T11:00:00-07:00",
+    "approved_on": "2026-10-22T11:38:00-07:00"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      -122.214444,
      38.31167
     ]
@@ -1754,6 +2122,52 @@
     "piles": null,
     "status": "Pre-Planned",
     "planned_on": "2026-10-21T09:09:00-07:00",
+    "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -122.330467,
+     37.159997
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192973861",
+    "name": "Broadcast Burn Unit",
+    "burn_date": "2026-10-29",
+    "agency": "California State Parks",
+    "agency_group": "CA Parks",
+    "burn_type": "Underburn",
+    "acres": 14.5,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-10-22T11:15:00-07:00",
+    "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -122.330467,
+     37.159997
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192973863",
+    "name": "Burn Piles within Broadcast Burn Unit",
+    "burn_date": "2026-10-29",
+    "agency": "California State Parks",
+    "agency_group": "CA Parks",
+    "burn_type": "Hand Pile",
+    "acres": null,
+    "piles": 25.0,
+    "status": "Pre-Planned",
+    "planned_on": "2026-10-22T11:15:00-07:00",
     "approved_on": null
    }
   },
@@ -1801,6 +2215,52 @@
     "status": "Pre-Planned",
     "planned_on": "2026-10-22T09:38:00-07:00",
     "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -120.811189,
+     38.246152
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192973809",
+    "name": "Unit 510",
+    "burn_date": "2026-10-29",
+    "agency": "East Bay Municipal Utility District",
+    "agency_group": "Local Non-Fire",
+    "burn_type": "Underburn",
+    "acres": 275.0,
+    "piles": null,
+    "status": "Approved",
+    "planned_on": "2026-10-22T11:00:00-07:00",
+    "approved_on": "2026-10-22T11:43:00-07:00"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -120.825686,
+     38.263025
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192973810",
+    "name": "Unit 520",
+    "burn_date": "2026-10-29",
+    "agency": "East Bay Municipal Utility District",
+    "agency_group": "Local Non-Fire",
+    "burn_type": "Underburn",
+    "acres": 275.0,
+    "piles": null,
+    "status": "Approved",
+    "planned_on": "2026-10-22T11:00:00-07:00",
+    "approved_on": "2026-10-22T11:42:00-07:00"
    }
   }
  ]
