@@ -5,7 +5,7 @@
   "source_url": "https://ssl.arb.ca.gov/pfirs/index.php?submit=Map+Page",
   "date_begin": "2026-10-20",
   "date_end": "2026-10-28",
-  "count": 95,
+  "count": 98,
   "note": "Planned and approved ignitions as published by PFIRS. Status can change through the day; confirm in PFIRS."
  },
  "features": [
@@ -418,7 +418,7 @@
     "burn_type": "Underburn",
     "acres": 5.0,
     "piles": null,
-    "status": "Approved",
+    "status": "Active",
     "planned_on": "2026-10-20T12:59:00-07:00",
     "approved_on": "2026-10-20T15:40:00-07:00"
    }
@@ -439,9 +439,9 @@
     "agency": "US Fish and Wildlife Services",
     "agency_group": "USFWS",
     "burn_type": "Underburn",
-    "acres": 150.0,
+    "acres": 70.0,
     "piles": null,
-    "status": "Approved",
+    "status": "Patrol",
     "planned_on": "2026-10-19T10:47:00-07:00",
     "approved_on": "2026-10-19T11:41:00-07:00"
    }
@@ -763,9 +763,9 @@
     "burn_type": "Underburn",
     "acres": 5.0,
     "piles": null,
-    "status": "Pre-Planned",
+    "status": "Approved",
     "planned_on": "2026-10-21T10:29:00-07:00",
-    "approved_on": null
+    "approved_on": "2026-10-21T16:28:00-07:00"
    }
   },
   {
@@ -947,7 +947,7 @@
     "burn_type": "Underburn",
     "acres": 36.0,
     "piles": null,
-    "status": "Active",
+    "status": "Patrol",
     "planned_on": "2026-10-20T15:29:00-07:00",
     "approved_on": "2026-10-20T15:39:00-07:00"
    }
@@ -1085,7 +1085,7 @@
     "burn_type": "Underburn",
     "acres": 10.0,
     "piles": null,
-    "status": "Approved",
+    "status": "Active",
     "planned_on": "2026-10-20T12:59:00-07:00",
     "approved_on": "2026-10-20T15:42:00-07:00"
    }
@@ -1108,7 +1108,7 @@
     "burn_type": "Underburn",
     "acres": 7.0,
     "piles": null,
-    "status": "Approved",
+    "status": "Active",
     "planned_on": "2026-10-20T12:59:00-07:00",
     "approved_on": "2026-10-20T15:42:00-07:00"
    }
@@ -1154,7 +1154,7 @@
     "burn_type": "Underburn",
     "acres": 50.0,
     "piles": null,
-    "status": "Approved",
+    "status": "Patrol",
     "planned_on": "2026-10-19T10:47:00-07:00",
     "approved_on": "2026-10-19T11:42:00-07:00"
    }
@@ -1417,6 +1417,29 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     -123.377398,
+     41.812169
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192973570",
+    "name": "Aubrey Slater Restoration",
+    "burn_date": "2026-10-22",
+    "agency": "Mid Klamath Watershed Council",
+    "agency_group": "Private",
+    "burn_type": "Hand Pile",
+    "acres": 14.0,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-10-21T19:13:00-07:00",
+    "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      -120.652413,
      38.915693
     ]
@@ -1455,6 +1478,52 @@
     "piles": null,
     "status": "Pre-Planned",
     "planned_on": "2025-11-06T13:34:00-08:00",
+    "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -123.380191,
+     41.835919
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192973569",
+    "name": "Motyka",
+    "burn_date": "2026-10-22",
+    "agency": "Mid Klamath Watershed Council",
+    "agency_group": "Private",
+    "burn_type": "Underburn",
+    "acres": 5.0,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-10-21T19:13:00-07:00",
+    "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -123.341559,
+     41.79842
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192973571",
+    "name": "Perez B",
+    "burn_date": "2026-10-22",
+    "agency": "Mid Klamath Watershed Council",
+    "agency_group": "Private",
+    "burn_type": "Underburn",
+    "acres": 20.0,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-10-21T19:13:00-07:00",
     "approved_on": null
    }
   },
