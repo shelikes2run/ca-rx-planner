@@ -5,7 +5,7 @@
   "source_url": "https://ssl.arb.ca.gov/pfirs/index.php?submit=Map+Page",
   "date_begin": "2026-10-22",
   "date_end": "2026-10-30",
-  "count": 77,
+  "count": 92,
   "note": "Planned and approved ignitions as published by PFIRS. Status can change through the day; confirm in PFIRS."
  },
  "features": [
@@ -119,7 +119,7 @@
     "burn_type": "Hand Pile",
     "acres": 14.0,
     "piles": null,
-    "status": "Approved",
+    "status": "Patrol",
     "planned_on": "2026-10-21T19:13:00-07:00",
     "approved_on": "2026-10-22T10:08:00-07:00"
    }
@@ -405,29 +405,6 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -123.380191,
-     41.835919
-    ]
-   },
-   "properties": {
-    "pfirs_id": "192973569",
-    "name": "Motyka",
-    "burn_date": "2026-10-22",
-    "agency": "Mid Klamath Watershed Council",
-    "agency_group": "Private",
-    "burn_type": "Underburn",
-    "acres": 5.0,
-    "piles": null,
-    "status": "Approved",
-    "planned_on": "2026-10-21T19:13:00-07:00",
-    "approved_on": "2026-10-22T10:09:00-07:00"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
      -123.341559,
      41.79842
     ]
@@ -439,9 +416,9 @@
     "agency": "Mid Klamath Watershed Council",
     "agency_group": "Private",
     "burn_type": "Underburn",
-    "acres": 20.0,
+    "acres": 7.0,
     "piles": null,
-    "status": "Approved",
+    "status": "Patrol",
     "planned_on": "2026-10-21T19:13:00-07:00",
     "approved_on": "2026-10-22T10:07:00-07:00"
    }
@@ -520,6 +497,75 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     -120.810288,
+     38.251783
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192975148",
+    "name": "510",
+    "burn_date": "2026-10-23",
+    "agency": "East Bay Municipal Utility District",
+    "agency_group": "Local Non-Fire",
+    "burn_type": "Hand Pile",
+    "acres": 1.0,
+    "piles": null,
+    "status": "Approved",
+    "planned_on": "2026-10-23T10:09:00-07:00",
+    "approved_on": "2026-10-23T10:40:00-07:00"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -120.829522,
+     38.26614
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192975149",
+    "name": "520",
+    "burn_date": "2026-10-23",
+    "agency": "East Bay Municipal Utility District",
+    "agency_group": "Local Non-Fire",
+    "burn_type": "Hand Pile",
+    "acres": 4.0,
+    "piles": null,
+    "status": "Approved",
+    "planned_on": "2026-10-23T10:09:00-07:00",
+    "approved_on": "2026-10-23T10:39:00-07:00"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -123.380191,
+     41.835919
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192975023",
+    "name": "Motyka",
+    "burn_date": "2026-10-23",
+    "agency": "Mid Klamath Watershed Council",
+    "agency_group": "Private",
+    "burn_type": "Underburn",
+    "acres": 2.0,
+    "piles": null,
+    "status": "Approved",
+    "planned_on": "2026-10-23T08:22:00-07:00",
+    "approved_on": "2026-10-23T09:09:00-07:00"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      -123.59202,
      39.76106
     ]
@@ -559,29 +605,6 @@
     "status": "Approved",
     "planned_on": "2026-10-21T07:57:00-07:00",
     "approved_on": "2026-10-21T08:35:00-07:00"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -122.7245,
-     38.8753
-    ]
-   },
-   "properties": {
-    "pfirs_id": "192961714",
-    "name": "Unit 1: North",
-    "burn_date": "2026-10-23",
-    "agency": "Private Landowner",
-    "agency_group": "Private",
-    "burn_type": "Underburn",
-    "acres": 6.7,
-    "piles": null,
-    "status": "Approved",
-    "planned_on": "2026-10-16T05:14:00-07:00",
-    "approved_on": "2026-10-22T16:33:00-07:00"
    }
   },
   {
@@ -786,9 +809,9 @@
     "burn_type": "Underburn",
     "acres": 7.0,
     "piles": null,
-    "status": "Pre-Planned",
+    "status": "Approved",
     "planned_on": "2026-10-19T11:41:00-07:00",
-    "approved_on": null
+    "approved_on": "2026-10-23T08:02:00-07:00"
    }
   },
   {
@@ -809,9 +832,9 @@
     "burn_type": "Underburn",
     "acres": 8.0,
     "piles": null,
-    "status": "Pre-Planned",
+    "status": "Approved",
     "planned_on": "2026-10-19T11:41:00-07:00",
-    "approved_on": null
+    "approved_on": "2026-10-23T08:03:00-07:00"
    }
   },
   {
@@ -832,9 +855,9 @@
     "burn_type": "Underburn",
     "acres": 10.0,
     "piles": null,
-    "status": "Pre-Planned",
+    "status": "Approved",
     "planned_on": "2026-10-19T11:41:00-07:00",
-    "approved_on": null
+    "approved_on": "2026-10-23T08:05:00-07:00"
    }
   },
   {
@@ -855,9 +878,9 @@
     "burn_type": "Underburn",
     "acres": 20.0,
     "piles": null,
-    "status": "Pre-Planned",
+    "status": "Approved",
     "planned_on": "2026-10-19T11:41:00-07:00",
-    "approved_on": null
+    "approved_on": "2026-10-23T08:05:00-07:00"
    }
   },
   {
@@ -880,6 +903,29 @@
     "piles": null,
     "status": "Pre-Planned",
     "planned_on": "2026-10-21T09:09:00-07:00",
+    "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -122.44573,
+     41.61268
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192975126",
+    "name": "2026-2026-Big Springs Rx",
+    "burn_date": "2026-10-26",
+    "agency": "CAL FIRE",
+    "agency_group": "CAL FIRE",
+    "burn_type": "Unknown",
+    "acres": 700.0,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-10-23T09:30:00-07:00",
     "approved_on": null
    }
   },
@@ -949,6 +995,29 @@
     "piles": null,
     "status": "Pre-Planned",
     "planned_on": "2026-10-21T07:06:00-07:00",
+    "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -122.2995,
+     41.3511
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192974986",
+    "name": "McBride",
+    "burn_date": "2026-10-26",
+    "agency": "US Forest Service",
+    "agency_group": "USFS",
+    "burn_type": "Underburn",
+    "acres": 110.1,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-10-23T07:10:00-07:00",
     "approved_on": null
    }
   },
@@ -1141,6 +1210,52 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     -121.77758,
+     37.14554
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192975365",
+    "name": "Rancho Canada broadcast",
+    "burn_date": "2026-10-27",
+    "agency": "Prometheus Fire Consulting LLC",
+    "agency_group": "Private",
+    "burn_type": "Underburn",
+    "acres": 6.0,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-10-23T11:20:00-07:00",
+    "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -122.645861,
+     38.492528
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192975167",
+    "name": "Saddle Mt. Upper Plum",
+    "burn_date": "2026-10-27",
+    "agency": "Sonoma County Agricultural Preservation & Open Space District",
+    "agency_group": "Local Non-Fire",
+    "burn_type": "Underburn",
+    "acres": 24.0,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-10-23T10:29:00-07:00",
+    "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      -118.932669,
      37.669349
     ]
@@ -1302,6 +1417,52 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     -122.512187,
+     38.355876
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192975034",
+    "name": "East Suttonfield Unit 2",
+    "burn_date": "2026-10-28",
+    "agency": "California State Parks",
+    "agency_group": "CA Parks",
+    "burn_type": "Underburn",
+    "acres": 8.0,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-10-23T08:37:00-07:00",
+    "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -122.500154,
+     38.437319
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192975032",
+    "name": "Hillside Units",
+    "burn_date": "2026-10-28",
+    "agency": "California State Parks",
+    "agency_group": "CA Parks",
+    "burn_type": "Underburn",
+    "acres": 12.0,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-10-23T08:37:00-07:00",
+    "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      -121.770799,
      39.771744
     ]
@@ -1317,6 +1478,52 @@
     "piles": null,
     "status": "Pre-Planned",
     "planned_on": "2025-11-06T16:06:00-08:00",
+    "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -122.516505,
+     38.439219
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192975033",
+    "name": "Pony Gate Units",
+    "burn_date": "2026-10-28",
+    "agency": "California State Parks",
+    "agency_group": "CA Parks",
+    "burn_type": "Underburn",
+    "acres": 35.0,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-10-23T08:37:00-07:00",
+    "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -122.71621,
+     38.579036
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192975155",
+    "name": "Rodger\\\\\\'s Canyon Rx",
+    "burn_date": "2026-10-28",
+    "agency": "Pepperwood Foundation",
+    "agency_group": "Private",
+    "burn_type": "Underburn",
+    "acres": 20.0,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-10-23T10:15:00-07:00",
     "approved_on": null
    }
   },
@@ -1486,6 +1693,29 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     -122.548746,
+     38.349748
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192975035",
+    "name": "Vineyard Trail Rx Burn Unit",
+    "burn_date": "2026-10-28",
+    "agency": "California State Parks",
+    "agency_group": "CA Parks",
+    "burn_type": "Underburn",
+    "acres": 11.0,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-10-23T08:37:00-07:00",
+    "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      -122.214444,
      38.31167
     ]
@@ -1547,6 +1777,98 @@
     "piles": 25.0,
     "status": "Pre-Planned",
     "planned_on": "2026-10-22T11:15:00-07:00",
+    "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -122.512187,
+     38.355876
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192975038",
+    "name": "East Suttonfield Unit 2",
+    "burn_date": "2026-10-29",
+    "agency": "California State Parks",
+    "agency_group": "CA Parks",
+    "burn_type": "Underburn",
+    "acres": 8.0,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-10-23T08:37:00-07:00",
+    "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -122.500154,
+     38.437319
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192975036",
+    "name": "Hillside Units",
+    "burn_date": "2026-10-29",
+    "agency": "California State Parks",
+    "agency_group": "CA Parks",
+    "burn_type": "Underburn",
+    "acres": 12.0,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-10-23T08:37:00-07:00",
+    "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -122.516505,
+     38.439219
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192975037",
+    "name": "Pony Gate Units",
+    "burn_date": "2026-10-29",
+    "agency": "California State Parks",
+    "agency_group": "CA Parks",
+    "burn_type": "Underburn",
+    "acres": 35.0,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-10-23T08:37:00-07:00",
+    "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -122.71621,
+     38.579036
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192975156",
+    "name": "Rodger\\\\\\'s Canyon Rx",
+    "burn_date": "2026-10-29",
+    "agency": "Pepperwood Foundation",
+    "agency_group": "Private",
+    "burn_type": "Underburn",
+    "acres": 35.0,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-10-23T10:15:00-07:00",
     "approved_on": null
    }
   },
@@ -1709,6 +2031,29 @@
     "status": "Approved",
     "planned_on": "2026-10-22T11:00:00-07:00",
     "approved_on": "2026-10-22T11:42:00-07:00"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -122.548746,
+     38.349748
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192975039",
+    "name": "Vineyard Trail Rx Burn Unit",
+    "burn_date": "2026-10-29",
+    "agency": "California State Parks",
+    "agency_group": "CA Parks",
+    "burn_type": "Underburn",
+    "acres": 11.0,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-10-23T08:37:00-07:00",
+    "approved_on": null
    }
   },
   {
