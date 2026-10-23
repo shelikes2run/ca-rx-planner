@@ -5,7 +5,7 @@
   "source_url": "https://ssl.arb.ca.gov/pfirs/index.php?submit=Map+Page",
   "date_begin": "2026-10-21",
   "date_end": "2026-10-29",
-  "count": 98,
+  "count": 101,
   "note": "Planned and approved ignitions as published by PFIRS. Status can change through the day; confirm in PFIRS."
  },
  "features": [
@@ -612,29 +612,6 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -122.7245,
-     38.8753
-    ]
-   },
-   "properties": {
-    "pfirs_id": "192971655",
-    "name": "Unit 1: North",
-    "burn_date": "2026-10-21",
-    "agency": "Private Landowner",
-    "agency_group": "Private",
-    "burn_type": "Underburn",
-    "acres": 6.7,
-    "piles": null,
-    "status": "Approved",
-    "planned_on": "2026-10-20T14:15:00-07:00",
-    "approved_on": "2026-10-20T14:28:00-07:00"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
      -122.722767,
      38.872633
     ]
@@ -646,9 +623,9 @@
     "agency": "Private Landowner",
     "agency_group": "Private",
     "burn_type": "Underburn",
-    "acres": 8.9,
+    "acres": 3.9,
     "piles": null,
-    "status": "Approved",
+    "status": "Patrol",
     "planned_on": "2026-10-20T14:15:00-07:00",
     "approved_on": "2026-10-20T14:31:00-07:00"
    }
@@ -671,7 +648,7 @@
     "burn_type": "Underburn",
     "acres": 4.4,
     "piles": null,
-    "status": "Approved",
+    "status": "Patrol",
     "planned_on": "2026-10-20T14:15:00-07:00",
     "approved_on": "2026-10-20T14:29:00-07:00"
    }
@@ -1187,68 +1164,22 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -122.722767,
-     38.872633
+     -118.932156,
+     36.705318
     ]
    },
    "properties": {
-    "pfirs_id": "192961712",
-    "name": "Unit 3: Central",
-    "burn_date": "2026-10-22",
-    "agency": "Private Landowner",
-    "agency_group": "Private",
-    "burn_type": "Underburn",
-    "acres": 8.9,
-    "piles": null,
-    "status": "Pre-Planned",
-    "planned_on": "2026-10-16T05:14:00-07:00",
-    "approved_on": null
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -122.7234,
-     38.87245
-    ]
-   },
-   "properties": {
-    "pfirs_id": "192961713",
-    "name": "Unit 4: Western Edge",
-    "burn_date": "2026-10-22",
-    "agency": "Private Landowner",
-    "agency_group": "Private",
-    "burn_type": "Underburn",
-    "acres": 4.4,
-    "piles": null,
-    "status": "Pre-Planned",
-    "planned_on": "2026-10-16T05:14:00-07:00",
-    "approved_on": null
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -122.214444,
-     38.31167
-    ]
-   },
-   "properties": {
-    "pfirs_id": "192958048",
-    "name": "1",
+    "pfirs_id": "192974846",
+    "name": "2026-Riparian",
     "burn_date": "2026-10-23",
-    "agency": "CAL FIRE",
-    "agency_group": "CAL FIRE",
-    "burn_type": "Underburn",
-    "acres": 50.0,
+    "agency": "UC Berkeley",
+    "agency_group": "Private",
+    "burn_type": "Hand Pile",
+    "acres": 1.5,
     "piles": null,
-    "status": "Pre-Planned",
-    "planned_on": "2026-10-13T13:10:00-07:00",
-    "approved_on": null
+    "status": "Approved",
+    "planned_on": "2026-10-22T15:53:00-07:00",
+    "approved_on": "2026-10-22T15:53:00-07:00"
    }
   },
   {
@@ -1315,9 +1246,9 @@
     "burn_type": "Underburn",
     "acres": 6.7,
     "piles": null,
-    "status": "Pre-Planned",
+    "status": "Approved",
     "planned_on": "2026-10-16T05:14:00-07:00",
-    "approved_on": null
+    "approved_on": "2026-10-22T16:33:00-07:00"
    }
   },
   {
@@ -1785,6 +1716,29 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     -123.317621,
+     38.626532
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192974898",
+    "name": "2026-2027 Tin Barn Rx",
+    "burn_date": "2026-10-27",
+    "agency": "Audubon Canyon Ranch",
+    "agency_group": "Private",
+    "burn_type": "Underburn",
+    "acres": 12.0,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-10-22T16:16:00-07:00",
+    "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      -119.37947,
      37.05787
     ]
@@ -1946,6 +1900,29 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     -121.799111,
+     36.447278
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192974809",
+    "name": "Dairy Field",
+    "burn_date": "2026-10-28",
+    "agency": "General Contractor",
+    "agency_group": "Private",
+    "burn_type": "Underburn",
+    "acres": 19.0,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-10-22T15:23:00-07:00",
+    "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      -121.770799,
      39.771744
     ]
@@ -1985,6 +1962,29 @@
     "status": "Approved",
     "planned_on": "2026-10-20T08:39:00-07:00",
     "approved_on": "2026-10-20T13:58:00-07:00"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -122.7375,
+     39.65417
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192974938",
+    "name": "Unit 10",
+    "burn_date": "2026-10-28",
+    "agency": "US Forest Service",
+    "agency_group": "USFS",
+    "burn_type": "Underburn",
+    "acres": 80.0,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-10-22T17:23:00-07:00",
+    "approved_on": null
    }
   },
   {
@@ -2214,6 +2214,75 @@
     "piles": null,
     "status": "Pre-Planned",
     "planned_on": "2026-10-22T09:38:00-07:00",
+    "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -122.72,
+     39.66
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192974940",
+    "name": "Unit 11",
+    "burn_date": "2026-10-29",
+    "agency": "US Forest Service",
+    "agency_group": "USFS",
+    "burn_type": "Underburn",
+    "acres": 47.0,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-10-22T17:23:00-07:00",
+    "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -122.73,
+     39.65
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192974939",
+    "name": "Unit 14",
+    "burn_date": "2026-10-29",
+    "agency": "US Forest Service",
+    "agency_group": "USFS",
+    "burn_type": "Underburn",
+    "acres": 67.0,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-10-22T17:23:00-07:00",
+    "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -122.74,
+     39.65
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192974937",
+    "name": "Unit 31",
+    "burn_date": "2026-10-29",
+    "agency": "US Forest Service",
+    "agency_group": "USFS",
+    "burn_type": "Underburn",
+    "acres": 69.0,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-10-22T17:23:00-07:00",
     "approved_on": null
    }
   },
