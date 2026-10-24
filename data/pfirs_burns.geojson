@@ -5,7 +5,7 @@
   "source_url": "https://ssl.arb.ca.gov/pfirs/index.php?submit=Map+Page",
   "date_begin": "2026-10-23",
   "date_end": "2026-10-31",
-  "count": 93,
+  "count": 94,
   "note": "Planned and approved ignitions as published by PFIRS. Status can change through the day; confirm in PFIRS."
  },
  "features": [
@@ -1041,6 +1041,29 @@
     "piles": null,
     "status": "Pre-Planned",
     "planned_on": "2026-10-23T11:50:00-07:00",
+    "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -122.512187,
+     38.355876
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192976685",
+    "name": "East Suttonfield Unit 2",
+    "burn_date": "2026-10-27",
+    "agency": "California State Parks",
+    "agency_group": "CA Parks",
+    "burn_type": "Underburn",
+    "acres": 8.0,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-10-24T09:40:00-07:00",
     "approved_on": null
    }
   },
