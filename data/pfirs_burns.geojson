@@ -497,52 +497,6 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -120.810288,
-     38.251783
-    ]
-   },
-   "properties": {
-    "pfirs_id": "192975148",
-    "name": "510",
-    "burn_date": "2026-10-23",
-    "agency": "East Bay Municipal Utility District",
-    "agency_group": "Local Non-Fire",
-    "burn_type": "Hand Pile",
-    "acres": 1.0,
-    "piles": null,
-    "status": "Approved",
-    "planned_on": "2026-10-23T10:09:00-07:00",
-    "approved_on": "2026-10-23T10:40:00-07:00"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -120.829522,
-     38.26614
-    ]
-   },
-   "properties": {
-    "pfirs_id": "192975149",
-    "name": "520",
-    "burn_date": "2026-10-23",
-    "agency": "East Bay Municipal Utility District",
-    "agency_group": "Local Non-Fire",
-    "burn_type": "Hand Pile",
-    "acres": 4.0,
-    "piles": null,
-    "status": "Approved",
-    "planned_on": "2026-10-23T10:09:00-07:00",
-    "approved_on": "2026-10-23T10:39:00-07:00"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
      -123.59202,
      39.76106
     ]
@@ -1302,6 +1256,29 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     -121.283439,
+     36.638723
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192976511",
+    "name": "Brush Burn",
+    "burn_date": "2026-10-27",
+    "agency": "CAL FIRE",
+    "agency_group": "CAL FIRE",
+    "burn_type": "Underburn",
+    "acres": 1146.0,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-10-23T19:57:00-07:00",
+    "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      -121.875761,
      41.718206
     ]
@@ -1547,6 +1524,29 @@
     "piles": null,
     "status": "Pre-Planned",
     "planned_on": "2026-10-22T11:15:00-07:00",
+    "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -121.283439,
+     36.638723
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192976509",
+    "name": "Brush Burn",
+    "burn_date": "2026-10-28",
+    "agency": "CAL FIRE",
+    "agency_group": "CAL FIRE",
+    "burn_type": "Underburn",
+    "acres": 172.0,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-10-23T19:57:00-07:00",
     "approved_on": null
    }
   },
@@ -2273,7 +2273,7 @@
     ]
    },
    "properties": {
-    "pfirs_id": "192973810",
+    "pfirs_id": "192976525",
     "name": "Unit 520",
     "burn_date": "2026-10-29",
     "agency": "East Bay Municipal Utility District",
@@ -2281,9 +2281,9 @@
     "burn_type": "Underburn",
     "acres": 275.0,
     "piles": null,
-    "status": "Approved",
-    "planned_on": "2026-10-22T11:00:00-07:00",
-    "approved_on": "2026-10-22T11:42:00-07:00"
+    "status": "Pre-Planned",
+    "planned_on": "2026-10-23T20:00:00-07:00",
+    "approved_on": null
    }
   },
   {
