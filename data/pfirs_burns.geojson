@@ -3,472 +3,12 @@
  "metadata": {
   "source": "CARB PFIRS public map page",
   "source_url": "https://ssl.arb.ca.gov/pfirs/index.php?submit=Map+Page",
-  "date_begin": "2026-10-22",
-  "date_end": "2026-10-30",
-  "count": 104,
+  "date_begin": "2026-10-23",
+  "date_end": "2026-10-31",
+  "count": 94,
   "note": "Planned and approved ignitions as published by PFIRS. Status can change through the day; confirm in PFIRS."
  },
  "features": [
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -118.932156,
-     36.705318
-    ]
-   },
-   "properties": {
-    "pfirs_id": "192973508",
-    "name": "2026-Riparian",
-    "burn_date": "2026-10-22",
-    "agency": "UC Berkeley",
-    "agency_group": "Private",
-    "burn_type": "Hand Pile",
-    "acres": 1.5,
-    "piles": null,
-    "status": "Approved",
-    "planned_on": "2026-10-21T15:46:00-07:00",
-    "approved_on": "2026-10-21T15:46:00-07:00"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -119.288965,
-     37.107236
-    ]
-   },
-   "properties": {
-    "pfirs_id": "192973501",
-    "name": "2026-Shaver Lake Understory",
-    "burn_date": "2026-10-22",
-    "agency": "Southern California Edison",
-    "agency_group": "Private",
-    "burn_type": "Underburn",
-    "acres": 20.0,
-    "piles": null,
-    "status": "Approved",
-    "planned_on": "2026-10-21T15:41:00-07:00",
-    "approved_on": "2026-10-21T15:41:00-07:00"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -121.013399,
-     40.379606
-    ]
-   },
-   "properties": {
-    "pfirs_id": "192971495",
-    "name": "Admin Piles Lassen County",
-    "burn_date": "2026-10-22",
-    "agency": "US Forest Service",
-    "agency_group": "USFS",
-    "burn_type": "Hand Pile",
-    "acres": 50.0,
-    "piles": null,
-    "status": "Approved",
-    "planned_on": "2026-10-20T11:37:00-07:00",
-    "approved_on": "2026-10-22T13:56:00-07:00"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -121.244353,
-     40.292111
-    ]
-   },
-   "properties": {
-    "pfirs_id": "192971518",
-    "name": "Admin Piles Plumas County",
-    "burn_date": "2026-10-22",
-    "agency": "US Forest Service",
-    "agency_group": "USFS",
-    "burn_type": "Hand Pile",
-    "acres": 10.0,
-    "piles": null,
-    "status": "Approved",
-    "planned_on": "2026-10-20T12:44:00-07:00",
-    "approved_on": "2026-10-20T13:02:00-07:00"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -123.377398,
-     41.812169
-    ]
-   },
-   "properties": {
-    "pfirs_id": "192973570",
-    "name": "Aubrey Slater Restoration",
-    "burn_date": "2026-10-22",
-    "agency": "Mid Klamath Watershed Council",
-    "agency_group": "Private",
-    "burn_type": "Hand Pile",
-    "acres": 14.0,
-    "piles": null,
-    "status": "Patrol",
-    "planned_on": "2026-10-21T19:13:00-07:00",
-    "approved_on": "2026-10-22T10:08:00-07:00"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -120.652413,
-     38.915693
-    ]
-   },
-   "properties": {
-    "pfirs_id": "192972974",
-    "name": "C141",
-    "burn_date": "2026-10-22",
-    "agency": "UC Berkeley",
-    "agency_group": "Private",
-    "burn_type": "Underburn",
-    "acres": 5.0,
-    "piles": null,
-    "status": "Approved",
-    "planned_on": "2026-10-21T10:29:00-07:00",
-    "approved_on": "2026-10-21T16:20:00-07:00"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -120.2672,
-     38.0714
-    ]
-   },
-   "properties": {
-    "pfirs_id": "192973689",
-    "name": "Cedar Ridge Unit 208A",
-    "burn_date": "2026-10-22",
-    "agency": "US Forest Service",
-    "agency_group": "USFS",
-    "burn_type": "Hand Pile",
-    "acres": 1032.7,
-    "piles": null,
-    "status": "Approved",
-    "planned_on": "2026-10-22T10:32:00-07:00",
-    "approved_on": "2026-10-23T15:41:00-07:00"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -120.042065,
-     38.152161
-    ]
-   },
-   "properties": {
-    "pfirs_id": "192973690",
-    "name": "Excelsior Unit 19G",
-    "burn_date": "2026-10-22",
-    "agency": "US Forest Service",
-    "agency_group": "USFS",
-    "burn_type": "Hand Pile",
-    "acres": 10.0,
-    "piles": null,
-    "status": "Approved",
-    "planned_on": "2026-10-22T10:32:00-07:00",
-    "approved_on": "2026-10-23T15:43:00-07:00"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -120.013159,
-     38.234695
-    ]
-   },
-   "properties": {
-    "pfirs_id": "192973674",
-    "name": "G-Z Handthin 1",
-    "burn_date": "2026-10-22",
-    "agency": "US Forest Service",
-    "agency_group": "USFS",
-    "burn_type": "Hand Pile",
-    "acres": 38.0,
-    "piles": null,
-    "status": "Approved",
-    "planned_on": "2026-10-22T10:32:00-07:00",
-    "approved_on": "2026-10-22T11:15:00-07:00"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -120.031301,
-     38.208774
-    ]
-   },
-   "properties": {
-    "pfirs_id": "192973675",
-    "name": "G-Z Handthin 2",
-    "burn_date": "2026-10-22",
-    "agency": "US Forest Service",
-    "agency_group": "USFS",
-    "burn_type": "Hand Pile",
-    "acres": 35.0,
-    "piles": null,
-    "status": "Approved",
-    "planned_on": "2026-10-22T10:32:00-07:00",
-    "approved_on": "2026-10-22T11:17:00-07:00"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -120.077142,
-     38.213277
-    ]
-   },
-   "properties": {
-    "pfirs_id": "192973676",
-    "name": "G-Z Handthin 3",
-    "burn_date": "2026-10-22",
-    "agency": "US Forest Service",
-    "agency_group": "USFS",
-    "burn_type": "Hand Pile",
-    "acres": 49.0,
-    "piles": null,
-    "status": "Approved",
-    "planned_on": "2026-10-22T10:32:00-07:00",
-    "approved_on": "2026-10-22T11:19:00-07:00"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -120.054079,
-     38.268584
-    ]
-   },
-   "properties": {
-    "pfirs_id": "192973678",
-    "name": "G-Z Handthin 4",
-    "burn_date": "2026-10-22",
-    "agency": "US Forest Service",
-    "agency_group": "USFS",
-    "burn_type": "Hand Pile",
-    "acres": 33.0,
-    "piles": null,
-    "status": "Approved",
-    "planned_on": "2026-10-22T10:32:00-07:00",
-    "approved_on": "2026-10-22T11:21:00-07:00"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -120.033739,
-     38.244938
-    ]
-   },
-   "properties": {
-    "pfirs_id": "192973679",
-    "name": "G-Z Handthin 5",
-    "burn_date": "2026-10-22",
-    "agency": "US Forest Service",
-    "agency_group": "USFS",
-    "burn_type": "Hand Pile",
-    "acres": 8.0,
-    "piles": null,
-    "status": "Approved",
-    "planned_on": "2026-10-22T10:32:00-07:00",
-    "approved_on": "2026-10-22T11:29:00-07:00"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -122.598651,
-     37.953404
-    ]
-   },
-   "properties": {
-    "pfirs_id": "192966120",
-    "name": "Lag Meadow",
-    "burn_date": "2026-10-22",
-    "agency": "Marin Municipal Water District",
-    "agency_group": "Local Non-Fire",
-    "burn_type": "Underburn",
-    "acres": 25.0,
-    "piles": null,
-    "status": "Completed",
-    "planned_on": "2026-10-19T07:10:00-07:00",
-    "approved_on": "2026-10-20T05:09:00-07:00"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -119.975997,
-     38.233708
-    ]
-   },
-   "properties": {
-    "pfirs_id": "192973688",
-    "name": "Leland Unit 4E2",
-    "burn_date": "2026-10-22",
-    "agency": "US Forest Service",
-    "agency_group": "USFS",
-    "burn_type": "Hand Pile",
-    "acres": 18.0,
-    "piles": null,
-    "status": "Approved",
-    "planned_on": "2026-10-22T10:32:00-07:00",
-    "approved_on": "2026-10-23T15:37:00-07:00"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -119.942121,
-     38.300364
-    ]
-   },
-   "properties": {
-    "pfirs_id": "192973685",
-    "name": "Mill Creek CG",
-    "burn_date": "2026-10-22",
-    "agency": "US Forest Service",
-    "agency_group": "USFS",
-    "burn_type": "Machine Pile",
-    "acres": 44.0,
-    "piles": null,
-    "status": "Approved",
-    "planned_on": "2026-10-22T10:32:00-07:00",
-    "approved_on": "2026-10-22T11:32:00-07:00"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -121.770799,
-     39.771744
-    ]
-   },
-   "properties": {
-    "pfirs_id": "192484823",
-    "name": "Monkey Face RX Unit 1B",
-    "burn_date": "2026-10-22",
-    "agency": "Land Manager Training",
-    "agency_group": "Private",
-    "burn_type": "Underburn",
-    "acres": 19.0,
-    "piles": null,
-    "status": "Pre-Planned",
-    "planned_on": "2025-11-06T13:34:00-08:00",
-    "approved_on": null
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -123.341559,
-     41.79842
-    ]
-   },
-   "properties": {
-    "pfirs_id": "192973571",
-    "name": "Perez B",
-    "burn_date": "2026-10-22",
-    "agency": "Mid Klamath Watershed Council",
-    "agency_group": "Private",
-    "burn_type": "Underburn",
-    "acres": 7.0,
-    "piles": null,
-    "status": "Patrol",
-    "planned_on": "2026-10-21T19:13:00-07:00",
-    "approved_on": "2026-10-22T10:07:00-07:00"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -119.990242,
-     38.191529
-    ]
-   },
-   "properties": {
-    "pfirs_id": "192973683",
-    "name": "Recharge TS Pinecrest",
-    "burn_date": "2026-10-22",
-    "agency": "US Forest Service",
-    "agency_group": "USFS",
-    "burn_type": "Machine Pile",
-    "acres": 312.0,
-    "piles": null,
-    "status": "Approved",
-    "planned_on": "2026-10-22T10:32:00-07:00",
-    "approved_on": "2026-10-22T11:30:00-07:00"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -119.985474,
-     38.271253
-    ]
-   },
-   "properties": {
-    "pfirs_id": "192973686",
-    "name": "Sno-Park",
-    "burn_date": "2026-10-22",
-    "agency": "US Forest Service",
-    "agency_group": "USFS",
-    "burn_type": "Machine Pile",
-    "acres": 28.0,
-    "piles": null,
-    "status": "Approved",
-    "planned_on": "2026-10-22T10:32:00-07:00",
-    "approved_on": "2026-10-23T15:31:00-07:00"
-   }
-  },
   {
    "type": "Feature",
    "geometry": {
@@ -543,6 +83,52 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     -123.59202,
+     39.76106
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192976534",
+    "name": "Torchbearr Brown SMP 24-26 Piles",
+    "burn_date": "2026-10-23",
+    "agency": "Private Landowner",
+    "agency_group": "Private",
+    "burn_type": "Hand Pile",
+    "acres": 30.0,
+    "piles": null,
+    "status": "Approved",
+    "planned_on": "2026-10-23T23:02:00-07:00",
+    "approved_on": "2026-10-23T23:49:00-07:00"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -123.55613,
+     39.77513
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192976530",
+    "name": "Torchbearr Vassar SMP 24-25 Piles",
+    "burn_date": "2026-10-23",
+    "agency": "Private Landowner",
+    "agency_group": "Private",
+    "burn_type": "Hand Pile",
+    "acres": 30.0,
+    "piles": null,
+    "status": "Approved",
+    "planned_on": "2026-10-23T23:02:00-07:00",
+    "approved_on": "2026-10-23T23:48:00-07:00"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      -119.37947,
      37.05787
     ]
@@ -589,6 +175,29 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     -123.569284,
+     39.770278
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192976535",
+    "name": "Rattlesnake Summit SMP 25-31 Piles",
+    "burn_date": "2026-10-24",
+    "agency": "Private Landowner",
+    "agency_group": "Private",
+    "burn_type": "Hand Pile",
+    "acres": 30.0,
+    "piles": null,
+    "status": "Approved",
+    "planned_on": "2026-10-23T23:02:00-07:00",
+    "approved_on": "2026-10-23T23:39:00-07:00"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      -123.59202,
      39.76106
     ]
@@ -628,6 +237,52 @@
     "status": "Approved",
     "planned_on": "2026-10-21T07:57:00-07:00",
     "approved_on": "2026-10-21T10:33:00-07:00"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -123.59202,
+     39.76106
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192976529",
+    "name": "Torchbearr Brown SMP 24-26 Piles",
+    "burn_date": "2026-10-24",
+    "agency": "Private Landowner",
+    "agency_group": "Private",
+    "burn_type": "Hand Pile",
+    "acres": 30.0,
+    "piles": null,
+    "status": "Approved",
+    "planned_on": "2026-10-23T23:02:00-07:00",
+    "approved_on": "2026-10-23T23:37:00-07:00"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -123.55613,
+     39.77513
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192976531",
+    "name": "Torchbearr Vassar SMP 24-25 Piles",
+    "burn_date": "2026-10-24",
+    "agency": "Private Landowner",
+    "agency_group": "Private",
+    "burn_type": "Hand Pile",
+    "acres": 30.0,
+    "piles": null,
+    "status": "Approved",
+    "planned_on": "2026-10-23T23:02:00-07:00",
+    "approved_on": "2026-10-23T23:47:00-07:00"
    }
   },
   {
@@ -766,6 +421,52 @@
     "status": "Approved",
     "planned_on": "2026-10-21T07:57:00-07:00",
     "approved_on": "2026-10-21T10:37:00-07:00"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -123.59202,
+     39.76106
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192976533",
+    "name": "Torchbearr Brown SMP 24-26 Piles",
+    "burn_date": "2026-10-25",
+    "agency": "Private Landowner",
+    "agency_group": "Private",
+    "burn_type": "Hand Pile",
+    "acres": 30.0,
+    "piles": null,
+    "status": "Approved",
+    "planned_on": "2026-10-23T23:02:00-07:00",
+    "approved_on": "2026-10-23T23:46:00-07:00"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -123.55613,
+     39.77513
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192976532",
+    "name": "Torchbearr Vassar SMP 24-25 Piles",
+    "burn_date": "2026-10-25",
+    "agency": "Private Landowner",
+    "agency_group": "Private",
+    "burn_type": "Hand Pile",
+    "acres": 30.0,
+    "piles": null,
+    "status": "Approved",
+    "planned_on": "2026-10-23T23:02:00-07:00",
+    "approved_on": "2026-10-23T23:42:00-07:00"
    }
   },
   {
@@ -973,6 +674,29 @@
     "status": "Pre-Planned",
     "planned_on": "2026-10-21T10:52:00-07:00",
     "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -123.31711,
+     39.349444
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192976570",
+    "name": "Calfire Howard SMP 24- 17 Broadcast",
+    "burn_date": "2026-10-26",
+    "agency": "Private Landowner",
+    "agency_group": "Private",
+    "burn_type": "Underburn",
+    "acres": 40.0,
+    "piles": null,
+    "status": "Approved",
+    "planned_on": "2026-10-23T23:33:00-07:00",
+    "approved_on": "2026-10-23T23:40:00-07:00"
    }
   },
   {
@@ -1279,6 +1003,29 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     -123.31711,
+     39.349444
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192976571",
+    "name": "Calfire Howard SMP 24- 17 Broadcast",
+    "burn_date": "2026-10-27",
+    "agency": "Private Landowner",
+    "agency_group": "Private",
+    "burn_type": "Underburn",
+    "acres": 40.0,
+    "piles": null,
+    "status": "Approved",
+    "planned_on": "2026-10-23T23:33:00-07:00",
+    "approved_on": "2026-10-23T23:53:00-07:00"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      -121.875761,
      41.718206
     ]
@@ -1571,6 +1318,29 @@
     "status": "Pre-Planned",
     "planned_on": "2026-10-22T11:15:00-07:00",
     "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -123.31711,
+     39.349444
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192976572",
+    "name": "Calfire Howard SMP 24- 17 Broadcast",
+    "burn_date": "2026-10-28",
+    "agency": "Private Landowner",
+    "agency_group": "Private",
+    "burn_type": "Underburn",
+    "acres": 40.0,
+    "piles": null,
+    "status": "Approved",
+    "planned_on": "2026-10-23T23:33:00-07:00",
+    "approved_on": "2026-10-23T23:36:00-07:00"
    }
   },
   {
