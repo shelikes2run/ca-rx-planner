@@ -5,7 +5,7 @@
   "source_url": "https://ssl.arb.ca.gov/pfirs/index.php?submit=Map+Page",
   "date_begin": "2026-10-24",
   "date_end": "2026-11-01",
-  "count": 94,
+  "count": 95,
   "note": "Planned and approved ignitions as published by PFIRS. Status can change through the day; confirm in PFIRS."
  },
  "features": [
@@ -395,7 +395,7 @@
     "burn_type": "Underburn",
     "acres": 7.0,
     "piles": null,
-    "status": "Approved",
+    "status": "Active",
     "planned_on": "2026-10-19T11:41:00-07:00",
     "approved_on": "2026-10-23T08:02:00-07:00"
    }
@@ -1018,6 +1018,29 @@
     "piles": null,
     "status": "Pre-Planned",
     "planned_on": "2026-10-24T09:40:00-07:00",
+    "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -116.808429,
+     33.2636
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192977088",
+    "name": "Fox Bile Burn",
+    "burn_date": "2026-10-27",
+    "agency": "CAL FIRE",
+    "agency_group": "CAL FIRE",
+    "burn_type": "Hand Pile",
+    "acres": 10.0,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-10-25T10:03:00-07:00",
     "approved_on": null
    }
   },
