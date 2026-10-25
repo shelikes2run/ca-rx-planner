@@ -717,9 +717,9 @@
     "burn_type": "Underburn",
     "acres": 21.0,
     "piles": null,
-    "status": "Pre-Planned",
+    "status": "Approved",
     "planned_on": "2026-10-21T07:06:00-07:00",
-    "approved_on": null
+    "approved_on": "2026-10-24T17:19:00-07:00"
    }
   },
   {
