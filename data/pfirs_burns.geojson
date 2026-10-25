@@ -3,104 +3,12 @@
  "metadata": {
   "source": "CARB PFIRS public map page",
   "source_url": "https://ssl.arb.ca.gov/pfirs/index.php?submit=Map+Page",
-  "date_begin": "2026-10-23",
-  "date_end": "2026-10-31",
-  "count": 98,
+  "date_begin": "2026-10-24",
+  "date_end": "2026-11-01",
+  "count": 94,
   "note": "Planned and approved ignitions as published by PFIRS. Status can change through the day; confirm in PFIRS."
  },
  "features": [
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -123.59202,
-     39.76106
-    ]
-   },
-   "properties": {
-    "pfirs_id": "192972709",
-    "name": "Torchbearr Brown SMP 24-26 Broadcast",
-    "burn_date": "2026-10-23",
-    "agency": "Private Landowner",
-    "agency_group": "Private",
-    "burn_type": "Underburn",
-    "acres": 10.0,
-    "piles": null,
-    "status": "Approved",
-    "planned_on": "2026-10-21T07:57:00-07:00",
-    "approved_on": "2026-10-21T10:32:00-07:00"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -123.59202,
-     39.76106
-    ]
-   },
-   "properties": {
-    "pfirs_id": "192972712",
-    "name": "Torchbearr Brown SMP 24-26 Piles",
-    "burn_date": "2026-10-23",
-    "agency": "Private Landowner",
-    "agency_group": "Private",
-    "burn_type": "Hand Pile",
-    "acres": 15.0,
-    "piles": null,
-    "status": "Approved",
-    "planned_on": "2026-10-21T07:57:00-07:00",
-    "approved_on": "2026-10-21T08:35:00-07:00"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -123.59202,
-     39.76106
-    ]
-   },
-   "properties": {
-    "pfirs_id": "192976534",
-    "name": "Torchbearr Brown SMP 24-26 Piles",
-    "burn_date": "2026-10-23",
-    "agency": "Private Landowner",
-    "agency_group": "Private",
-    "burn_type": "Hand Pile",
-    "acres": 30.0,
-    "piles": null,
-    "status": "Approved",
-    "planned_on": "2026-10-23T23:02:00-07:00",
-    "approved_on": "2026-10-23T23:49:00-07:00"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -123.55613,
-     39.77513
-    ]
-   },
-   "properties": {
-    "pfirs_id": "192976530",
-    "name": "Torchbearr Vassar SMP 24-25 Piles",
-    "burn_date": "2026-10-23",
-    "agency": "Private Landowner",
-    "agency_group": "Private",
-    "burn_type": "Hand Pile",
-    "acres": 30.0,
-    "piles": null,
-    "status": "Approved",
-    "planned_on": "2026-10-23T23:02:00-07:00",
-    "approved_on": "2026-10-23T23:48:00-07:00"
-   }
-  },
   {
    "type": "Feature",
    "geometry": {
