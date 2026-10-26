@@ -1,0 +1,38 @@
+name: Refresh drought forecast (UCI CHRS SPI)
+
+on:
+  schedule:
+    - cron: "41 13 * * *"   # daily; the source updates monthly, commits only when it changes
+  workflow_dispatch: {}
+  push:
+    branches: [main]
+    paths: [scripts/drought_fetch.py, .github/workflows/drought.yml]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: drought
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install basin tools
+        run: pip install pyshp shapely
+      - name: Fetch SPI forecasts for California basins
+        run: python scripts/drought_fetch.py data/drought_spi_forecast.geojson
+      - name: Commit if changed
+        run: |
+          git add data/drought_spi_forecast.geojson data/hybas_ca_lev05.geojson
+          if git diff --cached --quiet; then echo "no change"; exit 0; fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898299+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Drought SPI forecast refresh $(date -u +%Y-%m-%dT%H:%MZ)"
+          git pull --rebase
+          git push
