@@ -5,7 +5,7 @@
   "source_url": "https://ssl.arb.ca.gov/pfirs/index.php?submit=Map+Page",
   "date_begin": "2026-10-25",
   "date_end": "2026-11-02",
-  "count": 85,
+  "count": 83,
   "note": "Planned and approved ignitions as published by PFIRS. Status can change through the day; confirm in PFIRS."
  },
  "features": [
@@ -280,9 +280,9 @@
     "burn_type": "Underburn",
     "acres": 5.8,
     "piles": null,
-    "status": "Pre-Planned",
+    "status": "Approved",
     "planned_on": "2026-10-23T14:12:00-07:00",
-    "approved_on": null
+    "approved_on": "2026-10-26T08:07:00-07:00"
    }
   },
   {
@@ -303,32 +303,9 @@
     "burn_type": "Underburn",
     "acres": 60.0,
     "piles": null,
-    "status": "Pre-Planned",
+    "status": "Approved",
     "planned_on": "2026-10-21T09:09:00-07:00",
-    "approved_on": null
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -122.44573,
-     41.61268
-    ]
-   },
-   "properties": {
-    "pfirs_id": "192977225",
-    "name": "2026-2026-Big Springs Rx",
-    "burn_date": "2026-10-26",
-    "agency": "CAL FIRE",
-    "agency_group": "CAL FIRE",
-    "burn_type": "Unknown",
-    "acres": 700.0,
-    "piles": null,
-    "status": "Pre-Planned",
-    "planned_on": "2026-10-25T23:51:00-07:00",
-    "approved_on": null
+    "approved_on": "2026-10-26T07:28:00-07:00"
    }
   },
   {
@@ -510,9 +487,9 @@
     "burn_type": "Underburn",
     "acres": 80.0,
     "piles": null,
-    "status": "Pre-Planned",
+    "status": "Approved",
     "planned_on": "2026-10-23T12:15:00-07:00",
-    "approved_on": null
+    "approved_on": "2026-10-26T08:02:00-07:00"
    }
   },
   {
@@ -857,29 +834,6 @@
     "piles": null,
     "status": "Pre-Planned",
     "planned_on": "2026-10-23T11:20:00-07:00",
-    "approved_on": null
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -122.645861,
-     38.492528
-    ]
-   },
-   "properties": {
-    "pfirs_id": "192975167",
-    "name": "Saddle Mt. Upper Plum",
-    "burn_date": "2026-10-27",
-    "agency": "Sonoma County Agricultural Preservation & Open Space District",
-    "agency_group": "Local Non-Fire",
-    "burn_type": "Underburn",
-    "acres": 24.0,
-    "piles": null,
-    "status": "Pre-Planned",
-    "planned_on": "2026-10-23T10:29:00-07:00",
     "approved_on": null
    }
   },
