@@ -7,9 +7,9 @@ Source: https://drought.eng.uci.edu (Center for Hydrometeorology and Remote Sens
                                          -> {HYBAS_ID: SPI} (observed through the latest month, AI forecast after)
 Basin outlines: HydroBASINS level 5 (HydroSHEDS, hybas_na_lev05_v1c), clipped to California once and cached.
 
-Writes data/drought_spi_forecast.geojson with, per basin:
-  obs_spi3 (latest observed SPI-3), spi3_m1..spi3_m3 (SPI-3 forecast 1-3 months ahead),
-  spi6_m3, spi6_m6 (SPI-6 forecast 3 and 6 months ahead), spi12_m6, spi12_m12, and *_lbl month labels.
+Writes data/drought_spi_forecast.geojson with, per basin, for MSDI (precipitation + soil moisture) and SPI (precipitation):
+  obs_<f>3 (latest observed 3-month index), <f>3_m1..m3 (3-month index forecast 1-3 months ahead),
+  <f>6_m3, <f>6_m6, <f>12_m6, <f>12_m12, and *_lbl month labels (f = msdi or spi).
 """
 import io, json, os, sys, urllib.request, zipfile, datetime as dt
 
@@ -73,20 +73,23 @@ def main():
     fc = ca_basins()
     lm = get(f"{API}/latest-month")
     y0, m0 = int(lm["year"]), int(lm["month"])
-    cols = {"obs_spi3": ("spi_3", 0)}
-    for k in (1, 2, 3):
-        cols[f"spi3_m{k}"] = ("spi_3", k)
-    for k in (3, 6):
-        cols[f"spi6_m{k}"] = ("spi_6", k)
-    for k in (6, 12):
-        cols[f"spi12_m{k}"] = ("spi_12", k)
+    cols = {}
+    # MSDI = Multivariate Standardized Drought Index (precipitation + soil moisture); SPI = precipitation only
+    for fam in ("msdi", "spi"):
+        cols[f"obs_{fam}3"] = (f"{fam}_3", 0)
+        for k in (1, 2, 3):
+            cols[f"{fam}3_m{k}"] = (f"{fam}_3", k)
+        for k in (3, 6):
+            cols[f"{fam}6_m{k}"] = (f"{fam}_6", k)
+        for k in (6, 12):
+            cols[f"{fam}12_m{k}"] = (f"{fam}_12", k)
     vals, labels = {}, {}
     for col, (kind, k) in cols.items():
         y, m = add_months(y0, m0, k)
         vals[col] = spi(y, m, kind)
         labels[col] = f"{MON[m - 1]} {y}"
     ids = {f["properties"]["HYBAS_ID"] for f in fc["features"]}
-    if not any(i in vals["spi3_m1"] for i in ids):
+    if not any(i in vals["msdi3_m1"] for i in ids) or not any(i in vals["spi3_m1"] for i in ids):
         sys.exit("no forecast values for California basins; leaving the previous file in place")
     for f in fc["features"]:
         p = f["properties"]
