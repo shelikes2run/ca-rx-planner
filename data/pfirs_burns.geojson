@@ -5,7 +5,7 @@
   "source_url": "https://ssl.arb.ca.gov/pfirs/index.php?submit=Map+Page",
   "date_begin": "2026-10-24",
   "date_end": "2026-11-01",
-  "count": 95,
+  "count": 96,
   "note": "Planned and approved ignitions as published by PFIRS. Status can change through the day; confirm in PFIRS."
  },
  "features": [
@@ -581,6 +581,29 @@
     "piles": null,
     "status": "Pre-Planned",
     "planned_on": "2026-10-21T10:52:00-07:00",
+    "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -121.013399,
+     40.379606
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192977186",
+    "name": "Admin Piles Lassen County",
+    "burn_date": "2026-10-26",
+    "agency": "US Forest Service",
+    "agency_group": "USFS",
+    "burn_type": "Hand Pile",
+    "acres": 10.0,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-10-25T14:50:00-07:00",
     "approved_on": null
    }
   },
