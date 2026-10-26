@@ -974,7 +974,7 @@
    "label": "Weather Evaluator – search / upload",
    "config": {
     "embedType": "url",
-    "expression": "<p>https://shelikes2run.github.io/ca-rx-planner/burn_eval_ca.html?v=faeab20</p>",
+    "expression": "<p>https://shelikes2run.github.io/ca-rx-planner/burn_eval_ca.html?v=def2dd9</p>",
     "enableLabel": false,
     "enableBlankMessage": false,
     "autoRefresh": false,
@@ -990,7 +990,7 @@
    "label": "Weather Evaluator – map-selected unit",
    "config": {
     "embedType": "url",
-    "expression": "<p>https://shelikes2run.github.io/ca-rx-planner/burn_eval_ca.html?v=faeab20&amp;unit=<exp data-uniqueid=\"1x_n\" data-dsid=\"dataSource_1-treatment_units-selection\" data-expression=\"%7B%22name%22%3A%22%7BName%7D%22%2C%22parts%22%3A%5B%7B%22type%22%3A%22FIELD%22%2C%22exp%22%3A%22%7BName%7D%22%2C%22dataSourceId%22%3A%22dataSource_1-treatment_units-selection%22%2C%22jimuFieldName%22%3A%22name%22%2C%22isFromRepeatedDataSourceContext%22%3Afalse%7D%5D%7D\">﻿<span contenteditable=\"false\">{Name}</span>﻿</exp>&amp;id=<exp data-uniqueid=\"1x_i\" data-dsid=\"dataSource_1-treatment_units-selection\" data-expression=\"%7B%22name%22%3A%22%7BObject%20ID%7D%22%2C%22parts%22%3A%5B%7B%22type%22%3A%22FIELD%22%2C%22exp%22%3A%22%7BObject%20ID%7D%22%2C%22dataSourceId%22%3A%22dataSource_1-treatment_units-selection%22%2C%22jimuFieldName%22%3A%22objectid%22%2C%22isFromRepeatedDataSourceContext%22%3Afalse%7D%5D%7D\">﻿<span contenteditable=\"false\">{Object ID}</span>﻿</exp></p>",
+    "expression": "<p>https://shelikes2run.github.io/ca-rx-planner/burn_eval_ca.html?v=def2dd9&amp;unit=<exp data-uniqueid=\"1x_n\" data-dsid=\"dataSource_1-treatment_units-selection\" data-expression=\"%7B%22name%22%3A%22%7BName%7D%22%2C%22parts%22%3A%5B%7B%22type%22%3A%22FIELD%22%2C%22exp%22%3A%22%7BName%7D%22%2C%22dataSourceId%22%3A%22dataSource_1-treatment_units-selection%22%2C%22jimuFieldName%22%3A%22name%22%2C%22isFromRepeatedDataSourceContext%22%3Afalse%7D%5D%7D\">﻿<span contenteditable=\"false\">{Name}</span>﻿</exp>&amp;id=<exp data-uniqueid=\"1x_i\" data-dsid=\"dataSource_1-treatment_units-selection\" data-expression=\"%7B%22name%22%3A%22%7BObject%20ID%7D%22%2C%22parts%22%3A%5B%7B%22type%22%3A%22FIELD%22%2C%22exp%22%3A%22%7BObject%20ID%7D%22%2C%22dataSourceId%22%3A%22dataSource_1-treatment_units-selection%22%2C%22jimuFieldName%22%3A%22objectid%22%2C%22isFromRepeatedDataSourceContext%22%3Afalse%7D%5D%7D\">﻿<span contenteditable=\"false\">{Object ID}</span>﻿</exp></p>",
     "enableLabel": true,
     "label": "Click a fuel treatment unit on the map to run it here.",
     "enableBlankMessage": true,
@@ -1212,7 +1212,7 @@
    "label": "Smoke Modeling – search / upload",
    "config": {
     "embedType": "url",
-    "expression": "<p>https://shelikes2run.github.io/ca-rx-planner/smoke_eval_ca.html?v=faeab20</p>",
+    "expression": "<p>https://shelikes2run.github.io/ca-rx-planner/smoke_eval_ca.html?v=def2dd9</p>",
     "enableLabel": false,
     "enableBlankMessage": false,
     "autoRefresh": false,
@@ -1228,7 +1228,7 @@
    "label": "Smoke Modeling – map-selected unit",
    "config": {
     "embedType": "url",
-    "expression": "<p>https://shelikes2run.github.io/ca-rx-planner/smoke_eval_ca.html?v=faeab20&amp;unit=<exp data-uniqueid=\"3x_n\" data-dsid=\"dataSource_3-treatment_units-selection\" data-expression=\"%7B%22name%22%3A%22%7BName%7D%22%2C%22parts%22%3A%5B%7B%22type%22%3A%22FIELD%22%2C%22exp%22%3A%22%7BName%7D%22%2C%22dataSourceId%22%3A%22dataSource_3-treatment_units-selection%22%2C%22jimuFieldName%22%3A%22name%22%2C%22isFromRepeatedDataSourceContext%22%3Afalse%7D%5D%7D\">﻿<span contenteditable=\"false\">{Name}</span>﻿</exp>&amp;id=<exp data-uniqueid=\"3x_i\" data-dsid=\"dataSource_3-treatment_units-selection\" data-expression=\"%7B%22name%22%3A%22%7BObject%20ID%7D%22%2C%22parts%22%3A%5B%7B%22type%22%3A%22FIELD%22%2C%22exp%22%3A%22%7BObject%20ID%7D%22%2C%22dataSourceId%22%3A%22dataSource_3-treatment_units-selection%22%2C%22jimuFieldName%22%3A%22objectid%22%2C%22isFromRepeatedDataSourceContext%22%3Afalse%7D%5D%7D\">﻿<span contenteditable=\"false\">{Object ID}</span>﻿</exp></p>",
+    "expression": "<p>https://shelikes2run.github.io/ca-rx-planner/smoke_eval_ca.html?v=def2dd9&amp;unit=<exp data-uniqueid=\"3x_n\" data-dsid=\"dataSource_3-treatment_units-selection\" data-expression=\"%7B%22name%22%3A%22%7BName%7D%22%2C%22parts%22%3A%5B%7B%22type%22%3A%22FIELD%22%2C%22exp%22%3A%22%7BName%7D%22%2C%22dataSourceId%22%3A%22dataSource_3-treatment_units-selection%22%2C%22jimuFieldName%22%3A%22name%22%2C%22isFromRepeatedDataSourceContext%22%3Afalse%7D%5D%7D\">﻿<span contenteditable=\"false\">{Name}</span>﻿</exp>&amp;id=<exp data-uniqueid=\"3x_i\" data-dsid=\"dataSource_3-treatment_units-selection\" data-expression=\"%7B%22name%22%3A%22%7BObject%20ID%7D%22%2C%22parts%22%3A%5B%7B%22type%22%3A%22FIELD%22%2C%22exp%22%3A%22%7BObject%20ID%7D%22%2C%22dataSourceId%22%3A%22dataSource_3-treatment_units-selection%22%2C%22jimuFieldName%22%3A%22objectid%22%2C%22isFromRepeatedDataSourceContext%22%3Afalse%7D%5D%7D\">﻿<span contenteditable=\"false\">{Object ID}</span>﻿</exp></p>",
     "enableLabel": true,
     "label": "Click a fuel treatment unit on the map to run it here.",
     "enableBlankMessage": true,
@@ -1356,7 +1356,7 @@
    "id": "w_help2",
    "label": "Outlook notes",
    "config": {
-    "text": "<p style=\"font-size:12px;\"><strong>How to read this page.</strong> Turn on layers in <em>Monthly &amp; Seasonal Outlooks</em> (CPC 6–10/8–14 day, monthly, 3-month seasonal; Predictive Services Month 1–4 fire potential) , <em>Drought Outlook</em> (UC Irvine CHRS AI forecast of the Standardized Precipitation Index by river basin: SPI-3 one to three months ahead, SPI-6 and SPI-12 further out; yellow-to-dark-red = drier than normal, blues = wetter; click a basin for every month; refreshed daily from drought.eng.uci.edu) and <em>Typical Rx Burn Days</em> (gridMET 2016–2025: average days per month meeting a generic broadcast Rx — Tmax 40–80°F, RHmin 20–50%, wind ≤12 mph). Click a grid cell for all 12 months. Units, RAWS and other detailed layers draw once you zoom in. For your own Rx and unit, use the Weather Evaluator page.</p>",
+    "text": "<p style=\"font-size:12px;\"><strong>How to read this page.</strong> Turn on layers in <em>Monthly &amp; Seasonal Outlooks</em> (CPC 6–10/8–14 day, monthly, 3-month seasonal; Predictive Services Month 1–4 fire potential) , <em>Drought Outlook</em> (UC Irvine CHRS AI forecast by river basin: MSDI combines precipitation and soil moisture and is shown by default, SPI is precipitation only; 3-month index one to three months ahead, 6- and 12-month further out; yellow-to-dark-red = drier than normal (D0–D4), blues = wetter; click a basin for every month; refreshed daily from drought.eng.uci.edu) and <em>Typical Rx Burn Days</em> (gridMET 2016–2025: average days per month meeting a generic broadcast Rx — Tmax 40–80°F, RHmin 20–50%, wind ≤12 mph). Click a grid cell for all 12 months. Units, RAWS and other detailed layers draw once you zoom in. For your own Rx and unit, use the Weather Evaluator page.</p>",
     "style": {
      "verticalAlign": "start",
      "wrap": true
@@ -1370,7 +1370,7 @@
    "label": "Compare & Rank",
    "config": {
     "embedType": "url",
-    "expression": "<p>https://shelikes2run.github.io/ca-rx-planner/compare_ca.html?v=faeab20</p>",
+    "expression": "<p>https://shelikes2run.github.io/ca-rx-planner/compare_ca.html?v=def2dd9</p>",
     "enableLabel": false,
     "enableBlankMessage": false,
     "autoRefresh": false,
