@@ -3,219 +3,12 @@
  "metadata": {
   "source": "CARB PFIRS public map page",
   "source_url": "https://ssl.arb.ca.gov/pfirs/index.php?submit=Map+Page",
-  "date_begin": "2026-10-24",
-  "date_end": "2026-11-01",
-  "count": 96,
+  "date_begin": "2026-10-25",
+  "date_end": "2026-11-02",
+  "count": 85,
   "note": "Planned and approved ignitions as published by PFIRS. Status can change through the day; confirm in PFIRS."
  },
  "features": [
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -119.37947,
-     37.05787
-    ]
-   },
-   "properties": {
-    "pfirs_id": "192976386",
-    "name": "2026-4 Lanes Unit 2",
-    "burn_date": "2026-10-24",
-    "agency": "Fresno County",
-    "agency_group": "Private",
-    "burn_type": "Hand Pile",
-    "acres": 31.0,
-    "piles": null,
-    "status": "Approved",
-    "planned_on": "2026-10-23T15:29:00-07:00",
-    "approved_on": "2026-10-23T15:29:00-07:00"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -119.37947,
-     37.05787
-    ]
-   },
-   "properties": {
-    "pfirs_id": "192976394",
-    "name": "2026-4 Lanes Unit 2",
-    "burn_date": "2026-10-24",
-    "agency": "Fresno County",
-    "agency_group": "Private",
-    "burn_type": "Hand Pile",
-    "acres": 31.0,
-    "piles": null,
-    "status": "Approved",
-    "planned_on": "2026-10-23T15:29:00-07:00",
-    "approved_on": "2026-10-23T15:29:00-07:00"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -123.569284,
-     39.770278
-    ]
-   },
-   "properties": {
-    "pfirs_id": "192976535",
-    "name": "Rattlesnake Summit SMP 25-31 Piles",
-    "burn_date": "2026-10-24",
-    "agency": "Private Landowner",
-    "agency_group": "Private",
-    "burn_type": "Hand Pile",
-    "acres": 30.0,
-    "piles": null,
-    "status": "Approved",
-    "planned_on": "2026-10-23T23:02:00-07:00",
-    "approved_on": "2026-10-23T23:39:00-07:00"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -123.59202,
-     39.76106
-    ]
-   },
-   "properties": {
-    "pfirs_id": "192972710",
-    "name": "Torchbearr Brown SMP 24-26 Broadcast",
-    "burn_date": "2026-10-24",
-    "agency": "Private Landowner",
-    "agency_group": "Private",
-    "burn_type": "Underburn",
-    "acres": 10.0,
-    "piles": null,
-    "status": "Approved",
-    "planned_on": "2026-10-21T07:57:00-07:00",
-    "approved_on": "2026-10-21T10:36:00-07:00"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -123.59202,
-     39.76106
-    ]
-   },
-   "properties": {
-    "pfirs_id": "192972713",
-    "name": "Torchbearr Brown SMP 24-26 Piles",
-    "burn_date": "2026-10-24",
-    "agency": "Private Landowner",
-    "agency_group": "Private",
-    "burn_type": "Hand Pile",
-    "acres": 15.0,
-    "piles": null,
-    "status": "Approved",
-    "planned_on": "2026-10-21T07:57:00-07:00",
-    "approved_on": "2026-10-21T10:33:00-07:00"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -123.59202,
-     39.76106
-    ]
-   },
-   "properties": {
-    "pfirs_id": "192976529",
-    "name": "Torchbearr Brown SMP 24-26 Piles",
-    "burn_date": "2026-10-24",
-    "agency": "Private Landowner",
-    "agency_group": "Private",
-    "burn_type": "Hand Pile",
-    "acres": 30.0,
-    "piles": null,
-    "status": "Approved",
-    "planned_on": "2026-10-23T23:02:00-07:00",
-    "approved_on": "2026-10-23T23:37:00-07:00"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -123.55613,
-     39.77513
-    ]
-   },
-   "properties": {
-    "pfirs_id": "192976531",
-    "name": "Torchbearr Vassar SMP 24-25 Piles",
-    "burn_date": "2026-10-24",
-    "agency": "Private Landowner",
-    "agency_group": "Private",
-    "burn_type": "Hand Pile",
-    "acres": 30.0,
-    "piles": null,
-    "status": "Approved",
-    "planned_on": "2026-10-23T23:02:00-07:00",
-    "approved_on": "2026-10-23T23:47:00-07:00"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -120.766384,
-     38.636742
-    ]
-   },
-   "properties": {
-    "pfirs_id": "192976244",
-    "name": "Unit A",
-    "burn_date": "2026-10-24",
-    "agency": "Healthy Forest Alliance",
-    "agency_group": "Private",
-    "burn_type": "Underburn",
-    "acres": 11.0,
-    "piles": null,
-    "status": "Approved",
-    "planned_on": "2026-10-23T14:12:00-07:00",
-    "approved_on": "2026-10-23T14:22:00-07:00"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -120.764892,
-     38.636599
-    ]
-   },
-   "properties": {
-    "pfirs_id": "192976243",
-    "name": "Unit B",
-    "burn_date": "2026-10-24",
-    "agency": "Healthy Forest Alliance",
-    "agency_group": "Private",
-    "burn_type": "Underburn",
-    "acres": 2.1,
-    "piles": null,
-    "status": "Approved",
-    "planned_on": "2026-10-23T14:12:00-07:00",
-    "approved_on": "2026-10-23T14:23:00-07:00"
-   }
-  },
   {
    "type": "Feature",
    "geometry": {
@@ -525,6 +318,29 @@
     ]
    },
    "properties": {
+    "pfirs_id": "192977225",
+    "name": "2026-2026-Big Springs Rx",
+    "burn_date": "2026-10-26",
+    "agency": "CAL FIRE",
+    "agency_group": "CAL FIRE",
+    "burn_type": "Unknown",
+    "acres": 700.0,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-10-25T23:51:00-07:00",
+    "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -122.44573,
+     41.61268
+    ]
+   },
+   "properties": {
     "pfirs_id": "192975126",
     "name": "2026-2026-Big Springs Rx",
     "burn_date": "2026-10-26",
@@ -681,29 +497,6 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -123.292989,
-     38.57764
-    ]
-   },
-   "properties": {
-    "pfirs_id": "192974964",
-    "name": "Stockoff Complex",
-    "burn_date": "2026-10-26",
-    "agency": "California State Parks",
-    "agency_group": "CA Parks",
-    "burn_type": "Underburn",
-    "acres": 86.0,
-    "piles": null,
-    "status": "Pre-Planned",
-    "planned_on": "2026-10-22T18:51:00-07:00",
-    "approved_on": null
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
      -120.88439,
      38.761139
     ]
@@ -766,29 +559,6 @@
     "status": "Approved",
     "planned_on": "2026-10-22T11:00:00-07:00",
     "approved_on": "2026-10-22T11:28:00-07:00"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -123.295567,
-     38.572206
-    ]
-   },
-   "properties": {
-    "pfirs_id": "192974963",
-    "name": "Upper Prairie",
-    "burn_date": "2026-10-26",
-    "agency": "California State Parks",
-    "agency_group": "CA Parks",
-    "burn_type": "Underburn",
-    "acres": 27.0,
-    "piles": null,
-    "status": "Pre-Planned",
-    "planned_on": "2026-10-22T18:51:00-07:00",
-    "approved_on": null
    }
   },
   {
@@ -1157,29 +927,6 @@
     "status": "Approved",
     "planned_on": "2026-10-23T11:56:00-07:00",
     "approved_on": "2026-10-23T12:07:00-07:00"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -123.292989,
-     38.57764
-    ]
-   },
-   "properties": {
-    "pfirs_id": "192974965",
-    "name": "Stockoff Complex",
-    "burn_date": "2026-10-27",
-    "agency": "California State Parks",
-    "agency_group": "CA Parks",
-    "burn_type": "Underburn",
-    "acres": 148.0,
-    "piles": null,
-    "status": "Pre-Planned",
-    "planned_on": "2026-10-22T18:51:00-07:00",
-    "approved_on": null
    }
   },
   {
