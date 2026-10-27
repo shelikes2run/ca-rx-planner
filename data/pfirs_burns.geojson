@@ -5,7 +5,7 @@
   "source_url": "https://ssl.arb.ca.gov/pfirs/index.php?submit=Map+Page",
   "date_begin": "2026-10-25",
   "date_end": "2026-11-02",
-  "count": 98,
+  "count": 118,
   "note": "Planned and approved ignitions as published by PFIRS. Status can change through the day; confirm in PFIRS."
  },
  "features": [
@@ -395,7 +395,7 @@
     "burn_type": "Underburn",
     "acres": 110.1,
     "piles": null,
-    "status": "Active",
+    "status": "Patrol",
     "planned_on": "2026-10-23T07:10:00-07:00",
     "approved_on": "2026-10-26T08:16:00-07:00"
    }
@@ -462,34 +462,11 @@
     "agency": "East Bay Municipal Utility District",
     "agency_group": "Local Non-Fire",
     "burn_type": "Underburn",
-    "acres": 275.0,
+    "acres": 1.0,
     "piles": null,
-    "status": "Active",
+    "status": "Patrol",
     "planned_on": "2026-10-22T11:00:00-07:00",
     "approved_on": "2026-10-22T11:29:00-07:00"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -120.825686,
-     38.263025
-    ]
-   },
-   "properties": {
-    "pfirs_id": "192973804",
-    "name": "Unit 520",
-    "burn_date": "2026-10-26",
-    "agency": "East Bay Municipal Utility District",
-    "agency_group": "Local Non-Fire",
-    "burn_type": "Underburn",
-    "acres": 275.0,
-    "piles": null,
-    "status": "Active",
-    "planned_on": "2026-10-22T11:00:00-07:00",
-    "approved_on": "2026-10-22T11:28:00-07:00"
    }
   },
   {
@@ -635,6 +612,29 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     -118.668281,
+     36.242581
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192981645",
+    "name": "2026-Copper Mine",
+    "burn_date": "2026-10-27",
+    "agency": "CAL FIRE",
+    "agency_group": "CAL FIRE",
+    "burn_type": "Underburn",
+    "acres": 41.0,
+    "piles": null,
+    "status": "Approved",
+    "planned_on": "2026-10-26T16:23:00-07:00",
+    "approved_on": "2026-10-26T16:23:00-07:00"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      -119.177686,
      37.059219
     ]
@@ -674,6 +674,29 @@
     "status": "Pre-Planned",
     "planned_on": "2026-10-23T15:04:00-07:00",
     "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -118.681795,
+     36.23164
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192981691",
+    "name": "2026-Hedrick",
+    "burn_date": "2026-10-27",
+    "agency": "CAL FIRE",
+    "agency_group": "CAL FIRE",
+    "burn_type": "Underburn",
+    "acres": 52.0,
+    "piles": null,
+    "status": "Approved",
+    "planned_on": "2026-10-26T16:24:00-07:00",
+    "approved_on": "2026-10-26T16:24:00-07:00"
    }
   },
   {
@@ -743,6 +766,29 @@
     "status": "Approved",
     "planned_on": "2026-10-26T08:24:00-07:00",
     "approved_on": "2026-10-26T12:13:00-07:00"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -121.013399,
+     40.379606
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192981593",
+    "name": "Admin Piles Lassen County",
+    "burn_date": "2026-10-27",
+    "agency": "US Forest Service",
+    "agency_group": "USFS",
+    "burn_type": "Hand Pile",
+    "acres": 10.0,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-10-26T16:16:00-07:00",
+    "approved_on": null
    }
   },
   {
@@ -832,9 +878,9 @@
     "burn_type": "Underburn",
     "acres": 1146.0,
     "piles": null,
-    "status": "Pre-Planned",
+    "status": "Approved",
     "planned_on": "2026-10-23T19:57:00-07:00",
-    "approved_on": null
+    "approved_on": "2026-10-26T15:53:00-07:00"
    }
   },
   {
@@ -993,9 +1039,55 @@
     "burn_type": "Underburn",
     "acres": 10.0,
     "piles": null,
-    "status": "Pre-Planned",
+    "status": "Approved",
     "planned_on": "2026-10-23T12:15:00-07:00",
-    "approved_on": null
+    "approved_on": "2026-10-26T15:34:00-07:00"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -123.59202,
+     39.76106
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192981630",
+    "name": "Torchbearr Brown SMP 24-26 Broadcast",
+    "burn_date": "2026-10-27",
+    "agency": "Private Landowner",
+    "agency_group": "Private",
+    "burn_type": "Underburn",
+    "acres": 10.0,
+    "piles": null,
+    "status": "Approved",
+    "planned_on": "2026-10-26T16:24:00-07:00",
+    "approved_on": "2026-10-26T16:52:00-07:00"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -123.55613,
+     39.77513
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192981700",
+    "name": "Torchbearr Vassar SMP 24-25 Broadcast",
+    "burn_date": "2026-10-27",
+    "agency": "Private Landowner",
+    "agency_group": "Private",
+    "burn_type": "Underburn",
+    "acres": 10.0,
+    "piles": null,
+    "status": "Approved",
+    "planned_on": "2026-10-26T16:26:00-07:00",
+    "approved_on": "2026-10-26T16:51:00-07:00"
    }
   },
   {
@@ -1384,9 +1476,9 @@
     "burn_type": "Underburn",
     "acres": 35.0,
     "piles": null,
-    "status": "Pre-Planned",
+    "status": "Approved",
     "planned_on": "2026-10-26T12:33:00-07:00",
-    "approved_on": null
+    "approved_on": "2026-10-26T14:17:00-07:00"
    }
   },
   {
@@ -1479,6 +1571,75 @@
     "status": "Approved",
     "planned_on": "2026-10-23T11:57:00-07:00",
     "approved_on": "2026-10-23T12:10:00-07:00"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -123.59202,
+     39.76106
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192981634",
+    "name": "Torchbearr Brown SMP 24-26 Broadcast",
+    "burn_date": "2026-10-28",
+    "agency": "Private Landowner",
+    "agency_group": "Private",
+    "burn_type": "Underburn",
+    "acres": 10.0,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-10-26T16:24:00-07:00",
+    "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -123.55613,
+     39.77513
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192981701",
+    "name": "Torchbearr Vassar SMP 24-25 Broadcast",
+    "burn_date": "2026-10-28",
+    "agency": "Private Landowner",
+    "agency_group": "Private",
+    "burn_type": "Underburn",
+    "acres": 10.0,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-10-26T16:26:00-07:00",
+    "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -121.049244,
+     38.925345
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192981737",
+    "name": "Tree Top RX",
+    "burn_date": "2026-10-28",
+    "agency": "Placer County Resource Conservation District",
+    "agency_group": "Local Non-Fire",
+    "burn_type": "Underburn",
+    "acres": 0.5,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-10-26T16:39:00-07:00",
+    "approved_on": null
    }
   },
   {
@@ -1739,6 +1900,75 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     -121.579168,
+     39.832412
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192981631",
+    "name": "Coutolenc A",
+    "burn_date": "2026-10-29",
+    "agency": "Terra Fuego",
+    "agency_group": "Private",
+    "burn_type": "Underburn",
+    "acres": 15.5,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-10-26T16:23:00-07:00",
+    "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -121.572952,
+     39.835586
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192981632",
+    "name": "Coutolenc B",
+    "burn_date": "2026-10-29",
+    "agency": "Terra Fuego",
+    "agency_group": "Private",
+    "burn_type": "Underburn",
+    "acres": 4.5,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-10-26T16:23:00-07:00",
+    "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     0.0,
+     0.0
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192981633",
+    "name": "Coutolenc C",
+    "burn_date": "2026-10-29",
+    "agency": "Terra Fuego",
+    "agency_group": "Private",
+    "burn_type": "Underburn",
+    "acres": 2.2,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-10-26T16:23:00-07:00",
+    "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      -119.734495,
      37.356029
     ]
@@ -1923,12 +2153,35 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     -120.919306,
+     39.983946
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192981422",
+    "name": "South Park",
+    "burn_date": "2026-10-29",
+    "agency": "US Forest Service",
+    "agency_group": "USFS",
+    "burn_type": "Underburn",
+    "acres": 128.0,
+    "piles": null,
+    "status": "Approved",
+    "planned_on": "2026-10-26T15:15:00-07:00",
+    "approved_on": "2026-10-26T16:27:00-07:00"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      -121.861329,
      36.491108
     ]
    },
    "properties": {
-    "pfirs_id": "192976414",
+    "pfirs_id": "192981729",
     "name": "Sudden Oak Death Unit",
     "burn_date": "2026-10-29",
     "agency": "General Contractor",
@@ -1936,9 +2189,9 @@
     "burn_type": "Underburn",
     "acres": 41.0,
     "piles": null,
-    "status": "Approved",
-    "planned_on": "2026-10-23T15:37:00-07:00",
-    "approved_on": "2026-10-26T08:24:00-07:00"
+    "status": "Pre-Planned",
+    "planned_on": "2026-10-26T16:28:00-07:00",
+    "approved_on": null
    }
   },
   {
@@ -1962,6 +2215,75 @@
     "status": "Pre-Planned",
     "planned_on": "2026-10-26T12:24:00-07:00",
     "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -123.59202,
+     39.76106
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192981635",
+    "name": "Torchbearr Brown SMP 24-26 Broadcast",
+    "burn_date": "2026-10-29",
+    "agency": "Private Landowner",
+    "agency_group": "Private",
+    "burn_type": "Underburn",
+    "acres": 10.0,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-10-26T16:24:00-07:00",
+    "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -123.55613,
+     39.77513
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192981702",
+    "name": "Torchbearr Vassar SMP 24-25 Broadcast",
+    "burn_date": "2026-10-29",
+    "agency": "Private Landowner",
+    "agency_group": "Private",
+    "burn_type": "Underburn",
+    "acres": 10.0,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-10-26T16:26:00-07:00",
+    "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -123.182851,
+     39.14397
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192981621",
+    "name": "Ukiah Valley Fire Authority - Vegetation Training Burn",
+    "burn_date": "2026-10-29",
+    "agency": "Private Landowner",
+    "agency_group": "Private",
+    "burn_type": "Underburn",
+    "acres": 4.5,
+    "piles": null,
+    "status": "Approved",
+    "planned_on": "2026-10-26T16:20:00-07:00",
+    "approved_on": "2026-10-26T16:54:00-07:00"
    }
   },
   {
@@ -2245,6 +2567,52 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     -123.59202,
+     39.76106
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192981646",
+    "name": "Torchbearr Brown SMP 24-26 Broadcast",
+    "burn_date": "2026-10-30",
+    "agency": "Private Landowner",
+    "agency_group": "Private",
+    "burn_type": "Underburn",
+    "acres": 10.0,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-10-26T16:24:00-07:00",
+    "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -123.55613,
+     39.77513
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192981703",
+    "name": "Torchbearr Vassar SMP 24-25 Broadcast",
+    "burn_date": "2026-10-30",
+    "agency": "Private Landowner",
+    "agency_group": "Private",
+    "burn_type": "Underburn",
+    "acres": 10.0,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-10-26T16:26:00-07:00",
+    "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      -123.256797,
      38.663734
     ]
@@ -2260,6 +2628,98 @@
     "piles": null,
     "status": "Pre-Planned",
     "planned_on": "2026-10-26T10:41:00-07:00",
+    "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -123.59202,
+     39.76106
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192981658",
+    "name": "Torchbearr Brown SMP 24-26 Broadcast",
+    "burn_date": "2026-10-31",
+    "agency": "Private Landowner",
+    "agency_group": "Private",
+    "burn_type": "Underburn",
+    "acres": 10.0,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-10-26T16:24:00-07:00",
+    "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -123.55613,
+     39.77513
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192981704",
+    "name": "Torchbearr Vassar SMP 24-25 Broadcast",
+    "burn_date": "2026-10-31",
+    "agency": "Private Landowner",
+    "agency_group": "Private",
+    "burn_type": "Underburn",
+    "acres": 10.0,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-10-26T16:26:00-07:00",
+    "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -123.59202,
+     39.76106
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192981659",
+    "name": "Torchbearr Brown SMP 24-26 Broadcast",
+    "burn_date": "2026-11-01",
+    "agency": "Private Landowner",
+    "agency_group": "Private",
+    "burn_type": "Underburn",
+    "acres": 10.0,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-10-26T16:24:00-07:00",
+    "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -123.55613,
+     39.77513
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192981705",
+    "name": "Torchbearr Vassar SMP 24-25 Broadcast",
+    "burn_date": "2026-11-01",
+    "agency": "Private Landowner",
+    "agency_group": "Private",
+    "burn_type": "Underburn",
+    "acres": 10.0,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-10-26T16:26:00-07:00",
     "approved_on": null
    }
   }
