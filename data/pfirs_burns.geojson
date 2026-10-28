@@ -5,7 +5,7 @@
   "source_url": "https://ssl.arb.ca.gov/pfirs/index.php?submit=Map+Page",
   "date_begin": "2026-10-27",
   "date_end": "2026-11-04",
-  "count": 163,
+  "count": 166,
   "note": "Planned and approved ignitions as published by PFIRS. Status can change through the day; confirm in PFIRS."
  },
  "features": [
@@ -349,7 +349,7 @@
     "burn_type": "Underburn",
     "acres": 11.0,
     "piles": null,
-    "status": "Active",
+    "status": "Patrol",
     "planned_on": "2026-10-27T07:41:00-07:00",
     "approved_on": "2026-10-27T08:26:00-07:00"
    }
@@ -416,9 +416,9 @@
     "agency": "CSU Chico Research Foundation",
     "agency_group": "Private",
     "burn_type": "Underburn",
-    "acres": 38.5,
+    "acres": 36.0,
     "piles": null,
-    "status": "Approved",
+    "status": "Patrol",
     "planned_on": "2026-10-22T11:18:00-07:00",
     "approved_on": "2026-10-26T13:37:00-07:00"
    }
@@ -878,7 +878,7 @@
     "burn_type": "Underburn",
     "acres": 275.0,
     "piles": null,
-    "status": "Approved",
+    "status": "Patrol",
     "planned_on": "2026-10-22T11:00:00-07:00",
     "approved_on": "2026-10-22T11:32:00-07:00"
    }
@@ -888,45 +888,22 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -120.825686,
-     38.263025
+     -121.331466,
+     39.11079
     ]
    },
    "properties": {
-    "pfirs_id": "192973806",
-    "name": "Unit 520",
-    "burn_date": "2026-10-27",
-    "agency": "East Bay Municipal Utility District",
-    "agency_group": "Local Non-Fire",
-    "burn_type": "Underburn",
-    "acres": 275.0,
-    "piles": null,
-    "status": "Approved",
-    "planned_on": "2026-10-22T11:00:00-07:00",
-    "approved_on": "2026-10-22T11:30:00-07:00"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -121.401633,
-     39.104667
-    ]
-   },
-   "properties": {
-    "pfirs_id": "192977587",
-    "name": "(site 6-0) Intel",
+    "pfirs_id": "192984609",
+    "name": "(site 8-0) NCO Club",
     "burn_date": "2026-10-28",
     "agency": "Beale Air Force Base",
     "agency_group": "Private",
     "burn_type": "Underburn",
-    "acres": 64.0,
+    "acres": 8.0,
     "piles": null,
-    "status": "Approved",
-    "planned_on": "2026-10-26T09:37:00-07:00",
-    "approved_on": "2026-10-26T11:12:00-07:00"
+    "status": "Pre-Planned",
+    "planned_on": "2026-10-28T09:21:00-07:00",
+    "approved_on": null
    }
   },
   {
@@ -1141,6 +1118,29 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     -122.128654,
+     40.61512
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192984304",
+    "name": "Austin williams",
+    "burn_date": "2026-10-28",
+    "agency": "Private Landowner",
+    "agency_group": "Private",
+    "burn_type": "Underburn",
+    "acres": 39.0,
+    "piles": null,
+    "status": "Approved",
+    "planned_on": "2026-10-28T07:19:00-07:00",
+    "approved_on": "2026-10-28T08:11:00-07:00"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      -120.280633,
      39.455417
     ]
@@ -1154,7 +1154,7 @@
     "burn_type": "Underburn",
     "acres": 46.0,
     "piles": null,
-    "status": "Approved",
+    "status": "Active",
     "planned_on": "2026-10-27T09:19:00-07:00",
     "approved_on": "2026-10-27T10:14:00-07:00"
    }
@@ -1177,9 +1177,9 @@
     "burn_type": "Underburn",
     "acres": 14.5,
     "piles": null,
-    "status": "Pre-Planned",
+    "status": "Approved",
     "planned_on": "2026-10-22T11:15:00-07:00",
-    "approved_on": null
+    "approved_on": "2026-10-28T07:15:00-07:00"
    }
   },
   {
@@ -1223,9 +1223,9 @@
     "burn_type": "Hand Pile",
     "acres": null,
     "piles": 25.0,
-    "status": "Pre-Planned",
+    "status": "Approved",
     "planned_on": "2026-10-22T11:15:00-07:00",
-    "approved_on": null
+    "approved_on": "2026-10-28T07:17:00-07:00"
    }
   },
   {
@@ -1361,9 +1361,9 @@
     "burn_type": "Hand Pile",
     "acres": 10.0,
     "piles": null,
-    "status": "Pre-Planned",
+    "status": "Approved",
     "planned_on": "2026-10-27T16:35:00-07:00",
-    "approved_on": null
+    "approved_on": "2026-10-28T07:13:00-07:00"
    }
   },
   {
@@ -1430,9 +1430,9 @@
     "burn_type": "Machine Pile",
     "acres": 5.0,
     "piles": null,
-    "status": "Pre-Planned",
+    "status": "Approved",
     "planned_on": "2026-10-27T18:07:00-07:00",
-    "approved_on": null
+    "approved_on": "2026-10-28T08:08:00-07:00"
    }
   },
   {
@@ -1476,9 +1476,9 @@
     "burn_type": "Underburn",
     "acres": 12.0,
     "piles": null,
-    "status": "Pre-Planned",
+    "status": "Approved",
     "planned_on": "2026-10-23T08:37:00-07:00",
-    "approved_on": null
+    "approved_on": "2026-10-28T07:18:00-07:00"
    }
   },
   {
@@ -1614,9 +1614,9 @@
     "burn_type": "Underburn",
     "acres": 35.0,
     "piles": null,
-    "status": "Pre-Planned",
+    "status": "Approved",
     "planned_on": "2026-10-23T08:37:00-07:00",
-    "approved_on": null
+    "approved_on": "2026-10-28T07:18:00-07:00"
    }
   },
   {
@@ -1752,9 +1752,9 @@
     "burn_type": "Hand Pile",
     "acres": 5.0,
     "piles": null,
-    "status": "Pre-Planned",
+    "status": "Approved",
     "planned_on": "2026-10-27T21:44:00-07:00",
-    "approved_on": null
+    "approved_on": "2026-10-28T08:52:00-07:00"
    }
   },
   {
@@ -1992,29 +1992,6 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -120.811189,
-     38.246152
-    ]
-   },
-   "properties": {
-    "pfirs_id": "192973807",
-    "name": "Unit 510",
-    "burn_date": "2026-10-28",
-    "agency": "East Bay Municipal Utility District",
-    "agency_group": "Local Non-Fire",
-    "burn_type": "Underburn",
-    "acres": 275.0,
-    "piles": null,
-    "status": "Approved",
-    "planned_on": "2026-10-22T11:00:00-07:00",
-    "approved_on": "2026-10-22T11:41:00-07:00"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
      -120.825686,
      38.263025
     ]
@@ -2028,7 +2005,7 @@
     "burn_type": "Underburn",
     "acres": 275.0,
     "piles": null,
-    "status": "Approved",
+    "status": "Active",
     "planned_on": "2026-10-22T11:00:00-07:00",
     "approved_on": "2026-10-22T11:38:00-07:00"
    }
@@ -2038,22 +2015,22 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -121.331466,
-     39.11079
+     -121.401633,
+     39.104667
     ]
    },
    "properties": {
-    "pfirs_id": "192977597",
-    "name": "(site 8-0) NCO Club",
+    "pfirs_id": "192984610",
+    "name": "(site 6-0) Intel",
     "burn_date": "2026-10-29",
     "agency": "Beale Air Force Base",
     "agency_group": "Private",
     "burn_type": "Underburn",
-    "acres": 8.0,
+    "acres": 64.0,
     "piles": null,
     "status": "Approved",
-    "planned_on": "2026-10-26T09:37:00-07:00",
-    "approved_on": "2026-10-26T10:34:00-07:00"
+    "planned_on": "2026-10-28T09:21:00-07:00",
+    "approved_on": "2026-10-28T09:22:00-07:00"
    }
   },
   {
@@ -2153,6 +2130,52 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     -121.702509,
+     39.845911
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192984644",
+    "name": "BCCER Broadcast Units",
+    "burn_date": "2026-10-29",
+    "agency": "CSU Chico Research Foundation",
+    "agency_group": "Private",
+    "burn_type": "Underburn",
+    "acres": 1.0,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-10-28T09:33:00-07:00",
+    "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -116.508186,
+     32.786617
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192984323",
+    "name": "Bear Valley_Oak Project",
+    "burn_date": "2026-10-29",
+    "agency": "US Forest Service",
+    "agency_group": "USFS",
+    "burn_type": "Hand Pile",
+    "acres": 20.0,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-10-28T08:29:00-07:00",
+    "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      -120.659262,
      38.919829
     ]
@@ -2168,6 +2191,29 @@
     "piles": null,
     "status": "Pre-Planned",
     "planned_on": "2026-10-27T14:24:00-07:00",
+    "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -121.05206,
+     38.931227
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192984606",
+    "name": "Canyon View Meadow",
+    "burn_date": "2026-10-29",
+    "agency": "Placer Land Trust",
+    "agency_group": "Private",
+    "burn_type": "Underburn",
+    "acres": 4.11,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-10-28T09:38:00-07:00",
     "approved_on": null
    }
   },
@@ -3088,6 +3134,29 @@
     "piles": null,
     "status": "Pre-Planned",
     "planned_on": "2026-10-27T10:05:00-07:00",
+    "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -120.211691,
+     37.874923
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192984336",
+    "name": "Shooting Range",
+    "burn_date": "2026-10-30",
+    "agency": "CAL FIRE",
+    "agency_group": "CAL FIRE",
+    "burn_type": "Underburn",
+    "acres": 29.0,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-10-28T07:46:00-07:00",
     "approved_on": null
    }
   },
