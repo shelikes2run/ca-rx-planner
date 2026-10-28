@@ -3,196 +3,12 @@
  "metadata": {
   "source": "CARB PFIRS public map page",
   "source_url": "https://ssl.arb.ca.gov/pfirs/index.php?submit=Map+Page",
-  "date_begin": "2026-10-26",
-  "date_end": "2026-11-03",
-  "count": 168,
+  "date_begin": "2026-10-27",
+  "date_end": "2026-11-04",
+  "count": 163,
   "note": "Planned and approved ignitions as published by PFIRS. Status can change through the day; confirm in PFIRS."
  },
  "features": [
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -122.39944,
-     38.57361
-    ]
-   },
-   "properties": {
-    "pfirs_id": "192972790",
-    "name": "1",
-    "burn_date": "2026-10-26",
-    "agency": "CAL FIRE",
-    "agency_group": "CAL FIRE",
-    "burn_type": "Underburn",
-    "acres": 21.0,
-    "piles": null,
-    "status": "Completed",
-    "planned_on": "2026-10-21T09:09:00-07:00",
-    "approved_on": "2026-10-26T07:28:00-07:00"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -121.013399,
-     40.379606
-    ]
-   },
-   "properties": {
-    "pfirs_id": "192977186",
-    "name": "Admin Piles Lassen County",
-    "burn_date": "2026-10-26",
-    "agency": "US Forest Service",
-    "agency_group": "USFS",
-    "burn_type": "Hand Pile",
-    "acres": 10.0,
-    "piles": null,
-    "status": "Approved",
-    "planned_on": "2026-10-25T14:50:00-07:00",
-    "approved_on": "2026-10-26T08:52:00-07:00"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -123.31711,
-     39.349444
-    ]
-   },
-   "properties": {
-    "pfirs_id": "192976570",
-    "name": "Calfire Howard SMP 24- 17 Broadcast",
-    "burn_date": "2026-10-26",
-    "agency": "Private Landowner",
-    "agency_group": "Private",
-    "burn_type": "Underburn",
-    "acres": 40.0,
-    "piles": null,
-    "status": "Approved",
-    "planned_on": "2026-10-23T23:33:00-07:00",
-    "approved_on": "2026-10-23T23:40:00-07:00"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -123.29186,
-     38.63113
-    ]
-   },
-   "properties": {
-    "pfirs_id": "192972121",
-    "name": "HRRR #0105",
-    "burn_date": "2026-10-26",
-    "agency": "Biswell Forestry",
-    "agency_group": "Private",
-    "burn_type": "Underburn",
-    "acres": 21.0,
-    "piles": null,
-    "status": "Approved",
-    "planned_on": "2026-10-21T07:06:00-07:00",
-    "approved_on": "2026-10-24T17:19:00-07:00"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -122.2995,
-     41.3511
-    ]
-   },
-   "properties": {
-    "pfirs_id": "192974986",
-    "name": "McBride",
-    "burn_date": "2026-10-26",
-    "agency": "US Forest Service",
-    "agency_group": "USFS",
-    "burn_type": "Underburn",
-    "acres": 110.1,
-    "piles": null,
-    "status": "Patrol",
-    "planned_on": "2026-10-23T07:10:00-07:00",
-    "approved_on": "2026-10-26T08:16:00-07:00"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -119.942121,
-     38.300364
-    ]
-   },
-   "properties": {
-    "pfirs_id": "192973685",
-    "name": "Mill Creek CG",
-    "burn_date": "2026-10-26",
-    "agency": "US Forest Service",
-    "agency_group": "USFS",
-    "burn_type": "Machine Pile",
-    "acres": 44.0,
-    "piles": null,
-    "status": "Completed",
-    "planned_on": "2026-10-22T10:32:00-07:00",
-    "approved_on": "2026-10-22T11:32:00-07:00"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -120.88439,
-     38.761139
-    ]
-   },
-   "properties": {
-    "pfirs_id": "192975647",
-    "name": "T12, R9E",
-    "burn_date": "2026-10-26",
-    "agency": "CAL FIRE",
-    "agency_group": "CAL FIRE",
-    "burn_type": "Underburn",
-    "acres": 80.0,
-    "piles": null,
-    "status": "Patrol",
-    "planned_on": "2026-10-23T12:15:00-07:00",
-    "approved_on": "2026-10-26T08:02:00-07:00"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -120.811189,
-     38.246152
-    ]
-   },
-   "properties": {
-    "pfirs_id": "192973800",
-    "name": "Unit 510",
-    "burn_date": "2026-10-26",
-    "agency": "East Bay Municipal Utility District",
-    "agency_group": "Local Non-Fire",
-    "burn_type": "Underburn",
-    "acres": 1.0,
-    "piles": null,
-    "status": "Patrol",
-    "planned_on": "2026-10-22T11:00:00-07:00",
-    "approved_on": "2026-10-22T11:29:00-07:00"
-   }
-  },
   {
    "type": "Feature",
    "geometry": {
@@ -232,9 +48,9 @@
     "agency": "CAL FIRE",
     "agency_group": "CAL FIRE",
     "burn_type": "Underburn",
-    "acres": 44.0,
+    "acres": 30.0,
     "piles": null,
-    "status": "Approved",
+    "status": "Completed",
     "planned_on": "2026-10-21T09:09:00-07:00",
     "approved_on": "2026-10-27T05:52:00-07:00"
    }
@@ -1923,6 +1739,29 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     -12032860.0,
+     3929738.0
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192984269",
+    "name": "Sugar Bowl Burn Piles",
+    "burn_date": "2026-10-28",
+    "agency": "Sugar Bowl",
+    "agency_group": "Private",
+    "burn_type": "Hand Pile",
+    "acres": 5.0,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-10-27T21:44:00-07:00",
+    "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      -123.48694,
      39.67767
     ]
@@ -3464,6 +3303,29 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     -122.39944,
+     38.57361
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192984210",
+    "name": "1",
+    "burn_date": "2026-10-31",
+    "agency": "CAL FIRE",
+    "agency_group": "CAL FIRE",
+    "burn_type": "Underburn",
+    "acres": 12.0,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-10-27T18:41:00-07:00",
+    "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      -123.256797,
      38.663734
     ]
@@ -3863,6 +3725,29 @@
     "pfirs_id": "192982648",
     "name": "Dog Island Park/ Samuel Ayes-Fuels Reduction Project",
     "burn_date": "2026-11-03",
+    "agency": "Red Bluff Fire Department",
+    "agency_group": "Local Fire",
+    "burn_type": "Underburn",
+    "acres": 14.95,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-10-27T09:21:00-07:00",
+    "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -122.235473,
+     40.185756
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192982649",
+    "name": "Dog Island Park/ Samuel Ayes-Fuels Reduction Project",
+    "burn_date": "2026-11-04",
     "agency": "Red Bluff Fire Department",
     "agency_group": "Local Fire",
     "burn_type": "Underburn",
