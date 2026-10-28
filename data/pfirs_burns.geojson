@@ -5,7 +5,7 @@
   "source_url": "https://ssl.arb.ca.gov/pfirs/index.php?submit=Map+Page",
   "date_begin": "2026-10-26",
   "date_end": "2026-11-03",
-  "count": 156,
+  "count": 168,
   "note": "Planned and approved ignitions as published by PFIRS. Status can change through the day; confirm in PFIRS."
  },
  "features": [
@@ -165,7 +165,7 @@
     "burn_type": "Underburn",
     "acres": 80.0,
     "piles": null,
-    "status": "Approved",
+    "status": "Patrol",
     "planned_on": "2026-10-23T12:15:00-07:00",
     "approved_on": "2026-10-26T08:02:00-07:00"
    }
@@ -211,7 +211,7 @@
     "burn_type": "Underburn",
     "acres": 17.0,
     "piles": null,
-    "status": "Approved",
+    "status": "Completed",
     "planned_on": "2026-10-26T09:35:00-07:00",
     "approved_on": "2026-10-27T10:17:00-07:00"
    }
@@ -257,7 +257,7 @@
     "burn_type": "Underburn",
     "acres": 2.5,
     "piles": null,
-    "status": "Approved",
+    "status": "Patrol",
     "planned_on": "2026-10-26T11:26:00-07:00",
     "approved_on": "2026-10-26T11:26:00-07:00"
    }
@@ -717,7 +717,7 @@
     "burn_type": "Underburn",
     "acres": 8.0,
     "piles": null,
-    "status": "Approved",
+    "status": "Patrol",
     "planned_on": "2026-10-24T09:40:00-07:00",
     "approved_on": "2026-10-27T05:53:00-07:00"
    }
@@ -761,9 +761,9 @@
     "agency": "US Forest Service",
     "agency_group": "USFS",
     "burn_type": "Underburn",
-    "acres": 125.1,
+    "acres": 60.0,
     "piles": null,
-    "status": "Active",
+    "status": "Patrol",
     "planned_on": "2026-10-27T08:08:00-07:00",
     "approved_on": "2026-10-27T08:08:00-07:00"
    }
@@ -855,7 +855,7 @@
     "burn_type": "Underburn",
     "acres": 10.0,
     "piles": null,
-    "status": "Approved",
+    "status": "Patrol",
     "planned_on": "2026-10-23T12:15:00-07:00",
     "approved_on": "2026-10-26T15:34:00-07:00"
    }
@@ -924,9 +924,9 @@
     "burn_type": "Hand Pile",
     "acres": 8.0,
     "piles": null,
-    "status": "Pre-Planned",
+    "status": "Approved",
     "planned_on": "2026-10-27T13:17:00-07:00",
-    "approved_on": null
+    "approved_on": "2026-10-27T13:42:00-07:00"
    }
   },
   {
@@ -1016,7 +1016,7 @@
     "burn_type": "Underburn",
     "acres": 210.0,
     "piles": null,
-    "status": "Active",
+    "status": "Patrol",
     "planned_on": "2026-10-24T12:28:00-07:00",
     "approved_on": "2026-10-26T09:16:00-07:00"
    }
@@ -1118,6 +1118,144 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     -119.252187,
+     37.019788
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192983972",
+    "name": "2026-Barnes North",
+    "burn_date": "2026-10-28",
+    "agency": "US Forest Service",
+    "agency_group": "USFS",
+    "burn_type": "Underburn",
+    "acres": 805.0,
+    "piles": null,
+    "status": "Approved",
+    "planned_on": "2026-10-27T15:45:00-07:00",
+    "approved_on": "2026-10-27T15:45:00-07:00"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -119.236626,
+     37.014796
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192983982",
+    "name": "2026-Barnes South",
+    "burn_date": "2026-10-28",
+    "agency": "US Forest Service",
+    "agency_group": "USFS",
+    "burn_type": "Underburn",
+    "acres": 1185.0,
+    "piles": null,
+    "status": "Approved",
+    "planned_on": "2026-10-27T15:45:00-07:00",
+    "approved_on": "2026-10-27T15:45:00-07:00"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -119.734495,
+     37.356029
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192983947",
+    "name": "2026-Crooks",
+    "burn_date": "2026-10-28",
+    "agency": "CAL FIRE",
+    "agency_group": "CAL FIRE",
+    "burn_type": "Underburn",
+    "acres": 112.0,
+    "piles": null,
+    "status": "Approved",
+    "planned_on": "2026-10-27T15:43:00-07:00",
+    "approved_on": "2026-10-27T15:43:00-07:00"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -119.177686,
+     37.059219
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192983999",
+    "name": "2026-Dinkey Creek Understory",
+    "burn_date": "2026-10-28",
+    "agency": "Southern California Edison",
+    "agency_group": "Private",
+    "burn_type": "Underburn",
+    "acres": 500.0,
+    "piles": null,
+    "status": "Approved",
+    "planned_on": "2026-10-27T15:49:00-07:00",
+    "approved_on": "2026-10-27T15:49:00-07:00"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -119.288965,
+     37.107236
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192983938",
+    "name": "2026-Shaver Lake Understory",
+    "burn_date": "2026-10-28",
+    "agency": "Southern California Edison",
+    "agency_group": "Private",
+    "burn_type": "Underburn",
+    "acres": 400.0,
+    "piles": null,
+    "status": "Approved",
+    "planned_on": "2026-10-27T15:43:00-07:00",
+    "approved_on": "2026-10-27T15:43:00-07:00"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -119.288965,
+     37.107236
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192983960",
+    "name": "2026-Shaver Lake Understory",
+    "burn_date": "2026-10-28",
+    "agency": "Southern California Edison",
+    "agency_group": "Private",
+    "burn_type": "Underburn",
+    "acres": 400.0,
+    "piles": null,
+    "status": "Approved",
+    "planned_on": "2026-10-27T15:44:00-07:00",
+    "approved_on": "2026-10-27T15:44:00-07:00"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      -122.786,
      41.345
     ]
@@ -1131,9 +1269,9 @@
     "burn_type": "Underburn",
     "acres": 170.0,
     "piles": null,
-    "status": "Pre-Planned",
+    "status": "Approved",
     "planned_on": "2026-10-27T07:41:00-07:00",
-    "approved_on": null
+    "approved_on": "2026-10-27T16:24:00-07:00"
    }
   },
   {
@@ -1244,11 +1382,11 @@
     "agency": "CAL FIRE",
     "agency_group": "CAL FIRE",
     "burn_type": "Underburn",
-    "acres": 172.0,
+    "acres": 400.0,
     "piles": null,
-    "status": "Pre-Planned",
+    "status": "Approved",
     "planned_on": "2026-10-23T19:57:00-07:00",
-    "approved_on": null
+    "approved_on": "2026-10-27T16:26:00-07:00"
    }
   },
   {
@@ -1272,6 +1410,29 @@
     "status": "Pre-Planned",
     "planned_on": "2026-10-22T11:15:00-07:00",
     "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -120.659262,
+     38.919829
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192983546",
+    "name": "C70/100",
+    "burn_date": "2026-10-28",
+    "agency": "UC Berkeley",
+    "agency_group": "Private",
+    "burn_type": "Underburn",
+    "acres": 8.0,
+    "piles": null,
+    "status": "Approved",
+    "planned_on": "2026-10-27T14:24:00-07:00",
+    "approved_on": "2026-10-27T15:11:00-07:00"
    }
   },
   {
@@ -1325,6 +1486,29 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     -119.734495,
+     37.356029
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192983620",
+    "name": "Crooks",
+    "burn_date": "2026-10-28",
+    "agency": "CAL FIRE",
+    "agency_group": "CAL FIRE",
+    "burn_type": "Underburn",
+    "acres": 66.0,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-10-27T14:42:00-07:00",
+    "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      -121.799111,
      36.447278
     ]
@@ -1338,9 +1522,9 @@
     "burn_type": "Underburn",
     "acres": 19.0,
     "piles": null,
-    "status": "Pre-Planned",
+    "status": "Approved",
     "planned_on": "2026-10-22T15:23:00-07:00",
-    "approved_on": null
+    "approved_on": "2026-10-27T16:42:00-07:00"
    }
   },
   {
@@ -1348,21 +1532,21 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -122.512187,
-     38.355876
+     -121.3455,
+     40.36066
     ]
    },
    "properties": {
-    "pfirs_id": "192975034",
-    "name": "East Suttonfield Unit 2",
+    "pfirs_id": "192984131",
+    "name": "Domingo Springs CG HP",
     "burn_date": "2026-10-28",
-    "agency": "California State Parks",
-    "agency_group": "CA Parks",
-    "burn_type": "Underburn",
-    "acres": 8.0,
+    "agency": "US Forest Service",
+    "agency_group": "USFS",
+    "burn_type": "Hand Pile",
+    "acres": 10.0,
     "piles": null,
     "status": "Pre-Planned",
-    "planned_on": "2026-10-23T08:37:00-07:00",
+    "planned_on": "2026-10-27T16:35:00-07:00",
     "approved_on": null
    }
   },
@@ -1384,9 +1568,9 @@
     "burn_type": "Underburn",
     "acres": 435.0,
     "piles": null,
-    "status": "Pre-Planned",
+    "status": "Approved",
     "planned_on": "2026-10-27T13:40:00-07:00",
-    "approved_on": null
+    "approved_on": "2026-10-27T13:54:00-07:00"
    }
   },
   {
@@ -1410,6 +1594,29 @@
     "status": "Approved",
     "planned_on": "2026-10-27T11:50:00-07:00",
     "approved_on": "2026-10-27T13:13:00-07:00"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -121.705368,
+     40.633401
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192984202",
+    "name": "Fall 2026 Piles",
+    "burn_date": "2026-10-28",
+    "agency": "CAL FIRE",
+    "agency_group": "CAL FIRE",
+    "burn_type": "Machine Pile",
+    "acres": 5.0,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-10-27T18:07:00-07:00",
+    "approved_on": null
    }
   },
   {
@@ -1486,6 +1693,29 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     -120.165412,
+     41.475264
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192983456",
+    "name": "McCauley Rx",
+    "burn_date": "2026-10-28",
+    "agency": "CAL FIRE",
+    "agency_group": "CAL FIRE",
+    "burn_type": "Underburn",
+    "acres": 300.0,
+    "piles": null,
+    "status": "Approved",
+    "planned_on": "2026-10-27T13:44:00-07:00",
+    "approved_on": "2026-10-27T14:35:00-07:00"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      -121.770799,
      39.771744
     ]
@@ -1502,6 +1732,29 @@
     "status": "Pre-Planned",
     "planned_on": "2025-11-06T16:06:00-08:00",
     "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -124.2822,
+     40.6838
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192983889",
+    "name": "Ocean Ranch RX",
+    "burn_date": "2026-10-28",
+    "agency": "CAL FIRE",
+    "agency_group": "CAL FIRE",
+    "burn_type": "Hand Pile",
+    "acres": 30.0,
+    "piles": null,
+    "status": "Approved",
+    "planned_on": "2026-10-27T15:55:00-07:00",
+    "approved_on": "2026-10-27T16:02:00-07:00"
    }
   },
   {
@@ -1571,6 +1824,29 @@
     "status": "Approved",
     "planned_on": "2026-10-27T10:05:00-07:00",
     "approved_on": "2026-10-27T12:07:00-07:00"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -122.920709,
+     40.585547
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192983874",
+    "name": "Reading Indian Creek Unit #6",
+    "burn_date": "2026-10-28",
+    "agency": "Bureau of Land Management",
+    "agency_group": "BLM",
+    "burn_type": "Unknown",
+    "acres": 70.0,
+    "piles": null,
+    "status": "Approved",
+    "planned_on": "2026-10-27T15:28:00-07:00",
+    "approved_on": "2026-10-27T15:28:00-07:00"
    }
   },
   {
@@ -1706,9 +1982,9 @@
     "burn_type": "Hand Pile",
     "acres": 8.0,
     "piles": null,
-    "status": "Pre-Planned",
+    "status": "Approved",
     "planned_on": "2026-10-27T13:17:00-07:00",
-    "approved_on": null
+    "approved_on": "2026-10-27T13:44:00-07:00"
    }
   },
   {
@@ -1729,9 +2005,9 @@
     "burn_type": "Hand Pile",
     "acres": 20.0,
     "piles": null,
-    "status": "Pre-Planned",
+    "status": "Approved",
     "planned_on": "2026-10-27T13:15:00-07:00",
-    "approved_on": null
+    "approved_on": "2026-10-27T13:43:00-07:00"
    }
   },
   {
@@ -1775,9 +2051,9 @@
     "burn_type": "Underburn",
     "acres": 0.5,
     "piles": null,
-    "status": "Pre-Planned",
+    "status": "Approved",
     "planned_on": "2026-10-26T16:39:00-07:00",
-    "approved_on": null
+    "approved_on": "2026-10-27T17:36:00-07:00"
    }
   },
   {
@@ -1923,29 +2199,6 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -122.548746,
-     38.349748
-    ]
-   },
-   "properties": {
-    "pfirs_id": "192975035",
-    "name": "Vineyard Trail Rx Burn Unit",
-    "burn_date": "2026-10-28",
-    "agency": "California State Parks",
-    "agency_group": "CA Parks",
-    "burn_type": "Underburn",
-    "acres": 11.0,
-    "piles": null,
-    "status": "Pre-Planned",
-    "planned_on": "2026-10-23T08:37:00-07:00",
-    "approved_on": null
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
      -121.331466,
      39.11079
     ]
@@ -2061,44 +2314,21 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -122.330467,
-     37.159997
+     -120.659262,
+     38.919829
     ]
    },
    "properties": {
-    "pfirs_id": "192973861",
-    "name": "Broadcast Burn Unit",
+    "pfirs_id": "192983547",
+    "name": "C70/100",
     "burn_date": "2026-10-29",
-    "agency": "California State Parks",
-    "agency_group": "CA Parks",
+    "agency": "UC Berkeley",
+    "agency_group": "Private",
     "burn_type": "Underburn",
-    "acres": 14.5,
+    "acres": 12.0,
     "piles": null,
     "status": "Pre-Planned",
-    "planned_on": "2026-10-22T11:15:00-07:00",
-    "approved_on": null
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -122.330467,
-     37.159997
-    ]
-   },
-   "properties": {
-    "pfirs_id": "192973863",
-    "name": "Burn Piles within Broadcast Burn Unit",
-    "burn_date": "2026-10-29",
-    "agency": "California State Parks",
-    "agency_group": "CA Parks",
-    "burn_type": "Hand Pile",
-    "acres": null,
-    "piles": 25.0,
-    "status": "Pre-Planned",
-    "planned_on": "2026-10-22T11:15:00-07:00",
+    "planned_on": "2026-10-27T14:24:00-07:00",
     "approved_on": null
    }
   },
@@ -2120,9 +2350,9 @@
     "burn_type": "Underburn",
     "acres": 15.5,
     "piles": null,
-    "status": "Pre-Planned",
+    "status": "Approved",
     "planned_on": "2026-10-26T16:23:00-07:00",
-    "approved_on": null
+    "approved_on": "2026-10-27T17:13:00-07:00"
    }
   },
   {
@@ -2143,9 +2373,9 @@
     "burn_type": "Underburn",
     "acres": 4.5,
     "piles": null,
-    "status": "Pre-Planned",
+    "status": "Approved",
     "planned_on": "2026-10-26T16:23:00-07:00",
-    "approved_on": null
+    "approved_on": "2026-10-27T17:12:00-07:00"
    }
   },
   {
@@ -2199,21 +2429,21 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -122.512187,
-     38.355876
+     -119.734495,
+     37.356029
     ]
    },
    "properties": {
-    "pfirs_id": "192975038",
-    "name": "East Suttonfield Unit 2",
+    "pfirs_id": "192983621",
+    "name": "Crooks",
     "burn_date": "2026-10-29",
-    "agency": "California State Parks",
-    "agency_group": "CA Parks",
+    "agency": "CAL FIRE",
+    "agency_group": "CAL FIRE",
     "burn_type": "Underburn",
-    "acres": 8.0,
+    "acres": 66.0,
     "piles": null,
     "status": "Pre-Planned",
-    "planned_on": "2026-10-23T08:37:00-07:00",
+    "planned_on": "2026-10-27T14:42:00-07:00",
     "approved_on": null
    }
   },
@@ -2237,6 +2467,29 @@
     "piles": null,
     "status": "Pre-Planned",
     "planned_on": "2026-10-23T08:37:00-07:00",
+    "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -121.852215,
+     38.700169
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192983529",
+    "name": "Huller Muller Site",
+    "burn_date": "2026-10-29",
+    "agency": "Cache Creek Conservancy",
+    "agency_group": "Private",
+    "burn_type": "Underburn",
+    "acres": 12.0,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-10-27T14:21:00-07:00",
     "approved_on": null
    }
   },
@@ -2534,9 +2787,9 @@
     "burn_type": "Underburn",
     "acres": 60.0,
     "piles": null,
-    "status": "Pre-Planned",
+    "status": "Approved",
     "planned_on": "2026-10-26T12:24:00-07:00",
-    "approved_on": null
+    "approved_on": "2026-10-27T16:59:00-07:00"
    }
   },
   {
@@ -2603,9 +2856,9 @@
     "burn_type": "Hand Pile",
     "acres": 8.0,
     "piles": null,
-    "status": "Pre-Planned",
+    "status": "Approved",
     "planned_on": "2026-10-27T13:17:00-07:00",
-    "approved_on": null
+    "approved_on": "2026-10-27T13:47:00-07:00"
    }
   },
   {
@@ -2626,9 +2879,9 @@
     "burn_type": "Hand Pile",
     "acres": 20.0,
     "piles": null,
-    "status": "Pre-Planned",
+    "status": "Approved",
     "planned_on": "2026-10-27T13:15:00-07:00",
-    "approved_on": null
+    "approved_on": "2026-10-27T13:45:00-07:00"
    }
   },
   {
@@ -2912,6 +3165,29 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     -119.967248,
+     37.485701
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192984184",
+    "name": "Mariposa Creek RX",
+    "burn_date": "2026-10-30",
+    "agency": "UC Cooperative Extension",
+    "agency_group": "Local Non-Fire",
+    "burn_type": "Underburn",
+    "acres": 1.0,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-10-27T17:12:00-07:00",
+    "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      -121.76986,
      39.775788
     ]
@@ -2948,9 +3224,9 @@
     "burn_type": "Underburn",
     "acres": 13.0,
     "piles": null,
-    "status": "Pre-Planned",
+    "status": "Approved",
     "planned_on": "2026-10-26T12:24:00-07:00",
-    "approved_on": null
+    "approved_on": "2026-10-27T17:08:00-07:00"
    }
   },
   {
