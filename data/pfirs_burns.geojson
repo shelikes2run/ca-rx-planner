@@ -5,7 +5,7 @@
   "source_url": "https://ssl.arb.ca.gov/pfirs/index.php?submit=Map+Page",
   "date_begin": "2026-10-29",
   "date_end": "2026-11-06",
-  "count": 111,
+  "count": 118,
   "note": "Planned and approved ignitions as published by PFIRS. Status can change through the day; confirm in PFIRS."
  },
  "features": [
@@ -48,9 +48,9 @@
     "agency": "CAL FIRE",
     "agency_group": "CAL FIRE",
     "burn_type": "Underburn",
-    "acres": 90.0,
+    "acres": 72.0,
     "piles": null,
-    "status": "Approved",
+    "status": "Completed",
     "planned_on": "2026-10-21T09:09:00-07:00",
     "approved_on": "2026-10-29T07:24:00-07:00"
    }
@@ -303,7 +303,7 @@
     "burn_type": "Underburn",
     "acres": 15.5,
     "piles": null,
-    "status": "Approved",
+    "status": "Active",
     "planned_on": "2026-10-26T16:23:00-07:00",
     "approved_on": "2026-10-27T17:13:00-07:00"
    }
@@ -326,7 +326,7 @@
     "burn_type": "Underburn",
     "acres": 4.5,
     "piles": null,
-    "status": "Approved",
+    "status": "Patrol",
     "planned_on": "2026-10-26T16:23:00-07:00",
     "approved_on": "2026-10-27T17:12:00-07:00"
    }
@@ -441,7 +441,7 @@
     "burn_type": "Machine Pile",
     "acres": 5.0,
     "piles": null,
-    "status": "Active",
+    "status": "Patrol",
     "planned_on": "2026-10-28T16:38:00-07:00",
     "approved_on": "2026-10-29T08:16:00-07:00"
    }
@@ -462,9 +462,9 @@
     "agency": "California State Parks",
     "agency_group": "CA Parks",
     "burn_type": "Underburn",
-    "acres": 17.0,
+    "acres": 15.0,
     "piles": null,
-    "status": "Approved",
+    "status": "Patrol",
     "planned_on": "2026-10-28T14:03:00-07:00",
     "approved_on": "2026-10-29T07:23:00-07:00"
    }
@@ -669,9 +669,9 @@
     "agency": "CAL FIRE",
     "agency_group": "CAL FIRE",
     "burn_type": "Underburn",
-    "acres": 60.0,
+    "acres": 37.0,
     "piles": null,
-    "status": "Approved",
+    "status": "Patrol",
     "planned_on": "2026-10-26T12:24:00-07:00",
     "approved_on": "2026-10-27T16:59:00-07:00"
    }
@@ -911,29 +911,6 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -122.214444,
-     38.31167
-    ]
-   },
-   "properties": {
-    "pfirs_id": "192972793",
-    "name": "1",
-    "burn_date": "2026-10-30",
-    "agency": "CAL FIRE",
-    "agency_group": "CAL FIRE",
-    "burn_type": "Underburn",
-    "acres": 50.0,
-    "piles": null,
-    "status": "Pre-Planned",
-    "planned_on": "2026-10-21T09:09:00-07:00",
-    "approved_on": null
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
      -119.252187,
      37.019788
     ]
@@ -1131,9 +1108,9 @@
     "burn_type": "Underburn",
     "acres": 17.0,
     "piles": null,
-    "status": "Pre-Planned",
+    "status": "Approved",
     "planned_on": "2026-10-28T14:03:00-07:00",
-    "approved_on": null
+    "approved_on": "2026-10-30T07:28:00-07:00"
    }
   },
   {
@@ -1215,17 +1192,17 @@
     ]
    },
    "properties": {
-    "pfirs_id": "192980951",
+    "pfirs_id": "192987285",
     "name": "Rambling",
     "burn_date": "2026-10-30",
     "agency": "CAL FIRE",
     "agency_group": "CAL FIRE",
-    "burn_type": "Underburn",
+    "burn_type": "Unknown",
     "acres": 13.0,
     "piles": null,
     "status": "Approved",
-    "planned_on": "2026-10-26T12:24:00-07:00",
-    "approved_on": "2026-10-27T17:08:00-07:00"
+    "planned_on": "2026-10-30T08:49:00-07:00",
+    "approved_on": "2026-10-30T08:49:00-07:00"
    }
   },
   {
@@ -1246,9 +1223,9 @@
     "burn_type": "Underburn",
     "acres": 31.0,
     "piles": null,
-    "status": "Pre-Planned",
+    "status": "Approved",
     "planned_on": "2026-10-29T18:01:00-07:00",
-    "approved_on": null
+    "approved_on": "2026-10-30T07:15:00-07:00"
    }
   },
   {
@@ -1269,9 +1246,9 @@
     "burn_type": "Hand Pile",
     "acres": 31.0,
     "piles": null,
-    "status": "Pre-Planned",
+    "status": "Approved",
     "planned_on": "2026-10-29T19:51:00-07:00",
-    "approved_on": null
+    "approved_on": "2026-10-30T07:17:00-07:00"
    }
   },
   {
@@ -1295,29 +1272,6 @@
     "status": "Pre-Planned",
     "planned_on": "2026-10-27T10:05:00-07:00",
     "approved_on": null
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -120.211691,
-     37.874923
-    ]
-   },
-   "properties": {
-    "pfirs_id": "192984336",
-    "name": "Shooting Range",
-    "burn_date": "2026-10-30",
-    "agency": "CAL FIRE",
-    "agency_group": "CAL FIRE",
-    "burn_type": "Underburn",
-    "acres": 29.0,
-    "piles": null,
-    "status": "Approved",
-    "planned_on": "2026-10-28T07:46:00-07:00",
-    "approved_on": "2026-10-28T14:38:00-07:00"
    }
   },
   {
@@ -1478,6 +1432,29 @@
     "piles": null,
     "status": "Pre-Planned",
     "planned_on": "2026-10-27T18:41:00-07:00",
+    "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -122.39944,
+     38.57361
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192987295",
+    "name": "1",
+    "burn_date": "2026-10-31",
+    "agency": "CAL FIRE",
+    "agency_group": "CAL FIRE",
+    "burn_type": "Underburn",
+    "acres": 25.0,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-10-30T08:56:00-07:00",
     "approved_on": null
    }
   },
@@ -1936,9 +1913,9 @@
     "burn_type": "Underburn",
     "acres": 4.97,
     "piles": null,
-    "status": "Pre-Planned",
+    "status": "Approved",
     "planned_on": "2026-10-29T15:25:00-07:00",
-    "approved_on": null
+    "approved_on": "2026-10-30T09:07:00-07:00"
    }
   },
   {
@@ -2005,9 +1982,9 @@
     "burn_type": "Underburn",
     "acres": 20.0,
     "piles": null,
-    "status": "Pre-Planned",
+    "status": "Approved",
     "planned_on": "2026-10-29T15:18:00-07:00",
-    "approved_on": null
+    "approved_on": "2026-10-30T09:06:00-07:00"
    }
   },
   {
@@ -2028,9 +2005,9 @@
     "burn_type": "Underburn",
     "acres": 47.0,
     "piles": null,
-    "status": "Pre-Planned",
+    "status": "Approved",
     "planned_on": "2026-10-29T15:18:00-07:00",
-    "approved_on": null
+    "approved_on": "2026-10-30T09:05:00-07:00"
    }
   },
   {
@@ -2053,6 +2030,29 @@
     "piles": null,
     "status": "Pre-Planned",
     "planned_on": "2026-10-29T14:38:00-07:00",
+    "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -122.508,
+     38.3736
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192987223",
+    "name": "Sonoma Botanical Garden",
+    "burn_date": "2026-11-02",
+    "agency": "Audubon Canyon Ranch",
+    "agency_group": "Private",
+    "burn_type": "Underburn",
+    "acres": 10.0,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-10-30T08:05:00-07:00",
     "approved_on": null
    }
   },
@@ -2084,6 +2084,29 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     -120.97305,
+     39.06715
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192987462",
+    "name": "Unit 1 - Broadcast",
+    "burn_date": "2026-11-02",
+    "agency": "CAL FIRE",
+    "agency_group": "CAL FIRE",
+    "burn_type": "Underburn",
+    "acres": 5.12,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-10-30T11:22:00-07:00",
+    "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      -122.538883,
      40.41694
     ]
@@ -2099,6 +2122,121 @@
     "piles": null,
     "status": "Pre-Planned",
     "planned_on": "2026-10-28T17:18:00-07:00",
+    "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -120.97326,
+     39.067107
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192987463",
+    "name": "Unit 2 - Broadcast",
+    "burn_date": "2026-11-02",
+    "agency": "CAL FIRE",
+    "agency_group": "CAL FIRE",
+    "burn_type": "Underburn",
+    "acres": 8.0,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-10-30T11:22:00-07:00",
+    "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -120.97053,
+     39.06707
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192987464",
+    "name": "Unit 3- Broadcast",
+    "burn_date": "2026-11-02",
+    "agency": "CAL FIRE",
+    "agency_group": "CAL FIRE",
+    "burn_type": "Underburn",
+    "acres": 6.01,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-10-30T11:22:00-07:00",
+    "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -120.97053,
+     39.06707
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192987466",
+    "name": "Unit 3- Broadcast",
+    "burn_date": "2026-11-02",
+    "agency": "CAL FIRE",
+    "agency_group": "CAL FIRE",
+    "burn_type": "Underburn",
+    "acres": 6.01,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-10-30T11:22:00-07:00",
+    "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -120.97094,
+     39.0658
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192987465",
+    "name": "Unit 4 - Broadcast",
+    "burn_date": "2026-11-02",
+    "agency": "CAL FIRE",
+    "agency_group": "CAL FIRE",
+    "burn_type": "Underburn",
+    "acres": 10.32,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-10-30T11:22:00-07:00",
+    "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -120.97339,
+     39.06471
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192987467",
+    "name": "Unit 6 - Broadcast",
+    "burn_date": "2026-11-02",
+    "agency": "CAL FIRE",
+    "agency_group": "CAL FIRE",
+    "burn_type": "Underburn",
+    "acres": 3.29,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-10-30T11:22:00-07:00",
     "approved_on": null
    }
   },
@@ -2145,6 +2283,29 @@
     "piles": null,
     "status": "Pre-Planned",
     "planned_on": "2026-10-27T09:21:00-07:00",
+    "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -121.220226,
+     41.123203
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192987318",
+    "name": "Intermountain Camp RX",
+    "burn_date": "2026-11-03",
+    "agency": "CAL FIRE",
+    "agency_group": "CAL FIRE",
+    "burn_type": "Underburn",
+    "acres": 27.0,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-10-30T09:34:00-07:00",
     "approved_on": null
    }
   },
@@ -2235,9 +2396,9 @@
     "burn_type": "Underburn",
     "acres": 5.0,
     "piles": null,
-    "status": "Pre-Planned",
+    "status": "Approved",
     "planned_on": "2026-10-29T16:57:00-07:00",
-    "approved_on": null
+    "approved_on": "2026-10-30T08:38:00-07:00"
    }
   },
   {
@@ -2442,9 +2603,9 @@
     "burn_type": "Underburn",
     "acres": 12.0,
     "piles": null,
-    "status": "Pre-Planned",
+    "status": "Approved",
     "planned_on": "2026-10-29T16:57:00-07:00",
-    "approved_on": null
+    "approved_on": "2026-10-30T08:28:00-07:00"
    }
   },
   {
