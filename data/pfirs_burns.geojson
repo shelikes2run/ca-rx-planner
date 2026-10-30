@@ -5,7 +5,7 @@
   "source_url": "https://ssl.arb.ca.gov/pfirs/index.php?submit=Map+Page",
   "date_begin": "2026-10-28",
   "date_end": "2026-11-05",
-  "count": 145,
+  "count": 155,
   "note": "Planned and approved ignitions as published by PFIRS. Status can change through the day; confirm in PFIRS."
  },
  "features": [
@@ -842,29 +842,6 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -120.919306,
-     39.983946
-    ]
-   },
-   "properties": {
-    "pfirs_id": "192981422",
-    "name": "South Park",
-    "burn_date": "2026-10-28",
-    "agency": "US Forest Service",
-    "agency_group": "USFS",
-    "burn_type": "Underburn",
-    "acres": 128.0,
-    "piles": null,
-    "status": "Active",
-    "planned_on": "2026-10-26T15:15:00-07:00",
-    "approved_on": "2026-10-26T16:27:00-07:00"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
      -12032860.0,
      3929738.0
     ]
@@ -1292,7 +1269,7 @@
     "burn_type": "Underburn",
     "acres": 37.0,
     "piles": null,
-    "status": "Approved",
+    "status": "Active",
     "planned_on": "2026-10-27T07:41:00-07:00",
     "approved_on": "2026-10-28T15:51:00-07:00"
    }
@@ -1614,7 +1591,7 @@
     "burn_type": "Underburn",
     "acres": 8.5,
     "piles": null,
-    "status": "Patrol",
+    "status": "Completed",
     "planned_on": "2026-10-27T14:21:00-07:00",
     "approved_on": "2026-10-28T13:17:00-07:00"
    }
@@ -1658,9 +1635,9 @@
     "agency": "US Forest Service",
     "agency_group": "USFS",
     "burn_type": "Underburn",
-    "acres": 150.0,
+    "acres": 142.0,
     "piles": null,
-    "status": "Approved",
+    "status": "Patrol",
     "planned_on": "2026-10-28T13:59:00-07:00",
     "approved_on": "2026-10-28T14:09:00-07:00"
    }
@@ -1732,6 +1709,29 @@
     "status": "Approved",
     "planned_on": "2026-10-26T11:45:00-07:00",
     "approved_on": "2026-10-26T12:16:00-07:00"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -120.919306,
+     39.983946
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192981422",
+    "name": "South Park",
+    "burn_date": "2026-10-29",
+    "agency": "US Forest Service",
+    "agency_group": "USFS",
+    "burn_type": "Underburn",
+    "acres": 1.2,
+    "piles": null,
+    "status": "Patrol",
+    "planned_on": "2026-10-26T15:15:00-07:00",
+    "approved_on": "2026-10-26T16:27:00-07:00"
    }
   },
   {
@@ -2307,6 +2307,52 @@
     "status": "Approved",
     "planned_on": "2026-10-26T12:24:00-07:00",
     "approved_on": "2026-10-27T17:08:00-07:00"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -117.474834,
+     33.558083
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192987091",
+    "name": "Rancho Carrillo",
+    "burn_date": "2026-10-30",
+    "agency": "US Forest Service",
+    "agency_group": "USFS",
+    "burn_type": "Underburn",
+    "acres": 31.0,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-10-29T18:01:00-07:00",
+    "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -117.483642,
+     33.55438
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192987141",
+    "name": "Rancho Carrillo Piles",
+    "burn_date": "2026-10-30",
+    "agency": "US Forest Service",
+    "agency_group": "USFS",
+    "burn_type": "Hand Pile",
+    "acres": 31.0,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-10-29T19:51:00-07:00",
+    "approved_on": null
    }
   },
   {
@@ -3165,6 +3211,52 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     -122.87306,
+     39.12142
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192987105",
+    "name": "Lakeshore East",
+    "burn_date": "2026-11-03",
+    "agency": "Private Landowner",
+    "agency_group": "Private",
+    "burn_type": "Underburn",
+    "acres": 13.9,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-10-29T19:43:00-07:00",
+    "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -122.87364,
+     39.12255
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192987106",
+    "name": "Lakeshore West",
+    "burn_date": "2026-11-03",
+    "agency": "Private Landowner",
+    "agency_group": "Private",
+    "burn_type": "Underburn",
+    "acres": 26.3,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-10-29T19:43:00-07:00",
+    "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      -117.18111,
      34.27944
     ]
@@ -3180,6 +3272,29 @@
     "piles": null,
     "status": "Pre-Planned",
     "planned_on": "2026-10-29T14:32:00-07:00",
+    "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -121.408626,
+     39.167374
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192987028",
+    "name": "(site 0-0) M60",
+    "burn_date": "2026-11-04",
+    "agency": "Beale Air Force Base",
+    "agency_group": "Private",
+    "burn_type": "Underburn",
+    "acres": 5.0,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-10-29T16:57:00-07:00",
     "approved_on": null
    }
   },
@@ -3303,6 +3418,52 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     -122.901245,
+     39.022118
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192987108",
+    "name": "Kuhlanapo East Tule",
+    "burn_date": "2026-11-04",
+    "agency": "Private Landowner",
+    "agency_group": "Private",
+    "burn_type": "Underburn",
+    "acres": 37.5,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-10-29T19:43:00-07:00",
+    "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -122.87364,
+     39.12255
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192987107",
+    "name": "Lakeshore West",
+    "burn_date": "2026-11-04",
+    "agency": "Private Landowner",
+    "agency_group": "Private",
+    "burn_type": "Underburn",
+    "acres": 26.3,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-10-29T19:43:00-07:00",
+    "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      -119.894,
      37.747
     ]
@@ -3326,6 +3487,29 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     -121.408626,
+     39.167374
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192987032",
+    "name": "(site 0-0) M60",
+    "burn_date": "2026-11-05",
+    "agency": "Beale Air Force Base",
+    "agency_group": "Private",
+    "burn_type": "Underburn",
+    "acres": 12.0,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-10-29T16:57:00-07:00",
+    "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      -122.235473,
      40.185756
     ]
@@ -3341,6 +3525,52 @@
     "piles": null,
     "status": "Pre-Planned",
     "planned_on": "2026-10-27T09:21:00-07:00",
+    "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -122.901245,
+     39.022118
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192987109",
+    "name": "Kuhlanapo East Tule",
+    "burn_date": "2026-11-05",
+    "agency": "Private Landowner",
+    "agency_group": "Private",
+    "burn_type": "Underburn",
+    "acres": 37.5,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-10-29T19:43:00-07:00",
+    "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -122.91386,
+     39.14464
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192987110",
+    "name": "Unit 3: Tule Unit",
+    "burn_date": "2026-11-05",
+    "agency": "Private Landowner",
+    "agency_group": "Private",
+    "burn_type": "Underburn",
+    "acres": 13.2,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-10-29T19:43:00-07:00",
     "approved_on": null
    }
   }
