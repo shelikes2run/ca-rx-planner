@@ -198,29 +198,6 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -122.53187,
-     38.346887
-    ]
-   },
-   "properties": {
-    "pfirs_id": "192984988",
-    "name": "Fern Lake Meadow",
-    "burn_date": "2026-10-30",
-    "agency": "California State Parks",
-    "agency_group": "CA Parks",
-    "burn_type": "Underburn",
-    "acres": 17.0,
-    "piles": null,
-    "status": "Approved",
-    "planned_on": "2026-10-28T14:03:00-07:00",
-    "approved_on": "2026-10-30T07:28:00-07:00"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
      -120.44481,
      39.26164
     ]
@@ -301,9 +278,9 @@
     "agency": "US Forest Service",
     "agency_group": "USFS",
     "burn_type": "Hand Pile",
-    "acres": 31.0,
+    "acres": 18.0,
     "piles": null,
-    "status": "Active",
+    "status": "Patrol",
     "planned_on": "2026-10-29T19:51:00-07:00",
     "approved_on": "2026-10-30T07:17:00-07:00"
    }
@@ -510,9 +487,9 @@
     "burn_type": "Underburn",
     "acres": 25.0,
     "piles": null,
-    "status": "Pre-Planned",
+    "status": "Approved",
     "planned_on": "2026-10-30T08:56:00-07:00",
-    "approved_on": null
+    "approved_on": "2026-10-31T07:29:00-07:00"
    }
   },
   {
@@ -1869,6 +1846,29 @@
     "piles": null,
     "status": "Pre-Planned",
     "planned_on": "2026-10-30T15:12:00-07:00",
+    "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -122.538883,
+     40.41694
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192988521",
+    "name": "Unit 13",
+    "burn_date": "2026-11-03",
+    "agency": "CAL FIRE",
+    "agency_group": "CAL FIRE",
+    "burn_type": "Underburn",
+    "acres": 100.0,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-10-31T10:32:00-07:00",
     "approved_on": null
    }
   },
