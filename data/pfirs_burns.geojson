@@ -5,7 +5,7 @@
   "source_url": "https://ssl.arb.ca.gov/pfirs/index.php?submit=Map+Page",
   "date_begin": "2026-10-30",
   "date_end": "2026-11-07",
-  "count": 102,
+  "count": 103,
   "note": "Planned and approved ignitions as published by PFIRS. Status can change through the day; confirm in PFIRS."
  },
  "features": [
@@ -605,6 +605,29 @@
     "status": "Pre-Planned",
     "planned_on": "2026-10-30T20:01:00-07:00",
     "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -122.419515,
+     41.380083
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192960164",
+    "name": "Brennan SLT",
+    "burn_date": "2026-10-31",
+    "agency": "Cross Contour, LLC",
+    "agency_group": "Private",
+    "burn_type": "Underburn",
+    "acres": 9.0,
+    "piles": null,
+    "status": "Completed",
+    "planned_on": "2026-10-14T14:03:00-07:00",
+    "approved_on": "2026-10-15T16:11:00-07:00"
    }
   },
   {
