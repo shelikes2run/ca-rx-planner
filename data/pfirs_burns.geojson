@@ -5,7 +5,7 @@
   "source_url": "https://ssl.arb.ca.gov/pfirs/index.php?submit=Map+Page",
   "date_begin": "2026-10-31",
   "date_end": "2026-11-08",
-  "count": 85,
+  "count": 94,
   "note": "Planned and approved ignitions as published by PFIRS. Status can change through the day; confirm in PFIRS."
  },
  "features": [
@@ -416,9 +416,9 @@
     "agency": "Private Landowner",
     "agency_group": "Private",
     "burn_type": "Hand Pile",
-    "acres": 10.0,
+    "acres": 3.0,
     "piles": null,
-    "status": "Approved",
+    "status": "Completed",
     "planned_on": "2026-10-29T14:38:00-07:00",
     "approved_on": "2026-10-30T14:33:00-07:00"
    }
@@ -865,6 +865,75 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     -120.014,
+     38.4252
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192989181",
+    "name": "18EV292",
+    "burn_date": "2026-11-02",
+    "agency": "US Forest Service",
+    "agency_group": "USFS",
+    "burn_type": "Hand Pile",
+    "acres": 0.6,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-11-01T13:57:00-08:00",
+    "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -119.42752,
+     37.23697
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192989119",
+    "name": "2026-Incline",
+    "burn_date": "2026-11-02",
+    "agency": "Private Landowner",
+    "agency_group": "Private",
+    "burn_type": "Hand Pile",
+    "acres": 842.0,
+    "piles": null,
+    "status": "Approved",
+    "planned_on": "2026-11-01T13:07:00-08:00",
+    "approved_on": "2026-11-01T13:07:00-08:00"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -119.781998,
+     36.876141
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192989110",
+    "name": "2026-Jenson/Jenco",
+    "burn_date": "2026-11-02",
+    "agency": "BurnBot",
+    "agency_group": "Private",
+    "burn_type": "Underburn",
+    "acres": 3.0,
+    "piles": null,
+    "status": "Approved",
+    "planned_on": "2026-11-01T13:03:00-08:00",
+    "approved_on": "2026-11-01T13:03:00-08:00"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      -120.601761,
      35.059675
     ]
@@ -881,6 +950,75 @@
     "status": "Approved",
     "planned_on": "2026-10-29T15:25:00-07:00",
     "approved_on": "2026-10-30T09:07:00-07:00"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -121.244353,
+     40.292111
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192989169",
+    "name": "Admin Piles Plumas County",
+    "burn_date": "2026-11-02",
+    "agency": "US Forest Service",
+    "agency_group": "USFS",
+    "burn_type": "Hand Pile",
+    "acres": 5.0,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-11-01T13:39:00-08:00",
+    "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -120.3082,
+     38.2575
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192989186",
+    "name": "Ben Smith",
+    "burn_date": "2026-11-02",
+    "agency": "US Forest Service",
+    "agency_group": "USFS",
+    "burn_type": "Machine Pile",
+    "acres": 304.79,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-11-01T13:57:00-08:00",
+    "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -120.1431,
+     38.4425
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192989184",
+    "name": "Cabbage TS",
+    "burn_date": "2026-11-02",
+    "agency": "US Forest Service",
+    "agency_group": "USFS",
+    "burn_type": "Hand Pile",
+    "acres": 908.96,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-11-01T13:57:00-08:00",
+    "approved_on": null
    }
   },
   {
@@ -980,6 +1118,29 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     -120.3675,
+     38.4322
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192989185",
+    "name": "Hemlock TS",
+    "burn_date": "2026-11-02",
+    "agency": "US Forest Service",
+    "agency_group": "USFS",
+    "burn_type": "Machine Pile",
+    "acres": 330.48,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-11-01T13:57:00-08:00",
+    "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      -120.44481,
      39.26164
     ]
@@ -1003,6 +1164,52 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     -120.3098,
+     38.2317
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192989187",
+    "name": "Mckays",
+    "burn_date": "2026-11-02",
+    "agency": "US Forest Service",
+    "agency_group": "USFS",
+    "burn_type": "Machine Pile",
+    "acres": 610.66,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-11-01T13:57:00-08:00",
+    "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -120.0059,
+     38.4094
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192989182",
+    "name": "Sapps Meadow",
+    "burn_date": "2026-11-02",
+    "agency": "US Forest Service",
+    "agency_group": "USFS",
+    "burn_type": "Hand Pile",
+    "acres": 4.79,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-11-01T13:57:00-08:00",
+    "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      -122.508,
      38.3736
     ]
@@ -1018,6 +1225,29 @@
     "piles": null,
     "status": "Pre-Planned",
     "planned_on": "2026-10-30T08:05:00-07:00",
+    "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -120.1135,
+     38.4294
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192989183",
+    "name": "Thompson TS",
+    "burn_date": "2026-11-02",
+    "agency": "US Forest Service",
+    "agency_group": "USFS",
+    "burn_type": "Machine Pile",
+    "acres": 30.0,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-11-01T13:57:00-08:00",
     "approved_on": null
    }
   },
@@ -1386,29 +1616,6 @@
     "piles": null,
     "status": "Pre-Planned",
     "planned_on": "2026-10-29T19:43:00-07:00",
-    "approved_on": null
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -117.18111,
-     34.27944
-    ]
-   },
-   "properties": {
-    "pfirs_id": "192989029",
-    "name": "North Arrowhead",
-    "burn_date": "2026-11-03",
-    "agency": "US Forest Service",
-    "agency_group": "USFS",
-    "burn_type": "Hand Pile",
-    "acres": 133.5,
-    "piles": null,
-    "status": "Pre-Planned",
-    "planned_on": "2026-11-01T10:53:00-08:00",
     "approved_on": null
    }
   },
