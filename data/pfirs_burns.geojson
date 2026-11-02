@@ -5,33 +5,10 @@
   "source_url": "https://ssl.arb.ca.gov/pfirs/index.php?submit=Map+Page",
   "date_begin": "2026-11-01",
   "date_end": "2026-11-09",
-  "count": 71,
+  "count": 90,
   "note": "Planned and approved ignitions as published by PFIRS. Status can change through the day; confirm in PFIRS."
  },
  "features": [
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -121.244353,
-     40.292111
-    ]
-   },
-   "properties": {
-    "pfirs_id": "192988783",
-    "name": "Admin Piles Plumas County",
-    "burn_date": "2026-11-01",
-    "agency": "US Forest Service",
-    "agency_group": "USFS",
-    "burn_type": "Hand Pile",
-    "acres": 10.0,
-    "piles": null,
-    "status": "Pre-Planned",
-    "planned_on": "2026-10-31T15:18:00-07:00",
-    "approved_on": null
-   }
-  },
   {
    "type": "Feature",
    "geometry": {
@@ -53,29 +30,6 @@
     "status": "Approved",
     "planned_on": "2026-10-27T09:21:00-07:00",
     "approved_on": "2026-10-30T14:14:00-07:00"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -122.03574,
-     40.314832
-    ]
-   },
-   "properties": {
-    "pfirs_id": "192986909",
-    "name": "Highway 36E- Piles",
-    "burn_date": "2026-11-01",
-    "agency": "CAL FIRE",
-    "agency_group": "CAL FIRE",
-    "burn_type": "Hand Pile",
-    "acres": 1.0,
-    "piles": null,
-    "status": "Approved",
-    "planned_on": "2026-10-29T15:50:00-07:00",
-    "approved_on": "2026-10-30T14:22:00-07:00"
    }
   },
   {
@@ -280,9 +234,9 @@
     "burn_type": "Hand Pile",
     "acres": 0.6,
     "piles": null,
-    "status": "Pre-Planned",
+    "status": "Approved",
     "planned_on": "2026-11-01T13:57:00-08:00",
-    "approved_on": null
+    "approved_on": "2026-11-02T09:52:00-08:00"
    }
   },
   {
@@ -364,6 +318,29 @@
     ]
    },
    "properties": {
+    "pfirs_id": "192988783",
+    "name": "Admin Piles Plumas County",
+    "burn_date": "2026-11-02",
+    "agency": "US Forest Service",
+    "agency_group": "USFS",
+    "burn_type": "Hand Pile",
+    "acres": 10.0,
+    "piles": null,
+    "status": "Approved",
+    "planned_on": "2026-10-31T15:18:00-07:00",
+    "approved_on": "2026-11-02T08:05:00-08:00"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -121.244353,
+     40.292111
+    ]
+   },
+   "properties": {
     "pfirs_id": "192989169",
     "name": "Admin Piles Plumas County",
     "burn_date": "2026-11-02",
@@ -395,9 +372,9 @@
     "burn_type": "Machine Pile",
     "acres": 304.79,
     "piles": null,
-    "status": "Pre-Planned",
+    "status": "Approved",
     "planned_on": "2026-11-01T13:57:00-08:00",
-    "approved_on": null
+    "approved_on": "2026-11-02T10:12:00-08:00"
    }
   },
   {
@@ -418,9 +395,9 @@
     "burn_type": "Hand Pile",
     "acres": 908.96,
     "piles": null,
-    "status": "Pre-Planned",
+    "status": "Approved",
     "planned_on": "2026-11-01T13:57:00-08:00",
-    "approved_on": null
+    "approved_on": "2026-11-02T09:59:00-08:00"
    }
   },
   {
@@ -441,9 +418,32 @@
     "burn_type": "Underburn",
     "acres": 14.95,
     "piles": null,
-    "status": "Pre-Planned",
+    "status": "Approved",
     "planned_on": "2026-10-27T09:21:00-07:00",
-    "approved_on": null
+    "approved_on": "2026-11-02T10:02:00-08:00"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -120.701285,
+     40.421921
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192989310",
+    "name": "Eagle Lake District Office Admin Hand Piles",
+    "burn_date": "2026-11-02",
+    "agency": "US Forest Service",
+    "agency_group": "USFS",
+    "burn_type": "Hand Pile",
+    "acres": 25.0,
+    "piles": null,
+    "status": "Approved",
+    "planned_on": "2026-11-02T08:16:00-08:00",
+    "approved_on": "2026-11-02T11:19:00-08:00"
    }
   },
   {
@@ -464,32 +464,9 @@
     "burn_type": "Underburn",
     "acres": 20.0,
     "piles": null,
-    "status": "Approved",
+    "status": "Active",
     "planned_on": "2026-10-29T15:18:00-07:00",
     "approved_on": "2026-10-30T09:06:00-07:00"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -122.93847,
-     40.759982
-    ]
-   },
-   "properties": {
-    "pfirs_id": "192986719",
-    "name": "Five Cent",
-    "burn_date": "2026-11-02",
-    "agency": "US Forest Service",
-    "agency_group": "USFS",
-    "burn_type": "Underburn",
-    "acres": 47.0,
-    "piles": null,
-    "status": "Approved",
-    "planned_on": "2026-10-29T15:18:00-07:00",
-    "approved_on": "2026-10-30T09:05:00-07:00"
    }
   },
   {
@@ -510,9 +487,32 @@
     "burn_type": "Machine Pile",
     "acres": 330.48,
     "piles": null,
-    "status": "Pre-Planned",
+    "status": "Approved",
     "planned_on": "2026-11-01T13:57:00-08:00",
-    "approved_on": null
+    "approved_on": "2026-11-02T10:08:00-08:00"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -122.03574,
+     40.314832
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192989382",
+    "name": "Highway 36E- Piles",
+    "burn_date": "2026-11-02",
+    "agency": "CAL FIRE",
+    "agency_group": "CAL FIRE",
+    "burn_type": "Hand Pile",
+    "acres": 2.0,
+    "piles": null,
+    "status": "Active",
+    "planned_on": "2026-11-02T08:18:00-08:00",
+    "approved_on": "2026-11-02T09:59:00-08:00"
    }
   },
   {
@@ -556,9 +556,9 @@
     "burn_type": "Underburn",
     "acres": 13.9,
     "piles": null,
-    "status": "Pre-Planned",
+    "status": "Approved",
     "planned_on": "2026-11-02T07:29:00-08:00",
-    "approved_on": null
+    "approved_on": "2026-11-02T10:05:00-08:00"
    }
   },
   {
@@ -579,9 +579,9 @@
     "burn_type": "Underburn",
     "acres": 26.3,
     "piles": null,
-    "status": "Pre-Planned",
+    "status": "Approved",
     "planned_on": "2026-11-02T07:29:00-08:00",
-    "approved_on": null
+    "approved_on": "2026-11-02T10:02:00-08:00"
    }
   },
   {
@@ -602,9 +602,32 @@
     "burn_type": "Machine Pile",
     "acres": 610.66,
     "piles": null,
-    "status": "Pre-Planned",
+    "status": "Approved",
     "planned_on": "2026-11-01T13:57:00-08:00",
-    "approved_on": null
+    "approved_on": "2026-11-02T10:16:00-08:00"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -124.035423,
+     40.34362
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192989481",
+    "name": "Pole Line Woodlands Pile",
+    "burn_date": "2026-11-02",
+    "agency": "California State Parks",
+    "agency_group": "CA Parks",
+    "burn_type": "Landing Pile",
+    "acres": 1.0,
+    "piles": null,
+    "status": "Approved",
+    "planned_on": "2026-11-02T09:34:00-08:00",
+    "approved_on": "2026-11-02T09:57:00-08:00"
    }
   },
   {
@@ -625,9 +648,9 @@
     "burn_type": "Hand Pile",
     "acres": 4.79,
     "piles": null,
-    "status": "Pre-Planned",
+    "status": "Approved",
     "planned_on": "2026-11-01T13:57:00-08:00",
-    "approved_on": null
+    "approved_on": "2026-11-02T09:54:00-08:00"
    }
   },
   {
@@ -671,9 +694,9 @@
     "burn_type": "Machine Pile",
     "acres": 30.0,
     "piles": null,
-    "status": "Pre-Planned",
+    "status": "Approved",
     "planned_on": "2026-11-01T13:57:00-08:00",
-    "approved_on": null
+    "approved_on": "2026-11-02T09:55:00-08:00"
    }
   },
   {
@@ -740,7 +763,7 @@
     "burn_type": "Underburn",
     "acres": 200.0,
     "piles": null,
-    "status": "Approved",
+    "status": "Active",
     "planned_on": "2026-10-28T17:18:00-07:00",
     "approved_on": "2026-10-30T14:33:00-07:00"
    }
@@ -888,6 +911,52 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     -121.244353,
+     40.292111
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192990097",
+    "name": "Admin Piles Plumas County",
+    "burn_date": "2026-11-03",
+    "agency": "US Forest Service",
+    "agency_group": "USFS",
+    "burn_type": "Hand Pile",
+    "acres": 5.0,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-11-02T15:10:00-08:00",
+    "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     0.0,
+     0.0
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192989702",
+    "name": "BH102",
+    "burn_date": "2026-11-03",
+    "agency": "US Forest Service",
+    "agency_group": "USFS",
+    "burn_type": "Hand Pile",
+    "acres": 10.0,
+    "piles": null,
+    "status": "Approved",
+    "planned_on": "2026-11-02T12:30:00-08:00",
+    "approved_on": "2026-11-02T14:20:00-08:00"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      -123.150523,
      40.581309
     ]
@@ -901,9 +970,9 @@
     "burn_type": "Underburn",
     "acres": 100.0,
     "piles": null,
-    "status": "Pre-Planned",
+    "status": "Approved",
     "planned_on": "2026-10-31T12:50:00-07:00",
-    "approved_on": null
+    "approved_on": "2026-11-02T13:09:00-08:00"
    }
   },
   {
@@ -980,6 +1049,52 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     -122.2519,
+     41.3344
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192989627",
+    "name": "Gateway",
+    "burn_date": "2026-11-03",
+    "agency": "US Forest Service",
+    "agency_group": "USFS",
+    "burn_type": "Hand Pile",
+    "acres": 10.0,
+    "piles": null,
+    "status": "Approved",
+    "planned_on": "2026-11-02T11:27:00-08:00",
+    "approved_on": "2026-11-02T13:30:00-08:00"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -122.03574,
+     40.314832
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192989383",
+    "name": "Highway 36E- Piles",
+    "burn_date": "2026-11-03",
+    "agency": "CAL FIRE",
+    "agency_group": "CAL FIRE",
+    "burn_type": "Hand Pile",
+    "acres": 2.0,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-11-02T08:18:00-08:00",
+    "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      -121.220226,
      41.123203
     ]
@@ -993,8 +1108,31 @@
     "burn_type": "Underburn",
     "acres": 27.0,
     "piles": null,
-    "status": "Pre-Planned",
+    "status": "Approved",
     "planned_on": "2026-10-30T09:34:00-07:00",
+    "approved_on": "2026-11-02T11:21:00-08:00"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -123.5997,
+     40.9895
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192990085",
+    "name": "LT 102",
+    "burn_date": "2026-11-03",
+    "agency": "US Forest Service",
+    "agency_group": "USFS",
+    "burn_type": "Landing Pile",
+    "acres": 30.0,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-11-02T15:02:00-08:00",
     "approved_on": null
    }
   },
@@ -1041,6 +1179,98 @@
     "piles": null,
     "status": "Pre-Planned",
     "planned_on": "2026-10-29T19:43:00-07:00",
+    "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -121.988649,
+     41.66692
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192990090",
+    "name": "Orr",
+    "burn_date": "2026-11-03",
+    "agency": "US Forest Service",
+    "agency_group": "USFS",
+    "burn_type": "Unknown",
+    "acres": 50.0,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-11-02T15:04:00-08:00",
+    "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -120.67042,
+     39.766519
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192989534",
+    "name": "Plumas Eureka",
+    "burn_date": "2026-11-03",
+    "agency": "US Forest Service",
+    "agency_group": "USFS",
+    "burn_type": "Hand Pile",
+    "acres": 80.0,
+    "piles": null,
+    "status": "Active",
+    "planned_on": "2026-11-02T10:10:00-08:00",
+    "approved_on": "2026-11-02T11:17:00-08:00"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -12032860.0,
+     3929738.0
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192989635",
+    "name": "Sugar Bowl Burn Piles",
+    "burn_date": "2026-11-03",
+    "agency": "Sugar Bowl",
+    "agency_group": "Private",
+    "burn_type": "Hand Pile",
+    "acres": 4.0,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-11-02T11:29:00-08:00",
+    "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -122.859287,
+     40.849369
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192989546",
+    "name": "Trinity Camps Stoney Point",
+    "burn_date": "2026-11-03",
+    "agency": "US Forest Service",
+    "agency_group": "USFS",
+    "burn_type": "Landing Pile",
+    "acres": 31.0,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-11-02T10:22:00-08:00",
     "approved_on": null
    }
   },
@@ -1164,6 +1394,29 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     -121.76993,
+     39.863763
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192989660",
+    "name": "14",
+    "burn_date": "2026-11-04",
+    "agency": "CAL FIRE",
+    "agency_group": "CAL FIRE",
+    "burn_type": "Underburn",
+    "acres": 165.0,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-11-02T11:56:00-08:00",
+    "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      -120.087,
      37.825
     ]
@@ -1223,9 +1476,9 @@
     "burn_type": "Underburn",
     "acres": 73.0,
     "piles": null,
-    "status": "Pre-Planned",
+    "status": "Approved",
     "planned_on": "2026-10-29T10:21:00-07:00",
-    "approved_on": null
+    "approved_on": "2026-11-02T10:21:00-08:00"
    }
   },
   {
@@ -1246,9 +1499,9 @@
     "burn_type": "Underburn",
     "acres": 30.0,
     "piles": null,
-    "status": "Pre-Planned",
+    "status": "Approved",
     "planned_on": "2026-10-29T10:21:00-07:00",
-    "approved_on": null
+    "approved_on": "2026-11-02T09:59:00-08:00"
    }
   },
   {
@@ -1294,6 +1547,29 @@
     "piles": null,
     "status": "Pre-Planned",
     "planned_on": "2026-10-27T09:21:00-07:00",
+    "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -122.03574,
+     40.314832
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192989384",
+    "name": "Highway 36E- Piles",
+    "burn_date": "2026-11-04",
+    "agency": "CAL FIRE",
+    "agency_group": "CAL FIRE",
+    "burn_type": "Hand Pile",
+    "acres": 2.0,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-11-02T08:18:00-08:00",
     "approved_on": null
    }
   },
@@ -1361,9 +1637,9 @@
     "burn_type": "Underburn",
     "acres": 480.0,
     "piles": null,
-    "status": "Pre-Planned",
+    "status": "Approved",
     "planned_on": "2026-10-29T10:21:00-07:00",
-    "approved_on": null
+    "approved_on": "2026-11-02T09:57:00-08:00"
    }
   },
   {
@@ -1387,6 +1663,29 @@
     "status": "Approved",
     "planned_on": "2026-10-29T16:57:00-07:00",
     "approved_on": "2026-10-30T08:28:00-07:00"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -121.769372,
+     39.857213
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192989664",
+    "name": "15",
+    "burn_date": "2026-11-05",
+    "agency": "CAL FIRE",
+    "agency_group": "CAL FIRE",
+    "burn_type": "Underburn",
+    "acres": 153.0,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-11-02T11:56:00-08:00",
+    "approved_on": null
    }
   },
   {
@@ -1440,6 +1739,29 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     -122.03574,
+     40.314832
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192989385",
+    "name": "Highway 36E- Piles",
+    "burn_date": "2026-11-05",
+    "agency": "CAL FIRE",
+    "agency_group": "CAL FIRE",
+    "burn_type": "Hand Pile",
+    "acres": 2.0,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-11-02T08:18:00-08:00",
+    "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      -122.901245,
      39.022118
     ]
@@ -1463,6 +1785,29 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     -117.18111,
+     34.27944
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192989449",
+    "name": "North Arrowhead",
+    "burn_date": "2026-11-05",
+    "agency": "US Forest Service",
+    "agency_group": "USFS",
+    "burn_type": "Hand Pile",
+    "acres": 133.5,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-11-02T08:47:00-08:00",
+    "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      -122.91386,
      39.14464
     ]
@@ -1478,6 +1823,29 @@
     "piles": null,
     "status": "Pre-Planned",
     "planned_on": "2026-10-29T19:43:00-07:00",
+    "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -121.768333,
+     39.849096
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192989667",
+    "name": "16",
+    "burn_date": "2026-11-06",
+    "agency": "CAL FIRE",
+    "agency_group": "CAL FIRE",
+    "burn_type": "Underburn",
+    "acres": 342.0,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-11-02T11:56:00-08:00",
     "approved_on": null
    }
   },
@@ -1532,6 +1900,29 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     -122.03574,
+     40.314832
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192989386",
+    "name": "Highway 36E- Piles",
+    "burn_date": "2026-11-06",
+    "agency": "CAL FIRE",
+    "agency_group": "CAL FIRE",
+    "burn_type": "Hand Pile",
+    "acres": 2.0,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-11-02T08:18:00-08:00",
+    "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      -122.91386,
      39.14464
     ]
@@ -1578,6 +1969,29 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     -122.03574,
+     40.314832
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192989387",
+    "name": "Highway 36E- Piles",
+    "burn_date": "2026-11-07",
+    "agency": "CAL FIRE",
+    "agency_group": "CAL FIRE",
+    "burn_type": "Hand Pile",
+    "acres": 2.0,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-11-02T08:18:00-08:00",
+    "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      -122.235473,
      40.185756
     ]
@@ -1593,6 +2007,29 @@
     "piles": null,
     "status": "Pre-Planned",
     "planned_on": "2026-10-27T09:21:00-07:00",
+    "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -122.03574,
+     40.314832
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192989388",
+    "name": "Highway 36E- Piles",
+    "burn_date": "2026-11-08",
+    "agency": "CAL FIRE",
+    "agency_group": "CAL FIRE",
+    "burn_type": "Hand Pile",
+    "acres": 2.0,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-11-02T08:18:00-08:00",
     "approved_on": null
    }
   },
