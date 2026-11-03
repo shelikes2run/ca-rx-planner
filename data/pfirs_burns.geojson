@@ -3,219 +3,12 @@
  "metadata": {
   "source": "CARB PFIRS public map page",
   "source_url": "https://ssl.arb.ca.gov/pfirs/index.php?submit=Map+Page",
-  "date_begin": "2026-11-01",
-  "date_end": "2026-11-09",
-  "count": 96,
+  "date_begin": "2026-11-02",
+  "date_end": "2026-11-10",
+  "count": 91,
   "note": "Planned and approved ignitions as published by PFIRS. Status can change through the day; confirm in PFIRS."
  },
  "features": [
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -122.235473,
-     40.185756
-    ]
-   },
-   "properties": {
-    "pfirs_id": "192982646",
-    "name": "Dog Island Park/ Samuel Ayes-Fuels Reduction Project",
-    "burn_date": "2026-11-01",
-    "agency": "Red Bluff Fire Department",
-    "agency_group": "Local Fire",
-    "burn_type": "Underburn",
-    "acres": 14.95,
-    "piles": null,
-    "status": "Approved",
-    "planned_on": "2026-10-27T09:21:00-07:00",
-    "approved_on": "2026-10-30T14:14:00-07:00"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -120.44481,
-     39.26164
-    ]
-   },
-   "properties": {
-    "pfirs_id": "192986649",
-    "name": "Jones CFIP 2026",
-    "burn_date": "2026-11-01",
-    "agency": "Private Landowner",
-    "agency_group": "Private",
-    "burn_type": "Hand Pile",
-    "acres": 10.0,
-    "piles": null,
-    "status": "Completed",
-    "planned_on": "2026-10-29T14:38:00-07:00",
-    "approved_on": "2026-10-31T15:43:00-07:00"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -123.18266,
-     39.18801
-    ]
-   },
-   "properties": {
-    "pfirs_id": "192987932",
-    "name": "Rafello Dr SMP 24-19 Piles",
-    "burn_date": "2026-11-01",
-    "agency": "Private Landowner",
-    "agency_group": "Private",
-    "burn_type": "Hand Pile",
-    "acres": 3.0,
-    "piles": null,
-    "status": "Approved",
-    "planned_on": "2026-10-30T15:46:00-07:00",
-    "approved_on": "2026-10-30T15:48:00-07:00"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -123.569284,
-     39.770278
-    ]
-   },
-   "properties": {
-    "pfirs_id": "192982889",
-    "name": "Rattlesnake Summit SMP 25-31 Piles",
-    "burn_date": "2026-11-01",
-    "agency": "Private Landowner",
-    "agency_group": "Private",
-    "burn_type": "Hand Pile",
-    "acres": 10.0,
-    "piles": null,
-    "status": "Approved",
-    "planned_on": "2026-10-27T10:05:00-07:00",
-    "approved_on": "2026-10-30T17:45:00-07:00"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -123.48694,
-     39.67767
-    ]
-   },
-   "properties": {
-    "pfirs_id": "192982788",
-    "name": "Torchbear Laytonville Unified SMP 25-27 Piles",
-    "burn_date": "2026-11-01",
-    "agency": "Private Landowner",
-    "agency_group": "Private",
-    "burn_type": "Hand Pile",
-    "acres": 10.0,
-    "piles": null,
-    "status": "Approved",
-    "planned_on": "2026-10-27T09:49:00-07:00",
-    "approved_on": "2026-10-30T15:56:00-07:00"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -123.59202,
-     39.76106
-    ]
-   },
-   "properties": {
-    "pfirs_id": "192981659",
-    "name": "Torchbearr Brown SMP 24-26 Broadcast",
-    "burn_date": "2026-11-01",
-    "agency": "Private Landowner",
-    "agency_group": "Private",
-    "burn_type": "Underburn",
-    "acres": 10.0,
-    "piles": null,
-    "status": "Approved",
-    "planned_on": "2026-10-26T16:24:00-07:00",
-    "approved_on": "2026-10-30T15:55:00-07:00"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -123.48893,
-     39.67833
-    ]
-   },
-   "properties": {
-    "pfirs_id": "192983341",
-    "name": "Torchbearr Laytonville SMP 25-30 Piles",
-    "burn_date": "2026-11-01",
-    "agency": "Private Landowner",
-    "agency_group": "Private",
-    "burn_type": "Hand Pile",
-    "acres": 8.0,
-    "piles": null,
-    "status": "Approved",
-    "planned_on": "2026-10-27T13:17:00-07:00",
-    "approved_on": "2026-10-30T15:49:00-07:00"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -123.50734,
-     39.74318
-    ]
-   },
-   "properties": {
-    "pfirs_id": "192983310",
-    "name": "Torchbearr Lewis Creek SMP 25-29 Piles",
-    "burn_date": "2026-11-01",
-    "agency": "Private Landowner",
-    "agency_group": "Private",
-    "burn_type": "Hand Pile",
-    "acres": 20.0,
-    "piles": null,
-    "status": "Approved",
-    "planned_on": "2026-10-27T13:15:00-07:00",
-    "approved_on": "2026-10-30T17:10:00-07:00"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -123.55613,
-     39.77513
-    ]
-   },
-   "properties": {
-    "pfirs_id": "192981705",
-    "name": "Torchbearr Vassar SMP 24-25 Broadcast",
-    "burn_date": "2026-11-01",
-    "agency": "Private Landowner",
-    "agency_group": "Private",
-    "burn_type": "Underburn",
-    "acres": 10.0,
-    "piles": null,
-    "status": "Approved",
-    "planned_on": "2026-10-26T16:26:00-07:00",
-    "approved_on": "2026-10-30T16:05:00-07:00"
-   }
-  },
   {
    "type": "Feature",
    "geometry": {
@@ -878,9 +671,9 @@
     "burn_type": "Underburn",
     "acres": 2.0,
     "piles": null,
-    "status": "Pre-Planned",
+    "status": "Approved",
     "planned_on": "2026-11-02T20:04:00-08:00",
-    "approved_on": null
+    "approved_on": "2026-11-03T07:40:00-08:00"
    }
   },
   {
@@ -1062,7 +855,7 @@
     "burn_type": "Hand Pile",
     "acres": 40.0,
     "piles": null,
-    "status": "Approved",
+    "status": "Active",
     "planned_on": "2026-11-02T15:47:00-08:00",
     "approved_on": "2026-11-02T16:43:00-08:00"
    }
@@ -1249,6 +1042,29 @@
     "status": "Pre-Planned",
     "planned_on": "2026-10-29T19:43:00-07:00",
     "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -123.256797,
+     38.663734
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192986228",
+    "name": "Lower Hill 2022",
+    "burn_date": "2026-11-03",
+    "agency": "Private Landowner",
+    "agency_group": "Private",
+    "burn_type": "Underburn",
+    "acres": 4.0,
+    "piles": null,
+    "status": "Completed",
+    "planned_on": "2026-10-29T09:23:00-07:00",
+    "approved_on": "2026-10-30T13:26:00-07:00"
    }
   },
   {
@@ -1453,9 +1269,9 @@
     "burn_type": "Underburn",
     "acres": 5.0,
     "piles": null,
-    "status": "Pre-Planned",
+    "status": "Approved",
     "planned_on": "2026-11-02T20:03:00-08:00",
-    "approved_on": null
+    "approved_on": "2026-11-03T07:44:00-08:00"
    }
   },
   {
@@ -1525,6 +1341,29 @@
     "status": "Approved",
     "planned_on": "2026-10-29T13:31:00-07:00",
     "approved_on": "2026-10-29T15:42:00-07:00"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -119.901,
+     37.865
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192990428",
+    "name": "1S19M",
+    "burn_date": "2026-11-04",
+    "agency": "US Forest Service",
+    "agency_group": "USFS",
+    "burn_type": "Machine Pile",
+    "acres": 21.0,
+    "piles": null,
+    "status": "Approved",
+    "planned_on": "2026-11-03T07:38:00-08:00",
+    "approved_on": "2026-11-03T08:11:00-08:00"
    }
   },
   {
@@ -2214,6 +2053,52 @@
     "piles": null,
     "status": "Pre-Planned",
     "planned_on": "2026-11-02T07:15:00-08:00",
+    "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -119.37193,
+     37.05787
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192956098",
+    "name": "4 Lanes Unit 3",
+    "burn_date": "2026-11-10",
+    "agency": "Fresno County",
+    "agency_group": "Private",
+    "burn_type": "Hand Pile",
+    "acres": 6.0,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-10-12T08:33:00-07:00",
+    "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -122.235473,
+     40.185756
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192982655",
+    "name": "Dog Island Park/ Samuel Ayes-Fuels Reduction Project",
+    "burn_date": "2026-11-10",
+    "agency": "Red Bluff Fire Department",
+    "agency_group": "Local Fire",
+    "burn_type": "Underburn",
+    "acres": 14.95,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-10-27T09:21:00-07:00",
     "approved_on": null
    }
   }
