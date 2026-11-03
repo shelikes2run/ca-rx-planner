@@ -5,7 +5,7 @@
   "source_url": "https://ssl.arb.ca.gov/pfirs/index.php?submit=Map+Page",
   "date_begin": "2026-11-01",
   "date_end": "2026-11-09",
-  "count": 90,
+  "count": 96,
   "note": "Planned and approved ignitions as published by PFIRS. Status can change through the day; confirm in PFIRS."
  },
  "features": [
@@ -50,7 +50,7 @@
     "burn_type": "Hand Pile",
     "acres": 10.0,
     "piles": null,
-    "status": "Approved",
+    "status": "Completed",
     "planned_on": "2026-10-29T14:38:00-07:00",
     "approved_on": "2026-10-31T15:43:00-07:00"
    }
@@ -464,7 +464,7 @@
     "burn_type": "Underburn",
     "acres": 20.0,
     "piles": null,
-    "status": "Active",
+    "status": "Patrol",
     "planned_on": "2026-10-29T15:18:00-07:00",
     "approved_on": "2026-10-30T09:06:00-07:00"
    }
@@ -510,7 +510,7 @@
     "burn_type": "Hand Pile",
     "acres": 2.0,
     "piles": null,
-    "status": "Active",
+    "status": "Patrol",
     "planned_on": "2026-11-02T08:18:00-08:00",
     "approved_on": "2026-11-02T09:59:00-08:00"
    }
@@ -533,7 +533,7 @@
     "burn_type": "Hand Pile",
     "acres": 10.0,
     "piles": null,
-    "status": "Approved",
+    "status": "Patrol",
     "planned_on": "2026-10-29T14:38:00-07:00",
     "approved_on": "2026-11-01T18:15:00-08:00"
    }
@@ -704,29 +704,6 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -122.859287,
-     40.849369
-    ]
-   },
-   "properties": {
-    "pfirs_id": "192986732",
-    "name": "Trinity Camps Stoney Point",
-    "burn_date": "2026-11-02",
-    "agency": "US Forest Service",
-    "agency_group": "USFS",
-    "burn_type": "Landing Pile",
-    "acres": 31.0,
-    "piles": null,
-    "status": "Pre-Planned",
-    "planned_on": "2026-10-29T15:18:00-07:00",
-    "approved_on": null
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
      -120.97305,
      39.06715
     ]
@@ -888,6 +865,98 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     -121.645742,
+     39.632561
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192990389",
+    "name": "Wajim Kumbali Rx",
+    "burn_date": "2026-11-02",
+    "agency": "Other Tribe",
+    "agency_group": "Private",
+    "burn_type": "Underburn",
+    "acres": 2.0,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-11-02T20:04:00-08:00",
+    "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -119.42752,
+     37.23697
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192990169",
+    "name": "2026-Incline",
+    "burn_date": "2026-11-03",
+    "agency": "Private Landowner",
+    "agency_group": "Private",
+    "burn_type": "Hand Pile",
+    "acres": 842.0,
+    "piles": null,
+    "status": "Approved",
+    "planned_on": "2026-11-02T15:49:00-08:00",
+    "approved_on": "2026-11-02T15:49:00-08:00"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -120.846584,
+     37.283139
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192990141",
+    "name": "2026-West Bear Creek North",
+    "burn_date": "2026-11-03",
+    "agency": "US Fish and Wildlife Services",
+    "agency_group": "USFWS",
+    "burn_type": "Underburn",
+    "acres": 150.0,
+    "piles": null,
+    "status": "Approved",
+    "planned_on": "2026-11-02T15:36:00-08:00",
+    "approved_on": "2026-11-02T15:36:00-08:00"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -121.185465,
+     37.585534
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192990123",
+    "name": "2026-White Lake",
+    "burn_date": "2026-11-03",
+    "agency": "US Fish and Wildlife Services",
+    "agency_group": "USFWS",
+    "burn_type": "Underburn",
+    "acres": 316.0,
+    "piles": null,
+    "status": "Approved",
+    "planned_on": "2026-11-02T15:33:00-08:00",
+    "approved_on": "2026-11-02T15:33:00-08:00"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      -119.37193,
      37.05787
     ]
@@ -924,9 +993,9 @@
     "burn_type": "Hand Pile",
     "acres": 5.0,
     "piles": null,
-    "status": "Pre-Planned",
+    "status": "Approved",
     "planned_on": "2026-11-02T15:10:00-08:00",
-    "approved_on": null
+    "approved_on": "2026-11-02T16:16:00-08:00"
    }
   },
   {
@@ -980,6 +1049,29 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     -120.217416,
+     39.3098
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192990151",
+    "name": "Cabin Creek HPs",
+    "burn_date": "2026-11-03",
+    "agency": "US Forest Service",
+    "agency_group": "USFS",
+    "burn_type": "Hand Pile",
+    "acres": 40.0,
+    "piles": null,
+    "status": "Approved",
+    "planned_on": "2026-11-02T15:47:00-08:00",
+    "approved_on": "2026-11-02T16:43:00-08:00"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      -123.210901,
      39.721985
     ]
@@ -1018,29 +1110,6 @@
     "piles": null,
     "status": "Pre-Planned",
     "planned_on": "2026-10-27T09:21:00-07:00",
-    "approved_on": null
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -122.531816,
-     38.345259
-    ]
-   },
-   "properties": {
-    "pfirs_id": "192988979",
-    "name": "Fern Lake Understory",
-    "burn_date": "2026-11-03",
-    "agency": "California State Parks",
-    "agency_group": "CA Parks",
-    "burn_type": "Underburn",
-    "acres": 7.0,
-    "piles": null,
-    "status": "Pre-Planned",
-    "planned_on": "2026-11-01T08:59:00-08:00",
     "approved_on": null
    }
   },
@@ -1095,22 +1164,22 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -121.220226,
-     41.123203
+     -120.44481,
+     39.26164
     ]
    },
    "properties": {
-    "pfirs_id": "192987318",
-    "name": "Intermountain Camp RX",
+    "pfirs_id": "192990375",
+    "name": "Jones CFIP 2026",
     "burn_date": "2026-11-03",
-    "agency": "CAL FIRE",
-    "agency_group": "CAL FIRE",
-    "burn_type": "Underburn",
-    "acres": 27.0,
+    "agency": "Private Landowner",
+    "agency_group": "Private",
+    "burn_type": "Hand Pile",
+    "acres": 10.0,
     "piles": null,
-    "status": "Approved",
-    "planned_on": "2026-10-30T09:34:00-07:00",
-    "approved_on": "2026-11-02T11:21:00-08:00"
+    "status": "Pre-Planned",
+    "planned_on": "2026-11-02T19:23:00-08:00",
+    "approved_on": null
    }
   },
   {
@@ -1131,9 +1200,9 @@
     "burn_type": "Landing Pile",
     "acres": 30.0,
     "piles": null,
-    "status": "Pre-Planned",
+    "status": "Approved",
     "planned_on": "2026-11-02T15:02:00-08:00",
-    "approved_on": null
+    "approved_on": "2026-11-02T16:15:00-08:00"
    }
   },
   {
@@ -1246,9 +1315,9 @@
     "burn_type": "Hand Pile",
     "acres": 4.0,
     "piles": null,
-    "status": "Pre-Planned",
+    "status": "Approved",
     "planned_on": "2026-11-02T11:29:00-08:00",
-    "approved_on": null
+    "approved_on": "2026-11-02T16:42:00-08:00"
    }
   },
   {
@@ -1292,9 +1361,9 @@
     "burn_type": "Underburn",
     "acres": 25.0,
     "piles": null,
-    "status": "Pre-Planned",
+    "status": "Approved",
     "planned_on": "2026-10-30T15:12:00-07:00",
-    "approved_on": null
+    "approved_on": "2026-11-02T16:23:00-08:00"
    }
   },
   {
@@ -1315,9 +1384,9 @@
     "burn_type": "Underburn",
     "acres": 37.0,
     "piles": null,
-    "status": "Pre-Planned",
+    "status": "Approved",
     "planned_on": "2026-10-30T15:12:00-07:00",
-    "approved_on": null
+    "approved_on": "2026-11-02T16:30:00-08:00"
    }
   },
   {
@@ -1338,9 +1407,9 @@
     "burn_type": "Underburn",
     "acres": 100.0,
     "piles": null,
-    "status": "Pre-Planned",
+    "status": "Approved",
     "planned_on": "2026-10-31T10:32:00-07:00",
-    "approved_on": null
+    "approved_on": "2026-11-02T16:53:00-08:00"
    }
   },
   {
@@ -1361,8 +1430,31 @@
     "burn_type": "Underburn",
     "acres": 246.0,
     "piles": null,
-    "status": "Pre-Planned",
+    "status": "Approved",
     "planned_on": "2026-10-30T15:12:00-07:00",
+    "approved_on": "2026-11-02T16:59:00-08:00"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -121.645742,
+     39.632561
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192990384",
+    "name": "Wajim Kumbali Rx",
+    "burn_date": "2026-11-03",
+    "agency": "Other Tribe",
+    "agency_group": "Private",
+    "burn_type": "Underburn",
+    "acres": 5.0,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-11-02T20:03:00-08:00",
     "approved_on": null
    }
   },
@@ -1762,6 +1854,29 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     -121.220226,
+     41.123203
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192990396",
+    "name": "Intermountain Camp RX",
+    "burn_date": "2026-11-05",
+    "agency": "CAL FIRE",
+    "agency_group": "CAL FIRE",
+    "burn_type": "Underburn",
+    "acres": 27.0,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-11-02T20:34:00-08:00",
+    "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      -122.901245,
      39.022118
     ]
@@ -1915,6 +2030,29 @@
     "piles": null,
     "status": "Pre-Planned",
     "planned_on": "2026-11-02T08:18:00-08:00",
+    "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -122.538883,
+     40.41694
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192990131",
+    "name": "Unit 13",
+    "burn_date": "2026-11-06",
+    "agency": "CAL FIRE",
+    "agency_group": "CAL FIRE",
+    "burn_type": "Underburn",
+    "acres": 150.0,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-11-02T15:35:00-08:00",
     "approved_on": null
    }
   },
