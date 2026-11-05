@@ -3,564 +3,12 @@
  "metadata": {
   "source": "CARB PFIRS public map page",
   "source_url": "https://ssl.arb.ca.gov/pfirs/index.php?submit=Map+Page",
-  "date_begin": "2026-11-03",
-  "date_end": "2026-11-11",
-  "count": 116,
+  "date_begin": "2026-11-04",
+  "date_end": "2026-11-12",
+  "count": 95,
   "note": "Planned and approved ignitions as published by PFIRS. Status can change through the day; confirm in PFIRS."
  },
  "features": [
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -120.014,
-     38.4252
-    ]
-   },
-   "properties": {
-    "pfirs_id": "192989181",
-    "name": "18EV292",
-    "burn_date": "2026-11-03",
-    "agency": "US Forest Service",
-    "agency_group": "USFS",
-    "burn_type": "Hand Pile",
-    "acres": 0.6,
-    "piles": null,
-    "status": "Active",
-    "planned_on": "2026-11-01T13:57:00-08:00",
-    "approved_on": "2026-11-02T09:52:00-08:00"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -119.42752,
-     37.23697
-    ]
-   },
-   "properties": {
-    "pfirs_id": "192990169",
-    "name": "2026-Incline",
-    "burn_date": "2026-11-03",
-    "agency": "Private Landowner",
-    "agency_group": "Private",
-    "burn_type": "Hand Pile",
-    "acres": 842.0,
-    "piles": null,
-    "status": "Approved",
-    "planned_on": "2026-11-02T15:49:00-08:00",
-    "approved_on": "2026-11-02T15:49:00-08:00"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -120.846584,
-     37.283139
-    ]
-   },
-   "properties": {
-    "pfirs_id": "192990141",
-    "name": "2026-West Bear Creek North",
-    "burn_date": "2026-11-03",
-    "agency": "US Fish and Wildlife Services",
-    "agency_group": "USFWS",
-    "burn_type": "Underburn",
-    "acres": 150.0,
-    "piles": null,
-    "status": "Approved",
-    "planned_on": "2026-11-02T15:36:00-08:00",
-    "approved_on": "2026-11-02T15:36:00-08:00"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -121.185465,
-     37.585534
-    ]
-   },
-   "properties": {
-    "pfirs_id": "192990123",
-    "name": "2026-White Lake",
-    "burn_date": "2026-11-03",
-    "agency": "US Fish and Wildlife Services",
-    "agency_group": "USFWS",
-    "burn_type": "Underburn",
-    "acres": 316.0,
-    "piles": null,
-    "status": "Approved",
-    "planned_on": "2026-11-02T15:33:00-08:00",
-    "approved_on": "2026-11-02T15:33:00-08:00"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -119.37193,
-     37.05787
-    ]
-   },
-   "properties": {
-    "pfirs_id": "192956097",
-    "name": "4 Lanes Unit 3",
-    "burn_date": "2026-11-03",
-    "agency": "Fresno County",
-    "agency_group": "Private",
-    "burn_type": "Hand Pile",
-    "acres": 6.0,
-    "piles": null,
-    "status": "Pre-Planned",
-    "planned_on": "2026-10-12T08:33:00-07:00",
-    "approved_on": null
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -121.244353,
-     40.292111
-    ]
-   },
-   "properties": {
-    "pfirs_id": "192990097",
-    "name": "Admin Piles Plumas County",
-    "burn_date": "2026-11-03",
-    "agency": "US Forest Service",
-    "agency_group": "USFS",
-    "burn_type": "Hand Pile",
-    "acres": 5.0,
-    "piles": null,
-    "status": "Approved",
-    "planned_on": "2026-11-02T15:10:00-08:00",
-    "approved_on": "2026-11-02T16:16:00-08:00"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     0.0,
-     0.0
-    ]
-   },
-   "properties": {
-    "pfirs_id": "192989702",
-    "name": "BH102",
-    "burn_date": "2026-11-03",
-    "agency": "US Forest Service",
-    "agency_group": "USFS",
-    "burn_type": "Hand Pile",
-    "acres": 10.0,
-    "piles": null,
-    "status": "Approved",
-    "planned_on": "2026-11-02T12:30:00-08:00",
-    "approved_on": "2026-11-02T14:20:00-08:00"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -123.150523,
-     40.581309
-    ]
-   },
-   "properties": {
-    "pfirs_id": "192988675",
-    "name": "Big Creek VTP",
-    "burn_date": "2026-11-03",
-    "agency": "CAL FIRE",
-    "agency_group": "CAL FIRE",
-    "burn_type": "Underburn",
-    "acres": 100.0,
-    "piles": null,
-    "status": "Approved",
-    "planned_on": "2026-10-31T12:50:00-07:00",
-    "approved_on": "2026-11-02T13:09:00-08:00"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -120.217416,
-     39.3098
-    ]
-   },
-   "properties": {
-    "pfirs_id": "192990151",
-    "name": "Cabin Creek HPs",
-    "burn_date": "2026-11-03",
-    "agency": "US Forest Service",
-    "agency_group": "USFS",
-    "burn_type": "Hand Pile",
-    "acres": 9.0,
-    "piles": null,
-    "status": "Patrol",
-    "planned_on": "2026-11-02T15:47:00-08:00",
-    "approved_on": "2026-11-02T16:43:00-08:00"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -123.210901,
-     39.721985
-    ]
-   },
-   "properties": {
-    "pfirs_id": "192987914",
-    "name": "Covelo South VMP SMP 26-014 Broadcast",
-    "burn_date": "2026-11-03",
-    "agency": "Private Landowner",
-    "agency_group": "Private",
-    "burn_type": "Underburn",
-    "acres": 100.0,
-    "piles": null,
-    "status": "Approved",
-    "planned_on": "2026-10-30T15:44:00-07:00",
-    "approved_on": "2026-10-30T15:47:00-07:00"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -122.235473,
-     40.185756
-    ]
-   },
-   "properties": {
-    "pfirs_id": "192982648",
-    "name": "Dog Island Park/ Samuel Ayes-Fuels Reduction Project",
-    "burn_date": "2026-11-03",
-    "agency": "Red Bluff Fire Department",
-    "agency_group": "Local Fire",
-    "burn_type": "Underburn",
-    "acres": 14.95,
-    "piles": null,
-    "status": "Approved",
-    "planned_on": "2026-10-27T09:21:00-07:00",
-    "approved_on": "2026-11-03T09:40:00-08:00"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -120.701285,
-     40.421921
-    ]
-   },
-   "properties": {
-    "pfirs_id": "192990952",
-    "name": "Eagle Lake District Office Admin Hand Piles",
-    "burn_date": "2026-11-03",
-    "agency": "US Forest Service",
-    "agency_group": "USFS",
-    "burn_type": "Hand Pile",
-    "acres": 6.0,
-    "piles": null,
-    "status": "Patrol",
-    "planned_on": "2026-11-03T09:32:00-08:00",
-    "approved_on": "2026-11-03T10:42:00-08:00"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -122.2519,
-     41.3344
-    ]
-   },
-   "properties": {
-    "pfirs_id": "192989627",
-    "name": "Gateway",
-    "burn_date": "2026-11-03",
-    "agency": "US Forest Service",
-    "agency_group": "USFS",
-    "burn_type": "Hand Pile",
-    "acres": 10.0,
-    "piles": null,
-    "status": "Patrol",
-    "planned_on": "2026-11-02T11:27:00-08:00",
-    "approved_on": "2026-11-02T13:30:00-08:00"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -120.3675,
-     38.4322
-    ]
-   },
-   "properties": {
-    "pfirs_id": "192989185",
-    "name": "Hemlock TS",
-    "burn_date": "2026-11-03",
-    "agency": "US Forest Service",
-    "agency_group": "USFS",
-    "burn_type": "Machine Pile",
-    "acres": 330.48,
-    "piles": null,
-    "status": "Active",
-    "planned_on": "2026-11-01T13:57:00-08:00",
-    "approved_on": "2026-11-02T10:08:00-08:00"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -122.03574,
-     40.314832
-    ]
-   },
-   "properties": {
-    "pfirs_id": "192989383",
-    "name": "Highway 36E- Piles",
-    "burn_date": "2026-11-03",
-    "agency": "CAL FIRE",
-    "agency_group": "CAL FIRE",
-    "burn_type": "Hand Pile",
-    "acres": 2.0,
-    "piles": null,
-    "status": "Patrol",
-    "planned_on": "2026-11-02T08:18:00-08:00",
-    "approved_on": "2026-11-03T09:40:00-08:00"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -120.44481,
-     39.26164
-    ]
-   },
-   "properties": {
-    "pfirs_id": "192990375",
-    "name": "Jones CFIP 2026",
-    "burn_date": "2026-11-03",
-    "agency": "Private Landowner",
-    "agency_group": "Private",
-    "burn_type": "Hand Pile",
-    "acres": 10.0,
-    "piles": null,
-    "status": "Approved",
-    "planned_on": "2026-11-02T19:23:00-08:00",
-    "approved_on": "2026-11-03T08:21:00-08:00"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -122.87306,
-     39.12142
-    ]
-   },
-   "properties": {
-    "pfirs_id": "192989282",
-    "name": "Lakeshore East",
-    "burn_date": "2026-11-03",
-    "agency": "Private Landowner",
-    "agency_group": "Private",
-    "burn_type": "Underburn",
-    "acres": 3.3,
-    "piles": null,
-    "status": "Patrol",
-    "planned_on": "2026-11-02T07:29:00-08:00",
-    "approved_on": "2026-11-02T10:05:00-08:00"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -123.256797,
-     38.663734
-    ]
-   },
-   "properties": {
-    "pfirs_id": "192986228",
-    "name": "Lower Hill 2022",
-    "burn_date": "2026-11-03",
-    "agency": "Private Landowner",
-    "agency_group": "Private",
-    "burn_type": "Underburn",
-    "acres": 4.0,
-    "piles": null,
-    "status": "Completed",
-    "planned_on": "2026-10-29T09:23:00-07:00",
-    "approved_on": "2026-10-30T13:26:00-07:00"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -121.988649,
-     41.66692
-    ]
-   },
-   "properties": {
-    "pfirs_id": "192990090",
-    "name": "Orr",
-    "burn_date": "2026-11-03",
-    "agency": "US Forest Service",
-    "agency_group": "USFS",
-    "burn_type": "Unknown",
-    "acres": 50.0,
-    "piles": null,
-    "status": "Active",
-    "planned_on": "2026-11-02T15:04:00-08:00",
-    "approved_on": "2026-11-03T09:41:00-08:00"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -120.67042,
-     39.766519
-    ]
-   },
-   "properties": {
-    "pfirs_id": "192989534",
-    "name": "Plumas Eureka",
-    "burn_date": "2026-11-03",
-    "agency": "US Forest Service",
-    "agency_group": "USFS",
-    "burn_type": "Hand Pile",
-    "acres": 80.0,
-    "piles": null,
-    "status": "Active",
-    "planned_on": "2026-11-02T10:10:00-08:00",
-    "approved_on": "2026-11-02T11:17:00-08:00"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -124.035423,
-     40.34362
-    ]
-   },
-   "properties": {
-    "pfirs_id": "192989481",
-    "name": "Pole Line Woodlands Pile",
-    "burn_date": "2026-11-03",
-    "agency": "California State Parks",
-    "agency_group": "CA Parks",
-    "burn_type": "Landing Pile",
-    "acres": 1.0,
-    "piles": null,
-    "status": "Active",
-    "planned_on": "2026-11-02T09:34:00-08:00",
-    "approved_on": "2026-11-02T09:57:00-08:00"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -12032860.0,
-     3929738.0
-    ]
-   },
-   "properties": {
-    "pfirs_id": "192989635",
-    "name": "Sugar Bowl Burn Piles",
-    "burn_date": "2026-11-03",
-    "agency": "Sugar Bowl",
-    "agency_group": "Private",
-    "burn_type": "Hand Pile",
-    "acres": 4.0,
-    "piles": null,
-    "status": "Active",
-    "planned_on": "2026-11-02T11:29:00-08:00",
-    "approved_on": "2026-11-02T16:42:00-08:00"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -120.1135,
-     38.4294
-    ]
-   },
-   "properties": {
-    "pfirs_id": "192989183",
-    "name": "Thompson TS",
-    "burn_date": "2026-11-03",
-    "agency": "US Forest Service",
-    "agency_group": "USFS",
-    "burn_type": "Machine Pile",
-    "acres": 30.0,
-    "piles": null,
-    "status": "Active",
-    "planned_on": "2026-11-01T13:57:00-08:00",
-    "approved_on": "2026-11-02T09:55:00-08:00"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -121.645742,
-     39.632561
-    ]
-   },
-   "properties": {
-    "pfirs_id": "192990384",
-    "name": "Wajim Kumbali Rx",
-    "burn_date": "2026-11-03",
-    "agency": "Other Tribe",
-    "agency_group": "Private",
-    "burn_type": "Underburn",
-    "acres": 5.0,
-    "piles": null,
-    "status": "Patrol",
-    "planned_on": "2026-11-02T20:03:00-08:00",
-    "approved_on": "2026-11-03T07:44:00-08:00"
-   }
-  },
   {
    "type": "Feature",
    "geometry": {
@@ -766,29 +214,6 @@
     "status": "Approved",
     "planned_on": "2026-11-03T16:12:00-08:00",
     "approved_on": "2026-11-04T08:43:00-08:00"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -121.719589,
-     39.717091
-    ]
-   },
-   "properties": {
-    "pfirs_id": "192992695",
-    "name": "BCEP",
-    "burn_date": "2026-11-04",
-    "agency": "Other Tribe",
-    "agency_group": "Private",
-    "burn_type": "Hand Pile",
-    "acres": 5.0,
-    "piles": null,
-    "status": "Approved",
-    "planned_on": "2026-11-03T18:24:00-08:00",
-    "approved_on": "2026-11-04T07:52:00-08:00"
    }
   },
   {
@@ -1267,9 +692,9 @@
     "agency": "Other Tribe",
     "agency_group": "Private",
     "burn_type": "Underburn",
-    "acres": 30.0,
+    "acres": 6.0,
     "piles": null,
-    "status": "Approved",
+    "status": "Completed",
     "planned_on": "2026-11-03T18:24:00-08:00",
     "approved_on": "2026-11-04T07:55:00-08:00"
    }
@@ -1683,9 +1108,9 @@
     "burn_type": "Underburn",
     "acres": 37.5,
     "piles": null,
-    "status": "Pre-Planned",
+    "status": "Approved",
     "planned_on": "2026-10-29T19:43:00-07:00",
-    "approved_on": null
+    "approved_on": "2026-11-04T17:14:00-08:00"
    }
   },
   {
@@ -1775,8 +1200,31 @@
     "burn_type": "Underburn",
     "acres": 4.3,
     "piles": null,
-    "status": "Pre-Planned",
+    "status": "Approved",
     "planned_on": "2026-11-03T10:42:00-08:00",
+    "approved_on": "2026-11-04T16:54:00-08:00"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -121.645742,
+     39.632561
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192996128",
+    "name": "Wajim Kumbali Rx",
+    "burn_date": "2026-11-05",
+    "agency": "Other Tribe",
+    "agency_group": "Private",
+    "burn_type": "Underburn",
+    "acres": 60.0,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-11-04T19:13:00-08:00",
     "approved_on": null
    }
   },
@@ -2291,6 +1739,29 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     -121.049244,
+     38.925345
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192996075",
+    "name": "Tree Top RX",
+    "burn_date": "2026-11-08",
+    "agency": "Placer County Resource Conservation District",
+    "agency_group": "Local Non-Fire",
+    "burn_type": "Underburn",
+    "acres": 5.5,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-11-04T17:43:00-08:00",
+    "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      -122.194642,
      37.053582
     ]
@@ -2671,6 +2142,52 @@
     "agency_group": "Private",
     "burn_type": "Machine Pile",
     "acres": 15.0,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-11-04T11:19:00-08:00",
+    "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -122.235473,
+     40.185756
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192982690",
+    "name": "Dog Island Park/ Samuel Ayes-Fuels Reduction Project",
+    "burn_date": "2026-11-12",
+    "agency": "Red Bluff Fire Department",
+    "agency_group": "Local Fire",
+    "burn_type": "Underburn",
+    "acres": 14.95,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-10-27T09:23:00-07:00",
+    "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -121.243838,
+     40.1473
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192994431",
+    "name": "humburn",
+    "burn_date": "2026-11-12",
+    "agency": "Jefferson Resource",
+    "agency_group": "Private",
+    "burn_type": "Machine Pile",
+    "acres": 20.0,
     "piles": null,
     "status": "Pre-Planned",
     "planned_on": "2026-11-04T11:19:00-08:00",
