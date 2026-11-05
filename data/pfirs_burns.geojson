@@ -5,33 +5,10 @@
   "source_url": "https://ssl.arb.ca.gov/pfirs/index.php?submit=Map+Page",
   "date_begin": "2026-11-04",
   "date_end": "2026-11-12",
-  "count": 98,
+  "count": 124,
   "note": "Planned and approved ignitions as published by PFIRS. Status can change through the day; confirm in PFIRS."
  },
  "features": [
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -121.408626,
-     39.167374
-    ]
-   },
-   "properties": {
-    "pfirs_id": "192987028",
-    "name": "(site 0-0) M60",
-    "burn_date": "2026-11-04",
-    "agency": "Beale Air Force Base",
-    "agency_group": "Private",
-    "burn_type": "Underburn",
-    "acres": 5.0,
-    "piles": null,
-    "status": "Approved",
-    "planned_on": "2026-10-29T16:57:00-07:00",
-    "approved_on": "2026-10-30T08:38:00-07:00"
-   }
-  },
   {
    "type": "Feature",
    "geometry": {
@@ -234,7 +211,7 @@
     "burn_type": "Landing Pile",
     "acres": 56.0,
     "piles": null,
-    "status": "Active",
+    "status": "Patrol",
     "planned_on": "2026-11-03T15:25:00-08:00",
     "approved_on": "2026-11-03T16:11:00-08:00"
    }
@@ -727,29 +704,6 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -121.408626,
-     39.167374
-    ]
-   },
-   "properties": {
-    "pfirs_id": "192987032",
-    "name": "(site 0-0) M60",
-    "burn_date": "2026-11-05",
-    "agency": "Beale Air Force Base",
-    "agency_group": "Private",
-    "burn_type": "Underburn",
-    "acres": 12.0,
-    "piles": null,
-    "status": "Approved",
-    "planned_on": "2026-10-29T16:57:00-07:00",
-    "approved_on": "2026-10-30T08:28:00-07:00"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
      -121.769372,
      39.857213
     ]
@@ -855,7 +809,7 @@
     "burn_type": "Landing Pile",
     "acres": 47.0,
     "piles": null,
-    "status": "Approved",
+    "status": "Active",
     "planned_on": "2026-11-04T13:47:00-08:00",
     "approved_on": "2026-11-04T14:18:00-08:00"
    }
@@ -878,7 +832,7 @@
     "burn_type": "Hand Pile",
     "acres": 12.0,
     "piles": null,
-    "status": "Approved",
+    "status": "Active",
     "planned_on": "2026-11-04T15:53:00-08:00",
     "approved_on": "2026-11-04T16:52:00-08:00"
    }
@@ -1131,7 +1085,7 @@
     "burn_type": "Hand Pile",
     "acres": 133.5,
     "piles": null,
-    "status": "Active",
+    "status": "Patrol",
     "planned_on": "2026-11-02T08:47:00-08:00",
     "approved_on": "2026-11-04T12:37:00-08:00"
    }
@@ -1246,9 +1200,9 @@
     "burn_type": "Underburn",
     "acres": 342.0,
     "piles": null,
-    "status": "Pre-Planned",
+    "status": "Approved",
     "planned_on": "2026-11-02T11:56:00-08:00",
-    "approved_on": null
+    "approved_on": "2026-11-05T10:49:00-08:00"
    }
   },
   {
@@ -1269,9 +1223,9 @@
     "burn_type": "Machine Pile",
     "acres": 76.0,
     "piles": null,
-    "status": "Pre-Planned",
+    "status": "Approved",
     "planned_on": "2026-11-05T06:52:00-08:00",
-    "approved_on": null
+    "approved_on": "2026-11-05T10:29:00-08:00"
    }
   },
   {
@@ -1361,9 +1315,9 @@
     "burn_type": "Underburn",
     "acres": 12.0,
     "piles": null,
-    "status": "Pre-Planned",
+    "status": "Approved",
     "planned_on": "2026-11-05T10:00:00-08:00",
-    "approved_on": null
+    "approved_on": "2026-11-05T14:17:00-08:00"
    }
   },
   {
@@ -1463,6 +1417,144 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     -117.18111,
+     34.27944
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192997519",
+    "name": "North Arrowhead",
+    "burn_date": "2026-11-06",
+    "agency": "US Forest Service",
+    "agency_group": "USFS",
+    "burn_type": "Hand Pile",
+    "acres": 90.0,
+    "piles": null,
+    "status": "Approved",
+    "planned_on": "2026-11-05T12:18:00-08:00",
+    "approved_on": "2026-11-05T12:40:00-08:00"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -121.805093,
+     38.528327
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192997206",
+    "name": "Plot 1",
+    "burn_date": "2026-11-06",
+    "agency": "Davis",
+    "agency_group": "Private",
+    "burn_type": "Underburn",
+    "acres": 0.25,
+    "piles": null,
+    "status": "Approved",
+    "planned_on": "2026-11-05T10:29:00-08:00",
+    "approved_on": "2026-11-05T10:33:00-08:00"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -123.77275,
+     41.274571
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192997260",
+    "name": "River Bolivar Unit 1",
+    "burn_date": "2026-11-06",
+    "agency": "US Forest Service",
+    "agency_group": "USFS",
+    "burn_type": "Hand Pile",
+    "acres": 25.0,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-11-05T10:46:00-08:00",
+    "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     0.0,
+     0.0
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192997261",
+    "name": "River Boulder R2",
+    "burn_date": "2026-11-06",
+    "agency": "US Forest Service",
+    "agency_group": "USFS",
+    "burn_type": "Hand Pile",
+    "acres": 10.0,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-11-05T10:46:00-08:00",
+    "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -120.2179,
+     34.90351
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192997233",
+    "name": "Ruiz Plot 3",
+    "burn_date": "2026-11-06",
+    "agency": "Santa Barbara County Fire Department",
+    "agency_group": "Local Fire",
+    "burn_type": "Underburn",
+    "acres": 26.0,
+    "piles": null,
+    "status": "Approved",
+    "planned_on": "2026-11-05T10:34:00-08:00",
+    "approved_on": "2026-11-05T14:36:00-08:00"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -123.37134,
+     39.62917
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192997837",
+    "name": "Shamrock VMP SMP 23-41 Broadcast",
+    "burn_date": "2026-11-06",
+    "agency": "Private Landowner",
+    "agency_group": "Private",
+    "burn_type": "Underburn",
+    "acres": 150.0,
+    "piles": null,
+    "status": "Approved",
+    "planned_on": "2026-11-05T14:35:00-08:00",
+    "approved_on": "2026-11-05T14:39:00-08:00"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      -121.889162,
      37.082664
     ]
@@ -1555,6 +1647,52 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     -122.371844,
+     37.268753
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192997585",
+    "name": "14",
+    "burn_date": "2026-11-07",
+    "agency": "CAL FIRE",
+    "agency_group": "CAL FIRE",
+    "burn_type": "Underburn",
+    "acres": 23.4,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-11-05T13:03:00-08:00",
+    "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -122.3727,
+     37.2666
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192997588",
+    "name": "15",
+    "burn_date": "2026-11-07",
+    "agency": "CAL FIRE",
+    "agency_group": "CAL FIRE",
+    "burn_type": "Underburn",
+    "acres": 20.4,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-11-05T13:03:00-08:00",
+    "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      -121.190727,
      41.369802
     ]
@@ -1571,6 +1709,52 @@
     "status": "Approved",
     "planned_on": "2026-11-04T08:00:00-08:00",
     "approved_on": "2026-11-04T08:18:00-08:00"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -122.37349,
+     41.34432
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192997722",
+    "name": "2026-Mills Ranch",
+    "burn_date": "2026-11-07",
+    "agency": "CAL FIRE",
+    "agency_group": "CAL FIRE",
+    "burn_type": "Unknown",
+    "acres": 50.0,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-11-05T14:15:00-08:00",
+    "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -122.3684,
+     37.2675
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192997584",
+    "name": "9",
+    "burn_date": "2026-11-07",
+    "agency": "CAL FIRE",
+    "agency_group": "CAL FIRE",
+    "burn_type": "Underburn",
+    "acres": 15.0,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-11-05T13:03:00-08:00",
+    "approved_on": null
    }
   },
   {
@@ -1693,6 +1877,121 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     -119.562295,
+     37.255079
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192997152",
+    "name": "Little Finegold RX Unit",
+    "burn_date": "2026-11-07",
+    "agency": "UC Cooperative Extension",
+    "agency_group": "Local Non-Fire",
+    "burn_type": "Underburn",
+    "acres": 7.75,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-11-05T10:10:00-08:00",
+    "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -120.443729,
+     39.647334
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192997731",
+    "name": "Q11",
+    "burn_date": "2026-11-07",
+    "agency": "US Forest Service",
+    "agency_group": "USFS",
+    "burn_type": "Underburn",
+    "acres": 56.7,
+    "piles": null,
+    "status": "Approved",
+    "planned_on": "2026-11-05T14:04:00-08:00",
+    "approved_on": "2026-11-05T14:58:00-08:00"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -120.444697,
+     39.643045
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192997732",
+    "name": "Q12",
+    "burn_date": "2026-11-07",
+    "agency": "US Forest Service",
+    "agency_group": "USFS",
+    "burn_type": "Underburn",
+    "acres": 69.7,
+    "piles": null,
+    "status": "Approved",
+    "planned_on": "2026-11-05T14:04:00-08:00",
+    "approved_on": "2026-11-05T15:00:00-08:00"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -120.436868,
+     39.646134
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192997733",
+    "name": "Q13",
+    "burn_date": "2026-11-07",
+    "agency": "US Forest Service",
+    "agency_group": "USFS",
+    "burn_type": "Underburn",
+    "acres": 36.3,
+    "piles": null,
+    "status": "Approved",
+    "planned_on": "2026-11-05T14:04:00-08:00",
+    "approved_on": "2026-11-05T15:01:00-08:00"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -120.43749,
+     39.640697
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192997735",
+    "name": "Q14",
+    "burn_date": "2026-11-07",
+    "agency": "US Forest Service",
+    "agency_group": "USFS",
+    "burn_type": "Underburn",
+    "acres": 60.8,
+    "piles": null,
+    "status": "Approved",
+    "planned_on": "2026-11-05T14:04:00-08:00",
+    "approved_on": "2026-11-05T15:03:00-08:00"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      -121.190727,
      41.369802
     ]
@@ -1808,6 +2107,52 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     -123.77275,
+     41.274571
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192997544",
+    "name": "River Bolivar Unit 1",
+    "burn_date": "2026-11-08",
+    "agency": "US Forest Service",
+    "agency_group": "USFS",
+    "burn_type": "Hand Pile",
+    "acres": 10.0,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-11-05T12:22:00-08:00",
+    "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -122.779887,
+     41.274731
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192997552",
+    "name": "River Bolivar Unit 2",
+    "burn_date": "2026-11-08",
+    "agency": "US Forest Service",
+    "agency_group": "USFS",
+    "burn_type": "Hand Pile",
+    "acres": 10.0,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-11-05T12:22:00-08:00",
+    "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      -121.049244,
      38.925345
     ]
@@ -1900,6 +2245,52 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     -120.464468,
+     38.7716
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192997184",
+    "name": "EID Fuel Break",
+    "burn_date": "2026-11-09",
+    "agency": "US Forest Service",
+    "agency_group": "USFS",
+    "burn_type": "Hand Pile",
+    "acres": 20.0,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-11-05T10:26:00-08:00",
+    "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -121.949846,
+     41.725608
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192997221",
+    "name": "Jerome",
+    "burn_date": "2026-11-09",
+    "agency": "US Forest Service",
+    "agency_group": "USFS",
+    "burn_type": "Unknown",
+    "acres": 1160.0,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-11-05T10:32:00-08:00",
+    "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      -119.967248,
      37.485701
     ]
@@ -1946,6 +2337,29 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     -121.988649,
+     41.66692
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192997216",
+    "name": "Orr",
+    "burn_date": "2026-11-09",
+    "agency": "US Forest Service",
+    "agency_group": "USFS",
+    "burn_type": "Unknown",
+    "acres": 1134.0,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-11-05T10:32:00-08:00",
+    "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      -120.295607,
      35.062479
     ]
@@ -1961,6 +2375,29 @@
     "piles": null,
     "status": "Pre-Planned",
     "planned_on": "2026-11-04T12:15:00-08:00",
+    "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -122.509,
+     40.571
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192997371",
+    "name": "Power Tower Unit A",
+    "burn_date": "2026-11-09",
+    "agency": "National Park Service",
+    "agency_group": "NPS",
+    "burn_type": "Underburn",
+    "acres": 174.0,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-11-05T11:42:00-08:00",
     "approved_on": null
    }
   },
@@ -2084,21 +2521,21 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -121.374321,
-     40.257702
+     -120.811829,
+     41.146309
     ]
    },
    "properties": {
-    "pfirs_id": "192994429",
-    "name": "Baccalodge",
+    "pfirs_id": "192997904",
+    "name": "Ash Hand Piles",
     "burn_date": "2026-11-10",
-    "agency": "Jefferson Resource",
-    "agency_group": "Private",
-    "burn_type": "Machine Pile",
-    "acres": 12.0,
+    "agency": "US Forest Service",
+    "agency_group": "USFS",
+    "burn_type": "Hand Pile",
+    "acres": 164.0,
     "piles": null,
     "status": "Pre-Planned",
-    "planned_on": "2026-11-04T11:19:00-08:00",
+    "planned_on": "2026-11-05T14:50:00-08:00",
     "approved_on": null
    }
   },
@@ -2153,6 +2590,75 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     -120.241597,
+     38.592903
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192997826",
+    "name": "Foster Firs",
+    "burn_date": "2026-11-10",
+    "agency": "US Forest Service",
+    "agency_group": "USFS",
+    "burn_type": "Machine Pile",
+    "acres": 75.0,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-11-05T14:32:00-08:00",
+    "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -123.051005,
+     40.37401
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192997414",
+    "name": "McFarland",
+    "burn_date": "2026-11-10",
+    "agency": "US Forest Service",
+    "agency_group": "USFS",
+    "burn_type": "Underburn",
+    "acres": 200.0,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-11-05T12:04:00-08:00",
+    "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -122.5,
+     40.57
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192997372",
+    "name": "Power Tower Unit B",
+    "burn_date": "2026-11-10",
+    "agency": "National Park Service",
+    "agency_group": "NPS",
+    "burn_type": "Underburn",
+    "acres": 367.0,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-11-05T11:42:00-08:00",
+    "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      -120.433865,
      39.832271
     ]
@@ -2169,6 +2675,52 @@
     "status": "Approved",
     "planned_on": "2026-11-04T15:14:00-08:00",
     "approved_on": "2026-11-04T15:50:00-08:00"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -121.243838,
+     40.1473
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192997657",
+    "name": "humburn",
+    "burn_date": "2026-11-10",
+    "agency": "Jefferson Resource",
+    "agency_group": "Private",
+    "burn_type": "Machine Pile",
+    "acres": 20.0,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-11-05T13:25:00-08:00",
+    "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -120.811829,
+     41.146309
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192997906",
+    "name": "Ash Hand Piles",
+    "burn_date": "2026-11-11",
+    "agency": "US Forest Service",
+    "agency_group": "USFS",
+    "burn_type": "Hand Pile",
+    "acres": 164.0,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-11-05T14:50:00-08:00",
+    "approved_on": null
    }
   },
   {
@@ -2199,21 +2751,44 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -121.31986,
-     40.239339
+     -121.243838,
+     40.1473
     ]
    },
    "properties": {
-    "pfirs_id": "192994430",
-    "name": "Plumas Side",
+    "pfirs_id": "192997658",
+    "name": "humburn",
     "burn_date": "2026-11-11",
     "agency": "Jefferson Resource",
     "agency_group": "Private",
     "burn_type": "Machine Pile",
-    "acres": 15.0,
+    "acres": 20.0,
     "piles": null,
     "status": "Pre-Planned",
-    "planned_on": "2026-11-04T11:19:00-08:00",
+    "planned_on": "2026-11-05T13:25:00-08:00",
+    "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -121.374321,
+     40.257702
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192997659",
+    "name": "Baccalodge",
+    "burn_date": "2026-11-12",
+    "agency": "Jefferson Resource",
+    "agency_group": "Private",
+    "burn_type": "Machine Pile",
+    "acres": 6.0,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-11-05T13:25:00-08:00",
     "approved_on": null
    }
   },
@@ -2237,6 +2812,29 @@
     "piles": null,
     "status": "Pre-Planned",
     "planned_on": "2026-10-27T09:23:00-07:00",
+    "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -121.31986,
+     40.239339
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192997661",
+    "name": "Plumas Side",
+    "burn_date": "2026-11-12",
+    "agency": "Jefferson Resource",
+    "agency_group": "Private",
+    "burn_type": "Machine Pile",
+    "acres": 8.0,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-11-05T13:25:00-08:00",
     "approved_on": null
    }
   },
