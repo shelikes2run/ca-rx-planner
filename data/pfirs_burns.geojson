@@ -5,7 +5,7 @@
   "source_url": "https://ssl.arb.ca.gov/pfirs/index.php?submit=Map+Page",
   "date_begin": "2026-11-06",
   "date_end": "2026-11-14",
-  "count": 116,
+  "count": 114,
   "note": "Planned and approved ignitions as published by PFIRS. Status can change through the day; confirm in PFIRS."
  },
  "features": [
@@ -48,34 +48,11 @@
     "agency": "US Forest Service",
     "agency_group": "USFS",
     "burn_type": "Machine Pile",
-    "acres": 76.0,
+    "acres": 5.0,
     "piles": null,
-    "status": "Approved",
+    "status": "Patrol",
     "planned_on": "2026-11-05T06:52:00-08:00",
     "approved_on": "2026-11-05T10:29:00-08:00"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -121.190727,
-     41.369802
-    ]
-   },
-   "properties": {
-    "pfirs_id": "192990579",
-    "name": "2023 Service Gulch",
-    "burn_date": "2026-11-06",
-    "agency": "CAL FIRE",
-    "agency_group": "CAL FIRE",
-    "burn_type": "Underburn",
-    "acres": 95.0,
-    "piles": null,
-    "status": "Approved",
-    "planned_on": "2026-11-03T08:53:00-08:00",
-    "approved_on": "2026-11-04T10:01:00-08:00"
    }
   },
   {
@@ -214,29 +191,6 @@
     "status": "Approved",
     "planned_on": "2026-11-02T08:18:00-08:00",
     "approved_on": "2026-11-05T08:59:00-08:00"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -121.220226,
-     41.123203
-    ]
-   },
-   "properties": {
-    "pfirs_id": "192992966",
-    "name": "Intermountain Camp RX",
-    "burn_date": "2026-11-06",
-    "agency": "CAL FIRE",
-    "agency_group": "CAL FIRE",
-    "burn_type": "Underburn",
-    "acres": 27.0,
-    "piles": null,
-    "status": "Active",
-    "planned_on": "2026-11-04T08:07:00-08:00",
-    "approved_on": "2026-11-04T14:38:00-08:00"
    }
   },
   {
@@ -444,29 +398,6 @@
     "status": "Patrol",
     "planned_on": "2026-11-03T09:37:00-08:00",
     "approved_on": "2026-11-05T16:38:00-08:00"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -121.190727,
-     41.369802
-    ]
-   },
-   "properties": {
-    "pfirs_id": "192992951",
-    "name": "2023 Service Gulch",
-    "burn_date": "2026-11-07",
-    "agency": "CAL FIRE",
-    "agency_group": "CAL FIRE",
-    "burn_type": "Underburn",
-    "acres": 95.0,
-    "piles": null,
-    "status": "Approved",
-    "planned_on": "2026-11-04T08:00:00-08:00",
-    "approved_on": "2026-11-04T08:18:00-08:00"
    }
   },
   {
@@ -835,29 +766,6 @@
     "status": "Approved",
     "planned_on": "2026-11-06T18:43:00-08:00",
     "approved_on": "2026-11-06T20:13:00-08:00"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -121.190727,
-     41.369802
-    ]
-   },
-   "properties": {
-    "pfirs_id": "192992952",
-    "name": "2023 Service Gulch",
-    "burn_date": "2026-11-08",
-    "agency": "CAL FIRE",
-    "agency_group": "CAL FIRE",
-    "burn_type": "Underburn",
-    "acres": 95.0,
-    "piles": null,
-    "status": "Approved",
-    "planned_on": "2026-11-04T08:00:00-08:00",
-    "approved_on": "2026-11-04T08:16:00-08:00"
    }
   },
   {
@@ -1249,6 +1157,29 @@
     "status": "Approved",
     "planned_on": "2026-11-03T09:08:00-08:00",
     "approved_on": "2026-11-06T14:42:00-08:00"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -120.561895,
+     39.828252
+    ]
+   },
+   "properties": {
+    "pfirs_id": "193000308",
+    "name": "Willow",
+    "burn_date": "2026-11-08",
+    "agency": "US Forest Service",
+    "agency_group": "USFS",
+    "burn_type": "Underburn",
+    "acres": 56.0,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-11-07T07:30:00-08:00",
+    "approved_on": null
    }
   },
   {
@@ -1662,6 +1593,29 @@
     "piles": null,
     "status": "Pre-Planned",
     "planned_on": "2026-11-06T17:02:00-08:00",
+    "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -120.561895,
+     39.828252
+    ]
+   },
+   "properties": {
+    "pfirs_id": "193000309",
+    "name": "Willow",
+    "burn_date": "2026-11-09",
+    "agency": "US Forest Service",
+    "agency_group": "USFS",
+    "burn_type": "Underburn",
+    "acres": 93.0,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-11-07T07:30:00-08:00",
     "approved_on": null
    }
   },
