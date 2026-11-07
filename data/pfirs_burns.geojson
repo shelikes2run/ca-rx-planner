@@ -5,7 +5,7 @@
   "source_url": "https://ssl.arb.ca.gov/pfirs/index.php?submit=Map+Page",
   "date_begin": "2026-11-06",
   "date_end": "2026-11-14",
-  "count": 114,
+  "count": 117,
   "note": "Planned and approved ignitions as published by PFIRS. Status can change through the day; confirm in PFIRS."
  },
  "features": [
@@ -349,9 +349,32 @@
     "burn_type": "Hand Pile",
     "acres": 3.0,
     "piles": null,
-    "status": "Approved",
+    "status": "Active",
     "planned_on": "2026-11-06T13:39:00-08:00",
     "approved_on": "2026-11-06T17:16:00-08:00"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -120.919306,
+     39.983946
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192981422",
+    "name": "South Park",
+    "burn_date": "2026-11-06",
+    "agency": "US Forest Service",
+    "agency_group": "USFS",
+    "burn_type": "Underburn",
+    "acres": 1.2,
+    "piles": null,
+    "status": "Completed",
+    "planned_on": "2026-10-26T15:15:00-07:00",
+    "approved_on": "2026-10-26T16:27:00-07:00"
    }
   },
   {
@@ -370,9 +393,9 @@
     "agency": "Private Landowner",
     "agency_group": "Private",
     "burn_type": "Underburn",
-    "acres": 13.2,
+    "acres": 0.9,
     "piles": null,
-    "status": "Approved",
+    "status": "Patrol",
     "planned_on": "2026-10-29T19:43:00-07:00",
     "approved_on": "2026-11-05T17:38:00-08:00"
    }
@@ -533,7 +556,7 @@
     "burn_type": "Underburn",
     "acres": 43.0,
     "piles": null,
-    "status": "Approved",
+    "status": "Active",
     "planned_on": "2026-11-06T08:49:00-08:00",
     "approved_on": "2026-11-06T09:27:00-08:00"
    }
@@ -1131,9 +1154,9 @@
     "burn_type": "Underburn",
     "acres": 5.5,
     "piles": null,
-    "status": "Pre-Planned",
+    "status": "Approved",
     "planned_on": "2026-11-04T17:43:00-08:00",
-    "approved_on": null
+    "approved_on": "2026-11-07T10:14:00-08:00"
    }
   },
   {
@@ -1177,9 +1200,9 @@
     "burn_type": "Underburn",
     "acres": 56.0,
     "piles": null,
-    "status": "Pre-Planned",
+    "status": "Approved",
     "planned_on": "2026-11-07T07:30:00-08:00",
-    "approved_on": null
+    "approved_on": "2026-11-07T12:46:00-08:00"
    }
   },
   {
@@ -1877,6 +1900,29 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     -122.87306,
+     39.12142
+    ]
+   },
+   "properties": {
+    "pfirs_id": "193000408",
+    "name": "Lakeshore East",
+    "burn_date": "2026-11-10",
+    "agency": "Private Landowner",
+    "agency_group": "Private",
+    "burn_type": "Underburn",
+    "acres": 10.0,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-11-07T13:37:00-08:00",
+    "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      -123.051005,
      40.37401
     ]
@@ -2122,6 +2168,29 @@
     "piles": null,
     "status": "Pre-Planned",
     "planned_on": "2026-11-05T17:51:00-08:00",
+    "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -122.87364,
+     39.12255
+    ]
+   },
+   "properties": {
+    "pfirs_id": "193000409",
+    "name": "Lakeshore West",
+    "burn_date": "2026-11-11",
+    "agency": "Private Landowner",
+    "agency_group": "Private",
+    "burn_type": "Underburn",
+    "acres": 10.0,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-11-07T13:37:00-08:00",
     "approved_on": null
    }
   },
