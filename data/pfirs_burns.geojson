@@ -3,426 +3,12 @@
  "metadata": {
   "source": "CARB PFIRS public map page",
   "source_url": "https://ssl.arb.ca.gov/pfirs/index.php?submit=Map+Page",
-  "date_begin": "2026-11-06",
-  "date_end": "2026-11-14",
-  "count": 118,
+  "date_begin": "2026-11-07",
+  "date_end": "2026-11-15",
+  "count": 100,
   "note": "Planned and approved ignitions as published by PFIRS. Status can change through the day; confirm in PFIRS."
  },
  "features": [
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -121.768333,
-     39.849096
-    ]
-   },
-   "properties": {
-    "pfirs_id": "192989667",
-    "name": "16",
-    "burn_date": "2026-11-06",
-    "agency": "CAL FIRE",
-    "agency_group": "CAL FIRE",
-    "burn_type": "Underburn",
-    "acres": 342.0,
-    "piles": null,
-    "status": "Patrol",
-    "planned_on": "2026-11-02T11:56:00-08:00",
-    "approved_on": "2026-11-05T10:49:00-08:00"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -119.897,
-     37.958
-    ]
-   },
-   "properties": {
-    "pfirs_id": "192996242",
-    "name": "1N19M",
-    "burn_date": "2026-11-06",
-    "agency": "US Forest Service",
-    "agency_group": "USFS",
-    "burn_type": "Machine Pile",
-    "acres": 5.0,
-    "piles": null,
-    "status": "Patrol",
-    "planned_on": "2026-11-05T06:52:00-08:00",
-    "approved_on": "2026-11-05T10:29:00-08:00"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -121.244353,
-     40.292111
-    ]
-   },
-   "properties": {
-    "pfirs_id": "192992557",
-    "name": "Admin Piles Plumas County",
-    "burn_date": "2026-11-06",
-    "agency": "US Forest Service",
-    "agency_group": "USFS",
-    "burn_type": "Hand Pile",
-    "acres": 4.0,
-    "piles": null,
-    "status": "Approved",
-    "planned_on": "2026-11-03T16:19:00-08:00",
-    "approved_on": "2026-11-04T09:08:00-08:00"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -120.77119,
-     38.571273
-    ]
-   },
-   "properties": {
-    "pfirs_id": "192989011",
-    "name": "Barentson Fuels Reduction",
-    "burn_date": "2026-11-06",
-    "agency": "Private Landowner",
-    "agency_group": "Private",
-    "burn_type": "Underburn",
-    "acres": 5.6,
-    "piles": null,
-    "status": "Approved",
-    "planned_on": "2026-11-01T10:14:00-08:00",
-    "approved_on": "2026-11-05T16:54:00-08:00"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -123.200056,
-     41.24729
-    ]
-   },
-   "properties": {
-    "pfirs_id": "192997108",
-    "name": "Blue Ridge 1",
-    "burn_date": "2026-11-06",
-    "agency": "Mid Klamath Watershed Council",
-    "agency_group": "Private",
-    "burn_type": "Underburn",
-    "acres": 12.0,
-    "piles": null,
-    "status": "Approved",
-    "planned_on": "2026-11-05T10:00:00-08:00",
-    "approved_on": "2026-11-05T14:17:00-08:00"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -122.188056,
-     38.767697
-    ]
-   },
-   "properties": {
-    "pfirs_id": "192990500",
-    "name": "Corral Feild",
-    "burn_date": "2026-11-06",
-    "agency": "CAL FIRE",
-    "agency_group": "CAL FIRE",
-    "burn_type": "Underburn",
-    "acres": 6.9,
-    "piles": null,
-    "status": "Completed",
-    "planned_on": "2026-11-03T08:20:00-08:00",
-    "approved_on": "2026-11-05T17:31:00-08:00"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -122.235473,
-     40.185756
-    ]
-   },
-   "properties": {
-    "pfirs_id": "192982651",
-    "name": "Dog Island Park/ Samuel Ayes-Fuels Reduction Project",
-    "burn_date": "2026-11-06",
-    "agency": "Red Bluff Fire Department",
-    "agency_group": "Local Fire",
-    "burn_type": "Underburn",
-    "acres": 14.95,
-    "piles": null,
-    "status": "Approved",
-    "planned_on": "2026-10-27T09:21:00-07:00",
-    "approved_on": "2026-11-05T09:21:00-08:00"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -122.03574,
-     40.314832
-    ]
-   },
-   "properties": {
-    "pfirs_id": "192989386",
-    "name": "Highway 36E- Piles",
-    "burn_date": "2026-11-06",
-    "agency": "CAL FIRE",
-    "agency_group": "CAL FIRE",
-    "burn_type": "Hand Pile",
-    "acres": 2.0,
-    "piles": null,
-    "status": "Approved",
-    "planned_on": "2026-11-02T08:18:00-08:00",
-    "approved_on": "2026-11-05T08:59:00-08:00"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -117.18111,
-     34.27944
-    ]
-   },
-   "properties": {
-    "pfirs_id": "192997519",
-    "name": "North Arrowhead",
-    "burn_date": "2026-11-06",
-    "agency": "US Forest Service",
-    "agency_group": "USFS",
-    "burn_type": "Hand Pile",
-    "acres": 90.0,
-    "piles": null,
-    "status": "Patrol",
-    "planned_on": "2026-11-05T12:18:00-08:00",
-    "approved_on": "2026-11-05T12:40:00-08:00"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -121.805093,
-     38.528327
-    ]
-   },
-   "properties": {
-    "pfirs_id": "192997206",
-    "name": "Plot 1",
-    "burn_date": "2026-11-06",
-    "agency": "Davis",
-    "agency_group": "Private",
-    "burn_type": "Underburn",
-    "acres": 0.25,
-    "piles": null,
-    "status": "Approved",
-    "planned_on": "2026-11-05T10:29:00-08:00",
-    "approved_on": "2026-11-05T10:33:00-08:00"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -123.77275,
-     41.274571
-    ]
-   },
-   "properties": {
-    "pfirs_id": "192997260",
-    "name": "River Bolivar Unit 1",
-    "burn_date": "2026-11-06",
-    "agency": "US Forest Service",
-    "agency_group": "USFS",
-    "burn_type": "Hand Pile",
-    "acres": 25.0,
-    "piles": null,
-    "status": "Pre-Planned",
-    "planned_on": "2026-11-05T10:46:00-08:00",
-    "approved_on": null
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     0.0,
-     0.0
-    ]
-   },
-   "properties": {
-    "pfirs_id": "192997261",
-    "name": "River Boulder R2",
-    "burn_date": "2026-11-06",
-    "agency": "US Forest Service",
-    "agency_group": "USFS",
-    "burn_type": "Hand Pile",
-    "acres": 10.0,
-    "piles": null,
-    "status": "Pre-Planned",
-    "planned_on": "2026-11-05T10:46:00-08:00",
-    "approved_on": null
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -120.2179,
-     34.90351
-    ]
-   },
-   "properties": {
-    "pfirs_id": "192997233",
-    "name": "Ruiz Plot 3",
-    "burn_date": "2026-11-06",
-    "agency": "Santa Barbara County Fire Department",
-    "agency_group": "Local Fire",
-    "burn_type": "Underburn",
-    "acres": 26.0,
-    "piles": null,
-    "status": "Completed",
-    "planned_on": "2026-11-05T10:34:00-08:00",
-    "approved_on": "2026-11-05T14:36:00-08:00"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -123.37134,
-     39.62917
-    ]
-   },
-   "properties": {
-    "pfirs_id": "192997837",
-    "name": "Shamrock VMP SMP 23-41 Broadcast",
-    "burn_date": "2026-11-06",
-    "agency": "Private Landowner",
-    "agency_group": "Private",
-    "burn_type": "Underburn",
-    "acres": 150.0,
-    "piles": null,
-    "status": "Approved",
-    "planned_on": "2026-11-05T14:35:00-08:00",
-    "approved_on": "2026-11-05T14:39:00-08:00"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -120.352581,
-     39.256214
-    ]
-   },
-   "properties": {
-    "pfirs_id": "192999504",
-    "name": "Soda Private Pile Burn",
-    "burn_date": "2026-11-06",
-    "agency": "Sierra Streams Institute",
-    "agency_group": "Private",
-    "burn_type": "Hand Pile",
-    "acres": 3.0,
-    "piles": null,
-    "status": "Active",
-    "planned_on": "2026-11-06T13:39:00-08:00",
-    "approved_on": "2026-11-06T17:16:00-08:00"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -120.919306,
-     39.983946
-    ]
-   },
-   "properties": {
-    "pfirs_id": "192981422",
-    "name": "South Park",
-    "burn_date": "2026-11-06",
-    "agency": "US Forest Service",
-    "agency_group": "USFS",
-    "burn_type": "Underburn",
-    "acres": 1.2,
-    "piles": null,
-    "status": "Completed",
-    "planned_on": "2026-10-26T15:15:00-07:00",
-    "approved_on": "2026-10-26T16:27:00-07:00"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -122.91386,
-     39.14464
-    ]
-   },
-   "properties": {
-    "pfirs_id": "192987111",
-    "name": "Unit 3: Tule Unit",
-    "burn_date": "2026-11-06",
-    "agency": "Private Landowner",
-    "agency_group": "Private",
-    "burn_type": "Underburn",
-    "acres": 0.9,
-    "piles": null,
-    "status": "Patrol",
-    "planned_on": "2026-10-29T19:43:00-07:00",
-    "approved_on": "2026-11-05T17:38:00-08:00"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -120.76068,
-     38.86517
-    ]
-   },
-   "properties": {
-    "pfirs_id": "192990977",
-    "name": "Unit 4 and 5",
-    "burn_date": "2026-11-06",
-    "agency": "US Forest Service",
-    "agency_group": "USFS",
-    "burn_type": "Underburn",
-    "acres": 15.0,
-    "piles": null,
-    "status": "Patrol",
-    "planned_on": "2026-11-03T09:37:00-08:00",
-    "approved_on": "2026-11-05T16:38:00-08:00"
-   }
-  },
   {
    "type": "Feature",
    "geometry": {
@@ -671,55 +257,9 @@
     "burn_type": "Underburn",
     "acres": 56.7,
     "piles": null,
-    "status": "Approved",
+    "status": "Patrol",
     "planned_on": "2026-11-05T14:04:00-08:00",
     "approved_on": "2026-11-05T14:58:00-08:00"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -120.444697,
-     39.643045
-    ]
-   },
-   "properties": {
-    "pfirs_id": "192997732",
-    "name": "Q12",
-    "burn_date": "2026-11-07",
-    "agency": "US Forest Service",
-    "agency_group": "USFS",
-    "burn_type": "Underburn",
-    "acres": 69.7,
-    "piles": null,
-    "status": "Approved",
-    "planned_on": "2026-11-05T14:04:00-08:00",
-    "approved_on": "2026-11-05T15:00:00-08:00"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -120.436868,
-     39.646134
-    ]
-   },
-   "properties": {
-    "pfirs_id": "192997733",
-    "name": "Q13",
-    "burn_date": "2026-11-07",
-    "agency": "US Forest Service",
-    "agency_group": "USFS",
-    "burn_type": "Underburn",
-    "acres": 36.3,
-    "piles": null,
-    "status": "Approved",
-    "planned_on": "2026-11-05T14:04:00-08:00",
-    "approved_on": "2026-11-05T15:01:00-08:00"
    }
   },
   {
@@ -750,29 +290,6 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -120.22412,
-     34.90484
-    ]
-   },
-   "properties": {
-    "pfirs_id": "193000051",
-    "name": "Ruiz Plot 2",
-    "burn_date": "2026-11-07",
-    "agency": "Santa Barbara County Fire Department",
-    "agency_group": "Local Fire",
-    "burn_type": "Underburn",
-    "acres": 30.0,
-    "piles": null,
-    "status": "Approved",
-    "planned_on": "2026-11-06T18:43:00-08:00",
-    "approved_on": "2026-11-06T20:41:00-08:00"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
      -120.2179,
      34.90351
     ]
@@ -784,9 +301,9 @@
     "agency": "Santa Barbara County Fire Department",
     "agency_group": "Local Fire",
     "burn_type": "Underburn",
-    "acres": 40.0,
+    "acres": 30.0,
     "piles": null,
-    "status": "Approved",
+    "status": "Patrol",
     "planned_on": "2026-11-06T18:43:00-08:00",
     "approved_on": "2026-11-06T20:13:00-08:00"
    }
@@ -1095,45 +612,22 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -122.779887,
-     41.274731
-    ]
-   },
-   "properties": {
-    "pfirs_id": "192997552",
-    "name": "River Bolivar Unit 2",
-    "burn_date": "2026-11-08",
-    "agency": "US Forest Service",
-    "agency_group": "USFS",
-    "burn_type": "Hand Pile",
-    "acres": 10.0,
-    "piles": null,
-    "status": "Pre-Planned",
-    "planned_on": "2026-11-05T12:22:00-08:00",
-    "approved_on": null
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
      -120.22412,
      34.90484
     ]
    },
    "properties": {
-    "pfirs_id": "193000246",
+    "pfirs_id": "193000591",
     "name": "Ruiz Plot 2",
     "burn_date": "2026-11-08",
     "agency": "Santa Barbara County Fire Department",
     "agency_group": "Local Fire",
     "burn_type": "Underburn",
-    "acres": 29.0,
+    "acres": 40.0,
     "piles": null,
-    "status": "Pre-Planned",
-    "planned_on": "2026-11-06T20:37:00-08:00",
-    "approved_on": null
+    "status": "Approved",
+    "planned_on": "2026-11-07T18:22:00-08:00",
+    "approved_on": "2026-11-07T20:05:00-08:00"
    }
   },
   {
@@ -1146,17 +640,17 @@
     ]
    },
    "properties": {
-    "pfirs_id": "193000244",
+    "pfirs_id": "193000590",
     "name": "Ruiz Plot 3",
     "burn_date": "2026-11-08",
     "agency": "Santa Barbara County Fire Department",
     "agency_group": "Local Fire",
     "burn_type": "Underburn",
-    "acres": 194.0,
+    "acres": 70.0,
     "piles": null,
-    "status": "Pre-Planned",
-    "planned_on": "2026-11-06T20:37:00-08:00",
-    "approved_on": null
+    "status": "Approved",
+    "planned_on": "2026-11-07T18:28:00-08:00",
+    "approved_on": "2026-11-07T20:08:00-08:00"
    }
   },
   {
@@ -1363,6 +857,29 @@
     "piles": null,
     "status": "Pre-Planned",
     "planned_on": "2026-11-03T10:29:00-08:00",
+    "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -120.9446,
+     39.09828
+    ]
+   },
+   "properties": {
+    "pfirs_id": "193000556",
+    "name": "NF Phase 1B RX",
+    "burn_date": "2026-11-09",
+    "agency": "Placer County Resource Conservation District",
+    "agency_group": "Local Non-Fire",
+    "burn_type": "Underburn",
+    "acres": 4.0,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-11-07T17:39:00-08:00",
     "approved_on": null
    }
   },
@@ -1969,6 +1486,29 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     -120.9446,
+     39.09828
+    ]
+   },
+   "properties": {
+    "pfirs_id": "193000557",
+    "name": "NF Phase 1B RX",
+    "burn_date": "2026-11-10",
+    "agency": "Placer County Resource Conservation District",
+    "agency_group": "Local Non-Fire",
+    "burn_type": "Underburn",
+    "acres": 1.0,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-11-07T17:39:00-08:00",
+    "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      -122.5,
      40.57
     ]
@@ -2214,6 +1754,29 @@
     "piles": null,
     "status": "Pre-Planned",
     "planned_on": "2026-11-07T13:37:00-08:00",
+    "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -120.9446,
+     39.09828
+    ]
+   },
+   "properties": {
+    "pfirs_id": "193000558",
+    "name": "NF Phase 1B RX",
+    "burn_date": "2026-11-11",
+    "agency": "Placer County Resource Conservation District",
+    "agency_group": "Local Non-Fire",
+    "burn_type": "Underburn",
+    "acres": 2.0,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-11-07T17:39:00-08:00",
     "approved_on": null
    }
   },
@@ -2720,6 +2283,29 @@
     "piles": null,
     "status": "Pre-Planned",
     "planned_on": "2026-11-06T19:43:00-08:00",
+    "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -122.235473,
+     40.185756
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192982693",
+    "name": "Dog Island Park/ Samuel Ayes-Fuels Reduction Project",
+    "burn_date": "2026-11-15",
+    "agency": "Red Bluff Fire Department",
+    "agency_group": "Local Fire",
+    "burn_type": "Underburn",
+    "acres": 14.95,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-10-27T09:23:00-07:00",
     "approved_on": null
    }
   }
