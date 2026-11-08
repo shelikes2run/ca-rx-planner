@@ -5,7 +5,7 @@
   "source_url": "https://ssl.arb.ca.gov/pfirs/index.php?submit=Map+Page",
   "date_begin": "2026-11-07",
   "date_end": "2026-11-15",
-  "count": 103,
+  "count": 107,
   "note": "Planned and approved ignitions as published by PFIRS. Status can change through the day; confirm in PFIRS."
  },
  "features": [
@@ -796,6 +796,29 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     -120.650811,
+     39.168956
+    ]
+   },
+   "properties": {
+    "pfirs_id": "193002097",
+    "name": "DU 44",
+    "burn_date": "2026-11-09",
+    "agency": "US Forest Service",
+    "agency_group": "USFS",
+    "burn_type": "Underburn",
+    "acres": 22.0,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-11-08T13:06:00-08:00",
+    "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      -122.235473,
      40.185756
     ]
@@ -901,9 +924,9 @@
     "burn_type": "Underburn",
     "acres": 4.0,
     "piles": null,
-    "status": "Pre-Planned",
+    "status": "Approved",
     "planned_on": "2026-11-07T17:39:00-08:00",
-    "approved_on": null
+    "approved_on": "2026-11-08T09:11:00-08:00"
    }
   },
   {
@@ -1095,6 +1118,29 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     -120.027052,
+     38.882678
+    ]
+   },
+   "properties": {
+    "pfirs_id": "193000855",
+    "name": "Sawmill piles",
+    "burn_date": "2026-11-09",
+    "agency": "CAL FIRE",
+    "agency_group": "CAL FIRE",
+    "burn_type": "Hand Pile",
+    "acres": 5.0,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-11-08T09:14:00-08:00",
+    "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      -120.433865,
      39.832271
     ]
@@ -1131,9 +1177,9 @@
     "burn_type": "Underburn",
     "acres": 20.0,
     "piles": null,
-    "status": "Pre-Planned",
+    "status": "Approved",
     "planned_on": "2026-11-06T10:39:00-08:00",
-    "approved_on": null
+    "approved_on": "2026-11-08T11:42:00-08:00"
    }
   },
   {
@@ -1154,9 +1200,9 @@
     "burn_type": "Underburn",
     "acres": 200.0,
     "piles": null,
-    "status": "Pre-Planned",
+    "status": "Approved",
     "planned_on": "2026-11-06T19:42:00-08:00",
-    "approved_on": null
+    "approved_on": "2026-11-08T11:39:00-08:00"
    }
   },
   {
@@ -1177,9 +1223,9 @@
     "burn_type": "Underburn",
     "acres": 200.0,
     "piles": null,
-    "status": "Pre-Planned",
+    "status": "Approved",
     "planned_on": "2026-11-06T19:42:00-08:00",
-    "approved_on": null
+    "approved_on": "2026-11-08T11:41:00-08:00"
    }
   },
   {
@@ -2061,6 +2107,29 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     -120.027052,
+     38.882678
+    ]
+   },
+   "properties": {
+    "pfirs_id": "193000856",
+    "name": "Sawmill piles",
+    "burn_date": "2026-11-12",
+    "agency": "CAL FIRE",
+    "agency_group": "CAL FIRE",
+    "burn_type": "Hand Pile",
+    "acres": 5.0,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-11-08T09:14:00-08:00",
+    "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      -116.654722,
      33.609722
     ]
@@ -2214,6 +2283,29 @@
     "piles": null,
     "status": "Pre-Planned",
     "planned_on": "2026-11-05T13:25:00-08:00",
+    "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -120.027052,
+     38.882678
+    ]
+   },
+   "properties": {
+    "pfirs_id": "193000857",
+    "name": "Sawmill piles",
+    "burn_date": "2026-11-13",
+    "agency": "CAL FIRE",
+    "agency_group": "CAL FIRE",
+    "burn_type": "Hand Pile",
+    "acres": 5.0,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-11-08T09:14:00-08:00",
     "approved_on": null
    }
   },
