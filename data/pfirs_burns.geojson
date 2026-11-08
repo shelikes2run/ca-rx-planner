@@ -5,7 +5,7 @@
   "source_url": "https://ssl.arb.ca.gov/pfirs/index.php?submit=Map+Page",
   "date_begin": "2026-11-06",
   "date_end": "2026-11-14",
-  "count": 117,
+  "count": 118,
   "note": "Planned and approved ignitions as published by PFIRS. Status can change through the day; confirm in PFIRS."
  },
  "features": [
@@ -789,6 +789,29 @@
     "status": "Approved",
     "planned_on": "2026-11-06T18:43:00-08:00",
     "approved_on": "2026-11-06T20:13:00-08:00"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -119.55415,
+     37.235389
+    ]
+   },
+   "properties": {
+    "pfirs_id": "193000439",
+    "name": "2026-DeHart RX",
+    "burn_date": "2026-11-08",
+    "agency": "UC Cooperative Extension",
+    "agency_group": "Local Non-Fire",
+    "burn_type": "Underburn",
+    "acres": 3.0,
+    "piles": null,
+    "status": "Approved",
+    "planned_on": "2026-11-07T15:06:00-08:00",
+    "approved_on": "2026-11-07T15:06:00-08:00"
    }
   },
   {
