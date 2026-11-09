@@ -5,7 +5,7 @@
   "source_url": "https://ssl.arb.ca.gov/pfirs/index.php?submit=Map+Page",
   "date_begin": "2026-11-07",
   "date_end": "2026-11-15",
-  "count": 107,
+  "count": 112,
   "note": "Planned and approved ignitions as published by PFIRS. Status can change through the day; confirm in PFIRS."
  },
  "features": [
@@ -267,6 +267,52 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     -120.444697,
+     39.643045
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192997732",
+    "name": "Q12",
+    "burn_date": "2026-11-07",
+    "agency": "US Forest Service",
+    "agency_group": "USFS",
+    "burn_type": "Underburn",
+    "acres": 37.0,
+    "piles": null,
+    "status": "Patrol",
+    "planned_on": "2026-11-05T14:04:00-08:00",
+    "approved_on": "2026-11-05T15:00:00-08:00"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -120.436868,
+     39.646134
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192997733",
+    "name": "Q13",
+    "burn_date": "2026-11-07",
+    "agency": "US Forest Service",
+    "agency_group": "USFS",
+    "burn_type": "Underburn",
+    "acres": 13.0,
+    "piles": null,
+    "status": "Patrol",
+    "planned_on": "2026-11-05T14:04:00-08:00",
+    "approved_on": "2026-11-05T15:01:00-08:00"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      -120.43749,
      39.640697
     ]
@@ -508,34 +554,11 @@
     "agency": "Cache Creek Conservancy",
     "agency_group": "Private",
     "burn_type": "Underburn",
-    "acres": 3.5,
+    "acres": 3.0,
     "piles": null,
-    "status": "Approved",
+    "status": "Completed",
     "planned_on": "2026-11-06T13:20:00-08:00",
     "approved_on": "2026-11-06T19:10:00-08:00"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -121.855324,
-     38.699583
-    ]
-   },
-   "properties": {
-    "pfirs_id": "192999451",
-    "name": "Huller Muller Upper Site Burn",
-    "burn_date": "2026-11-08",
-    "agency": "Cache Creek Conservancy",
-    "agency_group": "Private",
-    "burn_type": "Underburn",
-    "acres": 13.0,
-    "piles": null,
-    "status": "Approved",
-    "planned_on": "2026-11-06T13:23:00-08:00",
-    "approved_on": "2026-11-06T19:32:00-08:00"
    }
   },
   {
@@ -589,52 +612,6 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -120.444697,
-     39.643045
-    ]
-   },
-   "properties": {
-    "pfirs_id": "192997732",
-    "name": "Q12",
-    "burn_date": "2026-11-08",
-    "agency": "US Forest Service",
-    "agency_group": "USFS",
-    "burn_type": "Underburn",
-    "acres": 69.7,
-    "piles": null,
-    "status": "Active",
-    "planned_on": "2026-11-05T14:04:00-08:00",
-    "approved_on": "2026-11-05T15:00:00-08:00"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -120.436868,
-     39.646134
-    ]
-   },
-   "properties": {
-    "pfirs_id": "192997733",
-    "name": "Q13",
-    "burn_date": "2026-11-08",
-    "agency": "US Forest Service",
-    "agency_group": "USFS",
-    "burn_type": "Underburn",
-    "acres": 36.3,
-    "piles": null,
-    "status": "Active",
-    "planned_on": "2026-11-05T14:04:00-08:00",
-    "approved_on": "2026-11-05T15:01:00-08:00"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
      -123.77275,
      41.274571
     ]
@@ -671,32 +648,9 @@
     "burn_type": "Underburn",
     "acres": 40.0,
     "piles": null,
-    "status": "Approved",
+    "status": "Patrol",
     "planned_on": "2026-11-07T18:22:00-08:00",
     "approved_on": "2026-11-07T20:05:00-08:00"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -120.2179,
-     34.90351
-    ]
-   },
-   "properties": {
-    "pfirs_id": "193000590",
-    "name": "Ruiz Plot 3",
-    "burn_date": "2026-11-08",
-    "agency": "Santa Barbara County Fire Department",
-    "agency_group": "Local Fire",
-    "burn_type": "Underburn",
-    "acres": 70.0,
-    "piles": null,
-    "status": "Approved",
-    "planned_on": "2026-11-07T18:28:00-08:00",
-    "approved_on": "2026-11-07T20:08:00-08:00"
    }
   },
   {
@@ -773,6 +727,29 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     -119.177686,
+     37.059219
+    ]
+   },
+   "properties": {
+    "pfirs_id": "193002215",
+    "name": "2026-Dinkey Creek Understory",
+    "burn_date": "2026-11-09",
+    "agency": "Southern California Edison",
+    "agency_group": "Private",
+    "burn_type": "Underburn",
+    "acres": 500.0,
+    "piles": null,
+    "status": "Approved",
+    "planned_on": "2026-11-08T15:09:00-08:00",
+    "approved_on": "2026-11-08T15:09:00-08:00"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      -121.847457,
      37.066344
     ]
@@ -789,6 +766,29 @@
     "status": "Approved",
     "planned_on": "2026-11-06T16:17:00-08:00",
     "approved_on": "2026-11-06T16:21:00-08:00"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -120.654533,
+     39.165044
+    ]
+   },
+   "properties": {
+    "pfirs_id": "193002243",
+    "name": "DU 43",
+    "burn_date": "2026-11-09",
+    "agency": "US Forest Service",
+    "agency_group": "USFS",
+    "burn_type": "Underburn",
+    "acres": 125.0,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-11-08T15:22:00-08:00",
+    "approved_on": null
    }
   },
   {
@@ -1118,6 +1118,52 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     -120.22412,
+     34.90484
+    ]
+   },
+   "properties": {
+    "pfirs_id": "193002262",
+    "name": "Ruiz Plot 2",
+    "burn_date": "2026-11-09",
+    "agency": "Santa Barbara County Fire Department",
+    "agency_group": "Local Fire",
+    "burn_type": "Underburn",
+    "acres": 19.0,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-11-08T16:44:00-08:00",
+    "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -120.2179,
+     34.90351
+    ]
+   },
+   "properties": {
+    "pfirs_id": "193002261",
+    "name": "Ruiz Plot 3",
+    "burn_date": "2026-11-09",
+    "agency": "Santa Barbara County Fire Department",
+    "agency_group": "Local Fire",
+    "burn_type": "Underburn",
+    "acres": 150.0,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-11-08T16:44:00-08:00",
+    "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      -120.027052,
      38.882678
     ]
@@ -1269,9 +1315,9 @@
     "burn_type": "Underburn",
     "acres": 93.0,
     "piles": null,
-    "status": "Pre-Planned",
+    "status": "Approved",
     "planned_on": "2026-11-07T07:30:00-08:00",
-    "approved_on": null
+    "approved_on": "2026-11-08T15:08:00-08:00"
    }
   },
   {
@@ -1501,6 +1547,29 @@
     "piles": null,
     "status": "Pre-Planned",
     "planned_on": "2026-11-05T14:32:00-08:00",
+    "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -121.9615,
+     41.2731
+    ]
+   },
+   "properties": {
+    "pfirs_id": "193002298",
+    "name": "Hwy 89",
+    "burn_date": "2026-11-10",
+    "agency": "US Forest Service",
+    "agency_group": "USFS",
+    "burn_type": "Underburn",
+    "acres": 20.0,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-11-08T17:37:00-08:00",
     "approved_on": null
    }
   },
@@ -1846,6 +1915,52 @@
     "piles": null,
     "status": "Pre-Planned",
     "planned_on": "2026-11-05T17:51:00-08:00",
+    "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -121.9484,
+     41.2661
+    ]
+   },
+   "properties": {
+    "pfirs_id": "193002295",
+    "name": "Hwy 89",
+    "burn_date": "2026-11-11",
+    "agency": "US Forest Service",
+    "agency_group": "USFS",
+    "burn_type": "Underburn",
+    "acres": 324.0,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-11-08T17:37:00-08:00",
+    "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -121.9615,
+     41.2731
+    ]
+   },
+   "properties": {
+    "pfirs_id": "193002297",
+    "name": "Hwy 89",
+    "burn_date": "2026-11-11",
+    "agency": "US Forest Service",
+    "agency_group": "USFS",
+    "burn_type": "Underburn",
+    "acres": 1540.0,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-11-08T17:37:00-08:00",
     "approved_on": null
    }
   },
