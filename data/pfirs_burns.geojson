@@ -5,7 +5,7 @@
   "source_url": "https://ssl.arb.ca.gov/pfirs/index.php?submit=Map+Page",
   "date_begin": "2026-11-10",
   "date_end": "2026-11-18",
-  "count": 199,
+  "count": 204,
   "note": "Planned and approved ignitions as published by PFIRS. Status can change through the day; confirm in PFIRS."
  },
  "features": [
@@ -73,7 +73,7 @@
     "burn_type": "Hand Pile",
     "acres": 7.0,
     "piles": null,
-    "status": "Approved",
+    "status": "Patrol",
     "planned_on": "2026-11-09T07:53:00-08:00",
     "approved_on": "2026-11-09T08:45:00-08:00"
    }
@@ -168,6 +168,29 @@
     "status": "Approved",
     "planned_on": "2026-11-04T10:08:00-08:00",
     "approved_on": "2026-11-09T14:35:00-08:00"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -120.773,
+     37.062
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192986285",
+    "name": "260050",
+    "burn_date": "2026-11-10",
+    "agency": "US Forest Service",
+    "agency_group": "USFS",
+    "burn_type": "Underburn",
+    "acres": 73.0,
+    "piles": null,
+    "status": "Active",
+    "planned_on": "2026-10-29T10:21:00-07:00",
+    "approved_on": "2026-11-02T10:21:00-08:00"
    }
   },
   {
@@ -393,9 +416,9 @@
     "agency": "CAL FIRE",
     "agency_group": "CAL FIRE",
     "burn_type": "Machine Pile",
-    "acres": 5.0,
+    "acres": 10.0,
     "piles": null,
-    "status": "Approved",
+    "status": "Patrol",
     "planned_on": "2026-11-09T11:16:00-08:00",
     "approved_on": "2026-11-09T14:24:00-08:00"
    }
@@ -1154,7 +1177,7 @@
     "burn_type": "Underburn",
     "acres": 74.0,
     "piles": null,
-    "status": "Approved",
+    "status": "Active",
     "planned_on": "2026-11-09T11:22:00-08:00",
     "approved_on": "2026-11-09T13:59:00-08:00"
    }
@@ -1177,7 +1200,7 @@
     "burn_type": "Underburn",
     "acres": 57.0,
     "piles": null,
-    "status": "Approved",
+    "status": "Active",
     "planned_on": "2026-11-09T11:25:00-08:00",
     "approved_on": "2026-11-09T14:17:00-08:00"
    }
@@ -1200,7 +1223,7 @@
     "burn_type": "Hand Pile",
     "acres": 209.0,
     "piles": null,
-    "status": "Approved",
+    "status": "Active",
     "planned_on": "2026-11-09T11:22:00-08:00",
     "approved_on": "2026-11-09T14:04:00-08:00"
    }
@@ -1269,9 +1292,9 @@
     "burn_type": "Underburn",
     "acres": 20.0,
     "piles": null,
-    "status": "Pre-Planned",
+    "status": "Approved",
     "planned_on": "2026-11-10T12:52:00-08:00",
-    "approved_on": null
+    "approved_on": "2026-11-11T06:46:00-08:00"
    }
   },
   {
@@ -1532,29 +1555,6 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -123.152054,
-     38.671651
-    ]
-   },
-   "properties": {
-    "pfirs_id": "193005643",
-    "name": "Britain Creek",
-    "burn_date": "2026-11-11",
-    "agency": "CAL FIRE",
-    "agency_group": "CAL FIRE",
-    "burn_type": "Underburn",
-    "acres": 170.0,
-    "piles": null,
-    "status": "Approved",
-    "planned_on": "2026-11-10T14:21:00-08:00",
-    "approved_on": "2026-11-10T14:45:00-08:00"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
      -120.659262,
      38.910857
     ]
@@ -1683,7 +1683,7 @@
     "burn_type": "Underburn",
     "acres": 126.0,
     "piles": null,
-    "status": "Approved",
+    "status": "Active",
     "planned_on": "2026-11-10T17:33:00-08:00",
     "approved_on": "2026-11-10T18:20:00-08:00"
    }
@@ -1706,7 +1706,7 @@
     "burn_type": "Underburn",
     "acres": 40.0,
     "piles": null,
-    "status": "Approved",
+    "status": "Active",
     "planned_on": "2026-11-10T17:33:00-08:00",
     "approved_on": "2026-11-10T18:18:00-08:00"
    }
@@ -1821,7 +1821,7 @@
     "burn_type": "Machine Pile",
     "acres": 5.0,
     "piles": null,
-    "status": "Approved",
+    "status": "Active",
     "planned_on": "2026-11-09T11:17:00-08:00",
     "approved_on": "2026-11-10T14:50:00-08:00"
    }
@@ -1844,9 +1844,9 @@
     "burn_type": "Underburn",
     "acres": 7.0,
     "piles": null,
-    "status": "Pre-Planned",
+    "status": "Approved",
     "planned_on": "2026-11-05T17:51:00-08:00",
-    "approved_on": null
+    "approved_on": "2026-11-11T06:45:00-08:00"
    }
   },
   {
@@ -1936,9 +1936,9 @@
     "burn_type": "Unknown",
     "acres": 500.0,
     "piles": null,
-    "status": "Pre-Planned",
+    "status": "Approved",
     "planned_on": "2026-11-10T16:53:00-08:00",
-    "approved_on": null
+    "approved_on": "2026-11-11T07:35:00-08:00"
    }
   },
   {
@@ -2488,7 +2488,7 @@
     "burn_type": "Underburn",
     "acres": 200.0,
     "piles": null,
-    "status": "Approved",
+    "status": "Active",
     "planned_on": "2026-11-06T19:42:00-08:00",
     "approved_on": "2026-11-10T12:02:00-08:00"
    }
@@ -2511,7 +2511,7 @@
     "burn_type": "Underburn",
     "acres": 200.0,
     "piles": null,
-    "status": "Approved",
+    "status": "Active",
     "planned_on": "2026-11-06T19:42:00-08:00",
     "approved_on": "2026-11-10T12:03:00-08:00"
    }
@@ -2649,7 +2649,7 @@
     "burn_type": "Underburn",
     "acres": 130.0,
     "piles": null,
-    "status": "Approved",
+    "status": "Active",
     "planned_on": "2026-11-10T07:23:00-08:00",
     "approved_on": "2026-11-10T09:47:00-08:00"
    }
@@ -2672,9 +2672,9 @@
     "burn_type": "Underburn",
     "acres": 43.0,
     "piles": null,
-    "status": "Pre-Planned",
+    "status": "Approved",
     "planned_on": "2026-11-10T18:25:00-08:00",
-    "approved_on": null
+    "approved_on": "2026-11-11T06:45:00-08:00"
    }
   },
   {
@@ -2718,9 +2718,9 @@
     "burn_type": "Underburn",
     "acres": 50.0,
     "piles": null,
-    "status": "Pre-Planned",
+    "status": "Approved",
     "planned_on": "2026-11-09T17:14:00-08:00",
-    "approved_on": null
+    "approved_on": "2026-11-11T09:45:00-08:00"
    }
   },
   {
@@ -2790,6 +2790,29 @@
     "status": "Approved",
     "planned_on": "2026-11-06T16:49:00-08:00",
     "approved_on": "2026-11-10T13:55:00-08:00"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -122.7406,
+     39.3059
+    ]
+   },
+   "properties": {
+    "pfirs_id": "193006372",
+    "name": "Board Camp Ridge Piles",
+    "burn_date": "2026-11-12",
+    "agency": "US Forest Service",
+    "agency_group": "USFS",
+    "burn_type": "Machine Pile",
+    "acres": 10.0,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-11-11T08:43:00-08:00",
+    "approved_on": null
    }
   },
   {
@@ -3533,6 +3556,29 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     -119.633999,
+     37.539326
+    ]
+   },
+   "properties": {
+    "pfirs_id": "193006447",
+    "name": "Wawona",
+    "burn_date": "2026-11-12",
+    "agency": "National Park Service",
+    "agency_group": "NPS",
+    "burn_type": "Machine Pile",
+    "acres": 5.0,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-11-11T09:50:00-08:00",
+    "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      -120.561895,
      39.828252
     ]
@@ -3756,6 +3802,29 @@
     "status": "Approved",
     "planned_on": "2026-11-10T11:44:00-08:00",
     "approved_on": "2026-11-10T11:52:00-08:00"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -122.695823,
+     39.264621
+    ]
+   },
+   "properties": {
+    "pfirs_id": "193006377",
+    "name": "M5 HTA",
+    "burn_date": "2026-11-13",
+    "agency": "US Forest Service",
+    "agency_group": "USFS",
+    "burn_type": "Machine Pile",
+    "acres": 60.0,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-11-11T08:45:00-08:00",
+    "approved_on": null
    }
   },
   {
@@ -4008,6 +4077,29 @@
     "piles": null,
     "status": "Pre-Planned",
     "planned_on": "2026-11-06T19:42:00-08:00",
+    "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -119.633999,
+     37.539326
+    ]
+   },
+   "properties": {
+    "pfirs_id": "193006450",
+    "name": "Wawona",
+    "burn_date": "2026-11-13",
+    "agency": "National Park Service",
+    "agency_group": "NPS",
+    "burn_type": "Machine Pile",
+    "acres": 5.0,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-11-11T09:50:00-08:00",
     "approved_on": null
    }
   },
@@ -4331,6 +4423,29 @@
     "status": "Approved",
     "planned_on": "2026-11-09T09:03:00-08:00",
     "approved_on": "2026-11-09T12:14:00-08:00"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -119.633999,
+     37.539326
+    ]
+   },
+   "properties": {
+    "pfirs_id": "193006452",
+    "name": "Wawona",
+    "burn_date": "2026-11-14",
+    "agency": "National Park Service",
+    "agency_group": "NPS",
+    "burn_type": "Machine Pile",
+    "acres": 5.0,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-11-11T09:50:00-08:00",
+    "approved_on": null
    }
   },
   {
