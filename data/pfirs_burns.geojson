@@ -3,656 +3,12 @@
  "metadata": {
   "source": "CARB PFIRS public map page",
   "source_url": "https://ssl.arb.ca.gov/pfirs/index.php?submit=Map+Page",
-  "date_begin": "2026-11-09",
-  "date_end": "2026-11-17",
-  "count": 225,
+  "date_begin": "2026-11-10",
+  "date_end": "2026-11-18",
+  "count": 199,
   "note": "Planned and approved ignitions as published by PFIRS. Status can change through the day; confirm in PFIRS."
  },
  "features": [
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -122.39944,
-     38.57361
-    ]
-   },
-   "properties": {
-    "pfirs_id": "193002494",
-    "name": "1",
-    "burn_date": "2026-11-09",
-    "agency": "CAL FIRE",
-    "agency_group": "CAL FIRE",
-    "burn_type": "Underburn",
-    "acres": 18.0,
-    "piles": null,
-    "status": "Completed",
-    "planned_on": "2026-11-09T07:16:00-08:00",
-    "approved_on": "2026-11-09T07:17:00-08:00"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -119.177686,
-     37.059219
-    ]
-   },
-   "properties": {
-    "pfirs_id": "193002215",
-    "name": "2026-Dinkey Creek Understory",
-    "burn_date": "2026-11-09",
-    "agency": "Southern California Edison",
-    "agency_group": "Private",
-    "burn_type": "Underburn",
-    "acres": 500.0,
-    "piles": null,
-    "status": "Approved",
-    "planned_on": "2026-11-08T15:09:00-08:00",
-    "approved_on": "2026-11-08T15:09:00-08:00"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -122.805507,
-     41.252572
-    ]
-   },
-   "properties": {
-    "pfirs_id": "193002573",
-    "name": "Boulder 508-12H",
-    "burn_date": "2026-11-09",
-    "agency": "US Forest Service",
-    "agency_group": "USFS",
-    "burn_type": "Hand Pile",
-    "acres": 21.3,
-    "piles": null,
-    "status": "Active",
-    "planned_on": "2026-11-09T08:16:00-08:00",
-    "approved_on": "2026-11-09T09:18:00-08:00"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -122.801595,
-     41.257854
-    ]
-   },
-   "properties": {
-    "pfirs_id": "193002581",
-    "name": "Boulder 508-25H",
-    "burn_date": "2026-11-09",
-    "agency": "US Forest Service",
-    "agency_group": "USFS",
-    "burn_type": "Hand Pile",
-    "acres": 11.7,
-    "piles": null,
-    "status": "Active",
-    "planned_on": "2026-11-09T08:16:00-08:00",
-    "approved_on": "2026-11-09T09:19:00-08:00"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -122.802884,
-     41.25601
-    ]
-   },
-   "properties": {
-    "pfirs_id": "193002576",
-    "name": "Boulder 508-8H",
-    "burn_date": "2026-11-09",
-    "agency": "US Forest Service",
-    "agency_group": "USFS",
-    "burn_type": "Hand Pile",
-    "acres": 43.0,
-    "piles": null,
-    "status": "Approved",
-    "planned_on": "2026-11-09T08:16:00-08:00",
-    "approved_on": "2026-11-09T09:19:00-08:00"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -121.847457,
-     37.066344
-    ]
-   },
-   "properties": {
-    "pfirs_id": "192999842",
-    "name": "Cusacks Burn Plot - TL9",
-    "burn_date": "2026-11-09",
-    "agency": "California State Parks",
-    "agency_group": "CA Parks",
-    "burn_type": "Underburn",
-    "acres": 28.0,
-    "piles": null,
-    "status": "Patrol",
-    "planned_on": "2026-11-06T16:17:00-08:00",
-    "approved_on": "2026-11-06T16:21:00-08:00"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -120.650811,
-     39.168956
-    ]
-   },
-   "properties": {
-    "pfirs_id": "193002097",
-    "name": "DU 44",
-    "burn_date": "2026-11-09",
-    "agency": "US Forest Service",
-    "agency_group": "USFS",
-    "burn_type": "Underburn",
-    "acres": 22.0,
-    "piles": null,
-    "status": "Patrol",
-    "planned_on": "2026-11-08T13:06:00-08:00",
-    "approved_on": "2026-11-09T09:26:00-08:00"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -122.235473,
-     40.185756
-    ]
-   },
-   "properties": {
-    "pfirs_id": "192982654",
-    "name": "Dog Island Park/ Samuel Ayes-Fuels Reduction Project",
-    "burn_date": "2026-11-09",
-    "agency": "Red Bluff Fire Department",
-    "agency_group": "Local Fire",
-    "burn_type": "Underburn",
-    "acres": 14.95,
-    "piles": null,
-    "status": "Approved",
-    "planned_on": "2026-10-27T09:21:00-07:00",
-    "approved_on": "2026-11-06T13:24:00-08:00"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -121.2846,
-     40.769
-    ]
-   },
-   "properties": {
-    "pfirs_id": "193002434",
-    "name": "Eastside Lassen Co.",
-    "burn_date": "2026-11-09",
-    "agency": "US Forest Service",
-    "agency_group": "USFS",
-    "burn_type": "Underburn",
-    "acres": 283.0,
-    "piles": null,
-    "status": "Patrol",
-    "planned_on": "2026-11-09T06:29:00-08:00",
-    "approved_on": "2026-11-09T08:55:00-08:00"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -123.530578,
-     39.210157
-    ]
-   },
-   "properties": {
-    "pfirs_id": "193002900",
-    "name": "Ewe 2 THP SMP 25-34 Broadcast",
-    "burn_date": "2026-11-09",
-    "agency": "Private Landowner",
-    "agency_group": "Private",
-    "burn_type": "Underburn",
-    "acres": 30.0,
-    "piles": null,
-    "status": "Approved",
-    "planned_on": "2026-11-09T09:19:00-08:00",
-    "approved_on": "2026-11-09T09:32:00-08:00"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -123.7554,
-     39.86988
-    ]
-   },
-   "properties": {
-    "pfirs_id": "193002785",
-    "name": "MRC Usal It First SMP 25-47 Broadcast",
-    "burn_date": "2026-11-09",
-    "agency": "Private Landowner",
-    "agency_group": "Private",
-    "burn_type": "Underburn",
-    "acres": 150.0,
-    "piles": null,
-    "status": "Approved",
-    "planned_on": "2026-11-09T09:13:00-08:00",
-    "approved_on": "2026-11-09T09:31:00-08:00"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -119.967248,
-     37.485701
-    ]
-   },
-   "properties": {
-    "pfirs_id": "192991173",
-    "name": "Mariposa Creek RX",
-    "burn_date": "2026-11-09",
-    "agency": "UC Cooperative Extension",
-    "agency_group": "Local Non-Fire",
-    "burn_type": "Underburn",
-    "acres": 1.0,
-    "piles": null,
-    "status": "Pre-Planned",
-    "planned_on": "2026-11-03T10:29:00-08:00",
-    "approved_on": null
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -120.9446,
-     39.09828
-    ]
-   },
-   "properties": {
-    "pfirs_id": "193000556",
-    "name": "NF Phase 1B RX",
-    "burn_date": "2026-11-09",
-    "agency": "Placer County Resource Conservation District",
-    "agency_group": "Local Non-Fire",
-    "burn_type": "Underburn",
-    "acres": 4.0,
-    "piles": null,
-    "status": "Approved",
-    "planned_on": "2026-11-07T17:39:00-08:00",
-    "approved_on": "2026-11-08T09:11:00-08:00"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -116.714019,
-     33.195501
-    ]
-   },
-   "properties": {
-    "pfirs_id": "192998857",
-    "name": "North",
-    "burn_date": "2026-11-09",
-    "agency": "CAL FIRE",
-    "agency_group": "CAL FIRE",
-    "burn_type": "Underburn",
-    "acres": 53.0,
-    "piles": null,
-    "status": "Approved",
-    "planned_on": "2026-11-06T11:35:00-08:00",
-    "approved_on": "2026-11-06T11:58:00-08:00"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -124.2822,
-     40.6838
-    ]
-   },
-   "properties": {
-    "pfirs_id": "192998529",
-    "name": "Ocean Ranch RX",
-    "burn_date": "2026-11-09",
-    "agency": "CAL FIRE",
-    "agency_group": "CAL FIRE",
-    "burn_type": "Hand Pile",
-    "acres": 15.0,
-    "piles": null,
-    "status": "Approved",
-    "planned_on": "2026-11-06T08:47:00-08:00",
-    "approved_on": "2026-11-06T10:12:00-08:00"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -121.411214,
-     39.494768
-    ]
-   },
-   "properties": {
-    "pfirs_id": "193000830",
-    "name": "Phoenix 1",
-    "burn_date": "2026-11-09",
-    "agency": "CAL FIRE",
-    "agency_group": "CAL FIRE",
-    "burn_type": "Underburn",
-    "acres": 57.0,
-    "piles": null,
-    "status": "Approved",
-    "planned_on": "2026-11-08T08:20:00-08:00",
-    "approved_on": "2026-11-08T08:28:00-08:00"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -120.295607,
-     35.062479
-    ]
-   },
-   "properties": {
-    "pfirs_id": "192994786",
-    "name": "Porter Unit 2",
-    "burn_date": "2026-11-09",
-    "agency": "CAL FIRE",
-    "agency_group": "CAL FIRE",
-    "burn_type": "Underburn",
-    "acres": 668.0,
-    "piles": null,
-    "status": "Approved",
-    "planned_on": "2026-11-04T12:15:00-08:00",
-    "approved_on": "2026-11-06T16:07:00-08:00"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -122.509,
-     40.571
-    ]
-   },
-   "properties": {
-    "pfirs_id": "192997371",
-    "name": "Power Tower Unit A",
-    "burn_date": "2026-11-09",
-    "agency": "National Park Service",
-    "agency_group": "NPS",
-    "burn_type": "Underburn",
-    "acres": 174.0,
-    "piles": null,
-    "status": "Approved",
-    "planned_on": "2026-11-05T11:42:00-08:00",
-    "approved_on": "2026-11-06T16:37:00-08:00"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -120.436868,
-     39.646134
-    ]
-   },
-   "properties": {
-    "pfirs_id": "192997733",
-    "name": "Q13",
-    "burn_date": "2026-11-09",
-    "agency": "US Forest Service",
-    "agency_group": "USFS",
-    "burn_type": "Underburn",
-    "acres": 36.3,
-    "piles": null,
-    "status": "Patrol",
-    "planned_on": "2026-11-05T14:04:00-08:00",
-    "approved_on": "2026-11-05T15:01:00-08:00"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -120.22412,
-     34.90484
-    ]
-   },
-   "properties": {
-    "pfirs_id": "193002326",
-    "name": "Ruiz Plot 2",
-    "burn_date": "2026-11-09",
-    "agency": "Santa Barbara County Fire Department",
-    "agency_group": "Local Fire",
-    "burn_type": "Underburn",
-    "acres": 19.0,
-    "piles": null,
-    "status": "Patrol",
-    "planned_on": "2026-11-08T20:07:00-08:00",
-    "approved_on": "2026-11-08T20:09:00-08:00"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -120.2179,
-     34.90351
-    ]
-   },
-   "properties": {
-    "pfirs_id": "193002327",
-    "name": "Ruiz Plot 3",
-    "burn_date": "2026-11-09",
-    "agency": "Santa Barbara County Fire Department",
-    "agency_group": "Local Fire",
-    "burn_type": "Underburn",
-    "acres": 70.0,
-    "piles": null,
-    "status": "Patrol",
-    "planned_on": "2026-11-08T20:07:00-08:00",
-    "approved_on": "2026-11-08T20:19:00-08:00"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -120.027052,
-     38.882678
-    ]
-   },
-   "properties": {
-    "pfirs_id": "193000855",
-    "name": "Sawmill piles",
-    "burn_date": "2026-11-09",
-    "agency": "CAL FIRE",
-    "agency_group": "CAL FIRE",
-    "burn_type": "Hand Pile",
-    "acres": 5.0,
-    "piles": null,
-    "status": "Approved",
-    "planned_on": "2026-11-08T09:14:00-08:00",
-    "approved_on": "2026-11-09T08:05:00-08:00"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -120.433865,
-     39.832271
-    ]
-   },
-   "properties": {
-    "pfirs_id": "192995456",
-    "name": "Sierra Nevada Journeys",
-    "burn_date": "2026-11-09",
-    "agency": "CAL FIRE",
-    "agency_group": "CAL FIRE",
-    "burn_type": "Underburn",
-    "acres": 45.0,
-    "piles": null,
-    "status": "Approved",
-    "planned_on": "2026-11-04T15:14:00-08:00",
-    "approved_on": "2026-11-04T15:49:00-08:00"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -120.433865,
-     39.832271
-    ]
-   },
-   "properties": {
-    "pfirs_id": "193002836",
-    "name": "Sierra Nevada Journeys",
-    "burn_date": "2026-11-09",
-    "agency": "CAL FIRE",
-    "agency_group": "CAL FIRE",
-    "burn_type": "Underburn",
-    "acres": 40.0,
-    "piles": null,
-    "status": "Approved",
-    "planned_on": "2026-11-09T09:13:00-08:00",
-    "approved_on": "2026-11-09T13:20:00-08:00"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -116.732982,
-     33.775137
-    ]
-   },
-   "properties": {
-    "pfirs_id": "192998781",
-    "name": "Stone Creek Broadcast Unit G",
-    "burn_date": "2026-11-09",
-    "agency": "California State Parks",
-    "agency_group": "CA Parks",
-    "burn_type": "Underburn",
-    "acres": 20.0,
-    "piles": null,
-    "status": "Approved",
-    "planned_on": "2026-11-06T10:39:00-08:00",
-    "approved_on": "2026-11-08T11:42:00-08:00"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -116.654722,
-     33.609722
-    ]
-   },
-   "properties": {
-    "pfirs_id": "193000113",
-    "name": "TM Unit 4",
-    "burn_date": "2026-11-09",
-    "agency": "US Forest Service",
-    "agency_group": "USFS",
-    "burn_type": "Underburn",
-    "acres": 120.0,
-    "piles": null,
-    "status": "Patrol",
-    "planned_on": "2026-11-06T19:42:00-08:00",
-    "approved_on": "2026-11-08T11:39:00-08:00"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -122.523618,
-     38.289849
-    ]
-   },
-   "properties": {
-    "pfirs_id": "193000005",
-    "name": "Van Hoosear Wildflower Preserve",
-    "burn_date": "2026-11-09",
-    "agency": "Audubon Canyon Ranch",
-    "agency_group": "Private",
-    "burn_type": "Underburn",
-    "acres": 34.0,
-    "piles": null,
-    "status": "Approved",
-    "planned_on": "2026-11-06T17:02:00-08:00",
-    "approved_on": "2026-11-09T05:04:00-08:00"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -120.561895,
-     39.828252
-    ]
-   },
-   "properties": {
-    "pfirs_id": "193000309",
-    "name": "Willow",
-    "burn_date": "2026-11-09",
-    "agency": "US Forest Service",
-    "agency_group": "USFS",
-    "burn_type": "Underburn",
-    "acres": 93.0,
-    "piles": null,
-    "status": "Active",
-    "planned_on": "2026-11-07T07:30:00-08:00",
-    "approved_on": "2026-11-08T15:08:00-08:00"
-   }
-  },
   {
    "type": "Feature",
    "geometry": {
@@ -694,7 +50,7 @@
     "burn_type": "Underburn",
     "acres": 59.0,
     "piles": null,
-    "status": "Approved",
+    "status": "Completed",
     "planned_on": "2026-11-06T09:10:00-08:00",
     "approved_on": "2026-11-10T05:48:00-08:00"
    }
@@ -901,7 +257,7 @@
     "burn_type": "Underburn",
     "acres": 28.0,
     "piles": null,
-    "status": "Approved",
+    "status": "Patrol",
     "planned_on": "2026-11-06T16:17:00-08:00",
     "approved_on": "2026-11-09T15:58:00-08:00"
    }
@@ -1060,9 +416,9 @@
     "agency": "California State Parks",
     "agency_group": "CA Parks",
     "burn_type": "Underburn",
-    "acres": 7.0,
+    "acres": 4.0,
     "piles": null,
-    "status": "Approved",
+    "status": "Patrol",
     "planned_on": "2026-11-05T17:51:00-08:00",
     "approved_on": "2026-11-10T05:50:00-08:00"
    }
@@ -1704,9 +1060,9 @@
     "agency": "CAL FIRE",
     "agency_group": "CAL FIRE",
     "burn_type": "Underburn",
-    "acres": 40.0,
+    "acres": 64.0,
     "piles": null,
-    "status": "Approved",
+    "status": "Patrol",
     "planned_on": "2026-11-09T09:13:00-08:00",
     "approved_on": "2026-11-09T16:55:00-08:00"
    }
@@ -2327,9 +1683,9 @@
     "burn_type": "Underburn",
     "acres": 126.0,
     "piles": null,
-    "status": "Pre-Planned",
+    "status": "Approved",
     "planned_on": "2026-11-10T17:33:00-08:00",
-    "approved_on": null
+    "approved_on": "2026-11-10T18:20:00-08:00"
    }
   },
   {
@@ -2350,9 +1706,9 @@
     "burn_type": "Underburn",
     "acres": 40.0,
     "piles": null,
-    "status": "Pre-Planned",
+    "status": "Approved",
     "planned_on": "2026-11-10T17:33:00-08:00",
-    "approved_on": null
+    "approved_on": "2026-11-10T18:18:00-08:00"
    }
   },
   {
@@ -3084,9 +2440,9 @@
     "agency": "Motherlode Prescribed Burn Association",
     "agency_group": "Private",
     "burn_type": "Underburn",
-    "acres": 5.5,
+    "acres": 7.0,
     "piles": null,
-    "status": "Approved",
+    "status": "Completed",
     "planned_on": "2026-11-09T09:03:00-08:00",
     "approved_on": "2026-11-09T12:16:00-08:00"
    }
@@ -3296,6 +2652,29 @@
     "status": "Approved",
     "planned_on": "2026-11-10T07:23:00-08:00",
     "approved_on": "2026-11-10T09:47:00-08:00"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -120.561895,
+     39.828252
+    ]
+   },
+   "properties": {
+    "pfirs_id": "193006176",
+    "name": "Willow",
+    "burn_date": "2026-11-11",
+    "agency": "US Forest Service",
+    "agency_group": "USFS",
+    "burn_type": "Underburn",
+    "acres": 43.0,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-11-10T18:25:00-08:00",
+    "approved_on": null
    }
   },
   {
@@ -5174,6 +4553,29 @@
     "pfirs_id": "192982695",
     "name": "Dog Island Park/ Samuel Ayes-Fuels Reduction Project",
     "burn_date": "2026-11-17",
+    "agency": "Red Bluff Fire Department",
+    "agency_group": "Local Fire",
+    "burn_type": "Underburn",
+    "acres": 14.95,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-10-27T09:23:00-07:00",
+    "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -122.235473,
+     40.185756
+    ]
+   },
+   "properties": {
+    "pfirs_id": "192982696",
+    "name": "Dog Island Park/ Samuel Ayes-Fuels Reduction Project",
+    "burn_date": "2026-11-18",
     "agency": "Red Bluff Fire Department",
     "agency_group": "Local Fire",
     "burn_type": "Underburn",
