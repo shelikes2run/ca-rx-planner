@@ -5,7 +5,7 @@
   "source_url": "https://ssl.arb.ca.gov/pfirs/index.php?submit=Map+Page",
   "date_begin": "2026-11-12",
   "date_end": "2026-11-20",
-  "count": 174,
+  "count": 179,
   "note": "Planned and approved ignitions as published by PFIRS. Status can change through the day; confirm in PFIRS."
  },
  "features": [
@@ -375,29 +375,6 @@
     "status": "Patrol",
     "planned_on": "2026-11-09T06:43:00-08:00",
     "approved_on": "2026-11-10T14:55:00-08:00"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -121.013515,
-     39.350028
-    ]
-   },
-   "properties": {
-    "pfirs_id": "192999962",
-    "name": "Big Parcel Unit 1",
-    "burn_date": "2026-11-12",
-    "agency": "US Forest Service",
-    "agency_group": "USFS",
-    "burn_type": "Underburn",
-    "acres": 91.0,
-    "piles": null,
-    "status": "Approved",
-    "planned_on": "2026-11-06T16:49:00-08:00",
-    "approved_on": "2026-11-10T13:55:00-08:00"
    }
   },
   {
@@ -2130,6 +2107,29 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     -120.228084,
+     38.012576
+    ]
+   },
+   "properties": {
+    "pfirs_id": "193013431",
+    "name": "Camp Earnest",
+    "burn_date": "2026-11-14",
+    "agency": "Motherlode Prescribed Burn Association",
+    "agency_group": "Private",
+    "burn_type": "Machine Pile",
+    "acres": 3.0,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-11-13T20:09:00-08:00",
+    "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      -122.235473,
      40.185756
     ]
@@ -2304,9 +2304,9 @@
     "burn_type": "Hand Pile",
     "acres": 106.0,
     "piles": null,
-    "status": "Pre-Planned",
+    "status": "Approved",
     "planned_on": "2026-11-13T09:19:00-08:00",
-    "approved_on": null
+    "approved_on": "2026-11-13T18:11:00-08:00"
    }
   },
   {
@@ -2327,9 +2327,9 @@
     "burn_type": "Hand Pile",
     "acres": 35.0,
     "piles": null,
-    "status": "Pre-Planned",
+    "status": "Approved",
     "planned_on": "2026-11-13T09:19:00-08:00",
-    "approved_on": null
+    "approved_on": "2026-11-13T17:30:00-08:00"
    }
   },
   {
@@ -2350,9 +2350,9 @@
     "burn_type": "Hand Pile",
     "acres": 29.0,
     "piles": null,
-    "status": "Pre-Planned",
+    "status": "Approved",
     "planned_on": "2026-11-13T09:19:00-08:00",
-    "approved_on": null
+    "approved_on": "2026-11-13T18:00:00-08:00"
    }
   },
   {
@@ -2373,9 +2373,9 @@
     "burn_type": "Hand Pile",
     "acres": 45.0,
     "piles": null,
-    "status": "Pre-Planned",
+    "status": "Approved",
     "planned_on": "2026-11-13T09:19:00-08:00",
-    "approved_on": null
+    "approved_on": "2026-11-13T18:11:00-08:00"
    }
   },
   {
@@ -2396,9 +2396,9 @@
     "burn_type": "Hand Pile",
     "acres": 7.0,
     "piles": null,
-    "status": "Pre-Planned",
+    "status": "Approved",
     "planned_on": "2026-11-13T09:19:00-08:00",
-    "approved_on": null
+    "approved_on": "2026-11-13T17:29:00-08:00"
    }
   },
   {
@@ -2419,9 +2419,9 @@
     "burn_type": "Hand Pile",
     "acres": 30.0,
     "piles": null,
-    "status": "Pre-Planned",
+    "status": "Approved",
     "planned_on": "2026-11-13T09:19:00-08:00",
-    "approved_on": null
+    "approved_on": "2026-11-13T17:46:00-08:00"
    }
   },
   {
@@ -2488,9 +2488,9 @@
     "burn_type": "Hand Pile",
     "acres": 1.0,
     "piles": null,
-    "status": "Pre-Planned",
+    "status": "Approved",
     "planned_on": "2026-11-13T10:20:00-08:00",
-    "approved_on": null
+    "approved_on": "2026-11-13T17:51:00-08:00"
    }
   },
   {
@@ -2764,9 +2764,9 @@
     "burn_type": "Hand Pile",
     "acres": 106.0,
     "piles": null,
-    "status": "Pre-Planned",
+    "status": "Approved",
     "planned_on": "2026-11-13T09:22:00-08:00",
-    "approved_on": null
+    "approved_on": "2026-11-13T18:17:00-08:00"
    }
   },
   {
@@ -2787,9 +2787,9 @@
     "burn_type": "Hand Pile",
     "acres": 35.0,
     "piles": null,
-    "status": "Pre-Planned",
+    "status": "Approved",
     "planned_on": "2026-11-13T09:22:00-08:00",
-    "approved_on": null
+    "approved_on": "2026-11-13T18:21:00-08:00"
    }
   },
   {
@@ -2810,9 +2810,9 @@
     "burn_type": "Hand Pile",
     "acres": 29.0,
     "piles": null,
-    "status": "Pre-Planned",
+    "status": "Approved",
     "planned_on": "2026-11-13T09:22:00-08:00",
-    "approved_on": null
+    "approved_on": "2026-11-13T18:25:00-08:00"
    }
   },
   {
@@ -2833,9 +2833,9 @@
     "burn_type": "Hand Pile",
     "acres": 45.0,
     "piles": null,
-    "status": "Pre-Planned",
+    "status": "Approved",
     "planned_on": "2026-11-13T09:22:00-08:00",
-    "approved_on": null
+    "approved_on": "2026-11-13T18:17:00-08:00"
    }
   },
   {
@@ -2856,9 +2856,9 @@
     "burn_type": "Hand Pile",
     "acres": 7.0,
     "piles": null,
-    "status": "Pre-Planned",
+    "status": "Approved",
     "planned_on": "2026-11-13T09:22:00-08:00",
-    "approved_on": null
+    "approved_on": "2026-11-13T18:27:00-08:00"
    }
   },
   {
@@ -2879,9 +2879,9 @@
     "burn_type": "Hand Pile",
     "acres": 30.0,
     "piles": null,
-    "status": "Pre-Planned",
+    "status": "Approved",
     "planned_on": "2026-11-13T09:22:00-08:00",
-    "approved_on": null
+    "approved_on": "2026-11-13T18:28:00-08:00"
    }
   },
   {
@@ -3293,9 +3293,9 @@
     "burn_type": "Hand Pile",
     "acres": 106.0,
     "piles": null,
-    "status": "Pre-Planned",
+    "status": "Approved",
     "planned_on": "2026-11-13T09:26:00-08:00",
-    "approved_on": null
+    "approved_on": "2026-11-13T18:48:00-08:00"
    }
   },
   {
@@ -3316,9 +3316,9 @@
     "burn_type": "Hand Pile",
     "acres": 35.0,
     "piles": null,
-    "status": "Pre-Planned",
+    "status": "Approved",
     "planned_on": "2026-11-13T09:26:00-08:00",
-    "approved_on": null
+    "approved_on": "2026-11-13T18:42:00-08:00"
    }
   },
   {
@@ -3339,9 +3339,9 @@
     "burn_type": "Hand Pile",
     "acres": 29.0,
     "piles": null,
-    "status": "Pre-Planned",
+    "status": "Approved",
     "planned_on": "2026-11-13T09:26:00-08:00",
-    "approved_on": null
+    "approved_on": "2026-11-13T18:37:00-08:00"
    }
   },
   {
@@ -3362,9 +3362,9 @@
     "burn_type": "Hand Pile",
     "acres": 45.0,
     "piles": null,
-    "status": "Pre-Planned",
+    "status": "Approved",
     "planned_on": "2026-11-13T09:26:00-08:00",
-    "approved_on": null
+    "approved_on": "2026-11-13T18:34:00-08:00"
    }
   },
   {
@@ -3385,9 +3385,9 @@
     "burn_type": "Hand Pile",
     "acres": 7.0,
     "piles": null,
-    "status": "Pre-Planned",
+    "status": "Approved",
     "planned_on": "2026-11-13T09:26:00-08:00",
-    "approved_on": null
+    "approved_on": "2026-11-13T18:41:00-08:00"
    }
   },
   {
@@ -3408,9 +3408,9 @@
     "burn_type": "Hand Pile",
     "acres": 30.0,
     "piles": null,
-    "status": "Pre-Planned",
+    "status": "Approved",
     "planned_on": "2026-11-13T09:26:00-08:00",
-    "approved_on": null
+    "approved_on": "2026-11-13T18:39:00-08:00"
    }
   },
   {
@@ -3592,9 +3592,9 @@
     "burn_type": "Landing Pile",
     "acres": 50.0,
     "piles": null,
-    "status": "Pre-Planned",
+    "status": "Approved",
     "planned_on": "2026-11-13T15:35:00-08:00",
-    "approved_on": null
+    "approved_on": "2026-11-13T15:37:00-08:00"
    }
   },
   {
@@ -3855,6 +3855,75 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     -120.75864,
+     39.436354
+    ]
+   },
+   "properties": {
+    "pfirs_id": "193013226",
+    "name": "SYRFB 100",
+    "burn_date": "2026-11-17",
+    "agency": "US Forest Service",
+    "agency_group": "USFS",
+    "burn_type": "Hand Pile",
+    "acres": 23.0,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-11-13T16:22:00-08:00",
+    "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -120.782436,
+     39.423672
+    ]
+   },
+   "properties": {
+    "pfirs_id": "193013227",
+    "name": "SYRFB 90",
+    "burn_date": "2026-11-17",
+    "agency": "US Forest Service",
+    "agency_group": "USFS",
+    "burn_type": "Hand Pile",
+    "acres": 81.0,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-11-13T16:22:00-08:00",
+    "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -120.744902,
+     39.439799
+    ]
+   },
+   "properties": {
+    "pfirs_id": "193013225",
+    "name": "SyrfB 110",
+    "burn_date": "2026-11-17",
+    "agency": "US Forest Service",
+    "agency_group": "USFS",
+    "burn_type": "Hand Pile",
+    "acres": 9.0,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-11-13T16:22:00-08:00",
+    "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      -120.136733,
      39.060532
     ]
@@ -3947,6 +4016,29 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     -120.798954,
+     39.417161
+    ]
+   },
+   "properties": {
+    "pfirs_id": "193013228",
+    "name": "SYRFB 80",
+    "burn_date": "2026-11-18",
+    "agency": "US Forest Service",
+    "agency_group": "USFS",
+    "burn_type": "Hand Pile",
+    "acres": 37.0,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-11-13T16:22:00-08:00",
+    "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      -123.251194,
      41.778648
     ]
@@ -3985,6 +4077,29 @@
     "piles": null,
     "status": "Pre-Planned",
     "planned_on": "2026-10-27T09:23:00-07:00",
+    "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -120.817967,
+     39.405788
+    ]
+   },
+   "properties": {
+    "pfirs_id": "193013229",
+    "name": "SYRFB 70",
+    "burn_date": "2026-11-19",
+    "agency": "US Forest Service",
+    "agency_group": "USFS",
+    "burn_type": "Hand Pile",
+    "acres": 49.0,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-11-13T16:22:00-08:00",
     "approved_on": null
    }
   },
