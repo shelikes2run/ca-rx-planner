@@ -5,7 +5,7 @@
   "source_url": "https://ssl.arb.ca.gov/pfirs/index.php?submit=Map+Page",
   "date_begin": "2026-11-13",
   "date_end": "2026-11-21",
-  "count": 140,
+  "count": 146,
   "note": "Planned and approved ignitions as published by PFIRS. Status can change through the day; confirm in PFIRS."
  },
  "features": [
@@ -1200,7 +1200,7 @@
     "burn_type": "Unknown",
     "acres": 702.0,
     "piles": null,
-    "status": "Approved",
+    "status": "Active",
     "planned_on": "2026-11-12T09:43:00-08:00",
     "approved_on": "2026-11-14T07:27:00-08:00"
    }
@@ -1223,7 +1223,7 @@
     "burn_type": "Unknown",
     "acres": 100.0,
     "piles": null,
-    "status": "Approved",
+    "status": "Active",
     "planned_on": "2026-11-14T07:29:00-08:00",
     "approved_on": "2026-11-14T07:30:00-08:00"
    }
@@ -1440,29 +1440,6 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -116.62333,
-     32.82806
-    ]
-   },
-   "properties": {
-    "pfirs_id": "193009586",
-    "name": "Roberts Ranch Oak Woodlands",
-    "burn_date": "2026-11-14",
-    "agency": "US Forest Service",
-    "agency_group": "USFS",
-    "burn_type": "Hand Pile",
-    "acres": 25.0,
-    "piles": null,
-    "status": "Approved",
-    "planned_on": "2026-11-13T09:02:00-08:00",
-    "approved_on": "2026-11-13T13:00:00-08:00"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
      -122.194723,
      38.767111
     ]
@@ -1647,6 +1624,144 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     -119.177686,
+     37.059219
+    ]
+   },
+   "properties": {
+    "pfirs_id": "193013634",
+    "name": "2026-Dinkey Creek Understory",
+    "burn_date": "2026-11-15",
+    "agency": "Southern California Edison",
+    "agency_group": "Private",
+    "burn_type": "Underburn",
+    "acres": 500.0,
+    "piles": null,
+    "status": "Approved",
+    "planned_on": "2026-11-14T14:04:00-08:00",
+    "approved_on": "2026-11-14T14:04:00-08:00"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -119.08,
+     37.636
+    ]
+   },
+   "properties": {
+    "pfirs_id": "193013663",
+    "name": "2026-FR-7",
+    "burn_date": "2026-11-15",
+    "agency": "US Forest Service",
+    "agency_group": "USFS",
+    "burn_type": "Hand Pile",
+    "acres": 167.0,
+    "piles": null,
+    "status": "Approved",
+    "planned_on": "2026-11-14T14:08:00-08:00",
+    "approved_on": "2026-11-14T14:08:00-08:00"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -119.026638,
+     36.995786
+    ]
+   },
+   "properties": {
+    "pfirs_id": "193013657",
+    "name": "2026-Garnet Fire Roadside Hazard",
+    "burn_date": "2026-11-15",
+    "agency": "US Forest Service",
+    "agency_group": "USFS",
+    "burn_type": "Hand Pile",
+    "acres": 1603.0,
+    "piles": null,
+    "status": "Approved",
+    "planned_on": "2026-11-14T14:06:00-08:00",
+    "approved_on": "2026-11-14T14:06:00-08:00"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -119.42752,
+     37.23697
+    ]
+   },
+   "properties": {
+    "pfirs_id": "193013669",
+    "name": "2026-Incline",
+    "burn_date": "2026-11-15",
+    "agency": "Private Landowner",
+    "agency_group": "Private",
+    "burn_type": "Hand Pile",
+    "acres": 842.0,
+    "piles": null,
+    "status": "Approved",
+    "planned_on": "2026-11-14T14:09:00-08:00",
+    "approved_on": "2026-11-14T14:09:00-08:00"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -119.589754,
+     37.435743
+    ]
+   },
+   "properties": {
+    "pfirs_id": "193013675",
+    "name": "2026-Nelder Grove",
+    "burn_date": "2026-11-15",
+    "agency": "Private Landowner",
+    "agency_group": "Private",
+    "burn_type": "Hand Pile",
+    "acres": 500.0,
+    "piles": null,
+    "status": "Approved",
+    "planned_on": "2026-11-14T14:10:00-08:00",
+    "approved_on": "2026-11-14T14:10:00-08:00"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -119.288965,
+     37.107236
+    ]
+   },
+   "properties": {
+    "pfirs_id": "193013642",
+    "name": "2026-Shaver Lake Understory",
+    "burn_date": "2026-11-15",
+    "agency": "Southern California Edison",
+    "agency_group": "Private",
+    "burn_type": "Underburn",
+    "acres": 40.0,
+    "piles": null,
+    "status": "Approved",
+    "planned_on": "2026-11-14T14:05:00-08:00",
+    "approved_on": "2026-11-14T14:05:00-08:00"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      -122.235473,
      40.185756
     ]
@@ -1686,29 +1801,6 @@
     "status": "Approved",
     "planned_on": "2026-11-13T13:42:00-08:00",
     "approved_on": "2026-11-13T14:46:00-08:00"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -122.030661,
-     41.659515
-    ]
-   },
-   "properties": {
-    "pfirs_id": "193007714",
-    "name": "Horsethief",
-    "burn_date": "2026-11-15",
-    "agency": "US Forest Service",
-    "agency_group": "USFS",
-    "burn_type": "Unknown",
-    "acres": 702.0,
-    "piles": null,
-    "status": "Pre-Planned",
-    "planned_on": "2026-11-12T09:43:00-08:00",
-    "approved_on": null
    }
   },
   {
@@ -1877,29 +1969,6 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -121.988649,
-     41.66692
-    ]
-   },
-   "properties": {
-    "pfirs_id": "193007715",
-    "name": "Orr",
-    "burn_date": "2026-11-15",
-    "agency": "US Forest Service",
-    "agency_group": "USFS",
-    "burn_type": "Unknown",
-    "acres": 1134.0,
-    "piles": null,
-    "status": "Pre-Planned",
-    "planned_on": "2026-11-12T09:43:00-08:00",
-    "approved_on": null
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
      -120.414305,
      39.830447
     ]
@@ -1915,6 +1984,29 @@
     "piles": null,
     "status": "Pre-Planned",
     "planned_on": "2026-11-14T12:07:00-08:00",
+    "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -116.62333,
+     32.82806
+    ]
+   },
+   "properties": {
+    "pfirs_id": "193013705",
+    "name": "Roberts Ranch Oak Woodlands",
+    "burn_date": "2026-11-15",
+    "agency": "US Forest Service",
+    "agency_group": "USFS",
+    "burn_type": "Hand Pile",
+    "acres": 30.0,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-11-14T16:13:00-08:00",
     "approved_on": null
    }
   },
@@ -3119,6 +3211,29 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     -118.573408,
+     34.699706
+    ]
+   },
+   "properties": {
+    "pfirs_id": "193013599",
+    "name": "Sawmill",
+    "burn_date": "2026-11-18",
+    "agency": "US Forest Service",
+    "agency_group": "USFS",
+    "burn_type": "Underburn",
+    "acres": 38.0,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-11-14T12:53:00-08:00",
+    "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      -123.251194,
      41.778648
     ]
@@ -3226,6 +3341,29 @@
     "piles": null,
     "status": "Pre-Planned",
     "planned_on": "2026-10-27T09:23:00-07:00",
+    "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -120.562704,
+     38.715182
+    ]
+   },
+   "properties": {
+    "pfirs_id": "193013614",
+    "name": "Sly Park 2020",
+    "burn_date": "2026-11-21",
+    "agency": "CAL FIRE",
+    "agency_group": "CAL FIRE",
+    "burn_type": "Unknown",
+    "acres": 5.0,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-11-14T13:49:00-08:00",
     "approved_on": null
    }
   }
