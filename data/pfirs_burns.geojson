@@ -5,7 +5,7 @@
   "source_url": "https://ssl.arb.ca.gov/pfirs/index.php?submit=Map+Page",
   "date_begin": "2026-11-19",
   "date_end": "2026-11-27",
-  "count": 110,
+  "count": 109,
   "note": "Planned and approved ignitions as published by PFIRS. Status can change through the day; confirm in PFIRS."
  },
  "features": [
@@ -168,6 +168,75 @@
     "status": "Approved",
     "planned_on": "2026-11-19T07:57:00-08:00",
     "approved_on": "2026-11-19T15:36:00-08:00"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -123.530048,
+     38.771504
+    ]
+   },
+   "properties": {
+    "pfirs_id": "193025436",
+    "name": "Bower Gualala SMP 22-57 Piles",
+    "burn_date": "2026-11-19",
+    "agency": "Private Landowner",
+    "agency_group": "Private",
+    "burn_type": "Machine Pile",
+    "acres": 3.0,
+    "piles": null,
+    "status": "Approved",
+    "planned_on": "2026-11-20T14:06:00-08:00",
+    "approved_on": "2026-11-20T14:26:00-08:00"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -123.534038,
+     38.785056
+    ]
+   },
+   "properties": {
+    "pfirs_id": "193025487",
+    "name": "Bower SMP 22-09 Piles",
+    "burn_date": "2026-11-19",
+    "agency": "Private Landowner",
+    "agency_group": "Private",
+    "burn_type": "Machine Pile",
+    "acres": 3.0,
+    "piles": null,
+    "status": "Approved",
+    "planned_on": "2026-11-20T14:19:00-08:00",
+    "approved_on": "2026-11-20T14:31:00-08:00"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -123.518054,
+     38.77734
+    ]
+   },
+   "properties": {
+    "pfirs_id": "193025458",
+    "name": "Bower SMP 22-56 Piles",
+    "burn_date": "2026-11-19",
+    "agency": "Private Landowner",
+    "agency_group": "Private",
+    "burn_type": "Machine Pile",
+    "acres": 3.0,
+    "piles": null,
+    "status": "Approved",
+    "planned_on": "2026-11-20T14:19:00-08:00",
+    "approved_on": "2026-11-20T14:30:00-08:00"
    }
   },
   {
@@ -681,29 +750,6 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -120.968325,
-     39.38859
-    ]
-   },
-   "properties": {
-    "pfirs_id": "193019735",
-    "name": "SYRFB 10",
-    "burn_date": "2026-11-19",
-    "agency": "US Forest Service",
-    "agency_group": "USFS",
-    "burn_type": "Hand Pile",
-    "acres": 32.0,
-    "piles": null,
-    "status": "Active",
-    "planned_on": "2026-11-17T17:57:00-08:00",
-    "approved_on": "2026-11-18T07:46:00-08:00"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
      -123.2,
      41.46
     ]
@@ -796,114 +842,22 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -120.737194,
-     38.99021
+     -120.735797,
+     38.988952
     ]
    },
    "properties": {
-    "pfirs_id": "193021019",
-    "name": "Vulcan Unit 15",
-    "burn_date": "2026-11-19",
-    "agency": "US Forest Service",
-    "agency_group": "USFS",
-    "burn_type": "Machine Pile",
-    "acres": 11.0,
-    "piles": null,
-    "status": "Approved",
-    "planned_on": "2026-11-18T11:48:00-08:00",
-    "approved_on": "2026-11-18T15:22:00-08:00"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -120.737287,
-     38.988708
-    ]
-   },
-   "properties": {
-    "pfirs_id": "193022147",
-    "name": "Vulcan Unit 15a",
+    "pfirs_id": "193021020",
+    "name": "Vulcan Unit 14a",
     "burn_date": "2026-11-19",
     "agency": "US Forest Service",
     "agency_group": "USFS",
     "burn_type": "Machine Pile",
     "acres": 4.0,
     "piles": null,
-    "status": "Approved",
-    "planned_on": "2026-11-18T16:12:00-08:00",
-    "approved_on": "2026-11-18T16:19:00-08:00"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -120.751069,
-     38.98493
-    ]
-   },
-   "properties": {
-    "pfirs_id": "193020991",
-    "name": "Vulcan Unit 18a",
-    "burn_date": "2026-11-19",
-    "agency": "US Forest Service",
-    "agency_group": "USFS",
-    "burn_type": "Machine Pile",
-    "acres": 2.0,
-    "piles": null,
-    "status": "Approved",
+    "status": "Patrol",
     "planned_on": "2026-11-18T11:48:00-08:00",
-    "approved_on": "2026-11-18T15:25:00-08:00"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -120.729886,
-     38.982658
-    ]
-   },
-   "properties": {
-    "pfirs_id": "193021036",
-    "name": "Vulcan Unit 24(a)",
-    "burn_date": "2026-11-19",
-    "agency": "US Forest Service",
-    "agency_group": "USFS",
-    "burn_type": "Machine Pile",
-    "acres": 53.0,
-    "piles": null,
-    "status": "Active",
-    "planned_on": "2026-11-18T11:48:00-08:00",
-    "approved_on": "2026-11-18T14:56:00-08:00"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -120.743942,
-     38.92633
-    ]
-   },
-   "properties": {
-    "pfirs_id": "193021049",
-    "name": "Vulcan Unit 25",
-    "burn_date": "2026-11-19",
-    "agency": "US Forest Service",
-    "agency_group": "USFS",
-    "burn_type": "Machine Pile",
-    "acres": 8.0,
-    "piles": null,
-    "status": "Approved",
-    "planned_on": "2026-11-18T11:48:00-08:00",
-    "approved_on": "2026-11-18T16:01:00-08:00"
+    "approved_on": "2026-11-18T15:30:00-08:00"
    }
   },
   {
@@ -1131,7 +1085,7 @@
     "burn_type": "Hand Pile",
     "acres": null,
     "piles": 15.0,
-    "status": "Approved",
+    "status": "Completed",
     "planned_on": "2026-11-18T14:21:00-08:00",
     "approved_on": "2026-11-20T06:29:00-08:00"
    }
@@ -1157,6 +1111,75 @@
     "status": "Pre-Planned",
     "planned_on": "2026-11-19T21:09:00-08:00",
     "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -123.530048,
+     38.771504
+    ]
+   },
+   "properties": {
+    "pfirs_id": "193025438",
+    "name": "Bower Gualala SMP 22-57 Piles",
+    "burn_date": "2026-11-20",
+    "agency": "Private Landowner",
+    "agency_group": "Private",
+    "burn_type": "Machine Pile",
+    "acres": 3.0,
+    "piles": null,
+    "status": "Approved",
+    "planned_on": "2026-11-20T14:06:00-08:00",
+    "approved_on": "2026-11-20T14:21:00-08:00"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -123.534038,
+     38.785056
+    ]
+   },
+   "properties": {
+    "pfirs_id": "193025486",
+    "name": "Bower SMP 22-09 Piles",
+    "burn_date": "2026-11-20",
+    "agency": "Private Landowner",
+    "agency_group": "Private",
+    "burn_type": "Machine Pile",
+    "acres": 3.0,
+    "piles": null,
+    "status": "Approved",
+    "planned_on": "2026-11-20T14:19:00-08:00",
+    "approved_on": "2026-11-20T14:24:00-08:00"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -123.518054,
+     38.77734
+    ]
+   },
+   "properties": {
+    "pfirs_id": "193025488",
+    "name": "Bower SMP 22-56 Piles",
+    "burn_date": "2026-11-20",
+    "agency": "Private Landowner",
+    "agency_group": "Private",
+    "burn_type": "Machine Pile",
+    "acres": 3.0,
+    "piles": null,
+    "status": "Approved",
+    "planned_on": "2026-11-20T14:19:00-08:00",
+    "approved_on": "2026-11-20T14:22:00-08:00"
    }
   },
   {
@@ -1430,7 +1453,7 @@
     "burn_type": "Machine Pile",
     "acres": 27.0,
     "piles": null,
-    "status": "Approved",
+    "status": "Patrol",
     "planned_on": "2026-11-20T08:38:00-08:00",
     "approved_on": "2026-11-20T08:57:00-08:00"
    }
@@ -1522,32 +1545,9 @@
     "burn_type": "Machine Pile",
     "acres": 11.0,
     "piles": null,
-    "status": "Approved",
+    "status": "Patrol",
     "planned_on": "2026-11-18T13:09:00-08:00",
     "approved_on": "2026-11-19T15:37:00-08:00"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -120.737194,
-     38.99021
-    ]
-   },
-   "properties": {
-    "pfirs_id": "193021389",
-    "name": "Vulcan Unit 15",
-    "burn_date": "2026-11-20",
-    "agency": "US Forest Service",
-    "agency_group": "USFS",
-    "burn_type": "Machine Pile",
-    "acres": 11.0,
-    "piles": null,
-    "status": "Approved",
-    "planned_on": "2026-11-18T13:09:00-08:00",
-    "approved_on": "2026-11-19T16:22:00-08:00"
    }
   },
   {
@@ -1568,7 +1568,7 @@
     "burn_type": "Machine Pile",
     "acres": 4.0,
     "piles": null,
-    "status": "Approved",
+    "status": "Patrol",
     "planned_on": "2026-11-18T16:12:00-08:00",
     "approved_on": "2026-11-19T13:06:00-08:00"
    }
@@ -1591,193 +1591,9 @@
     "burn_type": "Machine Pile",
     "acres": 2.0,
     "piles": null,
-    "status": "Approved",
-    "planned_on": "2026-11-18T13:09:00-08:00",
-    "approved_on": "2026-11-19T16:36:00-08:00"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -120.729886,
-     38.982658
-    ]
-   },
-   "properties": {
-    "pfirs_id": "193021388",
-    "name": "Vulcan Unit 24(a)",
-    "burn_date": "2026-11-20",
-    "agency": "US Forest Service",
-    "agency_group": "USFS",
-    "burn_type": "Machine Pile",
-    "acres": 53.0,
-    "piles": null,
-    "status": "Approved",
-    "planned_on": "2026-11-18T13:09:00-08:00",
-    "approved_on": "2026-11-19T15:15:00-08:00"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -120.743942,
-     38.92633
-    ]
-   },
-   "properties": {
-    "pfirs_id": "193022263",
-    "name": "Vulcan Unit 25",
-    "burn_date": "2026-11-20",
-    "agency": "US Forest Service",
-    "agency_group": "USFS",
-    "burn_type": "Machine Pile",
-    "acres": 8.0,
-    "piles": null,
-    "status": "Approved",
-    "planned_on": "2026-11-18T16:24:00-08:00",
-    "approved_on": "2026-11-19T14:35:00-08:00"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -120.737914,
-     38.93142
-    ]
-   },
-   "properties": {
-    "pfirs_id": "193022264",
-    "name": "Vulcan Unit 26",
-    "burn_date": "2026-11-20",
-    "agency": "US Forest Service",
-    "agency_group": "USFS",
-    "burn_type": "Machine Pile",
-    "acres": 8.0,
-    "piles": null,
-    "status": "Approved",
-    "planned_on": "2026-11-18T16:24:00-08:00",
-    "approved_on": "2026-11-19T13:54:00-08:00"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -120.743109,
-     38.922306
-    ]
-   },
-   "properties": {
-    "pfirs_id": "193021046",
-    "name": "Vulcan Unit 28",
-    "burn_date": "2026-11-20",
-    "agency": "US Forest Service",
-    "agency_group": "USFS",
-    "burn_type": "Machine Pile",
-    "acres": 30.0,
-    "piles": null,
-    "status": "Approved",
-    "planned_on": "2026-11-18T11:48:00-08:00",
-    "approved_on": "2026-11-19T14:30:00-08:00"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -120.741035,
-     38.925355
-    ]
-   },
-   "properties": {
-    "pfirs_id": "193021047",
-    "name": "Vulcan Unit 29",
-    "burn_date": "2026-11-20",
-    "agency": "US Forest Service",
-    "agency_group": "USFS",
-    "burn_type": "Machine Pile",
-    "acres": 42.0,
-    "piles": null,
-    "status": "Approved",
-    "planned_on": "2026-11-18T11:48:00-08:00",
-    "approved_on": "2026-11-19T14:47:00-08:00"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -120.78834,
-     38.93098
-    ]
-   },
-   "properties": {
-    "pfirs_id": "193021390",
-    "name": "Vulcan Unit 47(a)",
-    "burn_date": "2026-11-20",
-    "agency": "US Forest Service",
-    "agency_group": "USFS",
-    "burn_type": "Machine Pile",
-    "acres": 16.0,
-    "piles": null,
-    "status": "Approved",
-    "planned_on": "2026-11-18T13:09:00-08:00",
-    "approved_on": "2026-11-19T15:47:00-08:00"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -120.774747,
-     38.99096
-    ]
-   },
-   "properties": {
-    "pfirs_id": "193021387",
-    "name": "Vulcan Unit 5 (ab)",
-    "burn_date": "2026-11-20",
-    "agency": "US Forest Service",
-    "agency_group": "USFS",
-    "burn_type": "Machine Pile",
-    "acres": 21.0,
-    "piles": null,
     "status": "Patrol",
     "planned_on": "2026-11-18T13:09:00-08:00",
-    "approved_on": "2026-11-19T15:27:00-08:00"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -120.778651,
-     38.987243
-    ]
-   },
-   "properties": {
-    "pfirs_id": "193021394",
-    "name": "Vulcan Unit 7 (ab)",
-    "burn_date": "2026-11-20",
-    "agency": "US Forest Service",
-    "agency_group": "USFS",
-    "burn_type": "Machine Pile",
-    "acres": 21.0,
-    "piles": null,
-    "status": "Approved",
-    "planned_on": "2026-11-18T13:09:00-08:00",
-    "approved_on": "2026-11-19T16:05:00-08:00"
+    "approved_on": "2026-11-19T16:36:00-08:00"
    }
   },
   {
@@ -1798,7 +1614,7 @@
     "burn_type": "Hand Pile",
     "acres": 5.0,
     "piles": null,
-    "status": "Approved",
+    "status": "Patrol",
     "planned_on": "2026-11-19T15:33:00-08:00",
     "approved_on": "2026-11-20T08:05:00-08:00"
    }
@@ -1900,6 +1716,75 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     -122.236202,
+     38.888078
+    ]
+   },
+   "properties": {
+    "pfirs_id": "193025429",
+    "name": "McClosky Fuel Reduction",
+    "burn_date": "2026-11-21",
+    "agency": "CAL FIRE",
+    "agency_group": "CAL FIRE",
+    "burn_type": "Hand Pile",
+    "acres": 0.25,
+    "piles": null,
+    "status": "Approved",
+    "planned_on": "2026-11-20T14:02:00-08:00",
+    "approved_on": "2026-11-20T14:46:00-08:00"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -120.387958,
+     39.564635
+    ]
+   },
+   "properties": {
+    "pfirs_id": "193025634",
+    "name": "Randolph HP",
+    "burn_date": "2026-11-21",
+    "agency": "US Forest Service",
+    "agency_group": "USFS",
+    "burn_type": "Hand Pile",
+    "acres": 40.8,
+    "piles": null,
+    "status": "Approved",
+    "planned_on": "2026-11-20T16:31:00-08:00",
+    "approved_on": "2026-11-20T16:36:00-08:00"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -122.676807,
+     38.811471
+    ]
+   },
+   "properties": {
+    "pfirs_id": "193025641",
+    "name": "Rd 500",
+    "burn_date": "2026-11-21",
+    "agency": "CAL FIRE",
+    "agency_group": "CAL FIRE",
+    "burn_type": "Hand Pile",
+    "acres": 5.0,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-11-20T16:38:00-08:00",
+    "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      -122.235473,
      40.185756
     ]
@@ -1959,9 +1844,9 @@
     "burn_type": "Underburn",
     "acres": 3.0,
     "piles": null,
-    "status": "Pre-Planned",
+    "status": "Approved",
     "planned_on": "2026-11-19T16:20:00-08:00",
-    "approved_on": null
+    "approved_on": "2026-11-20T14:47:00-08:00"
    }
   },
   {
@@ -2038,6 +1923,29 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     -121.2921,
+     40.8838
+    ]
+   },
+   "properties": {
+    "pfirs_id": "193025680",
+    "name": "Bald Mach Piles",
+    "burn_date": "2026-11-23",
+    "agency": "US Forest Service",
+    "agency_group": "USFS",
+    "burn_type": "Machine Pile",
+    "acres": 235.0,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-11-20T18:23:00-08:00",
+    "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      -122.235473,
      40.185756
     ]
@@ -2061,6 +1969,29 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     -123.415421,
+     41.876796
+    ]
+   },
+   "properties": {
+    "pfirs_id": "193025655",
+    "name": "East Fork Indian Creek Harrison",
+    "burn_date": "2026-11-23",
+    "agency": "Mid Klamath Watershed Council",
+    "agency_group": "Private",
+    "burn_type": "Hand Pile",
+    "acres": 8.0,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-11-20T16:57:00-08:00",
+    "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      -122.255353,
      37.092289
     ]
@@ -2074,9 +2005,9 @@
     "burn_type": "Machine Pile",
     "acres": 5.0,
     "piles": null,
-    "status": "Pre-Planned",
+    "status": "Approved",
     "planned_on": "2026-11-18T08:55:00-08:00",
-    "approved_on": null
+    "approved_on": "2026-11-20T15:45:00-08:00"
    }
   },
   {
@@ -2169,6 +2100,29 @@
     "status": "Approved",
     "planned_on": "2026-11-19T09:43:00-08:00",
     "approved_on": "2026-11-20T08:59:00-08:00"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -121.0462,
+     41.1017
+    ]
+   },
+   "properties": {
+    "pfirs_id": "193025562",
+    "name": "Stoney Breaker",
+    "burn_date": "2026-11-23",
+    "agency": "Bureau of Land Management",
+    "agency_group": "BLM",
+    "burn_type": "Hand Pile",
+    "acres": 20.0,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-11-20T15:42:00-08:00",
+    "approved_on": null
    }
   },
   {
@@ -2376,6 +2330,29 @@
     "status": "Approved",
     "planned_on": "2026-11-19T09:43:00-08:00",
     "approved_on": "2026-11-20T10:53:00-08:00"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -121.0462,
+     41.1017
+    ]
+   },
+   "properties": {
+    "pfirs_id": "193025563",
+    "name": "Stoney Breaker",
+    "burn_date": "2026-11-24",
+    "agency": "Bureau of Land Management",
+    "agency_group": "BLM",
+    "burn_type": "Hand Pile",
+    "acres": 20.0,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-11-20T15:42:00-08:00",
+    "approved_on": null
    }
   },
   {
