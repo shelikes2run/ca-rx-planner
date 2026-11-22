@@ -5,7 +5,7 @@
   "source_url": "https://ssl.arb.ca.gov/pfirs/index.php?submit=Map+Page",
   "date_begin": "2026-11-21",
   "date_end": "2026-11-29",
-  "count": 49,
+  "count": 52,
   "note": "Planned and approved ignitions as published by PFIRS. Status can change through the day; confirm in PFIRS."
  },
  "features": [
@@ -27,7 +27,7 @@
     "burn_type": "Hand Pile",
     "acres": 727.0,
     "piles": null,
-    "status": "Approved",
+    "status": "Active",
     "planned_on": "2026-11-20T13:45:00-08:00",
     "approved_on": "2026-11-20T13:45:00-08:00"
    }
@@ -257,9 +257,32 @@
     "burn_type": "Hand Pile",
     "acres": 1.5,
     "piles": null,
-    "status": "Pre-Planned",
+    "status": "Approved",
     "planned_on": "2026-11-20T13:10:00-08:00",
-    "approved_on": null
+    "approved_on": "2026-11-22T10:10:00-08:00"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -118.519807,
+     36.144674
+    ]
+   },
+   "properties": {
+    "pfirs_id": "193025906",
+    "name": "2026-Freeman Creek Grove",
+    "burn_date": "2026-11-23",
+    "agency": "US Forest Service",
+    "agency_group": "USFS",
+    "burn_type": "Hand Pile",
+    "acres": 727.0,
+    "piles": null,
+    "status": "Approved",
+    "planned_on": "2026-11-22T13:41:00-08:00",
+    "approved_on": "2026-11-22T13:41:00-08:00"
    }
   },
   {
@@ -328,6 +351,29 @@
     "piles": null,
     "status": "Pre-Planned",
     "planned_on": "2026-11-20T18:23:00-08:00",
+    "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -122.1966,
+     41.8679
+    ]
+   },
+   "properties": {
+    "pfirs_id": "193025953",
+    "name": "Butte LSR Units",
+    "burn_date": "2026-11-23",
+    "agency": "US Forest Service",
+    "agency_group": "USFS",
+    "burn_type": "Machine Pile",
+    "acres": 58.0,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-11-22T15:30:00-08:00",
     "approved_on": null
    }
   },
@@ -418,9 +464,9 @@
     "burn_type": "Hand Pile",
     "acres": 2.9,
     "piles": null,
-    "status": "Pre-Planned",
+    "status": "Approved",
     "planned_on": "2026-11-20T12:55:00-08:00",
-    "approved_on": null
+    "approved_on": "2026-11-22T09:56:00-08:00"
    }
   },
   {
@@ -467,6 +513,29 @@
     "status": "Approved",
     "planned_on": "2026-11-19T15:56:00-08:00",
     "approved_on": "2026-11-19T16:26:00-08:00"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -121.9868,
+     41.6665
+    ]
+   },
+   "properties": {
+    "pfirs_id": "193025954",
+    "name": "Orr Units",
+    "burn_date": "2026-11-23",
+    "agency": "US Forest Service",
+    "agency_group": "USFS",
+    "burn_type": "Unknown",
+    "acres": 250.0,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-11-22T15:30:00-08:00",
+    "approved_on": null
    }
   },
   {
@@ -533,9 +602,9 @@
     "burn_type": "Hand Pile",
     "acres": 2.0,
     "piles": null,
-    "status": "Pre-Planned",
+    "status": "Approved",
     "planned_on": "2026-11-20T12:39:00-08:00",
-    "approved_on": null
+    "approved_on": "2026-11-22T15:31:00-08:00"
    }
   },
   {
@@ -579,9 +648,9 @@
     "burn_type": "Hand Pile",
     "acres": 0.25,
     "piles": null,
-    "status": "Pre-Planned",
+    "status": "Approved",
     "planned_on": "2026-11-21T22:35:00-08:00",
-    "approved_on": null
+    "approved_on": "2026-11-22T10:04:00-08:00"
    }
   },
   {
@@ -602,9 +671,9 @@
     "burn_type": "Hand Pile",
     "acres": 0.25,
     "piles": null,
-    "status": "Pre-Planned",
+    "status": "Approved",
     "planned_on": "2026-11-21T22:35:00-08:00",
-    "approved_on": null
+    "approved_on": "2026-11-22T09:58:00-08:00"
    }
   },
   {
