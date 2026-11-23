@@ -5,7 +5,7 @@
   "source_url": "https://ssl.arb.ca.gov/pfirs/index.php?submit=Map+Page",
   "date_begin": "2026-11-21",
   "date_end": "2026-11-29",
-  "count": 52,
+  "count": 54,
   "note": "Planned and approved ignitions as published by PFIRS. Status can change through the day; confirm in PFIRS."
  },
  "features": [
@@ -209,9 +209,9 @@
     "agency": "Cache Creek Conservancy",
     "agency_group": "Private",
     "burn_type": "Underburn",
-    "acres": 3.0,
+    "acres": 0.5,
     "piles": null,
-    "status": "Approved",
+    "status": "Completed",
     "planned_on": "2026-11-19T16:20:00-08:00",
     "approved_on": "2026-11-20T14:47:00-08:00"
    }
@@ -234,9 +234,9 @@
     "burn_type": "Machine Pile",
     "acres": 2.0,
     "piles": null,
-    "status": "Pre-Planned",
+    "status": "Approved",
     "planned_on": "2026-11-21T21:08:00-08:00",
-    "approved_on": null
+    "approved_on": "2026-11-22T20:09:00-08:00"
    }
   },
   {
@@ -283,6 +283,29 @@
     "status": "Approved",
     "planned_on": "2026-11-22T13:41:00-08:00",
     "approved_on": "2026-11-22T13:41:00-08:00"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -123.0156,
+     41.624663
+    ]
+   },
+   "properties": {
+    "pfirs_id": "193025991",
+    "name": "2026_Isinglass",
+    "burn_date": "2026-11-23",
+    "agency": "FWS Forestry LLC",
+    "agency_group": "Private",
+    "burn_type": "Unknown",
+    "acres": 341.0,
+    "piles": null,
+    "status": "Approved",
+    "planned_on": "2026-11-22T18:38:00-08:00",
+    "approved_on": "2026-11-22T20:17:00-08:00"
    }
   },
   {
@@ -372,9 +395,9 @@
     "burn_type": "Machine Pile",
     "acres": 58.0,
     "piles": null,
-    "status": "Pre-Planned",
+    "status": "Approved",
     "planned_on": "2026-11-22T15:30:00-08:00",
-    "approved_on": null
+    "approved_on": "2026-11-22T20:20:00-08:00"
    }
   },
   {
@@ -418,9 +441,32 @@
     "burn_type": "Hand Pile",
     "acres": 8.0,
     "piles": null,
-    "status": "Pre-Planned",
+    "status": "Approved",
     "planned_on": "2026-11-20T16:57:00-08:00",
-    "approved_on": null
+    "approved_on": "2026-11-22T20:11:00-08:00"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -121.981267,
+     41.189438
+    ]
+   },
+   "properties": {
+    "pfirs_id": "193025998",
+    "name": "East Siskiyou",
+    "burn_date": "2026-11-23",
+    "agency": "Wyntoon Timberlands LLC",
+    "agency_group": "Private",
+    "burn_type": "Landing Pile",
+    "acres": 30.0,
+    "piles": null,
+    "status": "Approved",
+    "planned_on": "2026-11-22T19:06:00-08:00",
+    "approved_on": "2026-11-22T20:14:00-08:00"
    }
   },
   {
@@ -533,9 +579,9 @@
     "burn_type": "Unknown",
     "acres": 250.0,
     "piles": null,
-    "status": "Pre-Planned",
+    "status": "Approved",
     "planned_on": "2026-11-22T15:30:00-08:00",
-    "approved_on": null
+    "approved_on": "2026-11-22T20:19:00-08:00"
    }
   },
   {
@@ -625,9 +671,9 @@
     "burn_type": "Machine Pile",
     "acres": 18.0,
     "piles": null,
-    "status": "Pre-Planned",
+    "status": "Approved",
     "planned_on": "2026-11-16T13:57:00-08:00",
-    "approved_on": null
+    "approved_on": "2026-11-22T20:23:00-08:00"
    }
   },
   {
