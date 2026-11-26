@@ -763,9 +763,9 @@
     "burn_type": "Machine Pile",
     "acres": 0.2,
     "piles": null,
-    "status": "Pre-Planned",
+    "status": "Approved",
     "planned_on": "2026-11-24T09:53:00-08:00",
-    "approved_on": null
+    "approved_on": "2026-11-26T07:49:00-08:00"
    }
   },
   {
@@ -809,9 +809,9 @@
     "burn_type": "Hand Pile",
     "acres": 0.5,
     "piles": null,
-    "status": "Pre-Planned",
+    "status": "Approved",
     "planned_on": "2026-11-24T09:53:00-08:00",
-    "approved_on": null
+    "approved_on": "2026-11-26T07:50:00-08:00"
    }
   },
   {
