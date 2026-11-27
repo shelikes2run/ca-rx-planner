@@ -5,7 +5,7 @@
   "source_url": "https://ssl.arb.ca.gov/pfirs/index.php?submit=Map+Page",
   "date_begin": "2026-11-26",
   "date_end": "2026-12-04",
-  "count": 78,
+  "count": 82,
   "note": "Planned and approved ignitions as published by PFIRS. Status can change through the day; confirm in PFIRS."
  },
  "features": [
@@ -295,6 +295,29 @@
     ]
    },
    "properties": {
+    "pfirs_id": "193030233",
+    "name": "2026-Kilgore Hills Piles",
+    "burn_date": "2026-11-28",
+    "agency": "CAL FIRE",
+    "agency_group": "CAL FIRE",
+    "burn_type": "Unknown",
+    "acres": 50.0,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-11-27T13:42:00-08:00",
+    "approved_on": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -122.5929,
+     41.6906
+    ]
+   },
+   "properties": {
     "pfirs_id": "193029610",
     "name": "2026-Kilgore Hills Piles",
     "burn_date": "2026-11-28",
@@ -329,6 +352,29 @@
     "status": "Approved",
     "planned_on": "2026-11-23T09:23:00-08:00",
     "approved_on": "2026-11-25T21:28:00-08:00"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -120.933551,
+     38.33046
+    ]
+   },
+   "properties": {
+    "pfirs_id": "193030179",
+    "name": "Brickyard",
+    "burn_date": "2026-11-28",
+    "agency": "CAL FIRE",
+    "agency_group": "CAL FIRE",
+    "burn_type": "Machine Pile",
+    "acres": 169.0,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-11-27T08:20:00-08:00",
+    "approved_on": null
    }
   },
   {
@@ -372,9 +418,9 @@
     "burn_type": "Underburn",
     "acres": 5.0,
     "piles": null,
-    "status": "Pre-Planned",
+    "status": "Approved",
     "planned_on": "2026-11-25T16:47:00-08:00",
-    "approved_on": null
+    "approved_on": "2026-11-27T11:22:00-08:00"
    }
   },
   {
@@ -418,9 +464,9 @@
     "burn_type": "Underburn",
     "acres": 83.0,
     "piles": null,
-    "status": "Pre-Planned",
+    "status": "Approved",
     "planned_on": "2026-11-25T12:37:00-08:00",
-    "approved_on": null
+    "approved_on": "2026-11-27T12:27:00-08:00"
    }
   },
   {
@@ -464,9 +510,9 @@
     "burn_type": "Underburn",
     "acres": 14.0,
     "piles": null,
-    "status": "Pre-Planned",
+    "status": "Approved",
     "planned_on": "2026-11-25T12:37:00-08:00",
-    "approved_on": null
+    "approved_on": "2026-11-27T12:29:00-08:00"
    }
   },
   {
@@ -487,9 +533,9 @@
     "burn_type": "Underburn",
     "acres": 46.0,
     "piles": null,
-    "status": "Pre-Planned",
+    "status": "Approved",
     "planned_on": "2026-11-25T12:37:00-08:00",
-    "approved_on": null
+    "approved_on": "2026-11-27T12:30:00-08:00"
    }
   },
   {
@@ -536,6 +582,29 @@
     "status": "Approved",
     "planned_on": "2026-10-27T09:24:00-07:00",
     "approved_on": "2026-11-25T21:33:00-08:00"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -117.240024,
+     34.252289
+    ]
+   },
+   "properties": {
+    "pfirs_id": "193030184",
+    "name": "General Fuel Reduction/Management",
+    "burn_date": "2026-11-29",
+    "agency": "CAL FIRE",
+    "agency_group": "CAL FIRE",
+    "burn_type": "Hand Pile",
+    "acres": 1.0,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-11-27T08:47:00-08:00",
+    "approved_on": null
    }
   },
   {
@@ -720,6 +789,29 @@
     "status": "Approved",
     "planned_on": "2026-10-27T09:24:00-07:00",
     "approved_on": "2026-11-25T21:36:00-08:00"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -117.240024,
+     34.252289
+    ]
+   },
+   "properties": {
+    "pfirs_id": "193030185",
+    "name": "General Fuel Reduction/Management",
+    "burn_date": "2026-11-30",
+    "agency": "CAL FIRE",
+    "agency_group": "CAL FIRE",
+    "burn_type": "Hand Pile",
+    "acres": 1.0,
+    "piles": null,
+    "status": "Pre-Planned",
+    "planned_on": "2026-11-27T08:47:00-08:00",
+    "approved_on": null
    }
   },
   {
