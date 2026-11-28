@@ -211,9 +211,9 @@
     "burn_type": "Hand Pile",
     "acres": 3.0,
     "piles": null,
-    "status": "Pre-Planned",
+    "status": "Approved",
     "planned_on": "2026-11-26T22:21:00-08:00",
-    "approved_on": null
+    "approved_on": "2026-11-27T19:03:00-08:00"
    }
   },
   {
@@ -295,17 +295,17 @@
     ]
    },
    "properties": {
-    "pfirs_id": "193030233",
+    "pfirs_id": "193029610",
     "name": "2026-Kilgore Hills Piles",
     "burn_date": "2026-11-28",
     "agency": "CAL FIRE",
     "agency_group": "CAL FIRE",
     "burn_type": "Unknown",
-    "acres": 50.0,
+    "acres": 40.0,
     "piles": null,
-    "status": "Pre-Planned",
-    "planned_on": "2026-11-27T13:42:00-08:00",
-    "approved_on": null
+    "status": "Approved",
+    "planned_on": "2026-11-25T10:10:00-08:00",
+    "approved_on": "2026-11-27T19:05:00-08:00"
    }
   },
   {
@@ -318,17 +318,17 @@
     ]
    },
    "properties": {
-    "pfirs_id": "193029610",
+    "pfirs_id": "193030233",
     "name": "2026-Kilgore Hills Piles",
     "burn_date": "2026-11-28",
     "agency": "CAL FIRE",
     "agency_group": "CAL FIRE",
     "burn_type": "Unknown",
-    "acres": 40.0,
+    "acres": 50.0,
     "piles": null,
-    "status": "Pre-Planned",
-    "planned_on": "2026-11-25T10:10:00-08:00",
-    "approved_on": null
+    "status": "Approved",
+    "planned_on": "2026-11-27T13:42:00-08:00",
+    "approved_on": "2026-11-27T19:06:00-08:00"
    }
   },
   {
